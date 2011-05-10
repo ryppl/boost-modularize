@@ -1,5 +1,4 @@
 [<ignore>]
-
 libs/compose/index.htm:	<ignore>
 libs/compose/index.html:	<ignore>
 libs/index.html:	<ignore>
@@ -13,23 +12,14 @@ tools/make-cputime-page.pl:	<ignore>
 tools/regression/:	<ignore>
 tools/release/:	<ignore>
 
-[src/accumulators]
-
+[accumulators]
 boost/accumulators/:	include/boost/accumulators/
 libs/accumulators/doc/:	doc/
 libs/accumulators/example/:	example/
 libs/accumulators/test/:	test/
 libs/accumulators/index.html:	index.html
-<name>: boost-accumulators
-<new>:	CMakeLists.txt
-	doc/CMakeLists.txt
-	example/CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/algorithm]
-
+[algorithm]
 boost/algorithm/:	include/boost/algorithm/
 libs/algorithm/minmax/doc/:	minmax/doc/
 libs/algorithm/minmax/example/:	minmax/example/
@@ -40,41 +30,22 @@ libs/algorithm/string/example/:	string/example/
 libs/algorithm/string/test/:	string/test/
 libs/algorithm/string/index.html:	string/index.html
 libs/algorithm/sublibs:	sublibs
-<name>: boost-algorithm
-<new>:	CMakeLists.txt
-	minmax/test/CMakeLists.txt
-	module.cmake
-	string/test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/any]
-
+[any]
 boost/any.hpp:	include/boost/any.hpp
 libs/any/doc/:	doc/
 libs/any/test/:	test/
 libs/any/any_test.cpp:	any_test.cpp
 libs/any/index.html:	index.html
 libs/any/test.hpp:	test.hpp
-<name>: boost-any
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/array]
-
+[array]
 boost/array.hpp:	include/boost/array.hpp
 libs/array/doc/:	doc/
 libs/array/index.html:	index.html
 libs/array/test/:	test/
-<name>: boost-array
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/asio]
-
+[asio]
 boost/asio.hpp:	include/boost/asio.hpp
 boost/asio/:	include/boost/asio/
 libs/asio/doc/:	doc/
@@ -82,45 +53,23 @@ libs/asio/example/:	example/
 libs/asio/test/:	test/
 libs/asio/tools/:	tools/
 libs/asio/index.html:	index.html
-<name>: boost-asio
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	test/ip/CMakeLists.txt
-	test/local/CMakeLists.txt
-	test/posix/CMakeLists.txt
-	test/ssl/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/assign]
-
+[assign]
 boost/assign.hpp:	include/boost/assign.hpp
 boost/assign/:	include/boost/assign/
 libs/assign/doc/:	doc/
 libs/assign/test/:	test/
 libs/assign/index.html:	index.html
-<name>: boost-assign
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/bimap]
-
+[bimap]
 boost/bimap.hpp:	include/boost/bimap.hpp
 boost/bimap/:	include/boost/bimap/
 libs/bimap/doc/:	doc/
 libs/bimap/example/:	example/
 libs/bimap/test/:	test/
 libs/bimap/index.html:	index.html
-<name>: boost-bimap
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/bind]
-
+[bind]
 boost/is_placeholder.hpp:	include/boost/is_placeholder.hpp
 boost/bind.hpp:	include/boost/bind.hpp
 boost/bind/:	include/boost/bind/
@@ -133,14 +82,8 @@ libs/bind/mem_fn.html:	mem_fn.html
 libs/bind/ref.html:	ref.html
 libs/bind/doc/:	doc/
 libs/bind/test/:	test/
-<name>: boost-bind
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/chrono]
-
+[chrono]
 boost/chrono.hpp:	include/boost/chrono.hpp
 boost/chrono/:	include/boost/chrono/
 libs/chrono/index.html:	index.html
@@ -149,36 +92,21 @@ libs/chrono/doc/:	doc/
 libs/chrono/example/:	example/
 libs/chrono/src/:	src/
 libs/chrono/test/:	test/
-<name>: boost-chrono
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/circular_buffer]
-
+[circular_buffer]
 boost/circular_buffer.hpp:	include/boost/circular_buffer.hpp
 boost/circular_buffer/:	include/boost/circular_buffer/
 boost/circular_buffer_fwd.hpp:	include/boost/circular_buffer_fwd.hpp
 libs/circular_buffer/index.html:	index.html
 libs/circular_buffer/doc/:	doc/
 libs/circular_buffer/test/:	test/
-<name>: boost-circular_buffer
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/compatibility]
-
+[compatibility]
 boost/compatibility/:	include/boost/compatibility/
 libs/compatibility/generate_cpp_c_headers.py:	generate_cpp_c_headers.py
 libs/compatibility/index.html:	index.html
-<name>: boost-compatibility
-<new>:	.ryppl/METADATA
 
-[src/concept_check]
-
+[concept_check]
 boost/concept_archetype.hpp:	include/boost/concept_archetype.hpp
 boost/concept_check.hpp:	include/boost/concept_check.hpp
 boost/concept/:	include/boost/concept/
@@ -210,14 +138,8 @@ libs/concept_check/usage_fail.cpp:	usage_fail.cpp
 libs/concept_check/using_concept_check.htm:	using_concept_check.htm
 libs/concept_check/where.cpp:	where.cpp
 libs/concept_check/where_fail.cpp:	where_fail.cpp
-<name>: boost-concept_check
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/config]
-
+[config]
 boost/config.hpp:	include/boost/config.hpp
 boost/config/:	include/boost/config/
 libs/config/configure:	configure
@@ -226,14 +148,8 @@ libs/config/test/:	test/
 libs/config/tools/:	tools/
 libs/config/config.htm:	config.htm
 libs/config/index.html:	index.html
-<name>: boost-config
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/conversion]
-
+[conversion]
 boost/implicit_cast.hpp:	include/boost/implicit_cast.hpp
 boost/cast.hpp:	include/boost/cast.hpp
 boost/lexical_cast.hpp:	include/boost/lexical_cast.hpp
@@ -245,13 +161,8 @@ libs/conversion/lexical_cast_test.cpp:	lexical_cast_test.cpp
 libs/conversion/numeric_cast_test.cpp:	numeric_cast_test.cpp
 libs/conversion/test.hpp:	test.hpp
 libs/conversion/test/:	test/
-<name>: boost-conversion
-<new>:	CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/core]
-
+[core]
 boost/blank.hpp:	include/boost/blank.hpp
 boost/blank_fwd.hpp:	include/boost/blank_fwd.hpp
 boost/cstdlib.hpp:	include/boost/cstdlib.hpp
@@ -282,22 +193,15 @@ boost/pending/relaxed_heap.hpp:	include/boost/pending/relaxed_heap.hpp
 boost/pending/stringtok.hpp:	include/boost/pending/stringtok.hpp
 boost/pending/detail/int_iterator.hpp:	include/boost/pending/detail/int_iterator.hpp
 boost/pending/detail/property.hpp:	include/boost/pending/detail/property.hpp
-<name>: boost-core
-<new>:	CMakeLists.txt
-	.ryppl/METADATA
 
-[src/crc]
-
+[crc]
 boost/crc.hpp:	include/boost/crc.hpp
 libs/crc/crc.html:	crc.html
 libs/crc/crc_example.cpp:	crc_example.cpp
 libs/crc/index.html:	index.html
 libs/crc/test/:	test/
-<name>: boost-crc
-<new>:	.ryppl/METADATA
 
-[src/date_time]
-
+[date_time]
 boost/date_time.hpp:	include/boost/date_time.hpp
 boost/date_time/:	include/boost/date_time/
 libs/date_time/index.html:	index.html
@@ -308,26 +212,13 @@ libs/date_time/example/:	example/
 libs/date_time/src/:	src/
 libs/date_time/test/:	test/
 libs/date_time/xmldoc/:	xmldoc/
-<name>: boost-date_time
-<new>:	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	CMakeLists.txt
-	.ryppl/METADATA
 
-[src/detail]
-
+[detail]
 boost/detail/:	include/boost/detail/
 libs/detail/utf8_codecvt_facet.cpp:	utf8_codecvt_facet.cpp
 libs/detail/test/:	test/
-<name>: boost-detail
-<new>:	CMakeLists.txt
-	module.cmake
-        include/boost/detail/utf8_codecvt_facet_impl.hpp
-	.ryppl/METADATA
 
-[src/disjoint_sets]
-
+[disjoint_sets]
 boost/pending/disjoint_sets.hpp:	include/boost/pending/disjoint_sets.hpp
 boost/pending/detail/disjoint_sets.hpp:	include/boost/pending/detail/disjoint_sets.hpp
 libs/disjoint_sets/Jamfile:	Jamfile
@@ -335,14 +226,8 @@ libs/disjoint_sets/bibliography.html:	bibliography.html
 libs/disjoint_sets/disjoint_set_test.cpp:	disjoint_set_test.cpp
 libs/disjoint_sets/disjoint_sets.html:	disjoint_sets.html
 libs/disjoint_sets/index.html:	index.html
-<name>: boost-disjoint_sets
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/dynamic_bitset]
-
+[dynamic_bitset]
 boost/dynamic_bitset.hpp:	include/boost/dynamic_bitset.hpp
 boost/dynamic_bitset/:	include/boost/dynamic_bitset/
 boost/dynamic_bitset_fwd.hpp:	include/boost/dynamic_bitset_fwd.hpp
@@ -355,14 +240,8 @@ libs/dynamic_bitset/dyn_bitset_unit_tests4.cpp:	dyn_bitset_unit_tests4.cpp
 libs/dynamic_bitset/dynamic_bitset.html:	dynamic_bitset.html
 libs/dynamic_bitset/example/:	example/
 libs/dynamic_bitset/index.html:	index.html
-<name>: boost-dynamic_bitset
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/exception]
-
+[exception]
 boost/exception.hpp:	include/boost/exception.hpp
 boost/exception_ptr.hpp:	include/boost/exception_ptr.hpp
 boost/throw_exception.hpp:	include/boost/throw_exception.hpp
@@ -373,14 +252,8 @@ libs/exception/example/:	example/
 libs/exception/index.html:	index.html
 libs/exception/src/:	src/
 libs/exception/test/:	test/
-<name>: boost-exception
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/filesystem]
-
+[filesystem]
 boost/filesystem.hpp:	include/boost/filesystem.hpp
 boost/filesystem/:	include/boost/filesystem/
 libs/filesystem/index.html:	index.html
@@ -388,45 +261,24 @@ libs/filesystem/build/:	build/
 libs/filesystem/test/:	test/
 libs/filesystem/v2/:	v2/
 libs/filesystem/v3/:	v3/
-<name>: boost-filesystem
-<new>:	CMakeLists.txt
-	module.cmake
-	build/CMakeLists.txt
-	test/CMakeLists.txt
-	v2/build/CMakeLists.txt
-	v3/build/CMakeLists.txt
-	.ryppl/METADATA
 <patch>: filesystem.patch
 
-[src/flyweight]
-
+[flyweight]
 boost/flyweight.hpp:	include/boost/flyweight.hpp
 boost/flyweight/:	include/boost/flyweight/
 libs/flyweight/index.html:	index.html
 libs/flyweight/doc/:	doc/
 libs/flyweight/example/:	example/
 libs/flyweight/test/:	test/
-<name>: boost-flyweight
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/foreach]
-
+[foreach]
 libs/foreach/doc/:	doc/
 boost/foreach.hpp:	include/boost/foreach.hpp
 boost/foreach_fwd.hpp:	include/boost/foreach_fwd.hpp
 libs/foreach/index.html:	index.html
 libs/foreach/test/:	test/
-<name>: boost-foreach
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/format]
-
+[format]
 boost/format.hpp:	include/boost/format.hpp
 boost/format/:	include/boost/format/
 libs/format/index.html:	index.html
@@ -435,14 +287,8 @@ libs/format/benchmark/:	benchmark/
 libs/format/doc/:	doc/
 libs/format/example/:	example/
 libs/format/test/:	test/
-<name>: boost-format
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/function]
-
+[function]
 boost/function.hpp:	include/boost/function.hpp
 boost/function/:	include/boost/function/
 boost/function_equal.hpp:	include/boost/function_equal.hpp
@@ -450,15 +296,8 @@ libs/function/index.html:	index.html
 libs/function/doc/:	doc/
 libs/function/example/:	example/
 libs/function/test/:	test/
-<name>: boost-function
-<new>:	CMakeLists.txt
-	doc/CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/functional]
-
+[functional]
 boost/functional.hpp:	include/boost/functional.hpp
 boost/functional/:	include/boost/functional/
 libs/functional/function_traits.html:	function_traits.html
@@ -479,31 +318,16 @@ libs/functional/factory/index.html:	factory/index.html
 libs/functional/factory/doc/:	factory/doc/
 libs/functional/factory/test/:	factory/test/
 libs/functional/test/:	test/
-<name>: boost-functional
-<new>:	CMakeLists.txt
-	hash/doc/CMakeLists.txt
-	hash/examples/CMakeLists.txt
-	hash/test/CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/function_types]
-
+[function_types]
 boost/function_types/:	include/boost/function_types/
 libs/function_types/index.html:	index.html
 libs/function_types/build/:	build/
 libs/function_types/doc/:	doc/
 libs/function_types/example/:	example/
 libs/function_types/test/:	test/
-<name>: boost-function_types
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/fusion]
-
+[fusion]
 boost/fusion/:	include/boost/fusion/
 libs/fusion/changelist.txt:	changelist.txt
 libs/fusion/index.html:	index.html
@@ -511,13 +335,8 @@ libs/fusion/todo.txt:	todo.txt
 libs/fusion/doc/:	doc/
 libs/fusion/example/:	example/
 libs/fusion/test/:	test/
-<name>: boost-fusion
-<new>:	CMakeLists.txt
-	module.cmake
-	.ryppl/METADATA
 
-[src/geometry]
-
+[geometry]
 boost/geometry.hpp: include/boost/geometry.hpp
 boost/geometry/:	include/boost/geometry/
 libs/geometry/index.html:	index.html
@@ -526,27 +345,15 @@ libs/geometry/example/:	example/
 libs/geometry/example_extensions/:	example_extensions/
 libs/geometry/test/:	test/
 libs/geometry/test_extensions/:	test_extensions/
-<name>: boost-geometry
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/gil]
-
+[gil]
 boost/gil/:	include/boost/gil/
 libs/gil/index.html:	index.html
 libs/gil/doc/:	doc/
 libs/gil/example/:	example/
 libs/gil/test/:	test/
-<name>: boost-gil
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/graph]
-
+[graph]
 boost/graph/:	include/boost/graph/
 libs/graph/index.html:	index.html
 libs/graph/build/:	build/
@@ -555,45 +362,23 @@ libs/graph/example/:	example/
 libs/graph/quickbook/:	quickbook/
 libs/graph/src/:	src/
 libs/graph/test/:	test/
-<name>: boost-graph
-<new>:	CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/graph_parallel]
-
+[graph_parallel]
 libs/graph_parallel/index.html:	index.html
 libs/graph_parallel/build/:	build/
 libs/graph_parallel/doc/:	doc/
 libs/graph_parallel/example/:	example/
 libs/graph_parallel/src/:	src/
 libs/graph_parallel/test/:	test/
-<name>: boost-graph_parallel
-<new>:	CMakeLists.txt
-	doc/CMakeLists.txt
-	example/CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/icl]
-
+[icl]
 boost/icl/:	include/boost/icl/
 libs/icl/index.html:	index.html
 libs/icl/doc/:	doc/
 libs/icl/example/:	example/
 libs/icl/test/:	test/
-<name>:	boost-icl
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/integer]
-
+[integer]
 boost/cstdint.hpp:	include/boost/cstdint.hpp
 boost/integer.hpp:	include/boost/integer.hpp
 boost/integer_fwd.hpp:	include/boost/integer_fwd.hpp
@@ -602,14 +387,8 @@ boost/integer/:	include/boost/integer/
 libs/integer/index.html:	index.html
 libs/integer/doc/:	doc/
 libs/integer/test/:	test/
-<name>: boost-integer
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/interprocess]
-
+[interprocess]
 boost/interprocess/:	include/boost/interprocess/
 libs/interprocess/Jamfile.v2:	Jamfile.v2
 libs/interprocess/index.html:	index.html
@@ -617,14 +396,8 @@ libs/interprocess/doc/:	doc/
 libs/interprocess/example/:	example/
 libs/interprocess/proj/:	proj/
 libs/interprocess/test/:	test/
-<name>: boost-interprocess
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/intrusive]
-
+[intrusive]
 boost/intrusive/:	include/boost/intrusive/
 libs/intrusive/index.html:	index.html
 libs/intrusive/doc/:	doc/
@@ -632,26 +405,15 @@ libs/intrusive/example/:	example/
 libs/intrusive/perf/:	perf/
 libs/intrusive/proj/:	proj/
 libs/intrusive/test/:	test/
-<name>: boost-intrusive
-<new>:	CMakeLists.txt
-	module.cmake
-	.ryppl/METADATA
 
-[src/io]
-
+[io]
 boost/io/:	include/boost/io/
 boost/io_fwd.hpp:	include/boost/io_fwd.hpp
 libs/io/index.html:	index.html
 libs/io/doc/:	doc/
 libs/io/test/:	test/
-<name>: boost-io
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/iostreams]
-
+[iostreams]
 boost/iostreams/:	include/boost/iostreams/
 libs/iostreams/index.html:	index.html
 libs/iostreams/build/:	build/
@@ -659,16 +421,8 @@ libs/iostreams/doc/:	doc/
 libs/iostreams/example/:	example/
 libs/iostreams/src/:	src/
 libs/iostreams/test/:	test/
-<name>: boost-iostreams
-<new>:	CMakeLists.txt
-	example/CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/iterator]
-
+[iterator]
 boost/iterator.hpp:	include/boost/iterator.hpp
 boost/iterator_adaptors.hpp:	include/boost/iterator_adaptors.hpp
 boost/function_output_iterator.hpp:	include/boost/function_output_iterator.hpp
@@ -679,38 +433,20 @@ libs/iterator/index.html:	index.html
 libs/iterator/doc/:	doc/
 libs/iterator/example/:	example/
 libs/iterator/test/:	test/
-<name>: boost-iterator
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/lambda]
-
+[lambda]
 boost/lambda/:	include/boost/lambda/
 libs/lambda/index.html:	index.html
 libs/lambda/doc/:	doc/
 libs/lambda/test/:	test/
-<name>: boost-lambda
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/logic]
-
+[logic]
 boost/logic/:	include/boost/logic/
 libs/logic/doc/: doc/
 libs/logic/test/: test/
 libs/logic/index.html: index.html
-<name>: boost-logic
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/math]
-
+[math]
 boost/math/:	include/boost/math/
 boost/math_fwd.hpp:	include/boost/math_fwd.hpp
 libs/math/index.html:	index.html
@@ -728,23 +464,15 @@ libs/math/src/:	src/
 libs/math/test/:	test/
 libs/math/tools/:	tools/
 libs/math/vc71_fix/:	vc71_fix/
-<name>: boost-math
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/move]
-
+[move]
 boost/move/: include/boost/move/
 libs/move/doc/:		doc/
 libs/move/example/:	example/
 libs/move/proj/:	proj/
 libs/move/test/:	test/
-<name>: boost-move
 
-[src/mpi]
-
+[mpi]
 boost/mpi.hpp:	include/boost/mpi.hpp
 boost/mpi/:	include/boost/mpi/
 libs/mpi/index.html:	index.html
@@ -753,16 +481,8 @@ libs/mpi/doc/:	doc/
 libs/mpi/example/:	example/
 libs/mpi/src/:	src/
 libs/mpi/test/:	test/
-<name>: boost-mpi
-<new>:	CMakeLists.txt
-	doc/CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/mpl]
-
+[mpl]
 boost/mpl/:	include/boost/mpl/
 libs/mpl/index.html:	index.html
 libs/mpl/book/:	book/
@@ -770,38 +490,23 @@ libs/mpl/doc/:	doc/
 libs/mpl/example/:	example/
 libs/mpl/preprocessed/:	preprocessed/
 libs/mpl/test/:	test/
-<name>: boost-mpl
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/msm]
-
+[msm]
 boost/msm/:	include/boost/msm/
 libs/msm/index.html:	index.html
 libs/msm/doc/:	doc/
 libs/msm/example/:	example/
 libs/msm/test/:	test/
-<name>: boost-msm
-<new>:	.ryppl/METADATA
 
-[src/multi_array]
-
+[multi_array]
 boost/multi_array.hpp:	include/boost/multi_array.hpp
 boost/multi_array/:	include/boost/multi_array/
 libs/multi_array/index.html:	index.html
 libs/multi_array/doc/:	doc/
 libs/multi_array/example/:	example/
 libs/multi_array/test/:	test/
-<name>: boost-multi_array
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/multi_index]
-
+[multi_index]
 boost/multi_index_container.hpp:	include/boost/multi_index_container.hpp
 boost/multi_index_container_fwd.hpp:	include/boost/multi_index_container_fwd.hpp
 boost/multi_index/:	include/boost/multi_index/
@@ -810,14 +515,8 @@ libs/multi_index/doc/:	doc/
 libs/multi_index/example/:	example/
 libs/multi_index/perf/:	perf/
 libs/multi_index/test/:	test/
-<name>: boost-multi_index
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/numeric]
-
+[numeric]
 boost/numeric/interval.hpp:	include/boost/numeric/interval.hpp
 boost/numeric/conversion/:	include/boost/numeric/conversion/
 boost/numeric/interval/:	include/boost/numeric/interval/
@@ -838,16 +537,8 @@ libs/numeric/ublas/bench4/:	ublas/bench4/
 libs/numeric/ublas/bench5/:	ublas/bench5/
 libs/numeric/ublas/doc/:	ublas/doc/
 libs/numeric/ublas/test/:	ublas/test/
-<name>: boost-numeric
-<new>:	CMakeLists.txt
-	conversion/test/CMakeLists.txt
-	interval/test/CMakeLists.txt
-	module.cmake
-	ublas/test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/optional]
-
+[optional]
 boost/none.hpp:	include/boost/none.hpp
 boost/none_t.hpp:	include/boost/none_t.hpp
 boost/optional.hpp:	include/boost/optional.hpp
@@ -855,27 +546,15 @@ boost/optional/:	include/boost/optional/
 libs/optional/index.html:	index.html
 libs/optional/doc/:	doc/
 libs/optional/test/:	test/
-<name>: boost-optional
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/parameter]
-
+[parameter]
 boost/parameter.hpp:	include/boost/parameter.hpp
 boost/parameter/:	include/boost/parameter/
 libs/parameter/index.html:	index.html
 libs/parameter/doc/:	doc/
 libs/parameter/test/:	test/
-<name>: boost-parameter
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/phoenix]
-
+[phoenix]
 boost/phoenix.hpp:			include/boost/phoenix.hpp
 boost/phoenix/: 			include/boost/phoenix/
 libs/phoenix/doc/:			doc/
@@ -883,46 +562,29 @@ libs/phoenix/example/:		example/
 libs/phoenix/preprocess/:	preprocess/
 libs/phoenix/test/:			test/
 libs/phoenix/index.html: 	index.html
-<name>: boost-phoenix
 
-[src/polygon]
-
+[polygon]
 boost/polygon/:	include/boost/polygon/
 libs/polygon/Jamfile.v2:	Jamfile.v2
 libs/polygon/index.html:	index.html
 libs/polygon/doc/:	doc/
 libs/polygon/test/:	test/
-<name>: boost-polygon
-<new>:	.ryppl/METADATA
 
-[src/pool]
-
+[pool]
 boost/pool/:	include/boost/pool/
 libs/pool/index.html:	index.html
 libs/pool/TODO.txt:	TODO.txt
 libs/pool/doc/:	doc/
 libs/pool/test/:	test/
-<name>: boost-pool
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/preprocessor]
-
+[preprocessor]
 boost/preprocessor.hpp:	include/boost/preprocessor.hpp
 boost/preprocessor/:	include/boost/preprocessor/
 libs/preprocessor/index.html:	index.html
 libs/preprocessor/doc/:	doc/
 libs/preprocessor/test/:	test/
-<name>: boost-preprocessor
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/program_options]
-
+[program_options]
 boost/program_options.hpp:	include/boost/program_options.hpp
 boost/program_options/:	include/boost/program_options/
 libs/program_options/index.html:	index.html
@@ -931,68 +593,39 @@ libs/program_options/doc/:	doc/
 libs/program_options/example/:	example/
 libs/program_options/src/:	src/
 libs/program_options/test/:	test/
-<name>: boost-program_options
-<new>:	CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 <patch>: program_options.patch
 
-[src/property_map]
-
+[property_map]
 boost/property_map/:	include/boost/property_map/
 libs/property_map/index.html:	index.html
 libs/property_map/doc/:	doc/
 libs/property_map/example/:	example/
 libs/property_map/test/:	test/
-<name>: boost-property_map
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/property_tree]
-
+[property_tree]
 boost/property_tree/:	include/boost/property_tree/
 libs/property_tree/breaking_changes.txt:	breaking_changes.txt
 libs/property_tree/index.html:	index.html
 libs/property_tree/doc/:	doc/
 libs/property_tree/examples/:	examples/
 libs/property_tree/test/:	test/
-<name>: boost-property_tree
-<new>:	CMakeLists.txt
-	.ryppl/METADATA
 <patch>: property_tree.patch
 
-[src/proto]
-
+[proto]
 boost/proto/:			include/boost/proto/
 libs/proto/doc/:		doc/
 libs/proto/example/:	example/
 libs/proto/preprocess/:	preprocess/
 libs/proto/test/:		test/
 libs/proto/index.html:	index.html
-<name>: boost-proto
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/ptr_container]
-
+[ptr_container]
 boost/ptr_container/:	include/boost/ptr_container/
 libs/ptr_container/index.html:	index.html
 libs/ptr_container/doc/:	doc/
 libs/ptr_container/test/:	test/
-<name>: boost-ptr_container
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/python]
-
+[python]
 boost/python.hpp:	include/boost/python.hpp
 boost/python/:	include/boost/python/
 libs/python/build/:		build/
@@ -1006,15 +639,8 @@ libs/python/index.html: 	index.html
 libs/python/release_notes.txt:	release_notes.txt
 libs/python/todo.html:	todo.html
 libs/python/todo.txt:	todo.txt
-<name>: boost-python
-<new>:	CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/random]
-
+[random]
 boost/nondet_random.hpp:	include/boost/nondet_random.hpp
 boost/random.hpp:	include/boost/random.hpp
 boost/random/:	include/boost/random/
@@ -1033,54 +659,29 @@ libs/random/extra/:	extra/
 libs/random/performance/:	performance/
 libs/random/src/:	src/
 libs/random/test/:	test/
-<name>: boost-random
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/range]
-
+[range]
 boost/range.hpp:	include/boost/range.hpp
 boost/range/:	include/boost/range/
 libs/range/index.html:	index.html
 libs/range/doc/:	doc/
 libs/range/test/:	test/
-<name>: boost-range
-<new>:	CMakeLists.txt
-	doc/CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/ratio]
-
+[ratio]
 boost/ratio.hpp:	include/boost/ratio.hpp
 boost/ratio/:	include/boost/ratio/
 libs/ratio/index.html:	index.html
 libs/ratio/doc/:	doc/
 libs/ratio/example/:	example/
 libs/ratio/test/:	test/
-<name>: boost-ratio
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/rational]
-
+[rational]
 boost/rational.hpp:	include/boost/rational.hpp
 libs/rational/index.html:	index.html
 libs/rational/rational.html:	rational.html
 libs/rational/test/:	test/
-<name>: boost-rational
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/regex]
-
+[regex]
 boost/cregex.hpp:	include/boost/cregex.hpp
 boost/regex.h:	include/boost/regex.h
 boost/regex.hpp:	include/boost/regex.hpp
@@ -1095,27 +696,15 @@ libs/regex/performance/:	performance/
 libs/regex/src/:	src/
 libs/regex/test/:	test/
 libs/regex/tools/:	tools/
-<name>: boost-regex
-<new>:	CMakeLists.txt
-	example/CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/scope_exit]
-
+[scope_exit]
 boost/scope_exit.hpp:	include/boost/scope_exit.hpp
 libs/scope_exit/index.html:	index.html
 libs/scope_exit/doc/:	doc/
 libs/scope_exit/example/:	example/
 libs/scope_exit/test/:	test/
-<name>: boost-scope_exit
-<new>:	CMakeLists.txt
-	.ryppl/METADATA
 
-[src/serialization]
-
+[serialization]
 boost/strong_typedef.hpp:	include/boost/strong_typedef.hpp
 boost/archive/:	include/boost/archive/
 boost/serialization/:	include/boost/serialization/
@@ -1128,16 +717,9 @@ libs/serialization/src/:	src/
 libs/serialization/test/:	test/
 libs/serialization/util/:	util/
 libs/serialization/vc7ide/:	vc7ide/
-<name>: boost-serialization
-<new>:	CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 <patch>: serialization.patch
 
-[src/signals]
-
+[signals]
 boost/last_value.hpp:	include/boost/last_value.hpp
 boost/signal.hpp:	include/boost/signal.hpp
 boost/signals.hpp:	include/boost/signals.hpp
@@ -1148,29 +730,16 @@ libs/signals/doc/:	doc/
 libs/signals/example/:	example/
 libs/signals/src/:	src/
 libs/signals/test/:	test/
-<name>: boost-signals
-<new>:	CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/signals2]
-
+[signals2]
 boost/signals2.hpp:	include/boost/signals2.hpp
 boost/signals2/:	include/boost/signals2/
 libs/signals2/index.html:	index.html
 libs/signals2/doc/:	doc/
 libs/signals2/example/:	example/
 libs/signals2/test/:	test/
-<name>: boost-signals2
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/smart_ptr]
-
+[smart_ptr]
 boost/enable_shared_from_this.hpp:	include/boost/enable_shared_from_this.hpp
 boost/intrusive_ptr.hpp:	include/boost/intrusive_ptr.hpp
 boost/get_pointer.hpp:	include/boost/get_pointer.hpp
@@ -1205,14 +774,8 @@ libs/smart_ptr/example/:	example/
 libs/smart_ptr/src/:	src/
 libs/smart_ptr/test/:	test/
 libs/smart_ptr/weak_ptr.htm:	weak_ptr.htm
-<name>: boost-smart_ptr
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/spirit]
-
+[spirit]
 boost/spirit.hpp:	include/boost/spirit.hpp
 boost/spirit/:	include/boost/spirit/
 libs/spirit/index.html:	index.html
@@ -1224,14 +787,8 @@ libs/spirit/phoenix/:	phoenix/
 libs/spirit/repository/:	repository/
 libs/spirit/test/:	test/
 libs/spirit/sublibs:	sublibs
-<name>: boost-spirit
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/statechart]
-
+[statechart]
 boost/statechart/:	include/boost/statechart/
 libs/statechart/Jamfile.v2:	Jamfile.v2
 libs/statechart/Statechart.sln:	Statechart.sln
@@ -1239,15 +796,8 @@ libs/statechart/index.html:	index.html
 libs/statechart/doc/:	doc/
 libs/statechart/example/:	example/
 libs/statechart/test/:	test/
-<name>: boost-statechart
-<new>:	CMakeLists.txt
-	example/CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/static_assert]
-
+[static_assert]
 boost/static_assert.hpp:	include/boost/static_assert.hpp
 libs/static_assert/Jamfile.v2:	Jamfile.v2
 libs/static_assert/index.html:	index.html
@@ -1267,14 +817,8 @@ libs/static_assert/static_assert_test_fail_7.cpp:	static_assert_test_fail_7.cpp
 libs/static_assert/static_assert_test_fail_8.cpp:	static_assert_test_fail_8.cpp
 libs/static_assert/static_assert_test_fail_9.cpp:	static_assert_test_fail_9.cpp
 libs/static_assert/doc/:	doc/
-<name>: boost-static_assert
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/system]
-
+[system]
 boost/cerrno.hpp:	include/boost/cerrno.hpp
 boost/system/:	include/boost/system/
 libs/system/index.html:	index.html
@@ -1282,14 +826,8 @@ libs/system/build/:	build/
 libs/system/doc/:	doc/
 libs/system/src/:	src/
 libs/system/test/:	test/
-<name>: boost-system
-<new>:	CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/test]
-
+[test]
 boost/test/:	include/boost/test/
 libs/test/Jamfile.v2:	Jamfile.v2
 libs/test/README:	README
@@ -1301,16 +839,8 @@ libs/test/example/:	example/
 libs/test/src/:	src/
 libs/test/test/:	test/
 libs/test/tools/:	tools/
-<name>: boost-test
-<new>:	CMakeLists.txt
-	build/Jamfile.v2
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/thread]
-
+[thread]
 boost/thread.hpp:	include/boost/thread.hpp
 boost/thread/:	include/boost/thread/
 libs/thread/index.html:	index.html
@@ -1320,29 +850,15 @@ libs/thread/example/:	example/
 libs/thread/src/:	src/
 libs/thread/test/:	test/
 libs/thread/tutorial/:	tutorial/
-<name>: boost-thread
-<new>:	CMakeLists.txt
-	example/CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/timer]
-
+[timer]
 boost/progress.hpp:	include/boost/progress.hpp
 boost/timer.hpp:	include/boost/timer.hpp
 libs/timer/index.html:	index.html
 libs/timer/timer.htm:	timer.htm
 libs/timer/test/:	test/
-<name>: boost-timer
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/tokenizer]
-
+[tokenizer]
 boost/token_functions.hpp:	include/boost/token_functions.hpp
 boost/token_iterator.hpp:	include/boost/token_iterator.hpp
 boost/tokenizer.hpp:	include/boost/tokenizer.hpp
@@ -1359,51 +875,27 @@ libs/tokenizer/token_iterator.htm:	token_iterator.htm
 libs/tokenizer/tokenizer.htm:	tokenizer.htm
 libs/tokenizer/tokenizerfunction.htm:	tokenizerfunction.htm
 libs/tokenizer/test/:	test/
-<name>: boost-tokenizer
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/tr1]
-
+[tr1]
 boost/tr1/:	include/boost/tr1/
 libs/tr1/index.html:	index.html
 libs/tr1/doc/:	doc/
 libs/tr1/test/:	test/
-<name>: boost-tr1
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/tuple]
-
+[tuple]
 boost/tuple/:	include/boost/tuple/
 libs/tuple/index.html:	index.html
 libs/tuple/doc/:	doc/
 libs/tuple/test/:	test/
-<name>: boost-tuple
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/typeof]
-
+[typeof]
 boost/typeof/:	include/boost/typeof/
 libs/typeof/index.html:	index.html
 libs/typeof/doc/:	doc/
 libs/typeof/test/:	test/
 libs/typeof/tools/:	tools/
-<name>: boost-typeof
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/type_traits]
-
+[type_traits]
 boost/aligned_storage.hpp:	include/boost/aligned_storage.hpp
 boost/type_traits.hpp:	include/boost/type_traits.hpp
 boost/type_traits/:	include/boost/type_traits/
@@ -1413,14 +905,8 @@ libs/type_traits/doc/:	doc/
 libs/type_traits/examples/:	examples/
 libs/type_traits/test/:	test/
 libs/type_traits/tools/:	tools/
-<name>: boost-type_traits
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/units]
-
+[units]
 boost/units/:	include/boost/units/
 libs/units/boost.css:	boost.css
 libs/units/index.html:	index.html
@@ -1430,15 +916,8 @@ libs/units/images/:	images/
 libs/units/test/:	test/
 libs/units/test_headers/:	test_headers/
 libs/units/tutorial/:	tutorial/
-<name>: boost-units
-<new>:	CMakeLists.txt
-	doc/CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/unordered]
-
+[unordered]
 boost/unordered_map.hpp:	include/boost/unordered_map.hpp
 boost/unordered_set.hpp:	include/boost/unordered_set.hpp
 boost/unordered/:	include/boost/unordered/
@@ -1446,16 +925,8 @@ libs/unordered/index.html:	index.html
 libs/unordered/doc/:	doc/
 libs/unordered/examples/:	examples/
 libs/unordered/test/:	test/
-<name>: boost-unordered
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	test/exception/CMakeLists.txt
-	test/unordered/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/utility]
-
+[utility]
 boost/swap.hpp:	include/boost/swap.hpp
 boost/ref.hpp:	include/boost/ref.hpp
 boost/assert.hpp:	include/boost/assert.hpp
@@ -1527,56 +998,33 @@ libs/utility/doc/:	doc/
 libs/utility/enable_if/:	enable_if/
 libs/utility/swap/:	swap/
 libs/utility/test/:	test/
-<name>: boost-utility
-<new>:	CMakeLists.txt
-	module.cmake
-	swap/test/CMakeLists.txt
-	test/CMakeLists.txt
-	enable_if/test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/uuid]
-
+[uuid]
 boost/uuid/:	include/boost/uuid/
 libs/uuid/index.html:	index.html
 libs/uuid/uuid.html:	uuid.html
 libs/uuid/test/:	test/
-<name>: boost-uuid
-<new>:	.ryppl/METADATA
 
-[src/variant]
-
+[variant]
 boost/variant.hpp:	include/boost/variant.hpp
 boost/variant/:	include/boost/variant/
 libs/variant/index.html:	index.html
 libs/variant/doc/:	doc/
 libs/variant/test/:	test/
-<name>: boost-variant
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[src/wave]
-
-boost/wave.hpp:	include/boost/wave.hpp
-boost/wave/:	include/boost/wave/
+[wave]
+boost/wave.hpp:		include/boost/wave.hpp
+boost/wave/:		include/boost/wave/
 libs/wave/ChangeLog:	ChangeLog
 libs/wave/index.html:	index.html
 libs/wave/build/:	build/
-libs/wave/doc/:	doc/
+libs/wave/doc/:		doc/
 libs/wave/samples/:	samples/
-libs/wave/src/:	src/
+libs/wave/src/:		src/
 libs/wave/test/:	test/
-<name>: boost-wave
-<new>:	CMakeLists.txt
-	module.cmake
-	src/CMakeLists.txt
-	test/CMakeLists.txt
-	.ryppl/METADATA
+tools/wave/:		tool/
 
-[src/xpressive]
-
+[xpressive]
 boost/xpressive/:	include/boost/xpressive/
 libs/xpressive/index.html:	index.html
 libs/xpressive/doc/:	doc/
@@ -1584,14 +1032,8 @@ libs/xpressive/example/:	example/
 libs/xpressive/perf/:	perf/
 libs/xpressive/test/:	test/
 libs/xpressive/tools/:	tools/
-<name>: boost-xpressive
-<new>:	CMakeLists.txt
-	module.cmake
-	test/CMakeLists.txt
-	.ryppl/METADATA
 
-[tools/bcp]
-
+[bcp]
 tools/bcp/add_dependent_lib.cpp:	add_dependent_lib.cpp
 tools/bcp/add_path.cpp:	add_path.cpp
 tools/bcp/bcp.hpp:	bcp.hpp
@@ -1612,11 +1054,8 @@ tools/bcp/scan_cvs_path.cpp:	scan_cvs_path.cpp
 tools/bcp/scan_licence.cpp:	scan_licence.cpp
 tools/bcp/doc/:	doc/
 tools/bcp/test/:	test/
-<name>: boost-bcp
-<new>:	.ryppl/METADATA
 
-[tools/boostbook]
-
+[boostbook]
 tools/boostbook/index.html:	index.html
 tools/boostbook/setup_boostbook.py:	setup_boostbook.py
 tools/boostbook/setup_boostbook.sh:	setup_boostbook.sh
@@ -1624,19 +1063,13 @@ tools/boostbook/doc/:	doc/
 tools/boostbook/dtd/:	dtd/
 tools/boostbook/test/:	test/
 tools/boostbook/xsl/:	xsl/
-<name>: boost-boostbook
-<new>:	.ryppl/METADATA
 
-[tools/build]
-
+[build]
 tools/build/boost.css:	boost.css
 tools/build/index.html:	index.html
 tools/build/v2/:	v2/
-<name>: boost-build
-<new>:	.ryppl/METADATA
 
-[tools/inspect]
-
+[inspect]
 tools/inspect/apple_macro_check.cpp:	apple_macro_check.cpp
 tools/inspect/apple_macro_check.hpp:	apple_macro_check.hpp
 tools/inspect/assert_macro_check.cpp:	assert_macro_check.cpp
@@ -1670,36 +1103,17 @@ tools/inspect/unnamed_namespace_check.hpp:	unnamed_namespace_check.hpp
 tools/inspect/wrong_line_ends_test.cpp:	wrong_line_ends_test.cpp
 tools/inspect/build/:	build/
 tools/inspect/doc/:	doc/
-<name>: boost-inspect
-<new>:	.ryppl/METADATA
 
-[tools/litre]
-
+[litre]
 tools/litre/cplusplus.py:	cplusplus.py
 tools/litre/litre.py:	litre.py
 tools/litre/tool.py:	tool.py
-<name>: boost-litre
-<new>:	.ryppl/METADATA
 
-[tools/quickbook]
-
+[quickbook]
 tools/quickbook/index.html:	index.html
 tools/quickbook/Jamfile.v2:	Jamfile.v2
 tools/quickbook/doc/:	doc/
 tools/quickbook/extra/:	extra/
 tools/quickbook/src/:	src/
 tools/quickbook/test/:	test/
-<name>: boost-quickbook
-<new>:	.ryppl/METADATA
 
-[tools/wave]
-
-tools/wave/cpp.cpp:	cpp.cpp
-tools/wave/cpp.hpp:	cpp.hpp
-tools/wave/cpp_config.hpp:	cpp_config.hpp
-tools/wave/cpp_version.hpp:	cpp_version.hpp
-tools/wave/stop_watch.hpp:	stop_watch.hpp
-tools/wave/trace_macro_expansion.hpp:	trace_macro_expansion.hpp
-tools/wave/build/:	build/
-<name>: boost-wave_driver
-<new>:	.ryppl/METADATA

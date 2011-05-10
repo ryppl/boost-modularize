@@ -363,26 +363,12 @@ def update_modules():
             # Add the files we just copied
             run('git', 'add', value)
 
-        # Handle the files that are new to the modularized boost
-        if manifest.has_option(section, '<new>'):
-
-            # add back the files we want to keep
-            new_files = manifest.get(section, '<new>').split('\n')
-            for file in new_files:
-                if new_module:
-                    if verbose:
-                        print '[INFO] Create', file, 'in', dst_module_dir
-                    path = os.path.join(dst_module_dir, file)
-                    if not os.path.isdir(os.path.dirname(path)):
-                        os.makedirs(os.path.dirname(path))
-                    fd = open(path, "w")
-                    fd.write('')
-                    fd.close()
-                    run('git', 'add', file)
-                else:
-                    if verbose:
-                        print '[INFO] Adding back', file, 'in', dst_module_dir
-                    run('git', 'checkout', '-f', 'HEAD', '--', file)
+        # Copy over the files that are new to the modularized boost
+        if os.path.exists('cmake/'+section):
+            print '[INFO] copy cmake/', section, 'to', dst_module_dir
+            #shutil.copytree('cmake/'+section, dst_module_dir)
+        else:
+            print '[WARNING] "cmake/%s" does not exist' % section
 
         # If this library has a patch file specified, apply it.
         if manifest.has_option(section, '<patch>') and not new_module:
