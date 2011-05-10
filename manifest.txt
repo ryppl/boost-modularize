@@ -518,6 +518,7 @@ libs/fusion/test/:	test/
 
 [src/geometry]
 
+boost/geometry.hpp: include/boost/geometry.hpp
 boost/geometry/:	include/boost/geometry/
 libs/geometry/index.html:	index.html
 libs/geometry/doc/:	doc/
@@ -699,8 +700,9 @@ libs/lambda/test/:	test/
 [src/logic]
 
 boost/logic/:	include/boost/logic/
-libs/logic/doc/:	doc/
-libs/logic/test/:	test/
+libs/logic/doc/: doc/
+libs/logic/test/: test/
+libs/logic/index.html: index.html
 <name>: boost-logic
 <new>:	CMakeLists.txt
 	module.cmake
@@ -731,6 +733,15 @@ libs/math/vc71_fix/:	vc71_fix/
 	module.cmake
 	test/CMakeLists.txt
 	.ryppl/METADATA
+
+[src/move]
+
+boost/move/: include/boost/move/
+libs/move/doc/:		doc/
+libs/move/example/:	example/
+libs/move/proj/:	proj/
+libs/move/test/:	test/
+<name>: boost-move
 
 [src/mpi]
 
@@ -863,6 +874,17 @@ libs/parameter/test/:	test/
 	test/CMakeLists.txt
 	.ryppl/METADATA
 
+[src/phoenix]
+
+boost/phoenix.hpp:			include/boost/phoenix.hpp
+boost/phoenix/: 			include/boost/phoenix/
+libs/phoenix/doc/:			doc/
+libs/phoenix/example/:		example/
+libs/phoenix/preprocess/:	preprocess/
+libs/phoenix/test/:			test/
+libs/phoenix/index.html: 	index.html
+<name>: boost-phoenix
+
 [src/polygon]
 
 boost/polygon/:	include/boost/polygon/
@@ -945,11 +967,12 @@ libs/property_tree/test/:	test/
 
 [src/proto]
 
-boost/proto/:	include/boost/proto/
-libs/proto/index.html:	index.html
-libs/proto/doc/:	doc/
+boost/proto/:			include/boost/proto/
+libs/proto/doc/:		doc/
 libs/proto/example/:	example/
-libs/proto/test/:	test/
+libs/proto/preprocess/:	preprocess/
+libs/proto/test/:		test/
+libs/proto/index.html:	index.html
 <name>: boost-proto
 <new>:	CMakeLists.txt
 	module.cmake
@@ -972,16 +995,17 @@ libs/ptr_container/test/:	test/
 
 boost/python.hpp:	include/boost/python.hpp
 boost/python/:	include/boost/python/
-libs/python/index.html:	index.html
+libs/python/build/:		build/
+libs/python/doc/:	doc/
+libs/python/example/: example/
+libs/python/pyste/: pyste/
+libs/python/class.cpp: class.cpp
+libs/python/src/: src/
+libs/python/test/: test/
+libs/python/index.html: 	index.html
 libs/python/release_notes.txt:	release_notes.txt
 libs/python/todo.html:	todo.html
 libs/python/todo.txt:	todo.txt
-libs/python/build/:	build/
-libs/python/doc/:	doc/
-libs/python/example/:	example/
-libs/python/pyste/:	pyste/
-libs/python/src/:	src/
-libs/python/test/:	test/
 <name>: boost-python
 <new>:	CMakeLists.txt
 	module.cmake

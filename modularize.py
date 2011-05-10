@@ -387,7 +387,7 @@ def update_modules():
         # If this library has a patch file specified, apply it.
         if manifest.has_option(section, '<patch>') and not new_module:
 
-            patch = os.path.abspath(manifest.get(section, '<patch>'))
+            patch = os.path.abspath('patches/'+manifest.get(section, '<patch>'))
             if verbose:
                 print '[INFO] Applying patch', patch, 'in', dst_module_dir
             run('git', 'apply', patch)
