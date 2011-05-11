@@ -336,7 +336,6 @@ def update_modules():
         cmake_files_dir = os.path.join('cmake', section)
         if os.path.exists(cmake_files_dir):
             dir_util.copy_tree(cmake_files_dir, dst_module_dir)
-            #run('git', 'add', dstname)
         else:
             print '[WARNING] "cmake/%s" does not exist' % section
 
@@ -369,9 +368,6 @@ def update_modules():
 
             if verbose: print '[INFO] Copied'
 
-            # Add the files we just copied
-            run('git', 'add', value)
-
         # If this library has a patch file specified, apply it.
         if manifest.has_option(section, '<patch>') and not new_module:
 
@@ -388,10 +384,12 @@ def update_modules():
                 file = line[3:].split(' -> ')[0]
                 if verbose:
                     print '[INFO] Adding patched file', file
-                run('git', 'add', file)
 
         if verbose:
             print '[INFO] Committing changes to module at:', dst_module_dir
+
+        # Add all the remaining files
+        run('git', 'add', '.')
 
         # everything looks good, so commit locally
         o = popen('git', 'status', '--porcelain', '--untracked-files=no')
