@@ -22,7 +22,7 @@ if(MSVC)
   add_definitions(/wd4005) # 'BOOST_RANDOM_SOURCE': macro redefinition
 endif(MSVC)
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/boost/*.?pp)
-boost_add_headers(${headers})
+file(GLOB_RECURSE headers include/boost/*.?pp)
+boost_add_headers(${headers} PREFIX "!include!!")
 
 boost_add_library(random NO_SYMBOL src/random_device.cpp)

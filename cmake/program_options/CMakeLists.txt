@@ -23,8 +23,8 @@ if(MSVC)
   add_definitions(/wd4005) # 'BOOST_PROGRAM_OPTIONS_SOURCE': macro redefinition
 endif(MSVC)
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/boost/*.?pp)
-boost_add_headers(${headers})
+file(GLOB_RECURSE headers include/boost/*.?pp)
+boost_add_headers(${headers} PREFIX "!include!!")
 
 boost_add_library(program_options NO_SYMBOL
   src/cmdline

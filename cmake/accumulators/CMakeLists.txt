@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost 1.45 COMPONENTS quickbook test NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_project(Accumulators
@@ -19,8 +19,8 @@ boost_project(Accumulators
     DEV ghostscript
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/boost/*.?pp)
-boost_add_headers(${headers})
+file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.?pp)
+boost_add_headers(${headers} PREFIX "!include!boost/accumulators!")
 
 add_subdirectory(doc)
 add_subdirectory(test)

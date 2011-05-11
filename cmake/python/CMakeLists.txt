@@ -21,8 +21,8 @@ boost_project(Python
     LIB libpython2.7
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/boost/*.?pp)
-boost_add_headers(${headers})
+file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.?pp)
+boost_add_headers(${headers} PREFIX "!include/boost!boost!")
 
 find_package(PythonLibs)
 

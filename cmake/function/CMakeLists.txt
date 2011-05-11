@@ -13,7 +13,7 @@ boost_project(Function
     utility
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/boost/*.?pp)
-boost_add_headers(${headers})
+file(GLOB_RECURSE headers include/boost/*.?pp)
+boost_add_headers(${headers} PREFIX "!include!!")
 
 boost_documentation(doc/function.xml)

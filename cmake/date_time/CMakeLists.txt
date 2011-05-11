@@ -20,8 +20,8 @@ boost_project("Date Time"
     tokenizer
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/boost/*.?pp)
-boost_add_headers(${headers})
+file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.?pp)
+boost_add_headers(${headers} PREFIX "!include/boost!boost!")
 
 add_definitions(-DDATE_TIME_INLINE)
 

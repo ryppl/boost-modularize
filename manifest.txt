@@ -13,12 +13,12 @@ tools/regression/:		<ignore>
 tools/release/:			<ignore>
 
 [accumulators]
-boost/accumulators/:		include/boost/accumulators/
+boost/accumulators/:		include/
 libs/accumulators/:		.
 
 [algorithm]
 boost/algorithm/:		include/boost/algorithm/
-libs/algorithm/:			.
+libs/algorithm/:		.
 
 [any]
 boost/any.hpp:			include/boost/any.hpp

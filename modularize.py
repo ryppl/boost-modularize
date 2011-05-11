@@ -323,7 +323,7 @@ def update_modules():
                 'git@github.com:boost-lib/%s.git' % base)
             run('git', 'config', 'branch.master.remote', 'origin')
             run('git', 'config', 'branch.master.merge', 'refs/heads/master')
-            run('git', 'pull', 'origin', 'master')
+            #run('git', 'pull', 'origin', 'master')
             run('git', 'submodule', 'add', 'git://github.com/boost-lib/%s.git' % base,
                 section, cwd=dst_repo_dir)
             run('git', 'commit', '-a', '-m', 'Added submodule %s' % base, cwd=dst_repo_dir)

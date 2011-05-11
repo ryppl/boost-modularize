@@ -13,8 +13,8 @@ boost_project(Config
     "Helps Boost library developers adapt to compiler idiosyncrasies; not intended for library users."
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/boost/*.?pp)
-boost_add_headers(${headers})
+file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.?pp)
+boost_add_headers(${headers} PREFIX "!include/boost!boost!")
 
 #boost_documentation(doc/config.qbk
 #  doc/configuring_boost.qbk
