@@ -1,4 +1,5 @@
 import os, sys, getopt, pickle, ConfigParser, shutil, time, subprocess, string
+from distutils import dir_util
 
 # This are global constants. Do not change.
 existing_cache_pkl = 'existing.cache'
@@ -331,6 +332,14 @@ def update_modules():
         # .git directory
         clean_dir(dst_module_dir)
 
+        # Copy over the files that are new to the modularized boost
+        cmake_files_dir = os.path.join('cmake', section)
+        if os.path.exists(cmake_files_dir):
+            dir_util.copy_tree(cmake_files_dir, dst_module_dir)
+            #run('git', 'add', dstname)
+        else:
+            print '[WARNING] "cmake/%s" does not exist' % section
+
         for key, value in manifest.items(section):
             # We'll handle these special keys later
             if key[0] == '<':
@@ -349,8 +358,8 @@ def update_modules():
                 print '[INFO]     to   :', dst_path
 
             # copy the files from src to target
-            if key[-1] == '/':
-                shutil.copytree(src_path, dst_path)
+            if os.path.isdir(src_path):
+                dir_util.copy_tree(src_path, dst_path)
             else:
                 if not os.path.isdir(os.path.dirname(dst_path)):
                     if verbose:
@@ -362,13 +371,6 @@ def update_modules():
 
             # Add the files we just copied
             run('git', 'add', value)
-
-        # Copy over the files that are new to the modularized boost
-        if os.path.exists('cmake/'+section):
-            print '[INFO] copy cmake/', section, 'to', dst_module_dir
-            #shutil.copytree('cmake/'+section, dst_module_dir)
-        else:
-            print '[WARNING] "cmake/%s" does not exist' % section
 
         # If this library has a patch file specified, apply it.
         if manifest.has_option(section, '<patch>') and not new_module:
