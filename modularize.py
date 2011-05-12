@@ -403,6 +403,10 @@ def push_modules():
     # commit them and push the new boost supermodule.
     print 'Pushing all modified submodues...'
 
+    run('git', 'submodule', '--quiet', 'foreach', 
+        'git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/$name'
+        cwd=dst_repo_dir)
+
     # Push the changes in each submodule to the remote repo
     run('git', 'submodule', 'foreach', 'git', 'push', 'origin', 'master',
         cwd=dst_repo_dir)
