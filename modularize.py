@@ -404,7 +404,7 @@ def push_modules():
     print 'Pushing all modified submodues...'
 
     run('git', 'submodule', '--quiet', 'foreach', 
-        'git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/$name'
+        'git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/$name',
         cwd=dst_repo_dir)
 
     # Push the changes in each submodule to the remote repo
