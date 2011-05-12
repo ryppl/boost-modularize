@@ -431,7 +431,7 @@ def push_modules():
 
     # Push this change up to the origin
     print 'Pushing the boost supermodule...'
-    run('git', 'push', 'origin', 'master', cwd=dst_repo_dir)
+    run('git', 'push', 'git@github.com:boost-lib/boost-supermodule.git', 'master', cwd=dst_repo_dir)
 
     print 'Done'
 
