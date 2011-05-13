@@ -334,11 +334,11 @@ def update_modules():
         clean_dir(dst_module_dir)
 
         # Copy over the files that are new to the modularized boost
-        cmake_files_dir = os.path.join('cmake', section)
-        if os.path.exists(cmake_files_dir):
-            dir_util.copy_tree(cmake_files_dir, dst_module_dir)
+        new_files_dir = os.path.join('new', section)
+        if os.path.exists(new_files_dir):
+            dir_util.copy_tree(new_files_dir, dst_module_dir)
         else:
-            print '[WARNING] "cmake/%s" does not exist' % section
+            print '[WARNING] "new/%s" does not exist' % section
 
         for key, value in manifest.items(section):
             # We'll handle these special keys later
@@ -397,6 +397,26 @@ def update_modules():
         lines = [l for l in o.split('\n') if not l == '']
         if len(lines):
             run('git', 'commit', '-m', 'latest from svn')
+
+    # copy new files
+    dir_util.copy_tree('new/toolchains', os.path.join(dst_repo_dir, 'toolchains'))
+    for new_file in ['BoostCPack.cmake', 'build.bat', 'build.cmake', 'LICENSE_1_0.txt', 'README.txt']:
+        shutil.copy2(os.path.join('new', new_file), dst_repo_dir)
+
+    # configure CMakeLists.txt
+    fin = open(os.path.join('new', 'CMakeLists.txt'))
+    fout = open(os.path.join(dst_repo_dir, 'CMakeLists.txt'), "wt")
+    for line in fin:
+        if line == '@BOOST_MODULE_ADD_SUBDIRECTORIES@\n':
+            for section in sections:
+                fout.write('add_subdirectory(%s)\n' % section)
+        else:
+            fout.write(line)
+    fin.close()
+    fout.close()
+
+    # Add everything
+    run('git', 'add', '.', cwd=dst_repo_dir)
 
 def push_modules():
     # We now want to 'git add' all the modified submodules to the supermodule,
