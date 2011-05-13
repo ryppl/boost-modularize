@@ -84,6 +84,10 @@ set(release_dir "${BUILDDIR}/release")
 set(package_dir "${BUILDDIR}/package")
 
 
+file(MAKE_DIRECTORY "${debug_dir}")
+file(MAKE_DIRECTORY "${release_dir}")
+
+
 if(NOT DEFINED BUILDSTEP OR BUILDSTEP STREQUAL "configure")
   execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
     "${toolchain_param}" -DCMAKE_BUILD_TYPE=Debug 

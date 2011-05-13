@@ -63,6 +63,7 @@ set(BOOST_PROJECTS_ALL)
 
 ##########################################################################
 @BOOST_MODULE_ADD_SUBDIRECTORIES@
+add_subdirectory(tools/cmake)
 ##########################################################################
 
 list(SORT BOOST_PROJECTS_ALL)

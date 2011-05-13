@@ -30,6 +30,7 @@ boost_add_executable(quickbook
     src/actions_class.cpp
     src/utils.cpp
     src/input_path.cpp
+    src/values.cpp
     src/post_process.cpp
     src/collector.cpp
     src/template_stack.cpp
