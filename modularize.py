@@ -310,7 +310,7 @@ def update_modules():
             lines = [l for l in o.split('\n') if not l == '']
             if len(lines):
                 run('git', 'checkout', 'master')
-                run('git', 'pull', 'origin', 'master')
+                #run('git', 'pull', 'origin', 'master')
                 run('git', 'rm', '--quiet', '-r', '.') # remove everything
 
                 new_module = False
@@ -427,6 +427,10 @@ def push_modules():
     # We now want to 'git add' all the modified submodules to the supermodule,
     # commit them and push the new boost supermodule.
     print 'Pushing all modified submodues...'
+
+    # Make sure the right url is set for origin of the cmake module
+    run('git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/cmake.git',
+        cwd=os.path.join(dst_repo_dir, 'tools', 'cmake')
 
     # Push the changes in each submodule to the remote repo
     run('git', 'submodule', 'foreach', 'git', 'push', 'origin', 'master',
