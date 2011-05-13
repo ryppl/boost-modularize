@@ -329,6 +329,10 @@ def update_modules():
             run('git', 'commit', '-a', '-m', 'Added submodule %s' % base, cwd=dst_repo_dir)
             new_module = True
 
+        # Make sure the right url is set for origin (buildbot might have dropped it)
+        run('git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/%s.git'
+            % os.path.basename(section))
+
         # Make sure we've really removed everything (leaving behind the top-level)
         # .git directory
         clean_dir(dst_module_dir)
@@ -422,10 +426,6 @@ def push_modules():
     # We now want to 'git add' all the modified submodules to the supermodule,
     # commit them and push the new boost supermodule.
     print 'Pushing all modified submodues...'
-
-    run('git', 'submodule', '--quiet', 'foreach', 
-        'git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/$name',
-        cwd=dst_repo_dir)
 
     # Push the changes in each submodule to the remote repo
     run('git', 'submodule', 'foreach', 'git', 'push', 'origin', 'master',
