@@ -125,8 +125,9 @@ boost/date_time/:		include/boost/date_time/
 libs/date_time/:			.
 
 [libs/detail]
-boost/detail/:			include/boost/detail/
-libs/detail/:			.
+boost/detail/:				include/boost/detail/
+libs/detail/utf8_codecvt_facet.cpp:	include/boost/detail/utf8_codecvt_facet_impl.hpp
+libs/detail/test/:			test/
 
 [libs/disjoint_sets]
 boost/pending/disjoint_sets.hpp:	include/boost/pending/disjoint_sets.hpp
