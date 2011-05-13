@@ -310,6 +310,7 @@ def update_modules():
             lines = [l for l in o.split('\n') if not l == '']
             if len(lines):
                 run('git', 'checkout', 'master')
+                run('git', 'pull', 'origin', 'master')
                 run('git', 'rm', '--quiet', '-r', '.') # remove everything
 
                 new_module = False
