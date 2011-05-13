@@ -17,12 +17,12 @@ project(Boost)
 
 set(BOOST_CONFIG_VERSION "1.46.1")
 
-file(WRITE "${PROJECT_BINARY_DIR}/boost_config_version.cmake"
+file(WRITE "${PROJECT_BINARY_DIR}/boost-config-version.cmake"
   "set(PACKAGE_VERSION \"${BOOST_CONFIG_VERSION}\")\n"
   "set(PACKAGE_VERSION_EXACT TRUE)\n"
   )
 
-file(WRITE "${Boost_BINARY_DIR}/boost_config.cmake"
+file(WRITE "${Boost_BINARY_DIR}/boost-config.cmake"
   "set(Boost_FOUND TRUE)\n"
   "set(Boost_INCLUDE_DIRS \"${Boost_BINARY_DIR}/include\")\n"
   "set(Boost_LIBRARY_DIRS \"${Boost_BINARY_DIR}/lib\")\n"
@@ -33,7 +33,7 @@ file(WRITE "${Boost_BINARY_DIR}/boost_config.cmake"
   "set(Boost_DEV_FILE \"${Boost_SOURCE_DIR}/tools/cmake/modules/UseBoostDev.cmake\")\n"
   )
 
-set(Boost_DIR ${Boost_BINARY_DIR} CACHE PATH "")
+set(Boost_DIR "${Boost_BINARY_DIR}")
 find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
@@ -171,11 +171,5 @@ endforeach(project)
 list(SORT CPACK_COMPONENTS_ALL)
 list(REMOVE_DUPLICATES CPACK_COMPONENTS_ALL)
 
-list(INSERT BOOST_FOOTER 0
-  "${PROJECT_SOURCE_DIR}/BoostCPack.cmake"
-  CPack
-  )
-
-foreach(file ${BOOST_FOOTER})
-  include("${file}")
-endforeach(file)
+include("${Boost_SOURCE_DIR}/BoostCPack.cmake")
+include(CPack)
