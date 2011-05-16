@@ -435,8 +435,8 @@ def push_modules():
         cwd=cmake_dir)
 
     # Pull Boost.CMake
-    run('git', 'checkout', 'origin/master', cwd=cmake_dir)
-    run('git', 'branch', '-f', 'master', cwd=cmake_dir)
+    run('git', 'checkout', 'master', cwd=cmake_dir)
+    run('git', 'pull', 'origin', 'master', cwd=cmake_dir)
 
     # Push the changes in each submodule to the remote repo
     run('git', 'submodule', 'foreach', 'git', 'push', 'origin', 'master',
