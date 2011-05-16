@@ -303,6 +303,7 @@ def update_modules():
         global dst_module_dir
         dst_module_dir = os.path.normpath(os.path.join(dst_repo_dir, section))
         print 'Processing module at:', dst_module_dir
+        sys.stdout.flush()
 
         if os.path.isdir(dst_module_dir):
             # make sure we're on the master branch

@@ -15,7 +15,7 @@ project(Boost)
 # Config Information                                                     #
 ##########################################################################
 
-set(BOOST_CONFIG_VERSION "1.46.1")
+set(BOOST_CONFIG_VERSION "1.47")
 
 file(WRITE "${PROJECT_BINARY_DIR}/boost-config-version.cmake"
   "set(PACKAGE_VERSION \"${BOOST_CONFIG_VERSION}\")\n"
