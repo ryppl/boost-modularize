@@ -433,6 +433,9 @@ def push_modules():
     run('git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/cmake.git',
         cwd=os.path.join(dst_repo_dir, 'tools', 'cmake'))
 
+    # Pull Boost.CMake
+    run('git', 'pull', 'origin', 'master', cwd=os.path.join(dst_repo_dir, 'tools', 'cmake'))
+
     # Push the changes in each submodule to the remote repo
     run('git', 'submodule', 'foreach', 'git', 'push', 'origin', 'master',
         cwd=dst_repo_dir)
