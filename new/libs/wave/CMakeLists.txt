@@ -20,6 +20,13 @@ boost_project(Wave
     intrusive
   )
 
+if(MSVC)
+  add_definitions(
+    -D_CRT_SECURE_NO_WARNINGS
+    -D_SCL_SECURE_NO_WARNINGS
+    )
+endif(MSVC)
+
 file(GLOB_RECURSE headers include/boost/*.?pp)
 boost_add_headers(${headers} PREFIX "!include!!")
 

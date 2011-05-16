@@ -1,4 +1,5 @@
 [<ignore>]
+boost/version.hpp:		<ignore>
 libs/compose/index.htm:		<ignore>
 libs/compose/index.html:	<ignore>
 libs/index.html:		<ignore>
@@ -92,7 +93,6 @@ boost/limits.hpp:			include/boost/limits.hpp
 boost/memory_order.hpp:			include/boost/memory_order.hpp
 boost/non_type.hpp:			include/boost/non_type.hpp
 boost/type.hpp:				include/boost/type.hpp
-boost/version.hpp:			include/boost/version.hpp
 boost/visit_each.hpp:			include/boost/visit_each.hpp
 boost/pending/bucket_sorter.hpp:	include/boost/pending/bucket_sorter.hpp
 boost/pending/container_traits.hpp:	include/boost/pending/container_traits.hpp
