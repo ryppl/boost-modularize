@@ -37,6 +37,8 @@ set(Boost_DIR "${Boost_BINARY_DIR}")
 find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
+option(BOOST_DEBIAN_PACKAGES "Create debian packages" OFF)
+
 ##########################################################################
 # Building and Testing                                                   #
 ##########################################################################
@@ -174,3 +176,7 @@ list(REMOVE_DUPLICATES CPACK_COMPONENTS_ALL)
 
 include("${Boost_SOURCE_DIR}/BoostCPack.cmake")
 include(CPack)
+
+if(BOOST_DEBIAN_PACKAGES)
+  include(BoostDebian)
+endif(BOOST_DEBIAN_PACKAGES)
