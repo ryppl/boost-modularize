@@ -18,8 +18,8 @@
 
 boost_doxygen(accumulators TAG
   INPUT
-    ../boost/accumulators/framework/depends_on.hpp
-    ../boost/accumulators/framework/extractor.hpp
+    ../include/framework/depends_on.hpp
+    ../include/framework/extractor.hpp
   PARAMETERS
     "MACRO_EXPANSION = YES"
     "EXPAND_ONLY_PREDEF = YES"
@@ -29,10 +29,10 @@ boost_doxygen(accumulators TAG
   )
 
 file(GLOB accdoc_headers
-  "../boost/accumulators/accumulators*.hpp"
-  "../boost/accumulators/framework/*.hpp"
-  "../boost/accumulators/framework/parameters/*.hpp"
-  "../boost/accumulators/framework/accumulators/*.hpp"
+  "../include/accumulators*.hpp"
+  "../include/framework/*.hpp"
+  "../include/framework/parameters/*.hpp"
+  "../include/framework/accumulators/*.hpp"
   )
 
 boost_add_reference(accdoc ${accdoc_headers}
@@ -43,9 +43,9 @@ boost_add_reference(accdoc ${accdoc_headers}
   )
 
 file(GLOB statsdoc_headers
-  "../boost/accumulators/statistics*.hpp"
-  "../boost/accumulators/statistics/*.hpp"
-  "../boost/accumulators/statistics/variates/*.hpp"
+  "../include/statistics*.hpp"
+  "../include/statistics/*.hpp"
+  "../include/statistics/variates/*.hpp"
   )
 
 # Generate the HTML form of the stats documentation, as this
@@ -83,8 +83,8 @@ add_custom_command(OUTPUT formulas.copied
   )
 
 file(GLOB opdoc_headers
-  "../boost/accumulators/numeric/functional.hpp"
-  "../boost/accumulators/numeric/functional/*.hpp"
+  "../include/numeric/functional.hpp"
+  "../include/numeric/functional/*.hpp"
   )
 
 boost_add_reference(opdoc ${opdoc_headers}

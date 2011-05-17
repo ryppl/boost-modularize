@@ -22,8 +22,9 @@ boost_project(Serialization
 if(MSVC)
   add_definitions(
     /Gy
-    /wd4005 # 'BOOST_SERIALIZATION_SOURCE': macro redefinition
     /wd4244 # converting 'std::streamsize' in 'size_t'
+    /D_CRT_SECURE_NO_WARNINGS
+    /D_SCL_SECURE_NO_WARNINGS
     )
 endif(MSVC)
 
