@@ -3,7 +3,23 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    bind
+    config
+    conversion
+    core
+    exception
+    graph
+    mpi
+    mpl
+    property_map
+    random
+    serialization
+    test
+    utility
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project("Graph Parallel"

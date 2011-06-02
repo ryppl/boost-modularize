@@ -3,7 +3,31 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 COMPONENTS quickbook test NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    array
+    bind
+    circular_buffer
+    concept_check
+    config
+    core
+    exception
+    foreach
+    fusion
+    iterator
+    mpl
+    numeric
+    parameter
+    preprocessor
+    random
+    range
+    test
+    tuple
+    type_traits
+    typeof
+    utility
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project(Accumulators

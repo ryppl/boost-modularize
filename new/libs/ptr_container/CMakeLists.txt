@@ -3,7 +3,30 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    array
+    assign
+    bind
+    circular_buffer
+    config
+    conversion
+    functional
+    iterator
+    lambda
+    mpl
+    range
+    serialization
+    smart_ptr
+    static_assert
+    test
+    timer
+    tuple
+    type_traits
+    unordered
+    utility
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project("Ptr Container"

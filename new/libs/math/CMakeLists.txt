@@ -3,7 +3,38 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    algorithm
+    array
+    bind
+    concept_check
+    config
+    conversion
+    core
+    detail
+    exception
+    format
+    function
+    fusion
+    integer
+    mpl
+    numeric
+    random
+    regex
+    serialization
+    smart_ptr
+    spirit
+    static_assert
+    test
+    timer
+    tr1
+    tuple
+    type_traits
+    typeof
+    utility
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project(Math

@@ -3,7 +3,29 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    array
+    concept_check
+    config
+    core
+    detail
+    exception
+    functional
+    integer
+    iterator
+    mpl
+    program_options
+    smart_ptr
+    static_assert
+    test
+    thread
+    timer
+    type_traits
+    utility
+    xpressive
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project(Regex

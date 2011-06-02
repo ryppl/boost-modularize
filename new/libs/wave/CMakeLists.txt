@@ -3,7 +3,33 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    any
+    concept_check
+    config
+    conversion
+    core
+    detail
+    exception
+    filesystem
+    integer
+    iterator
+    mpl
+    multi_index
+    pool
+    preprocessor
+    program_options
+    serialization
+    smart_ptr
+    spirit
+    static_assert
+    timer
+    type_traits
+    utility
+    xpressive
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project(Wave

@@ -3,7 +3,54 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    algorithm
+    any
+    array
+    assign
+    bind
+    concept_check
+    config
+    conversion
+    core
+    detail
+    disjoint_sets
+    dynamic_bitset
+    exception
+    filesystem
+    foreach
+    function
+    functional
+    integer
+    iterator
+    math
+    mpi
+    mpl
+    multi_index
+    optional
+    parameter
+    property_map
+    property_tree
+    random
+    range
+    regex
+    serialization
+    smart_ptr
+    spirit
+    static_assert
+    test
+    timer
+    tokenizer
+    tuple
+    type_traits
+    typeof
+    unordered
+    utility
+    variant
+    xpressive
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project(Graph

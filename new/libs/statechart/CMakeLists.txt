@@ -3,7 +3,23 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost 1.45 NO_MODULE)
+find_package(Boost
+  COMPONENTS
+    bind
+    config
+    conversion
+    detail
+    function
+    mpl
+    pool
+    smart_ptr
+    static_assert
+    test
+    thread
+    type_traits
+    utility
+  NO_MODULE
+  )
 include("${Boost_DEV_FILE}")
 
 boost_project(Statechart
