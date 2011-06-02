@@ -262,6 +262,7 @@ libs/move/:			.
 boost/mpi.hpp:			include/boost/mpi.hpp
 boost/mpi/:			include/boost/mpi/
 libs/mpi/:			.
+<patch>:			mpi.patch
 
 [libs/mpl]
 boost/mpl/:			include/boost/mpl/
