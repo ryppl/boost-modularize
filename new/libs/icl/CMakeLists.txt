@@ -1,0 +1,26 @@
+# Distributed under the Boost Software License, Version 1.0.
+# See http://www.boost.org/LICENSE_1_0.txt
+
+cmake_minimum_required(VERSION 2.8)
+
+find_package(Boost
+  COMPONENTS
+    bind
+    chrono
+    concept_check
+    config
+    date_time
+    detail
+    integer
+    interprocess
+    iterator
+    mpl
+    rational
+    static_assert
+    test
+    type_traits
+    utility
+  NO_MODULE
+  )
+include("${Boost_DEV_FILE}")
+

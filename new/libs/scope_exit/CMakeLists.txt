@@ -1,2 +1,18 @@
+# Distributed under the Boost Software License, Version 1.0.
+# See http://www.boost.org/LICENSE_1_0.txt
 
-message(STATUS "TODO: scope_exit needs boost_module info")
+cmake_minimum_required(VERSION 2.8)
+
+find_package(Boost
+  COMPONENTS
+    config
+    detail
+    foreach
+    preprocessor
+    rational
+    test
+    typeof
+  NO_MODULE
+  )
+include("${Boost_DEV_FILE}")
+
