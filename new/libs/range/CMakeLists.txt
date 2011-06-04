@@ -8,19 +8,16 @@ find_package(Boost
     algorithm
     array
     assign
-    bind
     concept_check
     config
     conversion
     detail
-    foreach
     iterator
     mpl
     preprocessor
     regex
     smart_ptr
     static_assert
-    test
     tuple
     type_traits
     utility

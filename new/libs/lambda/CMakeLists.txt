@@ -5,16 +5,12 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    any
     bind
     config
     core
     detail
-    function
     mpl
     preprocessor
-    smart_ptr
-    test
     tuple
     type_traits
     utility

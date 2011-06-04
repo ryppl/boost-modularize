@@ -10,7 +10,6 @@ find_package(Boost
     iterator
     mpl
     range
-    test
     type_traits
     utility
   NO_MODULE

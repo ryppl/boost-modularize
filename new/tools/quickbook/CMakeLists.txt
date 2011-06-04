@@ -7,11 +7,9 @@ find_package(Boost
   COMPONENTS
     algorithm
     bind
-    concept_check
     config
     conversion
     core
-    detail
     filesystem
     foreach
     iostreams

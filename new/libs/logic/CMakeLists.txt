@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost COMPONENTS config detail test utility NO_MODULE)
+find_package(Boost COMPONENTS config detail utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_project(Logic

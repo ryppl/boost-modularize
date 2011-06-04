@@ -22,7 +22,6 @@ find_package(Boost
     numeric
     random
     regex
-    serialization
     smart_ptr
     spirit
     static_assert
@@ -31,7 +30,6 @@ find_package(Boost
     tr1
     tuple
     type_traits
-    typeof
     utility
   NO_MODULE
   )

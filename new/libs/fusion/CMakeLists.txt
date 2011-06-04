@@ -5,21 +5,13 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    any
-    array
     config
-    conversion
-    core
     detail
     function_types
-    functional
-    lambda
     mpl
     preprocessor
     smart_ptr
     static_assert
-    timer
-    tr1
     tuple
     type_traits
     utility

@@ -12,7 +12,6 @@ find_package(Boost
     mpl
     preprocessor
     static_assert
-    test
     type_traits
     utility
   NO_MODULE

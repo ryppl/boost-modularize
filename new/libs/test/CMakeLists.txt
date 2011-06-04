@@ -11,7 +11,6 @@ find_package(Boost
     core
     detail
     exception
-    functional
     io
     iterator
     mpl
@@ -20,7 +19,6 @@ find_package(Boost
     preprocessor
     smart_ptr
     static_assert
-    thread
     timer
     type_traits
     utility

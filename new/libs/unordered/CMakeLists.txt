@@ -6,7 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     algorithm
-    concept_check
     config
     core
     detail

@@ -6,22 +6,18 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     array
-    bind
     circular_buffer
     concept_check
     config
     core
     exception
-    foreach
     fusion
     iterator
     mpl
     numeric
     parameter
     preprocessor
-    random
     range
-    test
     tuple
     type_traits
     typeof

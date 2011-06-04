@@ -6,7 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     any
-    array
     bind
     config
     core
@@ -19,11 +18,7 @@ find_package(Boost
     optional
     parameter
     preprocessor
-    signals
     smart_ptr
-    test
-    thread
-    timer
     type_traits
     utility
     variant

@@ -5,21 +5,15 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    array
-    bind
     config
     detail
-    functional
     interprocess
     mpl
     multi_index
     parameter
     preprocessor
-    tokenizer
-    tuple
     type_traits
     utility
-    variant
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")

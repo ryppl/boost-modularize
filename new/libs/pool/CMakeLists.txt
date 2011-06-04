@@ -9,9 +9,7 @@ find_package(Boost
     core
     detail
     exception
-    serialization
     static_assert
-    test
     type_traits
   NO_MODULE
   )

@@ -11,10 +11,8 @@ find_package(Boost
     detail
     function
     mpl
-    pool
     smart_ptr
     static_assert
-    test
     thread
     type_traits
     utility

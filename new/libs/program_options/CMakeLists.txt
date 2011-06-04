@@ -14,11 +14,8 @@ find_package(Boost
     exception
     function
     iterator
-    preprocessor
-    regex
     smart_ptr
     static_assert
-    timer
     tokenizer
     type_traits
     utility

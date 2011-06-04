@@ -10,11 +10,8 @@ find_package(Boost
     detail
     exception
     integer
-    lambda
     mpl
     preprocessor
-    static_assert
-    test
     type_traits
     typeof
     utility

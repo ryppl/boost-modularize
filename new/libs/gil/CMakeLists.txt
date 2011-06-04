@@ -8,10 +8,8 @@ find_package(Boost
     bind
     concept_check
     config
-    crc
     integer
     iterator
-    lambda
     mpl
     preprocessor
     smart_ptr

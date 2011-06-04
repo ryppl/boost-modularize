@@ -8,11 +8,8 @@ find_package(Boost
     config
     core
     date_time
-    detail
     functional
     integer
-    interprocess
-    iterator
     move
     smart_ptr
     static_assert

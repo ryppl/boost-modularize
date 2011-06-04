@@ -5,20 +5,12 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    bind
     config
-    conversion
     core
     detail
-    function
-    fusion
     mpl
     preprocessor
-    static_assert
-    timer
-    tokenizer
     type_traits
-    utility
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")

@@ -7,21 +7,14 @@ find_package(Boost
   COMPONENTS
     algorithm
     config
-    conversion
     core
-    filesystem
-    function
     io
     lambda
     math
     mpl
-    numeric
     preprocessor
-    regex
     serialization
     static_assert
-    test
-    timer
     type_traits
     typeof
     utility

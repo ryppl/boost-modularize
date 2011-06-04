@@ -5,12 +5,9 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    bind
     config
     detail
-    function
     smart_ptr
-    thread
     tuple
     units
     utility

@@ -5,19 +5,15 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    bind
-    chrono
     concept_check
     config
     date_time
     detail
-    integer
     interprocess
     iterator
     mpl
     rational
     static_assert
-    test
     type_traits
     utility
   NO_MODULE

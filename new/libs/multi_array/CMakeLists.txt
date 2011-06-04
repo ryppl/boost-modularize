@@ -13,7 +13,6 @@ find_package(Boost
     iterator
     mpl
     static_assert
-    test
     type_traits
     utility
   NO_MODULE

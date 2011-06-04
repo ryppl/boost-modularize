@@ -8,7 +8,6 @@ find_package(Boost
     array
     bind
     config
-    conversion
     core
     date_time
     detail
@@ -16,16 +15,10 @@ find_package(Boost
     function
     integer
     iterator
-    lambda
-    logic
     preprocessor
     regex
-    serialization
     smart_ptr
     system
-    test
-    thread
-    tuple
     type_traits
     utility
   NO_MODULE

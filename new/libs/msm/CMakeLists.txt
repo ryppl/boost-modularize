@@ -19,7 +19,6 @@ find_package(Boost
     serialization
     smart_ptr
     statechart
-    test
     timer
     tuple
     type_traits

@@ -5,29 +5,20 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    assign
-    bind
     concept_check
     config
     exception
-    foreach
     functional
     iterator
     lambda
     mpl
     multi_index
-    optional
     preprocessor
     property_map
-    range
     serialization
     static_assert
-    test
-    tokenizer
     type_traits
-    typeof
     utility
-    xpressive
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")

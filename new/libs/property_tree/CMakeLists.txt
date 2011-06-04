@@ -8,7 +8,6 @@ find_package(Boost
     any
     config
     core
-    detail
     exception
     foreach
     format
@@ -16,12 +15,10 @@ find_package(Boost
     mpl
     multi_index
     optional
-    range
     serialization
     smart_ptr
     spirit
     static_assert
-    test
     type_traits
     utility
   NO_MODULE

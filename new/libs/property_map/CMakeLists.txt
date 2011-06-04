@@ -21,7 +21,6 @@ find_package(Boost
     optional
     serialization
     smart_ptr
-    test
     type_traits
     utility
   NO_MODULE

@@ -6,12 +6,10 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     array
-    compatibility
     config
     core
     detail
     exception
-    filesystem
     function
     functional
     integer

@@ -7,11 +7,9 @@ find_package(Boost
   COMPONENTS
     bind
     config
-    conversion
     core
     detail
     exception
-    filesystem
     function
     integer
     mpl
@@ -21,7 +19,6 @@ find_package(Boost
     regex
     smart_ptr
     static_assert
-    test
     type_traits
     utility
   NO_MODULE

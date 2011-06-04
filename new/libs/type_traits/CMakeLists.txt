@@ -7,7 +7,6 @@ find_package(Boost
   COMPONENTS
     config
     detail
-    function
     mpl
     preprocessor
     static_assert

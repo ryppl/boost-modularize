@@ -9,7 +9,6 @@ find_package(Boost
     conversion
     core
     exception
-    foreach
     function
     graph
     integer
@@ -18,11 +17,9 @@ find_package(Boost
     optional
     property_map
     python
-    random
     serialization
     smart_ptr
     static_assert
-    test
     type_traits
     utility
   NO_MODULE

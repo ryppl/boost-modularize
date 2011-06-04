@@ -9,10 +9,8 @@ find_package(Boost
     core
     detail
     exception
-    io
     optional
     smart_ptr
-    test
     timer
     utility
   NO_MODULE

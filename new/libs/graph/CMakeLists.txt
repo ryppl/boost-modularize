@@ -8,7 +8,6 @@ find_package(Boost
     algorithm
     any
     array
-    assign
     bind
     concept_check
     config
@@ -40,8 +39,6 @@ find_package(Boost
     spirit
     static_assert
     test
-    timer
-    tokenizer
     tuple
     type_traits
     typeof

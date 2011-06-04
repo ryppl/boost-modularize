@@ -7,22 +7,18 @@ find_package(Boost
   COMPONENTS
     array
     bind
-    concept_check
     config
     detail
     function
     functional
     fusion
-    integer
     iterator
     math
     mpl
-    program_options
     random
     regex
     smart_ptr
     static_assert
-    test
     tuple
     type_traits
     unordered

@@ -13,21 +13,17 @@ find_package(Boost
     config
     conversion
     core
-    date_time
     detail
-    dynamic_bitset
     exception
     foreach
     format
     function
     function_types
-    functional
     fusion
     integer
     io
     iostreams
     iterator
-    lambda
     math
     mpl
     optional
@@ -35,7 +31,6 @@ find_package(Boost
     pool
     preprocessor
     proto
-    random
     range
     regex
     serialization
@@ -43,7 +38,6 @@ find_package(Boost
     static_assert
     thread
     timer
-    tuple
     type_traits
     typeof
     unordered

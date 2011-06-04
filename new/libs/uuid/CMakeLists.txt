@@ -6,10 +6,7 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     config
-    conversion
-    detail
     exception
-    functional
     integer
     io
     iterator
@@ -17,7 +14,6 @@ find_package(Boost
     serialization
     smart_ptr
     static_assert
-    test
     type_traits
     utility
   NO_MODULE

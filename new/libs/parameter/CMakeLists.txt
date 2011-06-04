@@ -5,18 +5,13 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    bind
     config
     core
     detail
-    graph
     mpl
     optional
     preprocessor
     python
-    static_assert
-    timer
-    tuple
     type_traits
     utility
   NO_MODULE

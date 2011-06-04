@@ -11,17 +11,12 @@ find_package(Boost
     detail
     exception
     functional
-    interprocess
     iterator
     math
     mpl
     preprocessor
-    random
     serialization
-    smart_ptr
     static_assert
-    test
-    tokenizer
     tuple
     type_traits
     utility

@@ -3,16 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    config
-    core
-    integer
-    random
-    test
-    timer
-  NO_MODULE
-  )
+find_package(Boost COMPONENTS config core integer NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_project(CRC

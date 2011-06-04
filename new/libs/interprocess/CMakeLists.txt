@@ -6,21 +6,17 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     config
-    conversion
     core
     date_time
     detail
-    functional
     integer
     intrusive
     math
     move
     mpl
-    multi_index
     preprocessor
     smart_ptr
     static_assert
-    thread
     type_traits
     unordered
     utility

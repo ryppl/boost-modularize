@@ -8,7 +8,6 @@ find_package(Boost
     algorithm
     array
     assign
-    bind
     concept_check
     config
     conversion
@@ -17,18 +16,15 @@ find_package(Boost
     foreach
     function_types
     fusion
-    graph
     integer
     iterator
     math
     mpl
     msm
     numeric
-    optional
     polygon
     program_options
     proto
-    random
     range
     smart_ptr
     static_assert

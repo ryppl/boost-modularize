@@ -16,3 +16,27 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
+boost_project(bcp TOOL
+  DEPENDS
+    filesystem
+    regex
+  )
+
+boost_add_executable(bcp
+  SOURCES
+    add_dependent_lib.cpp
+    add_path.cpp
+    bcp_imp.cpp
+    copy_path.cpp
+    file_types.cpp
+    fileview.cpp
+    main.cpp
+    path_operations.cpp
+    scan_cvs_path.cpp 
+    licence_info.cpp
+    scan_licence.cpp
+    output_licence_info.cpp
+  LINK_BOOST_LIBRARIES
+    filesystem
+    regex
+  )

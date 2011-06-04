@@ -5,7 +5,6 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    array
     concept_check
     config
     core
@@ -15,11 +14,9 @@ find_package(Boost
     integer
     iterator
     mpl
-    program_options
     smart_ptr
     static_assert
     test
-    thread
     timer
     type_traits
     utility

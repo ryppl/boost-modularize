@@ -5,13 +5,10 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    bind
     config
     core
     detail
     mpl
-    test
-    tuple
     type_traits
     utility
   NO_MODULE

@@ -6,13 +6,11 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     config
-    detail
     integer
     mpl
     rational
     static_assert
     type_traits
-    typeof
     utility
   NO_MODULE
   )

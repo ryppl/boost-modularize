@@ -5,7 +5,6 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost
   COMPONENTS
-    bind
     concept_check
     config
     conversion
@@ -15,7 +14,6 @@ find_package(Boost
     mpl
     smart_ptr
     static_assert
-    test
     tuple
     type_traits
     utility
