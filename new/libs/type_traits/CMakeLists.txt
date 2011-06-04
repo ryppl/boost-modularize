@@ -10,8 +10,6 @@ find_package(Boost
     mpl
     preprocessor
     static_assert
-    test
-    timer
     typeof
     utility
   NO_MODULE

@@ -67,10 +67,13 @@ def file2mod(include, src2mod):
 # infer the module to which boost/... belongs and add that module as a
 # dependency in moddeps
 def visit_file(file, mod, src2mod, moddeps):
-    if file.find(mod + '/example/') != -1:
-        return
     if file.find(mod + '/test/') != -1:
         return
+    if file.find(mod + '/example/') != -1:
+        return
+    if file.find(mod + '/examples/') != -1:
+        return
+
     deps = moddeps[mod]
     with open(file) as xpp:
         for line in xpp:

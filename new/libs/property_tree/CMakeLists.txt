@@ -9,14 +9,11 @@ find_package(Boost
     config
     core
     exception
-    foreach
-    format
     iterator
     mpl
     multi_index
     optional
     serialization
-    smart_ptr
     spirit
     static_assert
     type_traits
