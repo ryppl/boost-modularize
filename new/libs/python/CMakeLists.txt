@@ -108,3 +108,36 @@ file(WRITE ${static_lib_dir}/CMakeLists.txt
   "  )\n"
   )
 add_subdirectory(${static_lib_dir} ${static_lib_dir}-build)
+
+
+# Some explanation why the code above does not (yet) simply look like this:
+
+##
+# boost_add_library(python
+#   SOURCES
+#     ...
+#   LINK_LIBRARIES
+#     ${PYTHON_LIBRARIES}
+#  )
+##
+
+# Most Boost libraries use BOOST_<name>_DYN_LINK and BOOST_<name>_SOURCE do
+# distinguish between importing and exporting as shown below.
+
+##
+# if defined(BOOST_ALL_DYN_LINK) || defined(BOOST_SYSTEM_DYN_LINK)
+#   if defined(BOOST_SYSTEM_SOURCE)
+#     define BOOST_SYSTEM_DECL BOOST_SYMBOL_EXPORT
+#   else
+#     define BOOST_SYSTEM_DECL BOOST_SYMBOL_IMPORT
+#   endif
+# else
+#   define BOOST_SYSTEM_DECL
+# endif
+##
+
+# Boost.Python currently is the only exception to this 'rule': It requires
+# BOOST_PYTHON_STATIC_LIB to be defined for building a static library.
+# To keep the boost_add_library command as simple as possible, I decided against
+# adding parameters to set custom definitions. This does not make it impossible
+# to use custom definitions, but it requires some hacks, as can be seen above.
