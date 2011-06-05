@@ -43,6 +43,16 @@ option(BOOST_DEBIAN_PACKAGES "Create debian packages" OFF)
 # Building and Testing                                                   #
 ##########################################################################
 
+option(BOOST_ENABLED_DOCS "ALL"
+  CACHE STRING "valid values are ALL, NONE, or a ; separated list of components"
+  )
+option(BOOST_ENABLED_TESTS "ALL"
+  CACHE STRING "valid values are ALL, NONE, or a ; separated list of components"
+  )
+option(BOOST_ENABLED_EXAMPLES "NONE"
+  CACHE STRING "valid values are ALL, NONE, or a ; separated list of components"
+  )
+
 # As long as CTest does not support incremental testing, we disable the
 # builtin test target and create our own. This target should be "built"
 # with the "keep going" option, eg: 'make test -k'.
