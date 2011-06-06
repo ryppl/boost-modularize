@@ -406,7 +406,7 @@ def update_modules():
 
     # copy new files
     dir_util.copy_tree('new/toolchains', os.path.join(dst_repo_dir, 'toolchains'))
-    for new_file in ['BoostCPack.cmake', 'build.bat', 'build.cmake', 'LICENSE_1_0.txt', 'README.txt']:
+    for new_file in ['build.bat', 'build.cmake', 'LICENSE_1_0.txt', 'README.txt']:
         shutil.copy2(os.path.join('new', new_file), dst_repo_dir)
 
     # configure CMakeLists.txt
