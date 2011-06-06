@@ -12,6 +12,7 @@ find_package(Boost
     filesystem
     regex
     smart_ptr
+    test
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
@@ -37,6 +38,7 @@ boost_add_executable(bcp
     scan_licence.cpp
     output_licence_info.cpp
   LINK_BOOST_LIBRARIES
-    filesystem
-    regex
+    shared filesystem
+    shared regex
+    static prg_exec_monitor
   )
