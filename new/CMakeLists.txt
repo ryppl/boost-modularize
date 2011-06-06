@@ -84,7 +84,7 @@ add_subdirectory(tools/cmake)
 
 set(CPACK_PACKAGE_NAME "Boost")
 set(CPACK_PACKAGE_VENDOR "http://www.boost.org")
-set(CPACK_PACKAGE_CONTACT "The Boost Community <boost@lists.boost.org>")
+set(CPACK_PACKAGE_CONTACT "Daniel Pfeifer <daniel@pfeifer-mail.de>")
 set(CPACK_PACKAGE_VERSION "${Boost_VERSION}")
 set(CPACK_PACKAGE_FILE_NAME "Boost-${Boost_VERSION}-${CMAKE_SYSTEM_NAME}-${BOOST_TOOLSET}")
 set(CPACK_SOURCE_IGNORE_FILES "${Boost_BINARY_DIR}/;/\\\\.git")
