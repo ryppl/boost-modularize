@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config core detail static_assert test NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project(Dynamic_bitset
+boost_project("Dynamic Bitset"
   AUTHORS
     "Jeremy Siek <jeremy.siek -at- gmail.com>"
     "Chuck Allison"
