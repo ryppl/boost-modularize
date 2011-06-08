@@ -22,10 +22,12 @@ boost_project(Exception
     "A library for transporting of arbitrary data in exception objects, and"
     "transporting of exceptions between threads."
   DEPENDS
-    smart_ptr
+    config
     detail
-    utility
+    smart_ptr
     tuple
+    units
+    utility
   )
 
 boost_add_headers(

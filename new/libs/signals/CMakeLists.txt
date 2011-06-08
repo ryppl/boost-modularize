@@ -25,10 +25,16 @@ boost_project(Signals
   DESCRIPTION
     "Managed signals & slots callback implementation."
   DEPENDS
-    smart_ptr
     any
-    intrusive
-    bind
+    config
+    core
+    function
+    iterator
+    mpl
+    optional
+    smart_ptr
+    type_traits
+    utility
   )
 
 if(MSVC)

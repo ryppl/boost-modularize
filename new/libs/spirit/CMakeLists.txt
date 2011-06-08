@@ -55,12 +55,40 @@ boost_project(Spirit
   DESCRIPTION
     "LL parser framework represents parsers directly as EBNF grammars in inlined C++."
   DEPENDS
-    xpressive
-    optional
-    foreach
+    algorithm
     array
-    unordered
+    concept_check
+    config
+    conversion
+    core
+    detail
+    exception
+    foreach
+    function
+    function_types
+    fusion
+    integer
+    io
+    iostreams
+    iterator
+    math
+    mpl
+    optional
+    phoenix
     pool
+    preprocessor
+    proto
+    range
+    regex
+    serialization
+    smart_ptr
+    static_assert
+    thread
+    type_traits
+    typeof
+    unordered
+    utility
+    variant
   )
 
 boost_add_headers(

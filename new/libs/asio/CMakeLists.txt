@@ -31,10 +31,22 @@ boost_project(Asio
   DESCRIPTION
     "Portable networking, including sockets, timers, hostname resolution and socket iostreams."
   DEPENDS
+    array
+    bind
     config
+    core
     date_time
+    detail
     exception
+    function
+    integer
+    iterator
+    preprocessor
+    regex
+    smart_ptr
     system
+    type_traits
+    utility
   )
 
 boost_add_headers(

@@ -37,10 +37,24 @@ boost_project(TR1
     "has one), otherwise it will include the Boost Library equivalents, and import"
     "them into namespace std::tr1."
   DEPENDS
-    fusion
-    random
-    math
+    array
+    bind
+    config
+    detail
+    function
     functional
+    fusion
+    iterator
+    math
+    mpl
+    random
+    regex
+    smart_ptr
+    static_assert
+    tuple
+    type_traits
+    unordered
+    utility
   )
 
 boost_add_headers(

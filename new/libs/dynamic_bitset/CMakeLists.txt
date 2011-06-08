@@ -13,6 +13,8 @@ boost_project("Dynamic Bitset"
   DESCRIPTION
     "A runtime-sized version of std::bitset"
   DEPENDS
+    config
+    core
     detail
     static_assert
   )

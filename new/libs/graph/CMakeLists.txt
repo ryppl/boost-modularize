@@ -60,14 +60,46 @@ boost_project(Graph
     "The BGL graph interface and graph components are generic,"
     "in the same sense as the the Standard Template Library (STL)."
   DEPENDS
-    property_map
-    tuple
+    algorithm
+    any
+    array
+    bind
+    concept_check
+    config
+    conversion
+    core
+    detail
+    disjoint_sets
+    dynamic_bitset
+    exception
+    filesystem
+    foreach
+    function
+    functional
+    integer
+    iterator
+    math
+    mpi
+    mpl
     multi_index
-    any # because of the dependency on boost/property_map/dynamic_property_map.hpp
-    random
+    optional
     parameter
-    regex
-    mpi # optional
+    property_map
+    property_tree
+    random
+    range
+    serialization
+    smart_ptr
+    spirit
+    static_assert
+    test
+    tuple
+    type_traits
+    typeof
+    unordered
+    utility
+    variant
+    xpressive
   )
 
 boost_add_headers(

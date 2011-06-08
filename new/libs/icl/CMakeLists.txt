@@ -20,7 +20,20 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(ICL)
+boost_project(ICL
+  DEPENDS
+    concept_check
+    config
+    date_time
+    detail
+    interprocess
+    iterator
+    mpl
+    rational
+    static_assert
+    type_traits
+    utility
+  )
 
 boost_add_headers(
   include/boost/icl

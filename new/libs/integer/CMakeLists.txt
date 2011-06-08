@@ -17,7 +17,8 @@ boost_project(Integer
     "The header <boost/cstdint.hpp> makes the standard integer types safely"
     "available in namespace boost without placing any names in namespace std."
   DEPENDS
-    utility
+    config
+    core
   )
 
 boost_add_headers(

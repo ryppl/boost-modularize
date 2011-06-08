@@ -8,6 +8,8 @@ include("${Boost_DEV_FILE}")
 
 boost_project(System
   DEPENDS
+    config
+    integer
     utility
   )
 

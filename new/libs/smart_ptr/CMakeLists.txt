@@ -24,6 +24,11 @@ boost_project("Smart Ptr"
   DESCRIPTION
     "Five smart pointer class templates."
   DEPENDS
+    config
+    core
+    detail
+    exception
+    type_traits
     utility
   )
 

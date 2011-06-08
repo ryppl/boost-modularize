@@ -27,8 +27,18 @@ boost_project("Ptr Container"
   DESCRIPTION
     "Containers for storing heap-allocated polymorphic objects to ease OO-programming."
   DEPENDS
+    array
     circular_buffer
+    config
+    iterator
+    mpl
     range
+    serialization
+    smart_ptr
+    static_assert
+    type_traits
+    unordered
+    utility
   )
 
 boost_add_headers(

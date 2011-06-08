@@ -36,7 +36,23 @@ boost_project(Signals2
     "callback receivers (also called event targets or subscribers), which are called"
     "when the signal is 'emitted'."
   DEPENDS
-    thread
+    any
+    bind
+    config
+    core
+    detail
+    exception
+    function
+    iterator
+    mpl
+    multi_index
+    optional
+    parameter
+    preprocessor
+    smart_ptr
+    type_traits
+    utility
+    variant
   )
 
 boost_add_headers(

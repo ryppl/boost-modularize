@@ -10,6 +10,7 @@ boost_project(Logic
   DEPENDS
     config
     detail
+    utility
   )
 
 boost_add_headers(

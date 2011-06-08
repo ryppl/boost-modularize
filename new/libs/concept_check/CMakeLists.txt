@@ -22,7 +22,13 @@ boost_project("Concept Check"
   DESCRIPTION
     "Tools for generic programming."
   DEPENDS
+    config
+    detail
+    iterator
+    mpl
+    parameter
     preprocessor
+    type_traits
   )
 
 boost_add_headers(

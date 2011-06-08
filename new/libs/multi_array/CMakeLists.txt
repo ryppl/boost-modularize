@@ -22,12 +22,15 @@ include("${Boost_DEV_FILE}")
 boost_project("Multi Array"
   DEPENDS
     array
-    iterator
-    detail
     concept_check
+    config
+    core
+    functional
+    iterator
     mpl
     static_assert
-    functional
+    type_traits
+    utility
   )
 
 boost_add_headers(

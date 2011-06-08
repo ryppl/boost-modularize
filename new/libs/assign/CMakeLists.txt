@@ -25,7 +25,16 @@ boost_project(Assign
   DESCRIPTION
     "Filling containers with constant or generated data has never been easier."
   DEPENDS
+    array
+    config
+    detail
+    mpl
+    preprocessor
     ptr_container
+    range
+    static_assert
+    tuple
+    type_traits
   )
 
 boost_add_headers(

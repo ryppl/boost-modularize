@@ -12,7 +12,11 @@ boost_project(Tuple
   DESCRIPTION
     "Ease definition of functions returning multiple values, and more."
   DEPENDS
+    config
+    detail
     static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

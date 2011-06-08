@@ -26,14 +26,17 @@ boost_project(Statechart
   DESCRIPTION
     "Arbitrarily complex finite state machines can be implemented in easily readable and maintainable C++ code."
   DEPENDS
-    type_traits
-    mpl
-    static_assert
-    intrusive
-    smart_ptr
     bind
+    config
+    conversion
+    detail
     function
-    numeric
+    mpl
+    smart_ptr
+    static_assert
+    thread
+    type_traits
+    utility
   )
 
 boost_add_headers(

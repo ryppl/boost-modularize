@@ -17,8 +17,12 @@ include("${Boost_DEV_FILE}")
 
 boost_project("Function Types"
   DEPENDS
-    mpl
+    config
+    core
     detail
+    mpl
+    preprocessor
+    type_traits
   )
 
 boost_add_headers(

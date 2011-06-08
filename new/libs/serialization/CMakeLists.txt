@@ -36,10 +36,21 @@ boost_project(Serialization
   DESCRIPTION
     "Serialization for persistence and marshalling."
   DEPENDS
-    spirit
-    io
-    bind # because we have a dependency on boost/mem_fn.hpp
     array
+    config
+    core
+    detail
+    integer
+    io
+    iterator
+    mpl
+    optional
+    preprocessor
+    smart_ptr
+    spirit
+    static_assert
+    type_traits
+    utility
     variant
   )
 

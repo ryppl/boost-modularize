@@ -32,11 +32,23 @@ boost_project(Test
   DESCRIPTION
     "Support for simple program testing, full unit testing, and for program execution monitoring."
   DEPENDS
-    smart_ptr
-    timer
-    io
     bind
+    config
+    conversion
+    core
+    detail
+    exception
+    io
+    iterator
+    mpl
     numeric
+    optional
+    preprocessor
+    smart_ptr
+    static_assert
+    timer
+    type_traits
+    utility
   )
 
 boost_add_headers(

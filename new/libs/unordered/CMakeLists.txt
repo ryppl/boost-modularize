@@ -24,7 +24,15 @@ include("${Boost_DEV_FILE}")
 boost_project(Unordered
   DEPENDS
     config
+    core
+    detail
+    exception
     functional
+    iterator
+    mpl
+    preprocessor
+    type_traits
+    utility
   )
 
 boost_add_headers(

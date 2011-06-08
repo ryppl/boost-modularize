@@ -22,7 +22,22 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Phoenix)
+boost_project(Phoenix
+  DEPENDS
+    bind
+    config
+    core
+    detail
+    fusion
+    mpl
+    preprocessor
+    proto
+    range
+    smart_ptr
+    spirit
+    type_traits
+    utility
+  )
 
 boost_add_headers(
   include/boost/phoenix

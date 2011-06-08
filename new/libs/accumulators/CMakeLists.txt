@@ -32,9 +32,23 @@ boost_project(Accumulators
   DESCRIPTION
     "A framework for incremental calculation, and a collection of statistical accumulators."
   DEPENDS
+    array
+    circular_buffer
+    concept_check
+    config
+    core
+    exception
+    fusion
+    iterator
+    mpl
+    numeric
     parameter
+    preprocessor
+    range
+    tuple
+    type_traits
     typeof
-    foreach
+    utility
   DEB_DEPENDS
     DEV ghostscript
   )

@@ -20,7 +20,15 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Lambda
   DEPENDS
+    bind
+    config
+    core
+    detail
+    mpl
+    preprocessor
     tuple
+    type_traits
+    utility
   )
 
 boost_add_headers(

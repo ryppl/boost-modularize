@@ -14,7 +14,10 @@ boost_project(Any
   DESCRIPTION
     "Safe, generic container for single values of different value types."
   DEPENDS
-    utility
+    config
+    exception
+    static_assert
+    type_traits
   )
 
 boost_add_headers(

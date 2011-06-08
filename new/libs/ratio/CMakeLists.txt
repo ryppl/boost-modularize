@@ -16,7 +16,16 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Ratio)
+boost_project(Ratio
+  DEPENDS
+    config
+    integer
+    mpl
+    rational
+    static_assert
+    type_traits
+    utility
+  )
 
 boost_add_headers(
   include/boost/ratio

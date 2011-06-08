@@ -31,11 +31,20 @@ boost_project("Date Time"
     "A set of date-time libraries based on generic programming concepts."
   DEPENDS
     algorithm
-    bind
+    config
+    conversion
+    core
+    detail
+    exception
+    integer
     io
+    mpl
+    range
     serialization
     smart_ptr
     tokenizer
+    type_traits
+    utility
   )
 
 boost_add_headers(

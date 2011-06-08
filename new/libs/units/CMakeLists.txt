@@ -29,9 +29,19 @@ boost_project(Units
   DESCRIPTION
     "Zero-overhead dimensional analysis and unit/quantity manipulation and conversion."
   DEPENDS
-    math
-    serialization
+    algorithm
+    config
+    core
+    io
     lambda
+    math
+    mpl
+    preprocessor
+    serialization
+    static_assert
+    type_traits
+    typeof
+    utility
   )
 
 boost_add_headers(

@@ -31,9 +31,14 @@ boost_project(Utility
   DESCRIPTION
     "Various small utilities for C++ programming."
   DEPENDS
-    iterator
-    exception
+    config
+    core
     detail
+    iterator
+    mpl
+    preprocessor
+    static_assert
+    type_traits
   )
 
 boost_add_headers(

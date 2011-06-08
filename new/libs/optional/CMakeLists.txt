@@ -17,6 +17,11 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Optional
   DEPENDS
+    config
+    core
+    detail
+    mpl
+    type_traits
     utility
   )
 

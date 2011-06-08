@@ -36,8 +36,22 @@ boost_project(Python
     "seamlessly expose C++ classes functions and objects to Python, and vice-versa,"
     "using no special tools -- just your C++ compiler."
   DEPENDS
-    graph
-    numeric # because of boost/cast.hpp from libs/python/src/errors.cpp:11
+    bind
+    config
+    conversion
+    core
+    detail
+    foreach
+    function
+    iterator
+    mpl
+    numeric
+    preprocessor
+    smart_ptr
+    static_assert
+    tuple
+    type_traits
+    utility
   DEB_DEPENDS
     DEV python2.7-dev
     LIB libpython2.7

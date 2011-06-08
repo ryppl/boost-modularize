@@ -29,8 +29,16 @@ boost_project(Filesystem
   DESCRIPTION
     "Provides portable facilities to query and manipulate paths, files, and directories."
   DEPENDS
-    system
+    config
+    detail
+    integer
+    io
+    iterator
     smart_ptr
+    static_assert
+    system
+    type_traits
+    utility
   )
 
 boost_add_headers(

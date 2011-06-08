@@ -15,6 +15,7 @@ boost_project(CRC
     "computation functions. The implementations are template-based."
   DEPENDS
     config
+    core
     integer
   )
 

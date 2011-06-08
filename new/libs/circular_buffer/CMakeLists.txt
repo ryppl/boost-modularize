@@ -24,8 +24,15 @@ boost_project("Circular Buffer"
   DESCRIPTION
     "STL compliant container also known as ring or cyclic buffer."
   DEPENDS
+    concept_check
     config
-    thread
+    core
+    detail
+    exception
+    iterator
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

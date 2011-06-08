@@ -26,6 +26,16 @@ boost_project(Conversion
      "Kevlin Henney"
   DESCRIPTION
     "Polymorphic and lexical casts"
+  DEPENDS
+    config
+    core
+    detail
+    exception
+    mpl
+    numeric
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

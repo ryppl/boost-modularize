@@ -11,6 +11,8 @@ boost_project(Config
     "John Maddock <john -at- johnmaddock.co.uk>"
   DESCRIPTION
     "Helps Boost library developers adapt to compiler idiosyncrasies; not intended for library users."
+  DEPENDS
+    core
   )
 
 boost_add_headers(

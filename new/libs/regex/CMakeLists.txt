@@ -31,8 +31,19 @@ boost_project(Regex
   DESCRIPTION
     "A regular expression library"
   DEPENDS
-    date_time
-    thread
+    concept_check
+    config
+    core
+    detail
+    exception
+    functional
+    integer
+    iterator
+    mpl
+    smart_ptr
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

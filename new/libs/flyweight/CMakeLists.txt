@@ -28,11 +28,15 @@ boost_project(Flyweight
     "easy to use this common programming idiom by providing the class template"
     "flyweight<T>, which acts as a drop-in replacement for const T."
   DEPENDS
+    config
+    detail
+    interprocess
     mpl
+    multi_index
     parameter
     preprocessor
-    interprocess
     type_traits
+    utility
   )
 
 boost_add_headers(

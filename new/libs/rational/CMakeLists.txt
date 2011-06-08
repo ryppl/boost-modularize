@@ -9,6 +9,7 @@ include("${Boost_DEV_FILE}")
 boost_project(Rational
   DEPENDS
     config
+    detail
     math
     static_assert
     utility

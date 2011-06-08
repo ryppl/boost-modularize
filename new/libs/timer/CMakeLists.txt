@@ -9,6 +9,9 @@ include("${Boost_DEV_FILE}")
 boost_project(Timer
   DEPENDS
     config
+    core
+    integer
+    utility
   )
 
 boost_add_headers(

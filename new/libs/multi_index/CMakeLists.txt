@@ -26,9 +26,21 @@ include("${Boost_DEV_FILE}")
 
 boost_project("Multi Index"
   DEPENDS
-    serialization
+    bind
+    config
+    core
+    detail
+    exception
     functional
+    iterator
     math
+    mpl
+    preprocessor
+    serialization
+    static_assert
+    tuple
+    type_traits
+    utility
   )
 
 boost_add_headers(

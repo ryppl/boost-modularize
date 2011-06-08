@@ -27,7 +27,16 @@ boost_project(Fusion
   DESCRIPTION
     "Library for working with tuples, including various containers, algorithms, etc."
   DEPENDS
+    config
+    detail
     function_types
+    mpl
+    preprocessor
+    smart_ptr
+    static_assert
+    tuple
+    type_traits
+    utility
   )
 
 boost_add_headers(

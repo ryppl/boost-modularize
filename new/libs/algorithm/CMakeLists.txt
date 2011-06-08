@@ -31,8 +31,16 @@ boost_project(Algorithm
     "A library of various algorithms."
   DEPENDS
     concept_check
+    config
+    detail
+    function
+    iterator
+    mpl
     range
     regex
+    tuple
+    type_traits
+    utility
   )
 
 boost_add_headers(

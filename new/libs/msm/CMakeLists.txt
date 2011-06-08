@@ -28,7 +28,25 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(MSM)
+boost_project(MSM
+  DEPENDS
+    bind
+    circular_buffer
+    config
+    function
+    fusion
+    mpl
+    parameter
+    phoenix
+    preprocessor
+    proto
+    serialization
+    smart_ptr
+    tuple
+    type_traits
+    typeof
+    utility
+  )
 
 boost_add_headers(
   include/boost/msm

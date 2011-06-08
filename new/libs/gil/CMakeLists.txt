@@ -27,8 +27,17 @@ boost_project(GIL
   DESCRIPTION
     "Generic Image Library"
   DEPENDS
-    type_traits
+    bind
+    concept_check
+    config
+    integer
+    iterator
     mpl
+    preprocessor
+    smart_ptr
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

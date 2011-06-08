@@ -30,10 +30,17 @@ boost_project("Program Options"
     "Access to configuration data given on command line, in config files and other sources."
   DEPENDS
     any
-    bind
+    config
+    conversion
+    core
+    detail
+    exception
+    function
+    iterator
     smart_ptr
-    test
-    tokenizer
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

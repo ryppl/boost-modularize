@@ -21,7 +21,16 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Detail
   DEPENDS
+    config
+    core
     integer
+    mpl
+    preprocessor
+    range
+    smart_ptr
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

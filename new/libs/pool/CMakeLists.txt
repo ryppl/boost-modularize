@@ -18,8 +18,11 @@ include("${Boost_DEV_FILE}")
 boost_project(Pool
   DEPENDS
     config
+    core
     detail
     exception
+    static_assert
+    type_traits
   )
 
 boost_add_headers(

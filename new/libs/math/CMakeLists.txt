@@ -37,8 +37,27 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Math
   DEPENDS
-    format
+    algorithm
     array
+    concept_check
+    config
+    conversion
+    core
+    detail
+    exception
+    format
+    function
+    fusion
+    integer
+    mpl
+    numeric
+    smart_ptr
+    static_assert
+    test
+    tr1
+    tuple
+    type_traits
+    utility
   )
 
 boost_add_headers(

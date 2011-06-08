@@ -34,10 +34,16 @@ boost_project(Random
   DESCRIPTION
     "A complete system for random number generation."
   DEPENDS
+    config
+    core
     detail
     integer
-    type_traits
+    math
+    mpl
+    range
     static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

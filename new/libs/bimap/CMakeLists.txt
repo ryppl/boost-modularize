@@ -29,8 +29,20 @@ boost_project(Bimap
   DESCRIPTION
     "Bidirectional map containers"
   DEPENDS
-    xpressive
+    concept_check
+    config
+    exception
+    functional
+    iterator
+    lambda
+    mpl
+    multi_index
+    preprocessor
     property_map
+    serialization
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

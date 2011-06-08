@@ -14,7 +14,6 @@ boost_project("Disjoint Sets"
   DESCRIPTION
     "Provides disjoint sets operations with union by rank and path compression."
   DEPENDS
-    test
     graph
   )
 

@@ -15,10 +15,11 @@ boost_project(Bind
     "member function pointers, and is able to bind any argument to a specific"
     "value or route input arguments into arbitrary positions."
   DEPENDS
-    utility
-    mpl
-    detail
     config
+    core
+    detail
+    smart_ptr
+    utility
   )
 
 boost_add_headers(

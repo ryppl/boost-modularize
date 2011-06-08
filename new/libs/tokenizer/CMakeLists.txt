@@ -8,6 +8,9 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Tokenizer
   DEPENDS
+    config
+    detail
+    mpl
     utility
   )
 

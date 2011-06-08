@@ -20,6 +20,14 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Variant
   DEPENDS
+    config
+    core
+    detail
+    math
+    mpl
+    preprocessor
+    static_assert
+    type_traits
     utility
   )
 

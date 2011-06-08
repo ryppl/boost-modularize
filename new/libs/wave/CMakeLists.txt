@@ -38,11 +38,24 @@ boost_project(Wave
     "A standards-conformant and highly-configurable implementation of the mandated"
     "C99/C++ preprocessor functionality packed behind an easy to use iterator interface."
   DEPENDS
+    concept_check
+    config
+    core
+    detail
+    exception
     filesystem
-    program_options
+    integer
+    iterator
+    mpl
+    multi_index
+    pool
+    preprocessor
+    serialization
+    smart_ptr
     spirit
-    thread
-    intrusive
+    static_assert
+    type_traits
+    utility
   )
 
 if(MSVC)

@@ -19,9 +19,13 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Format
   DEPENDS
-    detail
     config
+    core
+    detail
+    exception
     optional
+    smart_ptr
+    utility
   )
 
 boost_add_headers(

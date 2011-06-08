@@ -18,7 +18,13 @@ include("${Boost_DEV_FILE}")
 
 boost_project(Foreach
   DEPENDS
+    config
+    detail
+    iterator
+    mpl
     range
+    type_traits
+    utility
   )
 
 boost_add_headers(

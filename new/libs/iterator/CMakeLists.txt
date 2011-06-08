@@ -31,10 +31,18 @@ boost_project(Iterator
     "and a framework of components for building iterators based on these"
     "extended concepts and includes several useful iterator adaptors."
   DEPENDS
-    mpl
-    type_traits
-    function
     concept_check
+    config
+    conversion
+    core
+    detail
+    function_types
+    mpl
+    smart_ptr
+    static_assert
+    tuple
+    type_traits
+    utility
   )
 
 boost_add_headers(

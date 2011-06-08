@@ -24,7 +24,24 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Core)
+boost_project(Core
+  DEPENDS
+    concept_check
+    config
+    conversion
+    detail
+    graph
+    iterator
+    mpi
+    mpl
+    optional
+    property_map
+    serialization
+    static_assert
+    type_traits
+    unordered
+    utility
+  )
 
 math(EXPR BOOST_VERSION
   "${Boost_VERSION_MAJOR} * 100000 + ${Boost_VERSION_MINOR} * 100 + ${Boost_VERSION_PATCH}"

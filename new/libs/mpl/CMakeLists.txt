@@ -26,9 +26,12 @@ boost_project(MPL
     "tools that make doing explict metaprogramming in C++ as easy and"
     "enjoyable as possible within the current language."
   DEPENDS
-    preprocessor
     config
     detail
+    preprocessor
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

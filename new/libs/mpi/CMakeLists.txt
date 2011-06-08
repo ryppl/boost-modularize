@@ -28,7 +28,22 @@ include("${Boost_DEV_FILE}")
 
 boost_project(MPI
   DEPENDS
+    config
+    core
+    exception
+    function
     graph
+    integer
+    iterator
+    mpl
+    optional
+    property_map
+    python
+    serialization
+    smart_ptr
+    static_assert
+    type_traits
+    utility
   )
 
 boost_add_headers(

@@ -39,10 +39,25 @@ boost_project(Xpressive
     "and which can refer to each other and themselves recursively with the power of"
     "context-free grammars."
   DEPENDS
+    config
+    conversion
+    core
+    detail
+    exception
     fusion
-    proto
-    intrusive
+    integer
+    iterator
+    mpl
     numeric
+    optional
+    preprocessor
+    proto
+    range
+    smart_ptr
+    spirit
+    type_traits
+    typeof
+    utility
   )
 
 boost_add_headers(

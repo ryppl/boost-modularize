@@ -24,7 +24,24 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Chrono)
+boost_project(Chrono
+  DEPENDS
+    config
+    core
+    detail
+    exception
+    integer
+    interprocess
+    io
+    math
+    mpl
+    ratio
+    static_assert
+    system
+    type_traits
+    typeof
+    utility
+  )
 
 boost_add_headers(
   include/boost/chrono

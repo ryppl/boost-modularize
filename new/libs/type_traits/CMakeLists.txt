@@ -35,7 +35,12 @@ boost_project("Type Traits"
     "Templates for fundamental properties of types."
   DEPENDS
     config
+    detail
+    mpl
+    preprocessor
     static_assert
+    typeof
+    utility
   )
 
 boost_add_headers(

@@ -12,6 +12,9 @@ boost_project(Array
   DESCRIPTION
     "STL compliant container wrapper for arrays of constant size."
   DEPENDS
+    config
+    detail
+    exception
     utility
   )
 

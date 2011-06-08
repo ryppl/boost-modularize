@@ -25,7 +25,15 @@ boost_project(Parameter
   DESCRIPTION
     "Write functions that accept arguments by name."
   DEPENDS
+    config
+    core
+    detail
+    mpl
+    optional
+    preprocessor
     python
+    type_traits
+    utility
   )
 
 boost_add_headers(

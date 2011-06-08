@@ -31,8 +31,22 @@ boost_project(Iostreams
   DESCRIPTION
     "Framework for defining streams, stream buffers and i/o filters"
   DEPENDS
-    range
+    bind
+    config
+    core
+    detail
+    exception
+    function
+    integer
+    mpl
+    preprocessor
     random
+    range
+    regex
+    smart_ptr
+    static_assert
+    type_traits
+    utility
   DEB_DEPENDS
     DEV libbz2-dev zlib1g-dev
     LIB libbz2-1.0 zlib1g
