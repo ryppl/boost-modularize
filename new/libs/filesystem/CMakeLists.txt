@@ -38,7 +38,7 @@ if(MSVC)
 endif(MSVC)
 
 file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers(${headers} PREFIX "!include!!")
+boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
 
 boost_forward_file(
   ${CMAKE_CURRENT_SOURCE_DIR}/../detail/utf8_codecvt_facet.cpp

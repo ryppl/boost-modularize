@@ -63,6 +63,7 @@ boost_project(Spirit
     pool
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers(${headers} PREFIX "!include!!")
-
+boost_add_headers(
+  include/boost/spirit
+  include/boost/spirit.hpp
+  )

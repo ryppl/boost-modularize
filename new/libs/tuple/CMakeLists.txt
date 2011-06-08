@@ -16,5 +16,5 @@ boost_project(Tuple
   )
 
 file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers(${headers} PREFIX "!include!!")
+boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
 

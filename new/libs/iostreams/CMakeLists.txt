@@ -50,7 +50,7 @@ if(MSVC)
 endif(MSVC)
 
 file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers(${headers} PREFIX "!include!!")
+boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
 
 set(sources src/file_descriptor.cpp src/mapped_file.cpp)
 set(link_libraries)

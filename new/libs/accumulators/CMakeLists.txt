@@ -39,8 +39,15 @@ boost_project(Accumulators
     DEV ghostscript
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.?pp)
-boost_add_headers(${headers} PREFIX "!include!boost/accumulators!")
+boost_add_headers(LOCATION accumulators
+  include/framework
+  include/numeric
+  include/statistics
+  include/accumulators.hpp
+  include/accumulators_fwd.hpp
+  include/statistics.hpp
+  include/statistics_fwd.hpp
+  )
 
 add_subdirectory(doc)
 add_subdirectory(test)

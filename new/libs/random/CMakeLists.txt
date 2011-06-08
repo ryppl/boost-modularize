@@ -45,6 +45,6 @@ if(MSVC)
 endif(MSVC)
 
 file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers(${headers} PREFIX "!include!!")
+boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
 
 boost_add_library(random NO_SYMBOL src/random_device.cpp)
