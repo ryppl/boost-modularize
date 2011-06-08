@@ -33,19 +33,10 @@ boost_project(Filesystem
     smart_ptr
   )
 
-if(MSVC)
-  add_definitions(/wd4005) # 'BOOST_FILESYSTEM_SOURCE': macro redefinition
-endif(MSVC)
-
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
-boost_forward_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/../detail/utf8_codecvt_facet.cpp
-  ${CMAKE_CURRENT_BINARY_DIR}/include/libs/detail/utf8_codecvt_facet.cpp
+boost_add_headers(
+  include/boost/filesystem
+  include/boost/filesystem.hpp
   )
-include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
-
 
 boost_add_library(filesystem NO_SYMBOL
   SOURCES
