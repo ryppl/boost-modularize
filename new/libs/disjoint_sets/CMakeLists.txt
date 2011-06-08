@@ -18,6 +18,12 @@ boost_project("Disjoint Sets"
     graph
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include/boost!boost!")
+# Header files have to be added individually, because the core component
+# will put files in the same directories. The directories must mot be symlinked!
 
+boost_add_headers(LOCATION pending
+  include/boost/pending/disjoint_sets.hpp
+  )
+boost_add_headers(LOCATION pending/detail
+  include/boost/pending/detail/disjoint_sets.hpp
+  )

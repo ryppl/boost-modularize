@@ -27,6 +27,18 @@ boost_project("Smart Ptr"
     utility
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
+boost_add_headers(
+  include/boost/enable_shared_from_this.hpp
+  include/boost/get_pointer.hpp
+  include/boost/intrusive_ptr.hpp
+  include/boost/make_shared.hpp
+  include/boost/pointer_cast.hpp
+  include/boost/pointer_to_other.hpp
+  include/boost/scoped_array.hpp
+  include/boost/scoped_ptr.hpp
+  include/boost/shared_array.hpp
+  include/boost/shared_ptr.hpp
+  include/boost/smart_ptr
+  include/boost/smart_ptr.hpp
+  include/boost/weak_ptr.hpp
+  )

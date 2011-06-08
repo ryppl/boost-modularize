@@ -30,8 +30,10 @@ boost_project(Thread
     range
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
+boost_add_headers(
+  include/boost/thread
+  include/boost/thread.hpp
+  )
 
 find_package(Threads REQUIRED)
 

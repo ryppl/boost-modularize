@@ -16,3 +16,9 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
+boost_project(Ratio)
+
+boost_add_headers(
+  include/boost/ratio
+  include/boost/ratio.hpp
+  )

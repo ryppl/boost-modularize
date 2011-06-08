@@ -11,6 +11,8 @@ boost_project(Tokenizer
     utility
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
+boost_add_headers(
+  include/boost/token_functions.hpp
+  include/boost/token_iterator.hpp
+  include/boost/tokenizer.hpp
+  )

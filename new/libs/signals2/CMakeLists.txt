@@ -39,6 +39,7 @@ boost_project(Signals2
     thread
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
+boost_add_headers(
+  include/boost/signals2
+  include/boost/signals2.hpp
+  )

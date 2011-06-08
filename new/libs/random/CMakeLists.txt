@@ -40,11 +40,10 @@ boost_project(Random
     static_assert
   )
 
-if(MSVC)
-  add_definitions(/wd4005) # 'BOOST_RANDOM_SOURCE': macro redefinition
-endif(MSVC)
-
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
+boost_add_headers(
+  include/boost/random
+  include/boost/random.hpp
+  include/boost/nondet_random.hpp
+  )
 
 boost_add_library(random NO_SYMBOL src/random_device.cpp)

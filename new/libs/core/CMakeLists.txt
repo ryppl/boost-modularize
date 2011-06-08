@@ -36,16 +36,17 @@ configure_file(
   ${CMAKE_CURRENT_BINARY_DIR}/include/boost/version.hpp
   )
 
+# Header files have to be added individually, because the disjoint_sets library
+# will put files in the same directories. The directories must mot be symlinked!
+
+file(GLOB headers "include/boost/*.hpp")
 boost_add_headers(
-  include/boost/blank.hpp
-  include/boost/blank_fwd.hpp
-  include/boost/cstdlib.hpp
-  include/boost/indirect_reference.hpp
-  include/boost/limits.hpp
-  include/boost/memory_order.hpp
-  include/boost/non_type.hpp
-  include/boost/pending
-  include/boost/type.hpp
-  ${CMAKE_CURRENT_BINARY_DIR}/include/boost/version.hpp
-  include/boost/visit_each.hpp
+  ${headers}
+  "${CMAKE_CURRENT_BINARY_DIR}/include/boost/version.hpp"
   )
+
+file(GLOB headers "include/boost/pending/*.hpp")
+boost_add_headers(${headers} LOCATION pending)
+
+file(GLOB headers "include/boost/pending/detail/*.hpp")
+boost_add_headers(${headers} LOCATION pending/detail)

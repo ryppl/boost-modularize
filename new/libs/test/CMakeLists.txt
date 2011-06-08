@@ -39,8 +39,9 @@ boost_project(Test
     numeric
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
+boost_add_headers(
+  include/boost/test
+  )
 
 if(MSVC)
   add_definitions(/EHa) # specify the asynchronous exception handling model

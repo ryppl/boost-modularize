@@ -52,8 +52,10 @@ if(MSVC)
     )
 endif(MSVC)
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
+boost_add_headers(
+  include/boost/wave
+  include/boost/wave.hpp
+  )
 
 boost_add_library(wave
   SOURCES
