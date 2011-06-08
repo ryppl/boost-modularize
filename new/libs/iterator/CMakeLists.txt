@@ -37,6 +37,11 @@ boost_project(Iterator
     concept_check
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
+boost_add_headers(
+  include/boost/function_output_iterator.hpp
+  include/boost/iterator
+  include/boost/iterator.hpp
+  include/boost/iterator_adaptors.hpp
+  include/boost/pointee.hpp
+  include/boost/shared_container_iterator.hpp
+  )

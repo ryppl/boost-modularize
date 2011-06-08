@@ -17,6 +17,8 @@ boost_project("Dynamic Bitset"
     static_assert
   )
 
-file(GLOB_RECURSE headers ${CMAKE_CURRENT_SOURCE_DIR}/include/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include/boost!boost!")
-
+boost_add_headers(
+  include/boost/dynamic_bitset
+  include/boost/dynamic_bitset.hpp
+  include/boost/dynamic_bitset_fwd.hpp
+  )

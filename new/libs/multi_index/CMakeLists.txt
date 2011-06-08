@@ -31,6 +31,8 @@ boost_project("Multi Index"
     math
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
+boost_add_headers(
+  include/boost/multi_index
+  include/boost/multi_index_container.hpp
+  include/boost/multi_index_container_fwd.hpp
+  )

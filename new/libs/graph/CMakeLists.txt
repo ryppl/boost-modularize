@@ -70,12 +70,9 @@ boost_project(Graph
     mpi # optional
   )
 
-if(MSVC)
-  add_definitions(/wd4005) # 'BOOST_GRAPH_SOURCE': macro redefinition
-endif(MSVC)
-
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
+boost_add_headers(
+  include/boost/graph
+  )
 
 boost_add_library(graph NO_SYMBOL
   SOURCES

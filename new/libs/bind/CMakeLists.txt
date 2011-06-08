@@ -25,7 +25,7 @@ boost_add_headers(
   include/boost/bind
   include/boost/bind.hpp
   include/boost/is_placeholder.hpp
-  include/boost/mem_fun.hpp
+  include/boost/mem_fn.hpp
   )
 
 boost_documentation(doc/ref.xml)

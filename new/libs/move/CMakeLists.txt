@@ -6,3 +6,8 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config mpl type_traits utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
+boost_project(Move)
+
+boost_add_headers(
+  include/boost/move
+  )

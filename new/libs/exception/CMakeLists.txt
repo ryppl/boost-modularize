@@ -28,6 +28,9 @@ boost_project(Exception
     tuple
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
+boost_add_headers(
+  include/boost/exception
+  include/boost/exception.hpp
+  include/boost/exception_ptr.hpp
+  include/boost/throw_exception.hpp
+  )
