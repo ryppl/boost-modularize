@@ -7,7 +7,6 @@ find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 include(BoostExtract)
-include(BoostDownload)
 
 boost_project(BoostBook TOOL
   AUTHORS
@@ -38,11 +37,10 @@ find_path(DOCBOOK_DTD_DIR docbookx.dtd PATHS
   )
 if(NOT DOCBOOK_DTD_DIR)
   set(DOCBOOK_DTD_DIR "${CMAKE_CURRENT_BINARY_DIR}/docbook-dtd")
-  boost_download(docbook-dtd.zip
+  boost_extract("${DOCBOOK_DTD_DIR}" DOWNLOAD
     http://www.oasis-open.org/docbook/xml/4.2/docbook-xml-4.2.zip
     73fe50dfe74ca631c1602f558ed8961f
     )
-  boost_extract(docbook-dtd.zip "${DOCBOOK_DTD_DIR}")
   set(install_docbook_dtd ON)
 endif(NOT DOCBOOK_DTD_DIR)
 
@@ -53,11 +51,10 @@ find_path(DOCBOOK_XSL_DIR html/html.xsl PATHS
   )
 if(NOT DOCBOOK_XSL_DIR)
   set(DOCBOOK_XSL_DIR "${CMAKE_CURRENT_BINARY_DIR}/docbook-xsl")
-  boost_download(docbook-xsl.tgz
+  boost_extract("${DOCBOOK_XSL_DIR}" DOWNLOAD
     http://sourceforge.net/projects/docbook/files/docbook-xsl/1.75.2/docbook-xsl-1.75.2.tar.bz2/download
     0c76a58a8e6cb5ab49f819e79917308f
     )
-  boost_extract(docbook-xsl.tgz "${DOCBOOK_XSL_DIR}")
   set(install_docbook_xsl ON)
 endif(NOT DOCBOOK_XSL_DIR)
 
