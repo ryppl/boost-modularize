@@ -14,7 +14,7 @@ tools/regression/:		<ignore>
 tools/release/:			<ignore>
 
 [libs/accumulators]
-boost/accumulators/:		include/
+boost/accumulators/:		include/boost/accumulators/
 libs/accumulators/:		.
 
 [libs/algorithm]

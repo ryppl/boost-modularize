@@ -19,9 +19,6 @@ boost_project("Graph Parallel"
     graph
   )
 
-file(GLOB_RECURSE headers include/boost/*.?pp)
-boost_add_headers_this_function_is_deprecated(${headers} PREFIX "!include!!")
-
 if(MSVC)
   add_definitions(
     /wd4251 # class needs to have dll-interface to be used by clients

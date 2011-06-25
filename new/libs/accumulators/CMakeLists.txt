@@ -53,14 +53,8 @@ boost_project(Accumulators
     DEV ghostscript
   )
 
-boost_add_headers(LOCATION accumulators
-  include/framework
-  include/numeric
-  include/statistics
-  include/accumulators.hpp
-  include/accumulators_fwd.hpp
-  include/statistics.hpp
-  include/statistics_fwd.hpp
+boost_add_headers(
+  include/boost/accumulators
   )
 
 add_subdirectory(doc)
