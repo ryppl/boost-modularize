@@ -516,6 +516,9 @@ libs/wave/:			.
 boost/xpressive/:		include/boost/xpressive/
 libs/xpressive/:		.
 
+[tools/auto_index]
+tools/auto_index/:		.
+
 [tools/bcp]
 tools/bcp/:			.
 
