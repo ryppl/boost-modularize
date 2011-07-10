@@ -18,7 +18,7 @@ boost_doxygen(reference XML TAG
     std_exception_dox.txt
   )
 
-boost_xsltproc(
+xsltproc(
   ${CMAKE_CURRENT_BINARY_DIR}/reference.qbk
   ${CMAKE_CURRENT_SOURCE_DIR}/reference.xsl
   ${reference_xml}
@@ -35,7 +35,7 @@ boost_doxygen(tutorial XML
     ${reference_tag}
   )
 
-boost_xsltproc(
+xsltproc(
   ${CMAKE_CURRENT_BINARY_DIR}/tutorial.qbk
   ${CMAKE_CURRENT_SOURCE_DIR}/tutorial.xsl
   ${tutorial_xml}
