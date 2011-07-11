@@ -43,15 +43,18 @@ option(BOOST_DEBIAN_PACKAGES "Create debian packages" OFF)
 # Building and Testing                                                   #
 ##########################################################################
 
-set(BOOST_ENABLED_DOCS "ALL"
-  CACHE STRING "valid values are ALL, NONE, or a ; separated list of components"
-  )
-set(BOOST_ENABLED_TESTS "ALL"
-  CACHE STRING "valid values are ALL, NONE, or a ; separated list of components"
-  )
-set(BOOST_ENABLED_EXAMPLES "NONE"
-  CACHE STRING "valid values are ALL, NONE, or a ; separated list of components"
-  )
+set(doc "valid values are ALL, NONE, or a ; separated list of components")
+
+# per default, build documentation in release build only
+if(DEFINED CMAKE_BUILD_TYPE AND NOT CMAKE_BUILD_TYPE STREQUAL "Release")
+  set(BOOST_ENABLED_DOCS "NONE" CACHE STRING ${doc})
+else()
+  set(BOOST_ENABLED_DOCS "ALL" CACHE STRING ${doc})
+endif()
+
+set(BOOST_ENABLED_TESTS "ALL" CACHE STRING ${doc})
+set(BOOST_ENABLED_EXAMPLES "NONE" CACHE STRING ${doc})
+
 
 # As long as CTest does not support incremental testing, we disable the
 # builtin test target and create our own. This target should be "built"
