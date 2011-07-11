@@ -312,7 +312,7 @@ def update_modules():
             if len(lines):
                 run('git', 'checkout', 'master')
                 #run('git', 'pull', 'origin', 'master')
-                run('git', 'rm', '--quiet', '-r', '.') # remove everything
+                run('git', 'rm', '--quiet', '--ignore-unmatch', '-r', '.') # remove everything
 
                 new_module = False
             else:
