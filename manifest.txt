@@ -245,6 +245,11 @@ libs/iterator/:			.
 boost/lambda/:			include/boost/lambda/
 libs/lambda/:			.
 
+[libs/locale]
+boost/locale.hpp:		include/boost/locale.hpp
+boost/locale/:			include/boost/locale/
+libs/locale/:			.
+
 [libs/logic]
 boost/logic/:			include/boost/logic/
 libs/logic/:			.
