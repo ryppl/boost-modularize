@@ -1,0 +1,27 @@
+== Boost.Modularize
+
+This project is used to manage all the projects at https://github.com/boost-lib
+
+=== How to contribute
+
+1. Clone this repository.
+
+2. Clone the Boost super-project in read only mode. Also update all submodules.
++
+................................................
+  git clone git://github.com/boost-lib/boost.git
+  git submodule update --init
+................................................
+
+3. Make changes to the CMakeLists.txt files in Boost.
+
+4. Copy the changed CMakeLists.txt files to the directory 'new' in
+Boost.Modularize:
++
+.............................
+cmake -P copy_listfiles.cmake
+.............................
+
+5. Commit your changes to Boost.Modularize.
+
+6. Reset the changes in Boost.
