@@ -250,6 +250,14 @@ def clean_dir(dst_module_dir):
     print '[ERROR] Cannot clean directory', dst_module_dir
     sys.exit(1)
 
+def setup_metarepo():
+    if os.path.exists(dst_repo_dir):
+        run('git', 'pull', 'git@github.com:boost-lib/boost.git', 'master', cwd=dst_repo_dir)
+    else:
+        os.makedirs(dst_repo_dir)
+        run('git', 'clone', 'git@github.com:boost-lib/boost.git', dst_repo_dir)
+    run('git', 'submodule', 'update', '--init', cwd=dst_repo_dir)
+
 def update_modules():
     # Parse the manifest
     manifest = ConfigParser.ConfigParser()
@@ -469,5 +477,6 @@ def push_modules():
 if __name__ == "__main__":
     parse_command_line()
 
+    if "setup"  in args: setup_metarepo()
     if "update" in args: update_modules()
-    if "push" in args:   push_modules()
+    if "push"   in args: push_modules()
