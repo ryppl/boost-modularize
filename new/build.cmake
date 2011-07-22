@@ -84,11 +84,19 @@ set(release_dir "${BUILDDIR}/release")
 set(package_dir "${BUILDDIR}/package")
 
 
+if(BUILDSTEP STREQUAL "cleanconfigure")
+  file(REMOVE_RECURSE
+    "${debug_dir}"
+    "${release_dir}"
+    )
+endif()
+
+
 file(MAKE_DIRECTORY "${debug_dir}")
 file(MAKE_DIRECTORY "${release_dir}")
 
 
-if(NOT DEFINED BUILDSTEP OR BUILDSTEP STREQUAL "configure")
+if(NOT DEFINED BUILDSTEP OR BUILDSTEP MATCHES "configure$")
   execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
     "${toolchain_param}" -DCMAKE_BUILD_TYPE=Debug 
     "${CMAKE_CURRENT_LIST_DIR}"
@@ -104,7 +112,7 @@ if(NOT DEFINED BUILDSTEP OR BUILDSTEP STREQUAL "configure")
   if(NOT debug_result EQUAL 0 OR NOT release_result EQUAL 0)
     message(FATAL_ERROR "Configuring failed.")
   endif(NOT debug_result EQUAL 0 OR NOT release_result EQUAL 0)
-endif(NOT DEFINED BUILDSTEP OR BUILDSTEP STREQUAL "configure")
+endif(NOT DEFINED BUILDSTEP OR BUILDSTEP MATCHES "configure$")
 
 
 if(NOT DEFINED BUILDSTEP OR BUILDSTEP STREQUAL "build")
