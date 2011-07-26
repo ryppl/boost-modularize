@@ -256,6 +256,8 @@ def setup_metarepo():
     else:
         os.makedirs(dst_repo_dir)
         run('git', 'clone', 'git@github.com:boost-lib/boost.git', dst_repo_dir)
+
+    run('git', 'submodule', 'foreach', 'git', 'checkout', '--force', cwd=dst_repo_dir)
     run('git', 'submodule', 'update', '--init', cwd=dst_repo_dir)
 
 def update_modules():
