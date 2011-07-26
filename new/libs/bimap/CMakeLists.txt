@@ -23,28 +23,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Bimap
-  AUTHORS
-    "Matias Capeletto <matias.capeletto -at- gmail.com>"
-  DESCRIPTION
-    "Bidirectional map containers"
-  DEPENDS
-    concept_check
-    config
-    exception
-    functional
-    iterator
-    lambda
-    mpl
-    multi_index
-    preprocessor
-    property_map
-    serialization
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/bimap
   include/boost/bimap.hpp

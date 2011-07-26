@@ -17,12 +17,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(bcp TOOL
-  DEPENDS
-    filesystem
-    regex
-  )
-
 boost_add_executable(bcp
   SOURCES
     add_dependent_lib.cpp

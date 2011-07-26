@@ -19,20 +19,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Multi Array"
-  DEPENDS
-    array
-    concept_check
-    config
-    core
-    functional
-    iterator
-    mpl
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/multi_array
   include/boost/multi_array.hpp

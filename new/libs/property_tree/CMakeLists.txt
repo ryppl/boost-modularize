@@ -22,23 +22,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Property Tree"
-  DEPENDS
-    any
-    config
-    core
-    exception
-    iterator
-    mpl
-    multi_index
-    optional
-    serialization
-    spirit
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/property_tree
   )

@@ -6,22 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config core detail smart_ptr utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project(Bind
-  AUTHORS
-    "Peter Dimov <pdimov -at- mmltd.net>"
-  DESCRIPTION
-    "A generalization of the standard functions std::bind1st and std::bind2nd."
-    "It supports arbitrary function objects, functions, function pointers, and"
-    "member function pointers, and is able to bind any argument to a specific"
-    "value or route input arguments into arbitrary positions."
-  DEPENDS
-    config
-    core
-    detail
-    smart_ptr
-    utility
-  )
-
 boost_add_headers(
   include/boost/bind
   include/boost/bind.hpp

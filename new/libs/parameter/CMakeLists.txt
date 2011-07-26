@@ -18,24 +18,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Parameter
-  AUTHORS
-    "David Abrahams <dave -at- boostpro.com>"
-    "Daniel Wallin <dalwan01 -at- student.umu.se>"
-  DESCRIPTION
-    "Write functions that accept arguments by name."
-  DEPENDS
-    config
-    core
-    detail
-    mpl
-    optional
-    preprocessor
-    python
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/parameter
   include/boost/parameter.hpp

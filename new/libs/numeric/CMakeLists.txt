@@ -27,22 +27,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Numeric
-  DEPENDS
-    concept_check
-    config
-    core
-    detail
-    logic
-    mpl
-    serialization
-    smart_ptr
-    static_assert
-    type_traits
-    typeof
-    utility
-  )
-
 boost_add_headers(
   include/boost/numeric
   )

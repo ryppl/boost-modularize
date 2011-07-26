@@ -23,24 +23,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Utility
-  AUTHORS
-    "David Abrahams <dave -at- boostpro.com>"
-    "Brad King"
-    "Douglas Gregor <doug.gregor -at- gmail.com>"
-  DESCRIPTION
-    "Various small utilities for C++ programming."
-  DEPENDS
-    config
-    core
-    detail
-    iterator
-    mpl
-    preprocessor
-    static_assert
-    type_traits
-  )
-
 boost_add_headers(
   include/boost/assert.hpp
   include/boost/call_traits.hpp

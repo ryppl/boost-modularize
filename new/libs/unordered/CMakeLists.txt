@@ -21,20 +21,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Unordered
-  DEPENDS
-    config
-    core
-    detail
-    exception
-    functional
-    iterator
-    mpl
-    preprocessor
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/unordered
   include/boost/unordered_map.hpp

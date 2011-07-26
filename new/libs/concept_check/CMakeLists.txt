@@ -16,21 +16,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Concept Check"
-  AUTHORS
-    "Jeremy Siek <jeremy.siek -at- gmail.com>"
-  DESCRIPTION
-    "Tools for generic programming."
-  DEPENDS
-    config
-    detail
-    iterator
-    mpl
-    parameter
-    preprocessor
-    type_traits
-  )
-
 boost_add_headers(
   include/boost/concept
   include/boost/concept_check

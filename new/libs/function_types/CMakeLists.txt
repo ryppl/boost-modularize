@@ -15,16 +15,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Function Types"
-  DEPENDS
-    config
-    core
-    detail
-    mpl
-    preprocessor
-    type_traits
-  )
-
 boost_add_headers(
   include/boost/function_types
   )

@@ -20,25 +20,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(UUID
-  AUTHORS
-    "Andy Tompkins"
-  DESCRIPTION
-    "The header uuid.hpp provides an implementation of Universally Unique Identifiers."
-  DEPENDS
-    config
-    exception
-    integer
-    io
-    iterator
-    random
-    serialization
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/uuid
   )

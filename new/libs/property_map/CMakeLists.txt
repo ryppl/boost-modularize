@@ -27,28 +27,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Property Map"
-  DEPENDS
-    any
-    bind
-    concept_check
-    config
-    conversion
-    core
-    detail
-    exception
-    function
-    graph
-    iterator
-    mpl
-    multi_index
-    optional
-    serialization
-    smart_ptr
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/property_map
   )

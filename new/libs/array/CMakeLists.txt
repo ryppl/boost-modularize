@@ -6,18 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config detail exception utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project(Array
-  AUTHORS
-    "Nicolai Josuttis"
-  DESCRIPTION
-    "STL compliant container wrapper for arrays of constant size."
-  DEPENDS
-    config
-    detail
-    exception
-    utility
-  )
-
 boost_add_headers(
   include/boost/array.hpp
   )

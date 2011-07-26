@@ -20,25 +20,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Statechart
-  AUTHORS
-    "Andreas Huber <ahd6974-boostorg -at- yahoo.com>"
-  DESCRIPTION
-    "Arbitrarily complex finite state machines can be implemented in easily readable and maintainable C++ code."
-  DEPENDS
-    bind
-    config
-    conversion
-    detail
-    function
-    mpl
-    smart_ptr
-    static_assert
-    thread
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/statechart
   )

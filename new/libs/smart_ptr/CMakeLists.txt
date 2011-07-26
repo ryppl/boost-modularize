@@ -15,23 +15,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Smart Ptr"
-  AUTHORS
-    "Darin Adler"
-    "Greg Colvin"
-    "Beman Dawes <bdawes -at- acm.org>"
-    "Peter Dimov <pdimov -at- mmltd.net>"
-  DESCRIPTION
-    "Five smart pointer class templates."
-  DEPENDS
-    config
-    core
-    detail
-    exception
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/enable_shared_from_this.hpp
   include/boost/get_pointer.hpp

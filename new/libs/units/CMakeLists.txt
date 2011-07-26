@@ -22,28 +22,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Units
-  AUTHORS
-    "Matthias Schabel <boost -at- schabel-family.org>"
-    "Steven Watanabe <steven -at- providere-consulting.com>"
-  DESCRIPTION
-    "Zero-overhead dimensional analysis and unit/quantity manipulation and conversion."
-  DEPENDS
-    algorithm
-    config
-    core
-    io
-    lambda
-    math
-    mpl
-    preprocessor
-    serialization
-    static_assert
-    type_traits
-    typeof
-    utility
-  )
-
 boost_add_headers(
   include/boost/units
   )

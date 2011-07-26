@@ -6,13 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config integer utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project(System
-  DEPENDS
-    config
-    integer
-    utility
-  )
-
 boost_add_headers(
   include/boost/system
   include/boost/cerrno.hpp

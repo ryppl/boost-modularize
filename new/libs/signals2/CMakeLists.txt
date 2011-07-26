@@ -26,35 +26,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Signals2
-  AUTHORS
-    "Frank Mori Hess <fmhess -at- users.sourceforge.net>"
-  DESCRIPTION
-    "The Boost.Signals2 library is an implementation of a managed signals and slots system."
-    "Signals represent callbacks with multiple targets, and are also called publishers or"
-    "events in similar systems. Signals are connected to some set of slots, which are"
-    "callback receivers (also called event targets or subscribers), which are called"
-    "when the signal is 'emitted'."
-  DEPENDS
-    any
-    bind
-    config
-    core
-    detail
-    exception
-    function
-    iterator
-    mpl
-    multi_index
-    optional
-    parameter
-    preprocessor
-    smart_ptr
-    type_traits
-    utility
-    variant
-  )
-
 boost_add_headers(
   include/boost/signals2
   include/boost/signals2.hpp

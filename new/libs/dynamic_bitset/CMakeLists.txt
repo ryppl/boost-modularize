@@ -6,19 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config core detail static_assert test NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project("Dynamic Bitset"
-  AUTHORS
-    "Jeremy Siek <jeremy.siek -at- gmail.com>"
-    "Chuck Allison"
-  DESCRIPTION
-    "A runtime-sized version of std::bitset"
-  DEPENDS
-    config
-    core
-    detail
-    static_assert
-  )
-
 boost_add_headers(
   include/boost/dynamic_bitset
   include/boost/dynamic_bitset.hpp

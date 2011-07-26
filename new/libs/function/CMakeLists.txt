@@ -19,20 +19,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Function
-  DEPENDS
-    bind
-    config
-    detail
-    exception
-    integer
-    mpl
-    preprocessor
-    type_traits
-    typeof
-    utility
-  )
-
 boost_add_headers(
   include/boost/function
   include/boost/function.hpp

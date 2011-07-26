@@ -15,25 +15,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(MPL
-  AUTHORS
-    "David Abrahams <dave -at- boostpro.com>"
-    "Aleksey Gurtovoy <agurtovoy -at- meta-comm.com>"
-  DESCRIPTION
-    "A general-purpose, high-level C++ template metaprogramming framework of"
-    "compile-time algorithms, sequences and metafunctions. It provides a"
-    "conceptual foundation and an extensive set of powerful and coherent"
-    "tools that make doing explict metaprogramming in C++ as easy and"
-    "enjoyable as possible within the current language."
-  DEPENDS
-    config
-    detail
-    preprocessor
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/mpl
   )

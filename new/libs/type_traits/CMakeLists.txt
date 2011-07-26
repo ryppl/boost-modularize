@@ -16,33 +16,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Type Traits"
-  AUTHORS
-    "David Abrahams <dave -at- boostpro.com>"
-    "Steve Cleary" 
-    "Beman Dawes <bdawes -at- acm.org>" 
-    "Aleksey Gurtovoy <agurtovoy -at- meta-comm.com>" 
-    "Howard Hinnant" 
-    "Jesse Jones" 
-    "Mat Marcus" 
-    "Itay Maman" 
-    "John Maddock <john -at- johnmaddock.co.uk>" 
-    "Alexander Nasonov <alexander.nasonov -at- gmail.com>" 
-    "Thorsten Ottosen <nesotto -at- cs.auc.dk>"
-    "Robert Ramey <ramey -at- rrsd.com>" 
-    "Jeremy Siek <jeremy.siek -at- gmail.com>"
-  DESCRIPTION
-    "Templates for fundamental properties of types."
-  DEPENDS
-    config
-    detail
-    mpl
-    preprocessor
-    static_assert
-    typeof
-    utility
-  )
-
 boost_add_headers(
   include/boost/type_traits
   include/boost/type_traits.hpp

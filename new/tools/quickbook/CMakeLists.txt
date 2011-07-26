@@ -25,17 +25,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(QuickBook TOOL
-  AUTHORS
-    "Joel de Guzman <joel -at- boost-consulting.com>"
-    "Eric Niebler <eric -at- boost-consulting.com>"
-  DESCRIPTION
-    "A WikiWiki style documentation tool geared towards C++ documentation"
-  DEPENDS
-    filesystem
-    program_options 
-  )
-
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
     /wd4244 /wd4267 /wd4355 /wd4511 /wd4512 /wd4701 /wd4702 /wd4800)

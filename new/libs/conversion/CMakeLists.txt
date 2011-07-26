@@ -20,24 +20,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Conversion
-  AUTHORS
-    "David Abrahams <dave -at- boost-consulting.com>"
-     "Kevlin Henney"
-  DESCRIPTION
-    "Polymorphic and lexical casts"
-  DEPENDS
-    config
-    core
-    detail
-    exception
-    mpl
-    numeric
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/cast.hpp
   include/boost/implicit_cast.hpp

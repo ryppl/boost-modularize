@@ -26,31 +26,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Test
-  AUTHORS
-    "Gennadiy Rozental <gennadiy.rozental -at- gmail.com>"
-  DESCRIPTION
-    "Support for simple program testing, full unit testing, and for program execution monitoring."
-  DEPENDS
-    bind
-    config
-    conversion
-    core
-    detail
-    exception
-    io
-    iterator
-    mpl
-    numeric
-    optional
-    preprocessor
-    smart_ptr
-    static_assert
-    timer
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/test
   )

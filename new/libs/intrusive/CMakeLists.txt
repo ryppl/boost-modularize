@@ -19,19 +19,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Intrusive
-  DEPENDS
-    config
-    core
-    functional
-    integer
-    move
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/intrusive
   )

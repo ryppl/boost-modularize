@@ -18,23 +18,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Circular Buffer"
-  AUTHORS
-    "Jan Gaspar <jano_gaspar -at- yahoo.com>"
-  DESCRIPTION
-    "STL compliant container also known as ring or cyclic buffer."
-  DEPENDS
-    concept_check
-    config
-    core
-    detail
-    exception
-    iterator
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/circular_buffer
   include/boost/circular_buffer.hpp

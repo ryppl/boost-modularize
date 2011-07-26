@@ -24,29 +24,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Date Time"
-  AUTHORS
-    "Jeff Garland <jeff -at- crystalclearsoftware.com>"
-  DESCRIPTION
-    "A set of date-time libraries based on generic programming concepts."
-  DEPENDS
-    algorithm
-    config
-    conversion
-    core
-    detail
-    exception
-    integer
-    io
-    mpl
-    range
-    serialization
-    smart_ptr
-    tokenizer
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/date_time
   include/boost/date_time.hpp

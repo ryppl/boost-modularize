@@ -28,24 +28,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Random
-  AUTHORS
-    "Jens Maurer <Jens.Maurer -at- gmx.net>"
-  DESCRIPTION
-    "A complete system for random number generation."
-  DEPENDS
-    config
-    core
-    detail
-    integer
-    math
-    mpl
-    range
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/random
   include/boost/random.hpp

@@ -8,17 +8,6 @@ include("${Boost_DEV_FILE}")
 
 include(BoostExtract)
 
-boost_project(BoostBook TOOL
-  AUTHORS
-    "Douglas Gregor <doug.gregor -at- gmail.com>"
-  DESCRIPTION
-    "The BoostBook documentation format is an extension of DocBook,"
-    "an SGML- or XML-based format for describing documentation."
-  DEB_DEPENDS
-    docbook-xml
-    docbook-xsl
-  )
-
 add_subdirectory(doc)
 
 if(WIN32)

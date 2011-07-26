@@ -30,30 +30,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Serialization
-  AUTHORS
-    "<ramey -at- rrsd.com>"
-  DESCRIPTION
-    "Serialization for persistence and marshalling."
-  DEPENDS
-    array
-    config
-    core
-    detail
-    integer
-    io
-    iterator
-    mpl
-    optional
-    preprocessor
-    smart_ptr
-    spirit
-    static_assert
-    type_traits
-    utility
-    variant
-  )
-
 if(MSVC)
   add_definitions(
     /Gy

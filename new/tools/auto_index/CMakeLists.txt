@@ -20,14 +20,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(AutoIndex TOOL
-  DEPENDS
-    regex
-    filesystem
-    system
-    program_options
-  )
-
 boost_add_executable(auto_index
   SOURCES
     src/auto_index.cpp 

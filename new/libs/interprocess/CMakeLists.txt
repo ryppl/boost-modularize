@@ -24,30 +24,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Interprocess
-  AUTHORS
-    "Ion Gaztanaga <igaztanaga -at- gmail.com>"
-  DESCRIPTION
-    "Shared memory, memory mapped files, process-shared mutexes, condition"
-    "variables, containers and allocators."
-  DEPENDS
-    config
-    core
-    date_time
-    detail
-    integer
-    intrusive
-    math
-    move
-    mpl
-    preprocessor
-    smart_ptr
-    static_assert
-    type_traits
-    unordered
-    utility
-  )
-
 boost_add_headers(
   include/boost/interprocess
   )

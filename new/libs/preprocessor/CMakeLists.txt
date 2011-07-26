@@ -6,9 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project(Preprocessor
-  )
-
 boost_add_headers(
   include/boost/preprocessor
   include/boost/preprocessor.hpp

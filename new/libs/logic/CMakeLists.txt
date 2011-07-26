@@ -6,13 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config detail utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project(Logic
-  DEPENDS
-    config
-    detail
-    utility
-  )
-
 boost_add_headers(
   include/boost/logic
   )

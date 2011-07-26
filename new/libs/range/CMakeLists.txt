@@ -25,28 +25,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Range
-  AUTHORS
-    "Thorsten Ottosen <nesotto -at- cs.auc.dk>"
-  DESCRIPTION
-    "A new infrastructure for generic algorithms that builds on top of the new iterator concepts."
-  DEPENDS
-    algorithm
-    array
-    concept_check
-    config
-    conversion
-    detail
-    iterator
-    mpl
-    preprocessor
-    regex
-    static_assert
-    tuple
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/range
   include/boost/range.hpp

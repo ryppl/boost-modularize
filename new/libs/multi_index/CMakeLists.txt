@@ -24,25 +24,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Multi Index"
-  DEPENDS
-    bind
-    config
-    core
-    detail
-    exception
-    functional
-    iterator
-    math
-    mpl
-    preprocessor
-    serialization
-    static_assert
-    tuple
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/multi_index
   include/boost/multi_index_container.hpp

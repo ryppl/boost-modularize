@@ -17,9 +17,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Inspect TOOL
-  )
-
 boost_add_executable(inspect
   SOURCES
     apple_macro_check.cpp

@@ -15,21 +15,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Exception
-  AUTHORS
-    "Emil Dotchevski <emil -at- revergestudios.com>"
-  DESCRIPTION
-    "A library for transporting of arbitrary data in exception objects, and"
-    "transporting of exceptions between threads."
-  DEPENDS
-    config
-    detail
-    smart_ptr
-    tuple
-    units
-    utility
-  )
-
 boost_add_headers(
   include/boost/exception
   include/boost/exception.hpp

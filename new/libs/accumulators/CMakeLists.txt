@@ -26,33 +26,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Accumulators
-  AUTHORS
-    "Eric Niebler <eric -at- boost-consulting.com>"
-  DESCRIPTION
-    "A framework for incremental calculation, and a collection of statistical accumulators."
-  DEPENDS
-    array
-    circular_buffer
-    concept_check
-    config
-    core
-    exception
-    fusion
-    iterator
-    mpl
-    numeric
-    parameter
-    preprocessor
-    range
-    tuple
-    type_traits
-    typeof
-    utility
-  DEB_DEPENDS
-    DEV ghostscript
-  )
-
 boost_add_headers(
   include/boost/accumulators
   )

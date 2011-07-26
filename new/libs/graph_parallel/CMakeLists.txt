@@ -6,19 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS conversion graph mpi utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_project("Graph Parallel"
-  AUTHORS
-    "Douglas Gregor <doug.gregor -at- gmail.com>"
-    "Nicholas Edmonds <ngedmond -at- osl.iu.edu>"
-    "Jeremiah Willcock <jewillco -at- osl.iu.edu>"
-    "Andrew Lumsdaine"
-  DESCRIPTION
-    "Parallel support using MPI for Boost.Graph."
-  DEPENDS
-    mpi
-    graph
-  )
-
 if(MSVC)
   add_definitions(
     /wd4251 # class needs to have dll-interface to be used by clients

@@ -23,26 +23,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Algorithm
-  AUTHORS
-    "Pavol Droba <droba -at- topmail.sk>"
-    "Herve Bronnimann <hbr -at- poly.edu>"
-  DESCRIPTION
-    "A library of various algorithms."
-  DEPENDS
-    concept_check
-    config
-    detail
-    function
-    iterator
-    mpl
-    range
-    regex
-    tuple
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/algorithm
   )

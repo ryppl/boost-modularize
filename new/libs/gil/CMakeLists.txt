@@ -20,26 +20,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(GIL
-  AUTHORS
-    "Lubomir Bourdev <lbourdev -at- adobe.com>"
-    "Hailin Jin <hljin -at- adobe.com>"
-  DESCRIPTION
-    "Generic Image Library"
-  DEPENDS
-    bind
-    concept_check
-    config
-    integer
-    iterator
-    mpl
-    preprocessor
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/gil
   )

@@ -25,33 +25,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Iostreams
-  AUTHORS
-    "Jonathan Turkanis <turkanis -at- coderage.com>"
-  DESCRIPTION
-    "Framework for defining streams, stream buffers and i/o filters"
-  DEPENDS
-    bind
-    config
-    core
-    detail
-    exception
-    function
-    integer
-    mpl
-    preprocessor
-    random
-    range
-    regex
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  DEB_DEPENDS
-    DEV libbz2-dev zlib1g-dev
-    LIB libbz2-1.0 zlib1g
-  )
-
 add_definitions(-DBOOST_IOSTREAMS_USE_DEPRECATED)
 
 if(MSVC)

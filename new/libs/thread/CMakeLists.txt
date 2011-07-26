@@ -22,23 +22,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Thread
-  DEPENDS
-    bind
-    config
-    date_time
-    detail
-    exception
-    function
-    integer
-    mpl
-    optional
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/thread
   include/boost/thread.hpp

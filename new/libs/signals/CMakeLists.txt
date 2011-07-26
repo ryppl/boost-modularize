@@ -19,24 +19,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Signals
-  AUTHORS
-    "Douglas Gregor <doug.gregor -at- gmail.com>"
-  DESCRIPTION
-    "Managed signals & slots callback implementation."
-  DEPENDS
-    any
-    config
-    core
-    function
-    iterator
-    mpl
-    optional
-    smart_ptr
-    type_traits
-    utility
-  )
-
 if(MSVC)
   add_definitions(
     /wd4251 # class needs to have dll-interface to be used by clients

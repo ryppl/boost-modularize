@@ -23,26 +23,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project("Program Options"
-  AUTHORS
-    "Vladimir Prus <ghost -at- cs.msu.su>"
-  DESCRIPTION
-    "Access to configuration data given on command line, in config files and other sources."
-  DEPENDS
-    any
-    config
-    conversion
-    core
-    detail
-    exception
-    function
-    iterator
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  )
-
 boost_add_headers(
   include/boost/program_options
   include/boost/program_options.hpp

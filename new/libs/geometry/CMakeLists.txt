@@ -40,36 +40,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Geometry
-  DEPENDS
-    algorithm
-    array
-    concept_check
-    config
-    conversion
-    core
-    detail
-    foreach
-    function_types
-    fusion
-    integer
-    iterator
-    math
-    mpl
-    msm
-    numeric
-    polygon
-    range
-    smart_ptr
-    static_assert
-    tokenizer
-    tuple
-    type_traits
-    typeof
-    units
-    utility
-  )
-
 boost_add_headers(
   include/boost/geometry
   include/boost/geometry.hpp

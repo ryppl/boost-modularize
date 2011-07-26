@@ -31,35 +31,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_project(Xpressive
-  AUTHORS
-    "Eric Niebler <eric -at- boost-consulting.com>"
-  DESCRIPTION
-    "Regular expressions that can be written as strings or as expression templates,"
-    "and which can refer to each other and themselves recursively with the power of"
-    "context-free grammars."
-  DEPENDS
-    config
-    conversion
-    core
-    detail
-    exception
-    fusion
-    integer
-    iterator
-    mpl
-    numeric
-    optional
-    preprocessor
-    proto
-    range
-    smart_ptr
-    spirit
-    type_traits
-    typeof
-    utility
-  )
-
 boost_add_headers(
   include/boost/xpressive
   )
