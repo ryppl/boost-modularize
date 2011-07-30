@@ -23,7 +23,7 @@ function( boost_python_test_add name )
   endif()
   #message( STATUS "${target}: ${BPTEST_TARGET_EXECUTABLE}, ${BPTEST_TARGET_SOURCES}" )
     
-  add_library(${target} SHARED ${BPTEST_TARGET_SOURCES})
+  add_library(${target} SHARED EXCLUDE_FROM_ALL ${BPTEST_TARGET_SOURCES})
   #target_link_libraries(${target} boost_python)
   boost_link_libraries(${target} python SHARED)
   set_property(TARGET ${target} APPEND PROPERTY
@@ -31,7 +31,7 @@ function( boost_python_test_add name )
   set_target_properties(${target} PROPERTIES
     PREFIX ""
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-    FOLDER "${BOOST_CURRENT_FOLDER}"
+    FOLDER "${BOOST_CURRENT_NAME}"
     PROJECT_LABEL "${target} (python extension)"
     # VERSION "${Boost_VERSION}"
     )
@@ -48,7 +48,7 @@ function( boost_python_test_add name )
       )
   endforeach()
 
-  set(project_test "${BOOST_CURRENT_PROJECT}-test")
+  set(project_test "${BOOST_CURRENT}-test")
   if(NOT TARGET ${project_test})
     add_custom_target(${project_test})
     if(TARGET test)
@@ -73,7 +73,7 @@ function( boost_python_link_test name )
   if( NOT BPTEST_TARGET_SOURCES )
     set( BPTEST_TARGET_SOURCES ${name}.cpp )
   endif()
-  add_library(${target} SHARED ${BPTEST_TARGET_SOURCES})
+  add_library(${target} SHARED EXCLUDE_FROM_ALL ${BPTEST_TARGET_SOURCES})
   #target_link_libraries(${target} boost_python)
   boost_link_libraries(${target} python SHARED)
   set_property(TARGET ${target} APPEND PROPERTY
@@ -81,13 +81,13 @@ function( boost_python_link_test name )
   set_target_properties(${target} PROPERTIES
     PREFIX ""
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-    FOLDER "${BOOST_CURRENT_FOLDER}"
+    FOLDER "${BOOST_CURRENT_NAME}"
     PROJECT_LABEL "${target} (python extension)"
     # VERSION "${Boost_VERSION}"
     )
   # To do: add dependencies to ${BPTEST_TARGET_PYSOURCES}
   
-  set(project_test "${BOOST_CURRENT_PROJECT}-test")
+  set(project_test "${BOOST_CURRENT}-test")
   if(NOT TARGET ${project_test})
     add_custom_target(${project_test})
     if(TARGET test)

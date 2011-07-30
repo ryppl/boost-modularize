@@ -3,6 +3,13 @@
 
 cmake_minimum_required(VERSION 2.8)
 
+find_package(PythonLibs)
+if(NOT PYTHONLIBS_FOUND)
+  return()
+endif()
+
+include_directories(${PYTHON_INCLUDE_DIRS})
+
 find_package(Boost
   COMPONENTS
     bind
@@ -27,14 +34,6 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-find_package(PythonLibs)
-
-if(NOT PYTHONLIBS_FOUND)
-  return()
-endif()
-
-include_directories(${PYTHON_INCLUDE_DIRS})
 
 set(sources
   src/numeric.cpp
