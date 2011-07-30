@@ -6,11 +6,4 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config core detail smart_ptr utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/bind
-  include/boost/bind.hpp
-  include/boost/is_placeholder.hpp
-  include/boost/mem_fn.hpp
-  )
-
 boost_documentation(doc/ref.xml)

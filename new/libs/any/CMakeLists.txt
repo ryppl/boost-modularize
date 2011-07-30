@@ -6,10 +6,6 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config exception static_assert type_traits NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/any.hpp
-  )
-
 boost_documentation(doc/any.xml)
 
 boost_add_test(any_test)

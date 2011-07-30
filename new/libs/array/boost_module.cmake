@@ -11,4 +11,6 @@ boost_module(Array
     detail
     exception
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

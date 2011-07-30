@@ -25,9 +25,4 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/asio
-  include/boost/asio.hpp
-  )
-
 add_subdirectory(doc)

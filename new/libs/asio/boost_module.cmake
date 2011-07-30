@@ -23,4 +23,6 @@ boost_module(Asio
     system
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

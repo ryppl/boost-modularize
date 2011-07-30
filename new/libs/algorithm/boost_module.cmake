@@ -19,4 +19,6 @@ boost_module(Algorithm
     tuple
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

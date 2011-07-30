@@ -18,4 +18,6 @@ boost_module(Chrono
     type_traits
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

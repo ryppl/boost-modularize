@@ -26,4 +26,10 @@ boost_module(Accumulators
     utility
   DEB_DEPENDS
     DEV ghostscript
+  DOC_DIRECTORIES
+    doc
+  TEST_DIRECTORIES
+    test
+  INCLUDE_DIRECTORIES
+    include
   )

@@ -17,9 +17,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/circular_buffer
-  include/boost/circular_buffer.hpp
-  include/boost/circular_buffer_fwd.hpp
-  )

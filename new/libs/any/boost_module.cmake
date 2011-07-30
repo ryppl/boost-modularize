@@ -13,4 +13,6 @@ boost_module(Any
     exception
     static_assert
     type_traits
+  INCLUDE_DIRECTORIES
+    include
   )
