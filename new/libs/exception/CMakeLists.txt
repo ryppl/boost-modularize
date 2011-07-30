@@ -14,10 +14,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/exception
-  include/boost/exception.hpp
-  include/boost/exception_ptr.hpp
-  include/boost/throw_exception.hpp
-  )

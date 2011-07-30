@@ -12,4 +12,6 @@ boost_module(CRC
     config
     core
     integer
+  INCLUDE_DIRECTORIES
+    include
   )

@@ -29,22 +29,4 @@ math(EXPR BOOST_VERSION
   )
 string(REPLACE "." "_" BOOST_LIB_VERSION "${Boost_VERSION}")
 
-configure_file(
-  ${CMAKE_CURRENT_SOURCE_DIR}/include/boost/version.hpp.in
-  ${CMAKE_CURRENT_BINARY_DIR}/include/boost/version.hpp
-  )
-
-# Header files have to be added individually, because the disjoint_sets library
-# will put files in the same directories. The directories must mot be symlinked!
-
-file(GLOB headers "include/boost/*.hpp")
-boost_add_headers(
-  ${headers}
-  "${CMAKE_CURRENT_BINARY_DIR}/include/boost/version.hpp"
-  )
-
-file(GLOB headers "include/boost/pending/*.hpp")
-boost_add_headers(${headers} LOCATION pending)
-
-file(GLOB headers "include/boost/pending/detail/*.hpp")
-boost_add_headers(${headers} LOCATION pending/detail)
+configure_file(include/boost/version.hpp.in include/boost/version.hpp)

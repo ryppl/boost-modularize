@@ -10,4 +10,6 @@ boost_module("Disjoint Sets"
     "Provides disjoint sets operations with union by rank and path compression."
   DEPENDS
     graph
+  INCLUDE_DIRECTORIES
+    include
   )

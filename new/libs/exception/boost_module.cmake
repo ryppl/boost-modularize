@@ -14,4 +14,6 @@ boost_module(Exception
     tuple
     units
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

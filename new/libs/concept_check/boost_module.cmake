@@ -14,4 +14,6 @@ boost_module("Concept Check"
     parameter
     preprocessor
     type_traits
+  INCLUDE_DIRECTORIES
+    include
   )

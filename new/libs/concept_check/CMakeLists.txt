@@ -15,10 +15,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/concept
-  include/boost/concept_check
-  include/boost/concept_archetype.hpp
-  include/boost/concept_check.hpp
-  )

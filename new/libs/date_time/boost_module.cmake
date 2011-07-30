@@ -22,4 +22,6 @@ boost_module("Date Time"
     tokenizer
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

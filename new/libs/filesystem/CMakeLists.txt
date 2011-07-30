@@ -23,11 +23,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/filesystem
-  include/boost/filesystem.hpp
-  )
-
 boost_add_library(filesystem NO_SYMBOL
   SOURCES
     v2/src/v2_operations

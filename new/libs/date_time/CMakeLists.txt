@@ -24,11 +24,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/date_time
-  include/boost/date_time.hpp
-  )
-
 add_definitions(-DDATE_TIME_INLINE)
 
 file(GLOB date_time_files boost/date_time/*.hpp)

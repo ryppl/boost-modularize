@@ -18,4 +18,7 @@ boost_module(Core
     type_traits
     unordered
     utility
+  INCLUDE_DIRECTORIES
+    "${BOOST_CURRENT_SOURCE_DIR}/include"
+    "${BOOST_CURRENT_BINARY_DIR}/include"
   )

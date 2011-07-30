@@ -12,4 +12,6 @@ boost_module("Dynamic Bitset"
     core
     detail
     static_assert
+  INCLUDE_DIRECTORIES
+    include
   )
