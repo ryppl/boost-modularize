@@ -43,4 +43,6 @@ boost_module(Spirit
     unordered
     utility
     variant
+  INCLUDE_DIRECTORIES
+    include
   )

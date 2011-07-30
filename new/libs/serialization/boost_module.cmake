@@ -23,4 +23,6 @@ boost_module(Serialization
     type_traits
     utility
     variant
+  INCLUDE_DIRECTORIES
+    include
   )

@@ -20,7 +20,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/proto
-  )

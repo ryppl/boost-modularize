@@ -15,4 +15,6 @@ boost_module(Numeric
     type_traits
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

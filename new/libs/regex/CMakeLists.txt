@@ -25,14 +25,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/regex
-  include/boost/regex.h
-  include/boost/regex.hpp
-  include/boost/regex_fwd.hpp
-  include/boost/cregex.hpp
-  )
-
 find_package(ICU)
 if(ICU_FOUND)
   add_definitions(-DBOOST_HAS_ICU=1)

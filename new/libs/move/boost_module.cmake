@@ -7,4 +7,6 @@ boost_module(Move
     mpl
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

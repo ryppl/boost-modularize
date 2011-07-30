@@ -5,4 +5,6 @@ boost_module("Static Assert"
   DEPENDS
     config
     detail
+  INCLUDE_DIRECTORIES
+    include
   )

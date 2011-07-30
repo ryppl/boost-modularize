@@ -19,4 +19,6 @@ boost_module("Program Options"
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

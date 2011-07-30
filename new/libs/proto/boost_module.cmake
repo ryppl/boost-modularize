@@ -15,4 +15,6 @@ boost_module(Proto
     type_traits
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

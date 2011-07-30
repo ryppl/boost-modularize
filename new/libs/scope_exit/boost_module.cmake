@@ -7,4 +7,6 @@ boost_module("Scope Exit"
     detail
     preprocessor
     typeof
+  INCLUDE_DIRECTORIES
+    include
   )

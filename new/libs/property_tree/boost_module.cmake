@@ -16,4 +16,6 @@ boost_module("Property Tree"
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

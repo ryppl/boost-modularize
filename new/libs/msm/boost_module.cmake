@@ -19,4 +19,6 @@ boost_module(MSM
     type_traits
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

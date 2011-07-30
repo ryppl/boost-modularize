@@ -18,4 +18,6 @@ boost_module(MPL
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

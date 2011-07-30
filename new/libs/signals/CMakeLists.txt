@@ -26,13 +26,6 @@ if(MSVC)
     )
 endif(MSVC)
 
-boost_add_headers(
-  include/boost/signals
-  include/boost/signals.hpp
-  include/boost/signal.hpp
-  include/boost/last_value.hpp
-  )
-
 boost_add_library(signals NO_SYMBOL
   src/trackable.cpp
   src/connection.cpp

@@ -28,11 +28,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/python
-  include/boost/python.hpp
-  )
-
 find_package(PythonLibs)
 
 if(NOT PYTHONLIBS_FOUND)

@@ -17,4 +17,6 @@ boost_module(Signals
     smart_ptr
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

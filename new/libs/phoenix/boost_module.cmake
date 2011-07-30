@@ -16,4 +16,6 @@ boost_module(Phoenix
     spirit
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

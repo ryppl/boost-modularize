@@ -16,4 +16,6 @@ boost_module("Smart Ptr"
     exception
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

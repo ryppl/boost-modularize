@@ -21,4 +21,6 @@ boost_module(Range
     tuple
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

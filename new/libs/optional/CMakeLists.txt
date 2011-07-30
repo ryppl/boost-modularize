@@ -14,10 +14,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/none.hpp
-  include/boost/none_t.hpp
-  include/boost/optional
-  include/boost/optional.hpp
-  )

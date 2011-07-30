@@ -22,4 +22,6 @@ boost_module(MPI
   DEB_DEPENDS
     DEV mpi-default-dev
     LIB mpi-default-bin
+  INCLUDE_DIRECTORIES
+    include
   )

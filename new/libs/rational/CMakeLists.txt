@@ -5,7 +5,3 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost COMPONENTS config detail math static_assert utility NO_MODULE)
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/rational.hpp
-  )

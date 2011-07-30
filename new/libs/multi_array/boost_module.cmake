@@ -13,4 +13,6 @@ boost_module("Multi Array"
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

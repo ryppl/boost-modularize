@@ -23,11 +23,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/program_options
-  include/boost/program_options.hpp
-  )
-
 boost_add_library(program_options NO_SYMBOL
   src/cmdline
   src/config_file

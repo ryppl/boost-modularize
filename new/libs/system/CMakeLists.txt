@@ -6,10 +6,5 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost COMPONENTS config integer utility NO_MODULE)
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/system
-  include/boost/cerrno.hpp
-  )
-
 add_subdirectory(doc)
 add_subdirectory(src)

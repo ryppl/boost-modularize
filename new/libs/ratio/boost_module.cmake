@@ -10,4 +10,6 @@ boost_module(Ratio
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

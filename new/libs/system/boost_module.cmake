@@ -6,4 +6,6 @@ boost_module(System
     config
     integer
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

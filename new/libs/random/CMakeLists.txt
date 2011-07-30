@@ -28,10 +28,4 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/random
-  include/boost/random.hpp
-  include/boost/nondet_random.hpp
-  )
-
 boost_add_library(random NO_SYMBOL src/random_device.cpp)

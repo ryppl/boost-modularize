@@ -2,4 +2,6 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 boost_module(Preprocessor
+  INCLUDE_DIRECTORIES
+    include
   )

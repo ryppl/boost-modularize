@@ -18,4 +18,6 @@ boost_module(Statechart
     thread
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

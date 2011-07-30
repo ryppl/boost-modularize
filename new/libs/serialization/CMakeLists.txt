@@ -39,12 +39,6 @@ if(MSVC)
     )
 endif(MSVC)
 
-boost_add_headers(
-  include/boost/archive
-  include/boost/serialization
-  include/boost/strong_typedef.hpp
-  )
-
 # if(GCC)
 #   add_definitions(-fvisibility=hidden)
 # endif(GCC)

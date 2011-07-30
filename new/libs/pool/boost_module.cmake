@@ -9,4 +9,6 @@ boost_module(Pool
     exception
     static_assert
     type_traits
+  INCLUDE_DIRECTORIES
+    include
   )

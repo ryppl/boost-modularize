@@ -26,11 +26,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/mpi
-  include/boost/mpi.hpp
-  )
-
 if(MSVC)
   add_definitions(
     /wd4251 # class needs to have dll-interface to be used by clients

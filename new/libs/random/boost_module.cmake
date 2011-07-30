@@ -17,4 +17,6 @@ boost_module(Random
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

@@ -6,4 +6,6 @@ boost_module(Polygon
     config
     mpl
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

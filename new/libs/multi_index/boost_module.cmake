@@ -18,4 +18,6 @@ boost_module("Multi Index"
     tuple
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

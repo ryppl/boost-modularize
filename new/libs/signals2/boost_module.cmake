@@ -28,4 +28,6 @@ boost_module(Signals2
     type_traits
     utility
     variant
+  INCLUDE_DIRECTORIES
+    include
   )

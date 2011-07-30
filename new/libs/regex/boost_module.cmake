@@ -20,4 +20,6 @@ boost_module(Regex
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

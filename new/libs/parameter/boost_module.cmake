@@ -17,4 +17,6 @@ boost_module(Parameter
     python
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

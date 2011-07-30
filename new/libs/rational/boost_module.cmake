@@ -8,4 +8,6 @@ boost_module(Rational
     math
     static_assert
     utility
+  INCLUDE_DIRECTORIES
+    include
   )
