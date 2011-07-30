@@ -12,4 +12,6 @@ boost_module(Tuple
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

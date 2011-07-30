@@ -12,4 +12,6 @@ boost_module(Variant
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

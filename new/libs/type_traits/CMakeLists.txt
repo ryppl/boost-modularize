@@ -15,9 +15,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/type_traits
-  include/boost/type_traits.hpp
-  include/boost/aligned_storage.hpp
-  )

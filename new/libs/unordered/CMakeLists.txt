@@ -20,9 +20,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/unordered
-  include/boost/unordered_map.hpp
-  include/boost/unordered_set.hpp
-  )

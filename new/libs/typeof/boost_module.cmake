@@ -9,4 +9,6 @@ boost_module(Typeof
     preprocessor
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

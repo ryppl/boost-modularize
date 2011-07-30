@@ -5,8 +5,3 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost COMPONENTS config core integer utility NO_MODULE)
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/progress.hpp
-  include/boost/timer.hpp
-  )

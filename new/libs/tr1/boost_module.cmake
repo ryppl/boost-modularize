@@ -29,4 +29,6 @@ boost_module(TR1
     type_traits
     unordered
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

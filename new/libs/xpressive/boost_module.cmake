@@ -28,4 +28,6 @@ boost_module(Xpressive
     type_traits
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

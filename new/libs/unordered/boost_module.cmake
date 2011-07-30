@@ -13,4 +13,6 @@ boost_module(Unordered
     preprocessor
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

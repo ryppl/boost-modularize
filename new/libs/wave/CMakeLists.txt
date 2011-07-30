@@ -38,11 +38,6 @@ if(MSVC)
     )
 endif(MSVC)
 
-boost_add_headers(
-  include/boost/wave
-  include/boost/wave.hpp
-  )
-
 boost_add_library(wave
   SOURCES
     src/instantiate_cpp_exprgrammar.cpp

@@ -21,4 +21,6 @@ boost_module(Units
     type_traits
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

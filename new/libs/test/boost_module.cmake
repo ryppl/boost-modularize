@@ -24,4 +24,6 @@ boost_module(Test
     timer
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

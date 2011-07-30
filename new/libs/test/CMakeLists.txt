@@ -26,10 +26,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/test
-  )
-
 if(MSVC)
   add_definitions(/EHa) # specify the asynchronous exception handling model
 endif(MSVC)

@@ -22,11 +22,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/thread
-  include/boost/thread.hpp
-  )
-
 find_package(Threads REQUIRED)
 
 if(CMAKE_USE_WIN32_THREADS_INIT)

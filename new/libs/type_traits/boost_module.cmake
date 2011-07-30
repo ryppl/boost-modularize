@@ -26,4 +26,6 @@ boost_module("Type Traits"
     static_assert
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )
