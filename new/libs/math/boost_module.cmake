@@ -24,4 +24,6 @@ boost_module(Math
     tuple
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

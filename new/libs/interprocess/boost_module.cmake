@@ -23,4 +23,6 @@ boost_module(Interprocess
     type_traits
     unordered
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

@@ -19,4 +19,6 @@ boost_module(GIL
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

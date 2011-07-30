@@ -4,4 +4,6 @@
 boost_module(Io
   DEPENDS
     detail
+  INCLUDE_DIRECTORIES
+    include
   )

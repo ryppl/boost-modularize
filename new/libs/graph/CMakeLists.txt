@@ -50,10 +50,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/graph
-  )
-
 boost_add_library(graph NO_SYMBOL
   SOURCES
     src/read_graphviz_new.cpp

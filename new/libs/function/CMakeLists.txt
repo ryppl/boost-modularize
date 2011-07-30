@@ -19,10 +19,4 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/function
-  include/boost/function.hpp
-  include/boost/function_equal.hpp
-  )
-
 boost_documentation(doc/function.xml)

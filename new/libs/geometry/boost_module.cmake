@@ -29,4 +29,6 @@ boost_module(Geometry
     typeof
     units
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

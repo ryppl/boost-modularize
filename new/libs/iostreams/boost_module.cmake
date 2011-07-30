@@ -26,4 +26,6 @@ boost_module(Iostreams
   DEB_DEPENDS
     DEV libbz2-dev zlib1g-dev
     LIB libbz2-1.0 zlib1g
+  INCLUDE_DIRECTORIES
+    include
   )

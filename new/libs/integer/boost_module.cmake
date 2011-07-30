@@ -14,4 +14,6 @@ boost_module(Integer
   DEPENDS
     config
     core
+  INCLUDE_DIRECTORIES
+    include
   )

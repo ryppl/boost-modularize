@@ -35,10 +35,6 @@ if(MSVC)
     )
 endif(MSVC)
 
-boost_add_headers(
-  include/boost/iostreams
-  )
-
 set(sources src/file_descriptor.cpp src/mapped_file.cpp)
 set(link_libraries)
 

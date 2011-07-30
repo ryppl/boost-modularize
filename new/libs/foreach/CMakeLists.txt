@@ -16,9 +16,4 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/foreach.hpp
-  include/boost/foreach_fwd.hpp
-  )
-
 boost_documentation(doc/foreach.qbk)

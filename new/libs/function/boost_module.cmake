@@ -13,4 +13,6 @@ boost_module(Function
     type_traits
     typeof
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

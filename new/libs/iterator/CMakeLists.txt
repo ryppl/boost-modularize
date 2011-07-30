@@ -20,12 +20,3 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
-
-boost_add_headers(
-  include/boost/function_output_iterator.hpp
-  include/boost/iterator
-  include/boost/iterator.hpp
-  include/boost/iterator_adaptors.hpp
-  include/boost/pointee.hpp
-  include/boost/shared_container_iterator.hpp
-  )

@@ -20,4 +20,6 @@ boost_module(Flyweight
     preprocessor
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

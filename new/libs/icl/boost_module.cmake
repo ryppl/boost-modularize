@@ -14,4 +14,6 @@ boost_module(ICL
     static_assert
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

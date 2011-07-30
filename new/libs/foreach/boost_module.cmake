@@ -10,4 +10,6 @@ boost_module(Foreach
     range
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )

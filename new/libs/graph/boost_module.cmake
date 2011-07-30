@@ -51,4 +51,6 @@ boost_module(Graph
     utility
     variant
     xpressive
+  INCLUDE_DIRECTORIES
+    include
   )

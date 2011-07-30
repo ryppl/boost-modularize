@@ -35,11 +35,6 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-boost_add_headers(
-  include/boost/math
-  include/boost/math_fwd.hpp
-  )
-
 include_directories(src/tr1)
 
 set(C99_SOURCES

@@ -12,4 +12,6 @@ boost_module(Lambda
     tuple
     type_traits
     utility
+  INCLUDE_DIRECTORIES
+    include
   )
