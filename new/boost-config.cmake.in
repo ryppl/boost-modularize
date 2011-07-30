@@ -6,8 +6,29 @@
 #   http://www.boost.org/LICENSE_1_0.txt                                       #
 ################################################################################
 
+include("@Boost_SOURCE_DIR@/tools/cmake/modules/BoostProject.cmake")
+
+function(boost_walk_dependencies)
+  foreach(component ${ARGN})
+    list(FIND _transitive_depends ${component} index)
+    if(index EQUAL -1)
+      boost_get_component_vars(${component})
+      set(_transitive_depends ${_transitive_depends}
+        ${component} CACHE INTERNAL "" FORCE)
+      set(_include_directories ${_include_directories}
+        ${BOOST_CURRENT_INCLUDE_DIRECTORIES} CACHE INTERNAL "" FORCE)
+      boost_walk_dependencies(${BOOST_CURRENT_DEPENDS})
+    endif()
+  endforeach(component)
+endfunction(boost_walk_dependencies)
+
+unset(_include_directories CACHE)
+unset(_transitive_depends CACHE)
+
+boost_walk_dependencies(${Boost_FIND_COMPONENTS})
+
 set(Boost_FOUND TRUE)
-set(Boost_INCLUDE_DIRS)
+set(Boost_INCLUDE_DIRS ${_include_directories})
 set(Boost_LIBRARY_DIRS "@Boost_BINARY_DIR@/lib")
 set(Boost_RESOURCE_PATH "@Boost_SOURCE_DIR@/tools/cmake/resources")
 set(BOOSTBOOK_CATALOG "@Boost_BINARY_DIR@/tools/boostbook/catalog.xml")
@@ -15,10 +36,5 @@ set(BOOSTBOOK_XSL_DIR "@Boost_SOURCE_DIR@/tools/boostbook/xsl")
 set(Boost_USE_FILE "@Boost_SOURCE_DIR@/tools/cmake/modules/UseBoost.cmake")
 set(Boost_DEV_FILE "@Boost_SOURCE_DIR@/tools/cmake/modules/UseBoostDev.cmake")
 
-include("@Boost_SOURCE_DIR@/tools/cmake/modules/BoostProject.cmake")
-
-foreach(component ${Boost_FIND_COMPONENTS})
-  boost_get_component_vars(${component})
-  list(APPEND Boost_INCLUDE_DIRS ${BOOST_CURRENT_INCLUDE_DIRECTORIES})
-  # TODO: add include dirs of ${BOOST_CURRENT_DEPENDS}
-endforeach(component)
+unset(_include_directories CACHE)
+unset(_transitive_depends CACHE)
