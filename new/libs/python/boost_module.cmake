@@ -28,6 +28,8 @@ boost_module(Python
   DEB_DEPENDS
     DEV python2.7-dev
     LIB libpython2.7
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
