@@ -35,7 +35,7 @@ file(WRITE "${Boost_BINARY_DIR}/boost-config.cmake"
 
 set(Boost_DIR "${Boost_BINARY_DIR}")
 find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+include("${Boost_USE_FILE}")
 
 option(BOOST_DEBIAN_PACKAGES "Create debian packages" OFF)
 

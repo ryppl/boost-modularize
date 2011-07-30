@@ -19,4 +19,7 @@ boost_module(MPI
     static_assert
     type_traits
     utility
+  DEB_DEPENDS
+    DEV mpi-default-dev
+    LIB mpi-default-bin
   )

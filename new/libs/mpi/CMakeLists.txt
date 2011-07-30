@@ -38,20 +38,20 @@ if(MSVC)
     )
 endif(MSVC)
 
-if(BOOST_DEBIAN_PACKAGES)
-  set(BOOST_MPI_BASE mpich2)
-  set(MPI_DEBIAN_DEPENDS DEB_DEPENDS
-    DEV libmpich2-dev
-    LIB libmpich2-2
-    )
-  add_subdirectory(src mpich2)
-
-  set(BOOST_MPI_BASE openmpi)
-  set(MPI_DEBIAN_DEPENDS DEB_DEPENDS
-    DEV libopenmpi-dev libcr-dev
-    LIB libopenmpi1.3
-    )
-  add_subdirectory(src openmpi)
-else()
+#if(BOOST_DEBIAN_PACKAGES)
+#  set(BOOST_MPI_BASE mpich2)
+#  set(MPI_DEBIAN_DEPENDS DEB_DEPENDS
+#    DEV libmpich2-dev
+#    LIB libmpich2-2
+#    )
+#  add_subdirectory(src mpich2)
+#
+#  set(BOOST_MPI_BASE openmpi)
+#  set(MPI_DEBIAN_DEPENDS DEB_DEPENDS
+#    DEV libopenmpi-dev libcr-dev
+#    LIB libopenmpi1.3
+#    )
+#  add_subdirectory(src openmpi)
+#else()
   add_subdirectory(src)
-endif()
+#endif()

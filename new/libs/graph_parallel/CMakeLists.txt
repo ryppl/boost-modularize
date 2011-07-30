@@ -22,11 +22,11 @@ endif()
 
 include_directories(${MPI_INCLUDE_PATH})
 
-if(BOOST_DEBIAN_PACKAGES)
-  set(mpi_library openmpi)
-else()
+#if(BOOST_DEBIAN_PACKAGES)
+#  set(mpi_library openmpi)
+#else()
   set(mpi_library mpi)
-endif()
+#endif()
 
 boost_add_library(graph_parallel
   SOURCES
