@@ -15,23 +15,8 @@ project(Boost)
 # Config Information                                                     #
 ##########################################################################
 
-set(BOOST_CONFIG_VERSION "1.48")
-
-file(WRITE "${PROJECT_BINARY_DIR}/boost-config-version.cmake"
-  "set(PACKAGE_VERSION \"${BOOST_CONFIG_VERSION}\")\n"
-  "set(PACKAGE_VERSION_EXACT TRUE)\n"
-  )
-
-file(WRITE "${Boost_BINARY_DIR}/boost-config.cmake"
-  "set(Boost_FOUND TRUE)\n"
-  "set(Boost_INCLUDE_DIRS \"${Boost_BINARY_DIR}/include\")\n"
-  "set(Boost_LIBRARY_DIRS \"${Boost_BINARY_DIR}/lib\")\n"
-  "set(Boost_RESOURCE_PATH \"${Boost_SOURCE_DIR}/tools/cmake/resources\")\n"
-  "set(BOOSTBOOK_CATALOG \"${Boost_BINARY_DIR}/tools/boostbook/catalog.xml\")\n"
-  "set(BOOSTBOOK_XSL_DIR \"${Boost_SOURCE_DIR}/tools/boostbook/xsl\")\n"
-  "set(Boost_USE_FILE \"${Boost_SOURCE_DIR}/tools/cmake/modules/UseBoost.cmake\")\n"
-  "set(Boost_DEV_FILE \"${Boost_SOURCE_DIR}/tools/cmake/modules/UseBoostDev.cmake\")\n"
-  )
+configure_file(boost-config.cmake.in boost-config.cmake @ONLY)
+configure_file(boost-config-version.cmake.in boost-config-version.cmake COPYONLY)
 
 set(Boost_DIR "${Boost_BINARY_DIR}")
 find_package(Boost NO_MODULE)

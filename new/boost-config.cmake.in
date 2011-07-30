@@ -1,0 +1,25 @@
+################################################################################
+# Copyright (C) 2011 Daniel Pfeifer <daniel@pfeifer-mail.de>                   #
+#                                                                              #
+# Distributed under the Boost Software License, Version 1.0.                   #
+# See accompanying file LICENSE_1_0.txt or copy at                             #
+#   http://www.boost.org/LICENSE_1_0.txt                                       #
+################################################################################
+
+set(Boost_FOUND TRUE)
+set(Boost_INCLUDE_DIRS "@Boost_BINARY_DIR@/include")
+set(Boost_LIBRARY_DIRS "@Boost_BINARY_DIR@/lib")
+set(Boost_RESOURCE_PATH "@Boost_SOURCE_DIR@/tools/cmake/resources")
+set(BOOSTBOOK_CATALOG "@Boost_BINARY_DIR@/tools/boostbook/catalog.xml")
+set(BOOSTBOOK_XSL_DIR "@Boost_SOURCE_DIR@/tools/boostbook/xsl")
+set(Boost_USE_FILE "@Boost_SOURCE_DIR@/tools/cmake/modules/UseBoost.cmake")
+set(Boost_DEV_FILE "@Boost_SOURCE_DIR@/tools/cmake/modules/UseBoostDev.cmake")
+
+include("@Boost_SOURCE_DIR@/tools/cmake/modules/BoostProject.cmake")
+
+foreach(component ${Boost_FIND_COMPONENTS})
+  boost_get_component_vars(${component})
+  list(APPEND Boost_INCLUDE_DIRS ${BOOST_CURRENT_INCLUDE_DIRECTORIES})
+  # TODO: add include dirs of ${BOOST_CURRENT_DEPENDS}
+endforeach(component)
+
