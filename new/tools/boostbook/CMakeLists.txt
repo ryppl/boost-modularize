@@ -87,7 +87,7 @@ install(FILES "${catalog}"
   COMPONENT "${BOOST_RUNTIME_COMPONENT}"
   )
 
-file(WRITE ${BOOST_EXPORT_FILE}
+file(WRITE "${BOOST_EXPORTS_FILE}"
   "set(BOOSTBOOK_CATALOG \"\${CMAKE_CURRENT_LIST_DIR}/../boostbook/catalog.xml\")\n"
   "set(BOOSTBOOK_XSL_DIR \"\${CMAKE_CURRENT_LIST_DIR}/../boostbook/xsl\")\n"
   )

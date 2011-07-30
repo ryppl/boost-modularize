@@ -7,7 +7,7 @@
 ################################################################################
 
 set(Boost_FOUND TRUE)
-set(Boost_INCLUDE_DIRS "@Boost_BINARY_DIR@/include")
+set(Boost_INCLUDE_DIRS)
 set(Boost_LIBRARY_DIRS "@Boost_BINARY_DIR@/lib")
 set(Boost_RESOURCE_PATH "@Boost_SOURCE_DIR@/tools/cmake/resources")
 set(BOOSTBOOK_CATALOG "@Boost_BINARY_DIR@/tools/boostbook/catalog.xml")
@@ -22,4 +22,3 @@ foreach(component ${Boost_FIND_COMPONENTS})
   list(APPEND Boost_INCLUDE_DIRS ${BOOST_CURRENT_INCLUDE_DIRECTORIES})
   # TODO: add include dirs of ${BOOST_CURRENT_DEPENDS}
 endforeach(component)
-
