@@ -3,18 +3,19 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
+find_package(PythonInterp REQUIRED)
+
 function( boost_python_test_add name )
   cmake_parse_arguments( BPTEST_TARGET
     ""
     "MODULE"
-    "SOURCES;PYSOURCES;EXECUTABLE"
+    "SOURCES;EXECUTABLE"
     ${ARGN}
     )
-  if ( BPTEST_TARGET_MODULE )
-    set( target ${BPTEST_TARGET_MODULE} )
-  else()
-    set( target ${name}_ext )
+  if ( NOT BPTEST_TARGET_MODULE )
+    set( BPTEST_TARGET_MODULE ${name}_ext )
   endif()
+  set( target ${BOOST_CURRENT}-test-${name} )
   if( NOT BPTEST_TARGET_SOURCES )
     set( BPTEST_TARGET_SOURCES ${name}.cpp )
   endif()
@@ -23,28 +24,25 @@ function( boost_python_test_add name )
   endif()
   #message( STATUS "${target}: ${BPTEST_TARGET_EXECUTABLE}, ${BPTEST_TARGET_SOURCES}" )
     
-  add_library(${target} SHARED EXCLUDE_FROM_ALL ${BPTEST_TARGET_SOURCES})
-  #target_link_libraries(${target} boost_python)
+  add_library(${target} MODULE EXCLUDE_FROM_ALL ${BPTEST_TARGET_SOURCES})
   boost_link_libraries(${target} python SHARED)
   set_property(TARGET ${target} APPEND PROPERTY
     COMPILE_DEFINITIONS "BOOST_ALL_DYN_LINK=1;BOOST_ALL_NO_LIB=1")
   set_target_properties(${target} PROPERTIES
     PREFIX ""
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-    FOLDER "${BOOST_CURRENT_NAME}"
-    PROJECT_LABEL "${target} (python extension)"
-    # VERSION "${Boost_VERSION}"
+    OUTPUT_NAME "${BPTEST_TARGET_MODULE}"
     )
-  # To do: add dependencies to ${BPTEST_TARGET_PYSOURCES}
 
-  set( bp_test_run_script "${CMAKE_CURRENT_SOURCE_DIR}/bp_test_run_script.cmake" )
   foreach( executable ${BPTEST_TARGET_EXECUTABLE} )
     set( test_run_args
-      "-DPYSCRIPT=${CMAKE_CURRENT_SOURCE_DIR}/${executable}"
-      "-DPYWD=${CMAKE_CURRENT_BINARY_DIR}"
+      "-DENVIRONMENT_VARS=PYTHONPATH"
+      "-DPYTHONPATH=${CMAKE_CURRENT_BINARY_DIR}"
+      "-DCOMMAND=${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/${executable}"
+      "-DTARGET=$<TARGET_FILE:${target}>"
       )
     add_custom_command(TARGET ${target} POST_BUILD
-      COMMAND ${CMAKE_COMMAND} ${test_run_args} -P "${bp_test_run_script}"
+      COMMAND ${CMAKE_COMMAND} ${test_run_args} -P "${boost_test_run_script}"
       )
   endforeach()
 
@@ -57,45 +55,6 @@ function( boost_python_test_add name )
   endif(NOT TARGET ${project_test})
   add_dependencies(${project_test} ${target})
 endfunction()
-
-function( boost_python_link_test name )
-  cmake_parse_arguments( BPTEST_TARGET
-    ""
-    "MODULE"
-    "SOURCES"
-    ${ARGN}
-    )
-  if ( BPTEST_TARGET_MODULE )
-    set( target ${BPTEST_TARGET_MODULE} )
-  else()
-    set( target ${name}_ext )
-  endif()
-  if( NOT BPTEST_TARGET_SOURCES )
-    set( BPTEST_TARGET_SOURCES ${name}.cpp )
-  endif()
-  add_library(${target} SHARED EXCLUDE_FROM_ALL ${BPTEST_TARGET_SOURCES})
-  #target_link_libraries(${target} boost_python)
-  boost_link_libraries(${target} python SHARED)
-  set_property(TARGET ${target} APPEND PROPERTY
-    COMPILE_DEFINITIONS "BOOST_ALL_DYN_LINK=1;BOOST_ALL_NO_LIB=1")
-  set_target_properties(${target} PROPERTIES
-    PREFIX ""
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-    FOLDER "${BOOST_CURRENT_NAME}"
-    PROJECT_LABEL "${target} (python extension)"
-    # VERSION "${Boost_VERSION}"
-    )
-  # To do: add dependencies to ${BPTEST_TARGET_PYSOURCES}
-  
-  set(project_test "${BOOST_CURRENT}-test")
-  if(NOT TARGET ${project_test})
-    add_custom_target(${project_test})
-    if(TARGET test)
-      add_dependencies(test ${project_test})
-    endif(TARGET test)
-  endif(NOT TARGET ${project_test})
-  add_dependencies(${project_test} ${target})
-endfunction()  
 
 # TODO:
 #boost_python_test_add( crossmod_exception
@@ -111,8 +70,9 @@ boost_python_test_add( enable_shared_from_this )
 boost_python_test_add( andreas_beyer )
 boost_python_test_add( wrapper_held_type )
 
-boost_python_test_add( polymorphism2_auto_ptr 
-  EXECUTABLE polymorphism2_auto_ptr.py polymorphism2.py SOURCES polymorphism2_auto_ptr.cpp )
+# TODO:
+#boost_python_test_add( polymorphism2_auto_ptr 
+#  EXECUTABLE polymorphism2_auto_ptr.py polymorphism2.py SOURCES polymorphism2_auto_ptr.cpp )
 
 boost_python_test_add( polymorphism )
 boost_python_test_add( polymorphism2 )
@@ -226,22 +186,33 @@ endif()
 
 # # --- unit tests of library components ---
 
-boost_python_link_test( indirect_traits_test LINK indirect_traits_test.cpp LINK_BOOST_LIBRARIES python )
-boost_add_test( destroy_test RUN destroy_test.cpp LINK_BOOST_LIBRARIES python )
-boost_add_test( pointer_type_id_test RUN pointer_type_id_test.cpp LINK_BOOST_LIBRARIES python )
-boost_add_test( bases RUN bases.cpp LINK_BOOST_LIBRARIES python )
-boost_add_test( if_else RUN if_else.cpp LINK_BOOST_LIBRARIES python )
-boost_add_test( pointee RUN pointee.cpp LINK_BOOST_LIBRARIES python )
-boost_add_test( result RUN result.cpp LINK_BOOST_LIBRARIES python )
-
-boost_add_test( string_literal LINK string_literal.cpp LINK_BOOST_LIBRARIES python )
-boost_python_link_test(borrowed borrowed.cpp)
-boost_python_link_test(object_manager object_manager.cpp)
-boost_python_link_test(copy_ctor_mutates_rhs copy_ctor_mutates_rhs.cpp)
-
-boost_add_test( upcast RUN upcast.cpp LINK_BOOST_LIBRARIES python )
-  
-boost_python_link_test(select_holder)
+boost_add_multiple_tests(
+  COMPILE
+    select_arg_to_python_test
+  COMPILE_FAIL
+    raw_pyobject_fail1
+    raw_pyobject_fail2
+    as_to_python_function
+    object_fail1
+  LINK
+    string_literal
+  MODULE
+    indirect_traits_test
+    borrowed
+    object_manager
+    copy_ctor_mutates_rhs
+    select_holder
+  RUN
+    destroy_test
+    pointer_type_id_test
+    bases
+    if_else
+    pointee
+    result
+    upcast
+  LINK_BOOST_LIBRARIES
+    python
+  )
 
 # TODO
 # [ run select_from_python_test.cpp ../src/converter/type_id.cpp 
@@ -249,12 +220,4 @@ boost_python_link_test(select_holder)
 #   :
 #   : <define>BOOST_PYTHON_STATIC_LIB
 #     <use>$(PY)
-
 # ]
-
-boost_add_test(select_arg_to_python_test COMPILE select_arg_to_python_test.cpp)
-
-boost_add_test(raw_pyobject_fail1 COMPILE FAIL raw_pyobject_fail1.cpp)
-boost_add_test(raw_pyobject_fail2 COMPILE FAIL raw_pyobject_fail2.cpp)
-boost_add_test(as_to_python_function COMPILE_FAIL as_to_python_function.cpp)
-boost_add_test(object_fail1 COMPILE FAIL object_fail1.cpp)
