@@ -141,7 +141,7 @@ boost_python_test_add(builtin_converters
 
 boost_add_test(pointer_vector PYTHON
   LINK_BOOST_LIBRARIES
-    python
+    shared python
   )
 
 boost_add_test(map_indexing_suite PYTHON
@@ -150,7 +150,7 @@ boost_add_test(map_indexing_suite PYTHON
     a_map_indexing_suite.cpp
     int_map_indexing_suite.cpp
   LINK_BOOST_LIBRARIES
-    python
+    shared python
   )
 
 # TODO
@@ -245,5 +245,5 @@ boost_add_multiple_tests(
     pytype_function
     vector_indexing_suite
   LINK_BOOST_LIBRARIES
-    python
+    shared python
   )
