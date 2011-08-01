@@ -421,12 +421,15 @@ def update_modules():
         shutil.copy2(os.path.join('new', new_file), dst_repo_dir)
 
     # configure CMakeLists.txt
+    subdirectories = sections
+    subdirectories.append('tools/cmake')
+    subdirectories.sort()
     fin = open(os.path.join('new', 'CMakeLists.txt'))
     fout = open(os.path.join(dst_repo_dir, 'CMakeLists.txt'), "wt")
     for line in fin:
-        if line == '@BOOST_MODULE_ADD_SUBDIRECTORIES@\n':
-            for section in sections:
-                fout.write('add_subdirectory(%s)\n' % section)
+        if line == '@BOOST_SUBDIRECTORIES@\n':
+            for directory in subdirectories:
+                fout.write('  %s\n' % directory)
         else:
             fout.write(line)
     fin.close()

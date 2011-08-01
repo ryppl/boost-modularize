@@ -21,6 +21,7 @@ configure_file(boost-config-version.cmake.in boost-config-version.cmake COPYONLY
 set(Boost_DIR "${Boost_BINARY_DIR}")
 find_package(Boost NO_MODULE)
 include("${Boost_USE_FILE}")
+include(BoostProject)
 
 option(BOOST_DEBIAN_PACKAGES "Create debian packages" OFF)
 
@@ -69,8 +70,18 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 ##########################################################################
 
 set(BOOST_PROJECTS_ALL)
-@BOOST_MODULE_ADD_SUBDIRECTORIES@
-add_subdirectory(tools/cmake)
+
+set(BOOST_SUBDIRECTORIES
+  @BOOST_SUBDIRECTORIES@
+  )
+
+foreach(dir ${BOOST_SUBDIRECTORIES})
+  boost_precache(${dir})
+endforeach(dir)
+
+foreach(dir ${BOOST_SUBDIRECTORIES})
+  add_subdirectory(${dir})
+endforeach(dir)
 
 ##########################################################################
 # Package Information                                                    #
