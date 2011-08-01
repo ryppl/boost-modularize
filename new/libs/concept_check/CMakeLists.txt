@@ -15,3 +15,20 @@ find_package(Boost
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")
+
+boost_add_multiple_tests(
+  RUN
+    #stl_concept_covering
+    stl_concept_check
+    concept_check_test
+    class_concept_check_test
+    old_concept_pass
+  COMPILE_FAIL
+    concept_check_fail_expected
+    class_concept_fail_expected
+    where_fail
+    usage_fail
+    function_requires_fail
+    old_concept_function_fail
+    old_concept_class_fail
+  )
