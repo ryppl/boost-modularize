@@ -427,7 +427,7 @@ def update_modules():
     fin = open(os.path.join('new', 'CMakeLists.txt'))
     fout = open(os.path.join(dst_repo_dir, 'CMakeLists.txt'), "wt")
     for line in fin:
-        if line == '@BOOST_SUBDIRECTORIES@\n':
+        if line == '  @BOOST_SUBDIRECTORIES@\n':
             for directory in subdirectories:
                 fout.write('  %s\n' % directory)
         else:
