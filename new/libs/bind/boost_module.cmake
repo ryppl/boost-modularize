@@ -15,6 +15,8 @@ boost_module(Bind
     detail
     smart_ptr
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
