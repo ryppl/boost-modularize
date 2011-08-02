@@ -10,6 +10,8 @@ boost_module(Format
     optional
     smart_ptr
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
