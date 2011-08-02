@@ -1,8 +1,6 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-include(BoostTesting)
-
 #if(MSVC)
 #  add_definitions(-D_HAS_ITERATOR_DEBUGGING=0)
 #endif(MSVC)

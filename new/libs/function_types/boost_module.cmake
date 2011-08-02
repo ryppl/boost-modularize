@@ -9,6 +9,8 @@ boost_module("Function Types"
     mpl
     preprocessor
     type_traits
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )

@@ -1,6 +1,9 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
+find_package(Boost COMPONENTS assign NO_MODULE)
+include("${Boost_USE_FILE}")
+
 # phoenix_core
 boost_add_multiple_tests(RUN
   core/primitives_tests.cpp
