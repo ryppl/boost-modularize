@@ -12,6 +12,8 @@ boost_module(CRC
     config
     core
     integer
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
