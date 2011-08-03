@@ -9,6 +9,7 @@ boost_module(Unordered
     exception
     functional
     iterator
+    move
     mpl
     preprocessor
     type_traits
