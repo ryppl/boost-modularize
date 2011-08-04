@@ -6,6 +6,8 @@ boost_module(Logic
     config
     detail
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
