@@ -10,6 +10,7 @@ find_package(Boost
     detail
     exception
     integer
+    math
     mpl
     numeric
     static_assert

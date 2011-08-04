@@ -20,6 +20,7 @@ find_package(Boost
     smart_ptr
     spirit
     tuple
+    unordered
     utility
   NO_MODULE
   )

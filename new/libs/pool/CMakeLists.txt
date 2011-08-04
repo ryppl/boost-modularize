@@ -9,8 +9,10 @@ find_package(Boost
     core
     detail
     exception
-    static_assert
+    math
+    thread
     type_traits
+    utility
   NO_MODULE
   )
 include("${Boost_DEV_FILE}")

@@ -13,7 +13,7 @@ find_package(Boost
     foreach
     functional
     iterator
-    mpl
+    move
     preprocessor
     type_traits
     utility
