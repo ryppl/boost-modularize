@@ -7,6 +7,8 @@ boost_module(Timer
     core
     integer
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
