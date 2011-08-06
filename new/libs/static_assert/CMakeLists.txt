@@ -5,3 +5,22 @@ cmake_minimum_required(VERSION 2.8)
 
 find_package(Boost COMPONENTS config core detail type_traits NO_MODULE)
 include("${Boost_DEV_FILE}")
+
+boost_add_multiple_tests(
+  RUN
+    static_assert_test
+#   static_assert_example_1
+    static_assert_example_2
+    static_assert_example_3
+  COMPILE_FAIL
+    static_assert_test_fail_1
+    static_assert_test_fail_2
+    static_assert_test_fail_3
+    static_assert_test_fail_4
+    static_assert_test_fail_5
+    static_assert_test_fail_6
+    static_assert_test_fail_7
+    static_assert_test_fail_8
+    static_assert_test_fail_9
+    static_assert_test_fail_10
+  )
