@@ -19,6 +19,8 @@ boost_module("Ptr Container"
     type_traits
     unordered
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
