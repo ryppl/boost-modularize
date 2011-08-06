@@ -7,6 +7,8 @@ boost_module(Tokenizer
     detail
     mpl
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
