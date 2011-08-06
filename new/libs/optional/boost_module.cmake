@@ -9,6 +9,8 @@ boost_module(Optional
     mpl
     type_traits
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
