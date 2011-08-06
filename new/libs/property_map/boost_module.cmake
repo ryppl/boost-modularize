@@ -21,6 +21,8 @@ boost_module("Property Map"
     smart_ptr
     type_traits
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
