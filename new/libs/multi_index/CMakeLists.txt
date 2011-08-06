@@ -10,6 +10,7 @@ find_package(Boost
     core
     detail
     exception
+    foreach
     functional
     iterator
     math

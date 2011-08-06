@@ -19,6 +19,8 @@ boost_module(Fusion
     tuple
     type_traits
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )

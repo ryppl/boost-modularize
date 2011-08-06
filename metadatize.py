@@ -8,14 +8,12 @@ find_boost = re.compile(r'find_package\(Boost\s+[^)]*\)')
 
 # These are controlled by command-line parameters
 src_repo_dir = None
-dst_repo_dir = None
 
 # Print the usage message (there's probably a nifty python way to do this)
 def usage():
-    print '''Usage: metadatize.py [-h] [--src=<dir>] [--dst=<dir>]
+    print '''Usage: metadatize.py [-h] [--src=<dir>]
     -h              : help
-    --src           : local path to the git repository storing the unmodularized boost
-    --dst           : local path to the git repository storing the modularized boost'''
+    --src           : local path to the git repository storing the unmodularized boost'''
 
 def parse_command_line():
     # Parse the command line arguments
@@ -26,20 +24,18 @@ def parse_command_line():
         usage()
         sys.exit(2)
 
-    global src_repo_dir, dst_repo_dir
+    global src_repo_dir
     for o, a in opts:
         if o in ("-h", "--help"):
             usage()
             sys.exit()
         elif o == "--src":
             src_repo_dir = os.path.abspath(a)
-        elif o == "--dst":
-            dst_repo_dir = os.path.abspath(a)
         else:
             assert False, "unhandled option"
     
-    if src_repo_dir is None or dst_repo_dir is None:
-        print 'You must specify both the source and destination directories'
+    if src_repo_dir is None:
+        print 'You must specify the source directory'
         usage()
         sys.exit(2)
 
