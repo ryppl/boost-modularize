@@ -17,6 +17,8 @@ boost_module(Filesystem
     system
     type_traits
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
