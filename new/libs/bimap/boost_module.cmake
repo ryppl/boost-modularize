@@ -21,6 +21,8 @@ boost_module(Bimap
     static_assert
     type_traits
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
