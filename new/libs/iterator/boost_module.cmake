@@ -23,6 +23,8 @@ boost_module(Iterator
     tuple
     type_traits
     utility
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
