@@ -1,4 +1,8 @@
-file(COPY "${CMAKE_CURRENT_LIST_DIR}/../boost/"
+if(NOT DEFINED BOOST_DIR)
+  set(BOOST_DIR "${CMAKE_CURRENT_LIST_DIR}/../boost")
+endif()
+
+file(COPY "${BOOST_DIR}/"
   DESTINATION "${CMAKE_CURRENT_LIST_DIR}/new"
   FILES_MATCHING
     PATTERN ".git"                 EXCLUDE

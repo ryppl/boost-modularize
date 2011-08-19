@@ -8,12 +8,9 @@ include("${Boost_DEV_FILE}")
 
 boost_documentation(doc/any.xml)
 
-boost_add_test(any_test)
-boost_add_test(any_cast_cv_failed COMPILE FAIL test/any_cast_cv_failed.cpp)
-
-#boost_test_suite(
-#  RUN
-#    any_test.cpp
-#  COMPILE_FAIL
-#    test/any_cast_cv_failed.cpp
-#  )
+boost_add_multiple_tests(
+  RUN
+    any_test.cpp
+  COMPILE_FAIL
+    test/any_cast_cv_failed.cpp
+  )
