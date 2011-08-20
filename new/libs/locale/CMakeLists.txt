@@ -78,6 +78,9 @@ set(tests
 set(link_libraries
   )
 
+set(link_boost_libraries
+  )
+
 if(BOOST_LOCALE_NO_ICONV)
   add_definitions(-DBOOST_LOCALE_NO_ICONV)
 else()
@@ -113,7 +116,10 @@ else()
     )
   list(APPEND link_libraries
     ${ICU_LIBRARIES}
-    ${ICU_I18N_LIBRARIES}    
+    ${ICU_I18N_LIBRARIES}
+    )
+  list(APPEND link_boost_libraries
+    thread
     )
 endif()
 
@@ -171,7 +177,7 @@ else()
 endif()
 
 if(NOT BOOST_LOCALE_NO_POSIX_BACKEND OR
-   NOT BOOST_LOCALE_NO_STD_BACKEND OR 
+   NOT BOOST_LOCALE_NO_STD_BACKEND OR
    NOT BOOST_LOCALE_NO_WINAPI_BACKEND)
   list(APPEND sources
     src/util/gregorian.cpp
@@ -190,7 +196,9 @@ boost_add_library(locale NO_SYMBOL
   SOURCES
     ${sources}
   LINK_LIBRARIES
-    ${link_libraries}    
+    ${link_libraries}
+  LINK_BOOST_LIBRARIES
+    ${link_boost_libraries}
   )
 
 boost_add_multiple_tests(

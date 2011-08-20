@@ -11,6 +11,9 @@ boost_module(Locale
     thread
     unordered
     utility
+  DEB_DEPENDS
+    DEV libicu-dev
+    LIB libicu42
   INCLUDE_DIRECTORIES
     include
   )

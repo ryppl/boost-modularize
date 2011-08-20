@@ -49,7 +49,7 @@ boost_add_test(set_factory RUN
   test_set_factory_main.cpp
   )
 
-add_library(intermod_holder_dll SHARED
+add_library(intermod_holder_dll SHARED EXCLUDE_FROM_ALL
   intermod_holder_dll.cpp
   )
 set_property(TARGET intermod_holder_dll APPEND PROPERTY
