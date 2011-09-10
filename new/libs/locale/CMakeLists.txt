@@ -19,7 +19,7 @@ include("${Boost_DEV_FILE}")
 
 find_package(Iconv)
 if(ICONV_FOUND)
-  option(DISBOOST_LOCALE_NO_ICONV "Disable iconv library" OFF)
+  option(BOOST_LOCALE_NO_ICONV "Disable iconv library" OFF)
 else()
   set(BOOST_LOCALE_NO_ICONV ON)
 endif()
