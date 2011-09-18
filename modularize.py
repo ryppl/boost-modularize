@@ -5,6 +5,9 @@ from distutils import dir_util
 existing_cache_pkl = 'existing.cache'
 is_win32 = (sys.platform == 'win32')
 
+repo_ro = 'git://github.com/boost-lib/%s.git'
+repo_rw = 'git@github.com:boost-lib/%s.git'
+
 # These are controlled by command-line parameters
 args = []
 verbose = False
@@ -252,10 +255,10 @@ def clean_dir(dst_module_dir):
 
 def setup_metarepo():
     if os.path.exists(dst_repo_dir):
-        run('git', 'pull', 'git@github.com:boost-lib/boost.git', 'master', cwd=dst_repo_dir)
+        run('git', 'pull', repo_rw % 'boost', 'master', cwd=dst_repo_dir)
     else:
         os.makedirs(dst_repo_dir)
-        run('git', 'clone', 'git@github.com:boost-lib/boost.git', dst_repo_dir)
+        run('git', 'clone', repo_rw % 'boost', dst_repo_dir)
 
     run('git', 'submodule', 'foreach', 'git', 'checkout', '--force', cwd=dst_repo_dir)
     run('git', 'submodule', 'update', '--init', cwd=dst_repo_dir)
@@ -331,19 +334,16 @@ def update_modules():
             os.makedirs(dst_module_dir)
             base = os.path.basename(section)
             run('git', 'init')
-            run('git', 'remote', 'add', 'origin',
-                'git@github.com:boost-lib/%s.git' % base)
+            run('git', 'remote', 'add', 'origin', repo_rw % base)
             run('git', 'config', 'branch.master.remote', 'origin')
             run('git', 'config', 'branch.master.merge', 'refs/heads/master')
             #run('git', 'pull', 'origin', 'master')
-            run('git', 'submodule', 'add', 'git://github.com/boost-lib/%s.git' % base,
-                section, cwd=dst_repo_dir)
-            run('git', 'commit', '-a', '-m', 'Added submodule %s' % base, cwd=dst_repo_dir)
+            run('git', 'submodule', 'add', repo_ro % base, section, cwd=dst_repo_dir)
+            run('git', 'commit', '-am', 'Added submodule %s' % base, cwd=dst_repo_dir)
             new_module = True
 
         # Make sure the right url is set for origin (buildbot might have dropped it)
-        run('git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/%s.git'
-            % os.path.basename(section))
+        run('git', 'remote', 'set-url', 'origin', repo_rw % os.path.basename(section))
 
         # Make sure we've really removed everything (leaving behind the top-level)
         # .git directory
@@ -445,8 +445,7 @@ def push_modules():
 
     # Make sure the right url is set for origin of the cmake module
     cmake_dir = os.path.join(dst_repo_dir, 'tools', 'cmake')
-    run('git', 'remote', 'set-url', 'origin', 'git@github.com:boost-lib/cmake.git',
-        cwd=cmake_dir)
+    run('git', 'remote', 'set-url', 'origin', repo_rw % 'cmake', cwd=cmake_dir)
 
     # Pull Boost.CMake
     run('git', 'checkout', 'master', cwd=cmake_dir)
@@ -476,7 +475,7 @@ def push_modules():
 
     # Push this change up to the origin
     print 'Pushing the boost supermodule...'
-    run('git', 'push', 'git@github.com:boost-lib/boost.git', 'master', cwd=dst_repo_dir)
+    run('git', 'push', repo_rw % 'boost', 'master', cwd=dst_repo_dir)
 
     print 'Done'
 
