@@ -6,7 +6,10 @@ existing_cache_pkl = 'existing.cache'
 is_win32 = (sys.platform == 'win32')
 
 repo_ro = 'git://github.com/boost-lib/%s.git'
-repo_rw = 'git@github.com:boost-lib/%s.git'
+#repo_rw = 'git@github.com:boost-lib/%s.git'
+
+# hardcoded github.com IP address. Temp fix for DNS issues.
+repo_rw = 'git@207.97.227.239:boost-lib/%s.git'
 
 # These are controlled by command-line parameters
 args = []
