@@ -4,6 +4,9 @@
 find_package(Boost COMPONENTS assign NO_MODULE)
 include("${Boost_USE_FILE}")
 
+# XXX: some tests #include <libs/bimap/test/test_bimap.hpp>
+include_directories("../../..")
+
 # tagged_test
 boost_add_test(test_tagged.cpp RUN)
 

@@ -5,11 +5,23 @@
 
 find_package(PythonInterp REQUIRED)
 
+function( boost_python_test_library_add target target_module )
+  add_library(${target} MODULE EXCLUDE_FROM_ALL ${ARGN})
+  boost_link_libraries(${target} python SHARED)
+  set_property(TARGET ${target} APPEND PROPERTY
+    COMPILE_DEFINITIONS "BOOST_ALL_DYN_LINK=1;BOOST_ALL_NO_LIB=1")
+  set_target_properties(${target} PROPERTIES
+    PREFIX ""
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+    OUTPUT_NAME "${target_module}"
+    )
+endfunction()
+
 function( boost_python_test_add name )
   cmake_parse_arguments( BPTEST_TARGET
     ""
     "MODULE"
-    "SOURCES;EXECUTABLE"
+    "SOURCES;EXECUTABLE;ADDITIONAL_MODULE"
     ${ARGN}
     )
   if ( NOT BPTEST_TARGET_MODULE )
@@ -23,16 +35,12 @@ function( boost_python_test_add name )
     set( BPTEST_TARGET_EXECUTABLE ${name}.py )
   endif()
   #message( STATUS "${target}: ${BPTEST_TARGET_EXECUTABLE}, ${BPTEST_TARGET_SOURCES}" )
-    
-  add_library(${target} MODULE EXCLUDE_FROM_ALL ${BPTEST_TARGET_SOURCES})
-  boost_link_libraries(${target} python SHARED)
-  set_property(TARGET ${target} APPEND PROPERTY
-    COMPILE_DEFINITIONS "BOOST_ALL_DYN_LINK=1;BOOST_ALL_NO_LIB=1")
-  set_target_properties(${target} PROPERTIES
-    PREFIX ""
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-    OUTPUT_NAME "${BPTEST_TARGET_MODULE}"
-    )
+  boost_python_test_library_add( ${target} ${BPTEST_TARGET_MODULE} ${BPTEST_TARGET_SOURCES} )
+  if( BPTEST_TARGET_ADDITIONAL_MODULE )
+    list( GET BPTEST_TARGET_ADDITIONAL_MODULE 0 BPTEST_ADDITIONAL_MODNAME )
+    boost_python_test_library_add( ${BPTEST_ADDITIONAL_MODNAME} ${BPTEST_TARGET_ADDITIONAL_MODULE} ) # repeat first argument
+    add_dependencies( ${target} ${BPTEST_ADDITIONAL_MODNAME} )
+  endif()
 
   foreach( executable ${BPTEST_TARGET_EXECUTABLE} )
     set( test_run_args
@@ -56,23 +64,12 @@ function( boost_python_test_add name )
   add_dependencies(${project_test} ${target})
 endfunction()
 
-# TODO: special case, this test case requires two modules
-#boost_python_test_add(crossmod_exception
-#  SOURCES
-#    crossmod_exception_a.cpp
-#    crossmod_exception_b.cpp
-#  )
+boost_python_test_add(crossmod_exception
+  MODULE crossmod_exception_a
+  SOURCES crossmod_exception_a.cpp
+  ADDITIONAL_MODULE crossmod_exception_b crossmod_exception_b.cpp
+  )
 
-# TODO:
-#boost_python_test_add(polymorphism2_auto_ptr
-#  EXECUTABLE
-#    polymorphism2_auto_ptr.py
-#    polymorphism2.py
-#  SOURCES
-#    polymorphism2_auto_ptr.cpp
-#  )
-
-# TODO:
 boost_python_test_add(numpy
   EXECUTABLE
     printer.py
@@ -93,14 +90,12 @@ boost_python_test_add(pearu1
     cltree
   )
 
-# TODO: special case, this test case requires two modules
-#boost_python_test_add(try
-#  EXECUTABLE
-#    newtest.py
-#  SOURCES
-#    m1.cpp
-#    m2.cpp
-#  )
+boost_python_test_add(try
+  EXECUTABLE newtest.py
+  MODULE m1
+  SOURCES m1.cpp
+  ADDITIONAL_MODULE m2 m2.cpp
+  )
 
 # TODO: patch this test case to follow the naming conventions
 boost_python_test_add(keywords
@@ -125,14 +120,15 @@ boost_python_test_add(builtin_converters
 # tests to take forever when debug symbols are enabled. This rule
 # turns them off when added to the requirements section
 
-# TODO
-#boost_python_test_add( iterator
-#  SOURCES iterator.cpp input_iterator.cpp )
+boost_python_test_add( iterator
+  SOURCES iterator.cpp
+  ADDITIONAL_MODULE input_iterator input_iterator.cpp )
 
-# TODO
-#boost_python_test_add( crossmod_opaque
-#  SOURCES crossmod_opaque_a.cpp crossmod_opaque_b.cpp
-#)
+boost_python_test_add( crossmod_opaque
+  MODULE crossmod_opaque_a
+  SOURCES crossmod_opaque_a.cpp
+  ADDITIONAL_MODULE crossmod_opaque_b crossmod_opaque_b.cpp
+)
 
 # TODO
 # Turn off this test on HP CXX, as the test hangs when executing.
@@ -153,8 +149,13 @@ boost_add_test(map_indexing_suite PYTHON
     shared python
   )
 
-# TODO
-#[ run import_.cpp /boost/python//boost_python $(PY) : : import_.py ]
+boost_add_test(import_ RUN
+    import_.cpp
+  LINK_BOOST_LIBRARIES
+    shared python
+  ARGS
+    ${CMAKE_CURRENT_SOURCE_DIR}/import_.py
+  )
 
 # if $(TEST_BIENSTMAN_NON_BUGS)
 # {
@@ -247,3 +248,13 @@ boost_add_multiple_tests(
   LINK_BOOST_LIBRARIES
     shared python
   )
+
+boost_python_test_add(polymorphism2_auto_ptr
+  EXECUTABLE
+    polymorphism2_auto_ptr.py
+    polymorphism2.py
+  SOURCES
+    polymorphism2_auto_ptr.cpp
+  )
+# Nasty hack required to get inter-test dependency to work
+add_dependencies( ${BOOST_CURRENT}-test-polymorphism2_auto_ptr polymorphism2 )
