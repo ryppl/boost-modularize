@@ -78,6 +78,10 @@ boost/config.hpp:		include/boost/config.hpp
 boost/config/:			include/boost/config/
 libs/config/:			.
 
+[libs/container]
+boost/container/:		include/boost/container/
+libs/container/:		.
+
 [libs/conversion]
 boost/implicit_cast.hpp:	include/boost/implicit_cast.hpp
 boost/cast.hpp:			include/boost/cast.hpp
@@ -461,6 +465,10 @@ libs/tokenizer/:		.
 [libs/tr1]
 boost/tr1/:			include/boost/tr1/
 libs/tr1/:			.
+
+[libs/tti]
+boost/tti/:			include/boost/tti/
+libs/tti/:			.
 
 [libs/tuple]
 boost/tuple/:			include/boost/tuple/

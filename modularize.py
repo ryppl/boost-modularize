@@ -485,6 +485,12 @@ def push_modules():
 if __name__ == "__main__":
     parse_command_line()
 
-    if "setup"  in args: setup_metarepo()
-    if "update" in args: update_modules()
-    if "push"   in args: push_modules()
+    if "setup" in args:
+        setup_metarepo()
+        gen_existing_cache(src_repo_dir)
+
+    if "update" in args:
+        update_modules()
+
+    if "push" in args:
+        push_modules()
