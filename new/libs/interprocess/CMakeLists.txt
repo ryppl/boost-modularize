@@ -6,6 +6,7 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     config
+    container
     core
     date_time
     detail
@@ -13,7 +14,6 @@ find_package(Boost
     intrusive
     math
     move
-    mpl
     preprocessor
     smart_ptr
     static_assert

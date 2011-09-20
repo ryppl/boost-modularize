@@ -15,6 +15,7 @@ find_package(Boost
     iterator
     move
     preprocessor
+    tuple
     type_traits
     utility
   NO_MODULE

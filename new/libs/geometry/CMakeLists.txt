@@ -26,6 +26,7 @@ find_package(Boost
     program_options
     proto
     range
+    rational
     smart_ptr
     static_assert
     test

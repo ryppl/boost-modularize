@@ -7,6 +7,7 @@ find_package(Boost
   COMPONENTS
     concept_check
     config
+    container
     date_time
     detail
     interprocess

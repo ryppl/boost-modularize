@@ -18,6 +18,7 @@ find_package(Boost
     parameter
     preprocessor
     range
+    static_assert
     tuple
     type_traits
     typeof

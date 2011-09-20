@@ -9,6 +9,7 @@ find_package(Boost
     config
     core
     detail
+    functional
     integer
     io
     iterator

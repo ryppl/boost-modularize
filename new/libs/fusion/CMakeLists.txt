@@ -6,6 +6,7 @@ cmake_minimum_required(VERSION 2.8)
 find_package(Boost
   COMPONENTS
     config
+    core
     detail
     function_types
     mpl

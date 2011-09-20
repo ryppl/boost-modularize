@@ -9,9 +9,9 @@ find_package(Boost
     core
     detail
     exception
+    format
     integer
     interprocess
-    io
     math
     mpl
     ratio
