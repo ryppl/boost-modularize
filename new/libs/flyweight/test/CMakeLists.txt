@@ -1,24 +1,40 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
+find_package(Threads)
+find_package(Boost COMPONENTS container NO_MODULE)
+include("${Boost_USE_FILE}")
+
 boost_add_test(assoc_cont_factory RUN
-  test_assoc_cont_factory.cpp
-  test_assoc_cont_fact_main.cpp
+  SOURCES
+    test_assoc_cont_factory.cpp
+    test_assoc_cont_fact_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 boost_add_test(basic RUN
-  test_basic.cpp
-  test_basic_main.cpp
+  SOURCES
+    test_basic.cpp
+    test_basic_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 boost_add_test(custom_factory RUN
-  test_basic.cpp
-  test_basic_main.cpp
+  SOURCES
+    test_basic.cpp
+    test_basic_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 boost_add_test(init RUN
-  test_init.cpp
-  test_init_main.cpp
+  SOURCES
+    test_init.cpp
+    test_init_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 boost_add_test(intermod_holder RUN
@@ -26,27 +42,40 @@ boost_add_test(intermod_holder RUN
     test_intermod_holder.cpp
     test_intermod_holder_main.cpp
   LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
     intermod_holder_dll
   )
 
 boost_add_test(multictor RUN
-  test_multictor.cpp
-  test_multictor_main.cpp
+  SOURCES
+    test_multictor.cpp
+    test_multictor_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 boost_add_test(no_locking RUN
-  test_no_locking.cpp
-  test_no_locking_main.cpp
+  SOURCES
+    test_no_locking.cpp
+    test_no_locking_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 boost_add_test(no_tracking RUN
-  test_no_tracking.cpp
-  test_no_tracking_main.cpp
+  SOURCES
+    test_no_tracking.cpp
+    test_no_tracking_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 boost_add_test(set_factory RUN
-  test_set_factory.cpp
-  test_set_factory_main.cpp
+  SOURCES
+    test_set_factory.cpp
+    test_set_factory_main.cpp
+  LINK_LIBRARIES
+    ${CMAKE_THREAD_LIBS_INIT}
   )
 
 add_library(intermod_holder_dll SHARED EXCLUDE_FROM_ALL
