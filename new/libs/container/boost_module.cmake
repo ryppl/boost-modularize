@@ -4,4 +4,6 @@
 boost_module(Container
   INCLUDE_DIRECTORIES
     include
+  TEST_DIRECTORIES
+    test
   )
