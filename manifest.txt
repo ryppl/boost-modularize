@@ -454,6 +454,7 @@ libs/thread/:			.
 [libs/timer]
 boost/progress.hpp:		include/boost/progress.hpp
 boost/timer.hpp:		include/boost/timer.hpp
+boost/timer/:			include/boost/timer/
 libs/timer/:			.
 
 [libs/tokenizer]
