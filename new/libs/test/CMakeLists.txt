@@ -41,6 +41,7 @@ boost_add_library(prg_exec_monitor
 boost_add_library(test_exec_monitor STATIC
   src/compiler_log_formatter.cpp
   src/debug.cpp
+  src/decorator.cpp
   src/execution_monitor.cpp
   src/framework.cpp
   src/plain_report_formatter.cpp
@@ -62,6 +63,7 @@ boost_add_library(unit_test_framework
   SOURCES
     src/compiler_log_formatter.cpp
     src/debug.cpp
+    src/decorator.cpp
     src/exception_safety.cpp
     src/execution_monitor.cpp
     src/framework.cpp

@@ -3,6 +3,7 @@
 
 boost_module(Timer
   DEPENDS
+    chrono
     config
     core
     integer
