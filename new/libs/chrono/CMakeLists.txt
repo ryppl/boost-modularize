@@ -24,9 +24,9 @@ find_package(Boost
   )
 include("${Boost_DEV_FILE}")
 
-if(CMAKE_SYSTEM STREQUAL "Linux")
+if(CMAKE_SYSTEM MATCHES "Linux")
   find_library(RT_LIBRARY rt)
-endif(CMAKE_SYSTEM STREQUAL "Linux") 
+endif(CMAKE_SYSTEM MATCHES "Linux") 
 
 boost_add_library(chrono NO_SYMBOL
   SOURCES
