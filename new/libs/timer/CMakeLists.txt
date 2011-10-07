@@ -8,7 +8,6 @@ include("${Boost_DEV_FILE}")
 
 boost_add_library(timer NO_SYMBOL
   SOURCES
-    src/auto_timers.cpp
     src/auto_timers_construction.cpp
     src/cpu_timer.cpp
   LINK_BOOST_LIBRARIES
