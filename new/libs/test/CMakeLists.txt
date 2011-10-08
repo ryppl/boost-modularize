@@ -31,11 +31,9 @@ if(MSVC)
 endif(MSVC)
 
 boost_add_library(prg_exec_monitor
-  SOURCES
-    src/execution_monitor.cpp
-    src/debug.cpp
-    src/cpp_main.cpp
-#  SHARED_DEFINITION BOOST_TEST_DYN_LINK=1
+  src/execution_monitor.cpp
+  src/debug.cpp
+  src/cpp_main.cpp
   )
 
 boost_add_library(test_exec_monitor STATIC
@@ -50,36 +48,34 @@ boost_add_library(test_exec_monitor STATIC
   src/results_reporter.cpp
   src/test_main.cpp
   src/test_tools.cpp
+  src/test_tree.cpp
   src/unit_test_log.cpp
   src/unit_test_main.cpp
   src/unit_test_monitor.cpp
   src/unit_test_parameters.cpp
-  src/unit_test_suite.cpp
   src/xml_log_formatter.cpp
   src/xml_report_formatter.cpp
   )
 
 boost_add_library(unit_test_framework
-  SOURCES
-    src/compiler_log_formatter.cpp
-    src/debug.cpp
-    src/decorator.cpp
-    src/exception_safety.cpp
-    src/execution_monitor.cpp
-    src/framework.cpp
-    src/interaction_based.cpp
-    src/logged_expectations.cpp
-    src/plain_report_formatter.cpp
-    src/progress_monitor.cpp
-    src/results_collector.cpp
-    src/results_reporter.cpp
-    src/test_tools.cpp
-    src/unit_test_log.cpp
-    src/unit_test_main.cpp
-    src/unit_test_monitor.cpp
-    src/unit_test_parameters.cpp
-    src/unit_test_suite.cpp
-    src/xml_log_formatter.cpp
-    src/xml_report_formatter.cpp
-#  SHARED_DEFINITION BOOST_TEST_DYN_LINK=1
+  src/compiler_log_formatter.cpp
+  src/debug.cpp
+  src/decorator.cpp
+  src/exception_safety.cpp
+  src/execution_monitor.cpp
+  src/framework.cpp
+  src/interaction_based.cpp
+  src/logged_expectations.cpp
+  src/plain_report_formatter.cpp
+  src/progress_monitor.cpp
+  src/results_collector.cpp
+  src/results_reporter.cpp
+  src/test_tools.cpp
+  src/test_tree.cpp
+  src/unit_test_log.cpp
+  src/unit_test_main.cpp
+  src/unit_test_monitor.cpp
+  src/unit_test_parameters.cpp
+  src/xml_log_formatter.cpp
+  src/xml_report_formatter.cpp
   )
