@@ -159,7 +159,7 @@ boost_add_multiple_tests(RUN
   include/object/static_cast.cpp
   include/operator/arithmetic.cpp
   include/operator/bitwise.cpp
-  include/operator/comparision.cpp
+  include/operator/comparison.cpp
   include/operator/if_else.cpp
   include/operator/io.cpp
   include/operator/logical.cpp
