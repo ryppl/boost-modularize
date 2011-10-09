@@ -119,6 +119,7 @@ boost_add_multiple_tests(RUN
 boost_add_multiple_tests(RUN
   regression/bug4853.cpp
   regression/bug5626.cpp
+  regression/bug5968.cpp
   )
 
 # phoenix_include
