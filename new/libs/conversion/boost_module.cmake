@@ -9,6 +9,7 @@ boost_module(Conversion
     "Polymorphic and lexical casts"
   DEPENDS
     config
+    container
     core
     detail
     exception
