@@ -20,6 +20,7 @@ Boost.Modularize:
 +
 .............................
 cmake -P copy_listfiles.cmake
+python clean.py
 .............................
 
 5. Commit your changes to Boost.Modularize.
