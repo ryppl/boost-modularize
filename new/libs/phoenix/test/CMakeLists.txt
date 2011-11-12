@@ -1,7 +1,7 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-find_package(Boost COMPONENTS assign NO_MODULE)
+find_package(Boost COMPONENTS assign signals2 NO_MODULE)
 include("${Boost_USE_FILE}")
 
 # phoenix_core
