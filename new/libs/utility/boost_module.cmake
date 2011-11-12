@@ -17,6 +17,8 @@ boost_module(Utility
     preprocessor
     static_assert
     type_traits
+  TEST_DIRECTORIES
+    test
   INCLUDE_DIRECTORIES
     include
   )
