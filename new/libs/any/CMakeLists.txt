@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost COMPONENTS config exception static_assert type_traits NO_MODULE)
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_documentation(doc/any.xml)

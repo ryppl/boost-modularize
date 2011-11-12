@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost COMPONENTS config integer utility NO_MODULE)
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 add_subdirectory(doc)

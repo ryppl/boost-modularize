@@ -3,25 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    bind
-    config
-    core
-    detail
-    functional
-    integer
-    io
-    iterator
-    smart_ptr
-    static_assert
-    system
-    test
-    timer
-    type_traits
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_add_library(filesystem NO_SYMBOL

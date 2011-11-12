@@ -3,27 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    algorithm
-    bind
-    config
-    conversion
-    core
-    filesystem
-    foreach
-    iostreams
-    iterator
-    preprocessor
-    program_options
-    range
-    smart_ptr
-    spirit
-    tuple
-    unordered
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 if(MSVC)

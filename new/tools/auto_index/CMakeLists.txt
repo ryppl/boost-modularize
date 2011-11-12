@@ -3,21 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    algorithm
-    array
-    core
-    exception
-    filesystem
-    format
-    program_options
-    range
-    regex
-    smart_ptr
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_add_executable(auto_index

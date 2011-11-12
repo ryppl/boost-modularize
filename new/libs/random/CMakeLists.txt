@@ -3,29 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    config
-    conversion
-    core
-    detail
-    foreach
-    format
-    integer
-    math
-    mpl
-    multi_index
-    range
-    regex
-    smart_ptr
-    static_assert
-    test
-    timer
-    tuple
-    type_traits
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_add_library(random NO_SYMBOL src/random_device.cpp)

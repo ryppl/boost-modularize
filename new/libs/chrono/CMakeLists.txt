@@ -3,25 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    config
-    core
-    detail
-    exception
-    format
-    integer
-    interprocess
-    math
-    mpl
-    ratio
-    static_assert
-    system
-    type_traits
-    typeof
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 if(CMAKE_SYSTEM MATCHES "Linux")

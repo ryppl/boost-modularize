@@ -3,51 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    algorithm
-    any
-    array
-    bind
-    concept_check
-    config
-    conversion
-    core
-    detail
-    disjoint_sets
-    dynamic_bitset
-    exception
-    filesystem
-    foreach
-    function
-    functional
-    integer
-    iterator
-    math
-    mpi
-    mpl
-    multi_index
-    optional
-    parameter
-    property_map
-    property_tree
-    random
-    range
-    regex
-    serialization
-    smart_ptr
-    spirit
-    static_assert
-    test
-    tuple
-    type_traits
-    typeof
-    unordered
-    utility
-    variant
-    xpressive
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 boost_add_library(graph NO_SYMBOL

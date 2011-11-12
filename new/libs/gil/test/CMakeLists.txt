@@ -4,6 +4,12 @@
 find_package(Boost COMPONENTS crc NO_MODULE)
 include("${Boost_USE_FILE}")
 
+configure_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/gil_reference_checksums.txt"
+  "${CMAKE_CURRENT_BINARY_DIR}/gil_reference_checksums.txt"
+  COPYONLY
+  )
+
 add_definitions(
   -DBOOST_GIL_NO_IO
   -D_SCL_SECURE_NO_WARNINGS

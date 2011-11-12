@@ -3,18 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    config
-    function
-    integer
-    iterator
-    smart_ptr
-    thread
-    unordered
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 find_package(Iconv)

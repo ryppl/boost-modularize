@@ -3,25 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    algorithm
-    config
-    conversion
-    core
-    detail
-    exception
-    integer
-    io
-    mpl
-    range
-    serialization
-    smart_ptr
-    tokenizer
-    type_traits
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 add_definitions(-DDATE_TIME_INLINE)

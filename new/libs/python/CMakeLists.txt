@@ -10,29 +10,7 @@ endif()
 
 include_directories(${PYTHON_INCLUDE_DIRS})
 
-find_package(Boost
-  COMPONENTS
-    bind
-    config
-    conversion
-    core
-    detail
-    foreach
-    function
-    graph
-    integer
-    iterator
-    mpl
-    numeric
-    preprocessor
-    property_map
-    smart_ptr
-    static_assert
-    tuple
-    type_traits
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 set(sources

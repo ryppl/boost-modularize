@@ -3,26 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost
-  COMPONENTS
-    bind
-    config
-    core
-    detail
-    exception
-    function
-    integer
-    mpl
-    preprocessor
-    random
-    range
-    regex
-    smart_ptr
-    static_assert
-    type_traits
-    utility
-  NO_MODULE
-  )
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 add_definitions(-DBOOST_IOSTREAMS_USE_DEPRECATED)

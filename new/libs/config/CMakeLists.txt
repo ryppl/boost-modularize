@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8)
 
-find_package(Boost COMPONENTS core filesystem regex test NO_MODULE)
+find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 #boost_documentation(doc/config.qbk
