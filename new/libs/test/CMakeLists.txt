@@ -7,7 +7,9 @@ find_package(Boost NO_MODULE)
 include("${Boost_DEV_FILE}")
 
 if(MSVC)
-  add_definitions(/EHa) # specify the asynchronous exception handling model
+  # specify the asynchronous exception handling model
+  string(REGEX REPLACE " ?/EH[as]?c?" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHa")
 endif(MSVC)
 
 boost_add_library(prg_exec_monitor

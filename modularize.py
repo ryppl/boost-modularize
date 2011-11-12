@@ -120,7 +120,8 @@ class Module:
     # uses git
     def update(self):
         if os.path.isdir(self.dst_dir):
-            run('git', 'checkout', 'master', cwd=self.dst_dir)
+            if '  master' in popen('git', 'branch', cwd=self.dst_dir):
+                run('git', 'checkout', 'master', cwd=self.dst_dir)
             run('git', 'rm', '--quiet', '--ignore-unmatch', '-r', '.', cwd=self.dst_dir)
         else:
             os.makedirs(self.dst_dir)
