@@ -18,9 +18,11 @@ boost_add_executable(quickbook
     src/doc_info_actions.cpp
     src/actions_class.cpp
     src/utils.cpp
+    src/files.cpp
+    src/string_ref.cpp
     src/input_path.cpp
     src/values.cpp
-    src/id_generator.cpp
+    src/id_manager.cpp
     src/post_process.cpp
     src/collector.cpp
     src/template_stack.cpp
