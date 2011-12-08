@@ -286,7 +286,7 @@ def validate_manifest(manifest, src_dir):
     existing_files = [f for f in files if f != '']
     existing_files.sort()
 
-    if debug:
+    if verbose:
         print '[DEBUG] Existing boost files:'
         print '[DEBUG]     ' + '\n[DEBUG]     '.join(existing_files)
         print '[DEBUG]\n'
@@ -303,7 +303,7 @@ def validate_manifest(manifest, src_dir):
                 manifest_files.append(item[0])
     manifest_files.sort()
 
-    if debug:
+    if verbose:
         print '[DEBUG] Modularized boost manifest_files:'
         print '[DEBUG]     ' + '\n[DEBUG]     '.join(manifest_files)
         print '[DEBUG]\n'
