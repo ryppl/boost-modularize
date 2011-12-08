@@ -108,6 +108,7 @@ class Module:
         sys.stdout.flush()
         self.section = section
         self.src_dir = src_dir
+        self.dstroot = dst_dir
         self.dst_dir = os.path.normpath(os.path.join(dst_dir, section))
         self.new_dir = os.path.join('new', section)
         self.depends = set()
@@ -132,7 +133,7 @@ class Module:
             run('git', 'remote', 'add', 'origin', repo_rw % base, cwd=self.dst_dir)
             run('git', 'config', 'branch.master.remote', 'origin', cwd=self.dst_dir)
             run('git', 'config', 'branch.master.merge', 'refs/heads/master', cwd=self.dst_dir)
-            run('git', 'submodule', 'add', repo_ro % base, self.section, cwd=dst_repo_dir)
+            run('git', 'submodule', 'add', repo_ro % base, self.section, cwd=dstroot)
 
     # remove everything (leaving behind the top-level .git directory)
     def clean(self):
