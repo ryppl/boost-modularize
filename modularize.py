@@ -391,6 +391,7 @@ def setup_metarepo(dst_dir):
         run('git', 'clone', repo_rw % 'boost', dst_dir)
 
     run('git', 'submodule', 'foreach', 'git', 'checkout', '--force', cwd=dst_dir)
+    run('git', 'submodule', 'foreach', 'git', 'pull', cwd=dst_dir)
     run('git', 'submodule', 'update', '--init', cwd=dst_dir)
 
     # Make sure the right url is set for origin of the cmake module
