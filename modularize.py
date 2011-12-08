@@ -408,7 +408,7 @@ def update_modules(src_dir, dst_dir, manifest):
     # validate the manifest against the live repo. We had
     # better know how to relocate /every/ file before we do anything
     # else. This will abort the program if validation fails.
-    #validate_manifest(manifest, src_dir)
+    validate_manifest(manifest, src_dir)
 
     # Iterate over the sections, which represent submodules. For each
     # submodule, make sure we're on the branch 'master', remove all the
