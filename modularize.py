@@ -119,6 +119,8 @@ class Module:
 
     # uses git
     def update(self):
+        if self.section == 'libs/heap':
+            shutil.rmtree(self.dst_dir)
         if os.path.isdir(self.dst_dir):
             if '  master' in popen('git', 'branch', cwd=self.dst_dir):
                 run('git', 'checkout', 'master', cwd=self.dst_dir)
@@ -130,7 +132,7 @@ class Module:
             run('git', 'remote', 'add', 'origin', repo_rw % base, cwd=self.dst_dir)
             run('git', 'config', 'branch.master.remote', 'origin', cwd=self.dst_dir)
             run('git', 'config', 'branch.master.merge', 'refs/heads/master', cwd=self.dst_dir)
-            run('git', 'submodule', 'add', repo_ro % base, section, cwd=dst_repo_dir)
+            run('git', 'submodule', 'add', repo_ro % base, self.section, cwd=dst_repo_dir)
 
     # remove everything (leaving behind the top-level .git directory)
     def clean(self):
