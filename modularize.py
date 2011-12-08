@@ -120,8 +120,6 @@ class Module:
 
     # uses git
     def update(self):
-        if self.section == 'libs/heap':
-            shutil.rmtree(self.dst_dir)
         if os.path.isdir(self.dst_dir):
             if '  master' in popen('git', 'branch', cwd=self.dst_dir):
                 run('git', 'checkout', 'master', cwd=self.dst_dir)
