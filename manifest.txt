@@ -207,6 +207,10 @@ libs/graph/:			.
 [libs/graph_parallel]
 libs/graph_parallel/:		.
 
+[libs/heap]
+boost/heap/:			include/boost/heap/
+libs/heap/:			.
+
 [libs/icl]
 boost/icl/:			include/boost/icl/
 libs/icl/:			.
