@@ -120,13 +120,14 @@ class Module:
 
     # uses git
     def update(self):
+        base = os.path.basename(self.dst_dir)
         if os.path.isdir(self.dst_dir):
             if '  master' in popen('git', 'branch', cwd=self.dst_dir):
                 run('git', 'checkout', 'master', cwd=self.dst_dir)
             run('git', 'rm', '--quiet', '--ignore-unmatch', '-r', '.', cwd=self.dst_dir)
+            run('git', 'remote', 'set-url', 'origin', repo_rw % base, cwd=self.dst_dir)
         else:
             os.makedirs(self.dst_dir)
-            base = os.path.basename(self.dst_dir)
             run('git', 'init', cwd=self.dst_dir)
             run('git', 'remote', 'add', 'origin', repo_rw % base, cwd=self.dst_dir)
             run('git', 'config', 'branch.master.remote', 'origin', cwd=self.dst_dir)
