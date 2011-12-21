@@ -94,30 +94,11 @@ boost/blank_fwd.hpp:			include/boost/blank_fwd.hpp
 boost/cstdlib.hpp:			include/boost/cstdlib.hpp
 boost/indirect_reference.hpp:		include/boost/indirect_reference.hpp
 boost/limits.hpp:			include/boost/limits.hpp
-boost/memory_order.hpp:			include/boost/memory_order.hpp
 boost/non_type.hpp:			include/boost/non_type.hpp
 boost/type.hpp:				include/boost/type.hpp
-boost/visit_each.hpp:			include/boost/visit_each.hpp
-boost/pending/bucket_sorter.hpp:	include/boost/pending/bucket_sorter.hpp
-boost/pending/container_traits.hpp:	include/boost/pending/container_traits.hpp
-boost/pending/cstddef.hpp:		include/boost/pending/cstddef.hpp
-boost/pending/fenced_priority_queue.hpp:	include/boost/pending/fenced_priority_queue.hpp
-boost/pending/fibonacci_heap.hpp:	include/boost/pending/fibonacci_heap.hpp
-boost/pending/indirect_cmp.hpp:		include/boost/pending/indirect_cmp.hpp
 boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
-boost/pending/is_heap.hpp:		include/boost/pending/is_heap.hpp
-boost/pending/iterator_adaptors.hpp:	include/boost/pending/iterator_adaptors.hpp
-boost/pending/iterator_tests.hpp:	include/boost/pending/iterator_tests.hpp
 boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
-boost/pending/mutable_heap.hpp:		include/boost/pending/mutable_heap.hpp
-boost/pending/mutable_queue.hpp:	include/boost/pending/mutable_queue.hpp
-boost/pending/property.hpp:		include/boost/pending/property.hpp
-boost/pending/property_serialize.hpp:	include/boost/pending/property_serialize.hpp
-boost/pending/queue.hpp:		include/boost/pending/queue.hpp
-boost/pending/relaxed_heap.hpp:		include/boost/pending/relaxed_heap.hpp
 boost/pending/stringtok.hpp:		include/boost/pending/stringtok.hpp
-boost/pending/detail/int_iterator.hpp:	include/boost/pending/detail/int_iterator.hpp
-boost/pending/detail/property.hpp:	include/boost/pending/detail/property.hpp
 
 [libs/crc]
 boost/crc.hpp:			include/boost/crc.hpp
@@ -201,8 +182,15 @@ boost/gil/:			include/boost/gil/
 libs/gil/:			.
 
 [libs/graph]
-boost/graph/:			include/boost/graph/
-libs/graph/:			.
+boost/graph/:				include/boost/graph/
+boost/pending/bucket_sorter.hpp:	include/boost/pending/bucket_sorter.hpp
+boost/pending/container_traits.hpp:	include/boost/pending/container_traits.hpp
+boost/pending/detail/property.hpp:	include/boost/pending/detail/property.hpp
+boost/pending/indirect_cmp.hpp:		include/boost/pending/indirect_cmp.hpp
+boost/pending/is_heap.hpp:		include/boost/pending/is_heap.hpp
+boost/pending/property.hpp:		include/boost/pending/property.hpp
+boost/pending/property_serialize.hpp:	include/boost/pending/property_serialize.hpp
+libs/graph/:				.
 
 [libs/graph_parallel]
 libs/graph_parallel/:		.
@@ -241,13 +229,16 @@ boost/iostreams/:		include/boost/iostreams/
 libs/iostreams/:		.
 
 [libs/iterator]
-boost/iterator.hpp:		include/boost/iterator.hpp
-boost/iterator_adaptors.hpp:	include/boost/iterator_adaptors.hpp
+boost/iterator.hpp:			include/boost/iterator.hpp
+boost/iterator_adaptors.hpp:		include/boost/iterator_adaptors.hpp
 boost/function_output_iterator.hpp:	include/boost/function_output_iterator.hpp
-boost/pointee.hpp:		include/boost/pointee.hpp
+boost/pending/detail/int_iterator.hpp:	include/boost/pending/detail/int_iterator.hpp
+boost/pending/iterator_adaptors.hpp:	include/boost/pending/iterator_adaptors.hpp
+boost/pending/iterator_tests.hpp:	include/boost/pending/iterator_tests.hpp
+boost/pointee.hpp:			include/boost/pointee.hpp
 boost/shared_container_iterator.hpp:	include/boost/shared_container_iterator.hpp
-boost/iterator/:		include/boost/iterator/
-libs/iterator/:			.
+boost/iterator/:			include/boost/iterator/
+libs/iterator/:				.
 
 [libs/lambda]
 boost/lambda/:			include/boost/lambda/
@@ -340,8 +331,15 @@ libs/program_options/:		.
 <patch>: program_options.patch
 
 [libs/property_map]
-boost/property_map/:		include/boost/property_map/
-libs/property_map/:		.
+boost/pending/cstddef.hpp:		include/boost/pending/cstddef.hpp
+boost/pending/fenced_priority_queue.hpp:include/boost/pending/fenced_priority_queue.hpp
+boost/pending/fibonacci_heap.hpp:	include/boost/pending/fibonacci_heap.hpp
+boost/pending/mutable_heap.hpp:		include/boost/pending/mutable_heap.hpp
+boost/pending/mutable_queue.hpp:	include/boost/pending/mutable_queue.hpp
+boost/pending/queue.hpp:		include/boost/pending/queue.hpp
+boost/pending/relaxed_heap.hpp:		include/boost/pending/relaxed_heap.hpp
+boost/property_map/:			include/boost/property_map/
+libs/property_map/:			.
 
 [libs/property_tree]
 boost/property_tree/:		include/boost/property_tree/
@@ -402,6 +400,7 @@ libs/serialization/:		.
 
 [libs/signals]
 boost/last_value.hpp:		include/boost/last_value.hpp
+boost/visit_each.hpp:		include/boost/visit_each.hpp
 boost/signal.hpp:		include/boost/signal.hpp
 boost/signals.hpp:		include/boost/signals.hpp
 boost/signals/:			include/boost/signals/
@@ -417,6 +416,7 @@ boost/enable_shared_from_this.hpp:	include/boost/enable_shared_from_this.hpp
 boost/intrusive_ptr.hpp:	include/boost/intrusive_ptr.hpp
 boost/get_pointer.hpp:		include/boost/get_pointer.hpp
 boost/make_shared.hpp:		include/boost/make_shared.hpp
+boost/memory_order.hpp:		include/boost/memory_order.hpp
 boost/pointer_cast.hpp:		include/boost/pointer_cast.hpp
 boost/pointer_to_other.hpp:	include/boost/pointer_to_other.hpp
 boost/scoped_array.hpp:		include/boost/scoped_array.hpp
