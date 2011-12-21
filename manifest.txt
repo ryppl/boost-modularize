@@ -110,8 +110,49 @@ boost/date_time/:		include/boost/date_time/
 libs/date_time/:			.
 
 [libs/detail]
-boost/detail/:				include/boost/detail/
+boost/detail/algorithm.hpp:		include/boost/detail/algorithm.hpp
+boost/detail/allocator_utilities.hpp:	include/boost/detail/allocator_utilities.hpp
+boost/detail/atomic_count.hpp:		include/boost/detail/atomic_count.hpp
+boost/detail/binary_search.hpp:		include/boost/detail/binary_search.hpp
+boost/detail/bitmask.hpp:		include/boost/detail/bitmask.hpp
+boost/detail/call_traits.hpp:		include/boost/detail/call_traits.hpp
+boost/detail/catch_exceptions.hpp:	include/boost/detail/catch_exceptions.hpp
+boost/detail/compressed_pair.hpp:	include/boost/detail/compressed_pair.hpp
+boost/detail/container_fwd.hpp:		include/boost/detail/container_fwd.hpp
+boost/detail/dynamic_bitset.hpp:	include/boost/detail/dynamic_bitset.hpp
+boost/detail/endian.hpp:		include/boost/detail/endian.hpp
+boost/detail/fenv.hpp:			include/boost/detail/fenv.hpp
+boost/detail/has_default_constructor.hpp:	include/boost/detail/has_default_constructor.hpp
+boost/detail/identifier.hpp:		include/boost/detail/identifier.hpp
+boost/detail/indirect_traits.hpp:	include/boost/detail/indirect_traits.hpp
+boost/detail/interlocked.hpp:		include/boost/detail/interlocked.hpp
+boost/detail/is_function_ref_tester.hpp:include/boost/detail/is_function_ref_tester.hpp
+boost/detail/is_incrementable.hpp:	include/boost/detail/is_incrementable.hpp
+boost/detail/is_sorted.hpp:		include/boost/detail/is_sorted.hpp
+boost/detail/is_xxx.hpp:		include/boost/detail/is_xxx.hpp
+boost/detail/iterator.hpp:		include/boost/detail/iterator.hpp
+boost/detail/lcast_precision.hpp:	include/boost/detail/lcast_precision.hpp
+boost/detail/lightweight_main.hpp:	include/boost/detail/lightweight_main.hpp
+boost/detail/lightweight_mutex.hpp:	include/boost/detail/lightweight_mutex.hpp
+boost/detail/lightweight_test.hpp:	include/boost/detail/lightweight_test.hpp
+boost/detail/lightweight_thread.hpp:	include/boost/detail/lightweight_thread.hpp
+boost/detail/limits.hpp:		include/boost/detail/limits.hpp
+boost/detail/named_template_params.hpp:	include/boost/detail/named_template_params.hpp
+boost/detail/no_exceptions_support.hpp:	include/boost/detail/no_exceptions_support.hpp
+boost/detail/none_t.hpp:		include/boost/detail/none_t.hpp
+boost/detail/numeric_traits.hpp:	include/boost/detail/numeric_traits.hpp
+boost/detail/ob_call_traits.hpp:	include/boost/detail/ob_call_traits.hpp
+boost/detail/ob_compressed_pair.hpp:	include/boost/detail/ob_compressed_pair.hpp
+boost/detail/quick_allocator.hpp:	include/boost/detail/quick_allocator.hpp
+boost/detail/reference_content.hpp:	include/boost/detail/reference_content.hpp
+boost/detail/scoped_enum_emulation.hpp:	include/boost/detail/scoped_enum_emulation.hpp
+boost/detail/select_type.hpp:		include/boost/detail/select_type.hpp
+boost/detail/sp_typeinfo.hpp:		include/boost/detail/sp_typeinfo.hpp
+boost/detail/templated_streams.hpp:	include/boost/detail/templated_streams.hpp
+boost/detail/utf8_codecvt_facet.hpp:	include/boost/detail/utf8_codecvt_facet.hpp
 libs/detail/utf8_codecvt_facet.cpp:	include/boost/detail/utf8_codecvt_facet_impl.hpp
+boost/detail/workaround.hpp:		include/boost/detail/workaround.hpp
+boost/detail/win/:			include/boost/detail/win/
 libs/detail/test/:			test/
 
 [libs/disjoint_sets]
