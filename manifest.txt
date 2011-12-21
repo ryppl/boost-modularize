@@ -96,6 +96,7 @@ boost/indirect_reference.hpp:		include/boost/indirect_reference.hpp
 boost/limits.hpp:			include/boost/limits.hpp
 boost/non_type.hpp:			include/boost/non_type.hpp
 boost/type.hpp:				include/boost/type.hpp
+boost/visit_each.hpp:			include/boost/visit_each.hpp
 boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
 boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
 boost/pending/stringtok.hpp:		include/boost/pending/stringtok.hpp
@@ -441,7 +442,6 @@ libs/serialization/:		.
 
 [libs/signals]
 boost/last_value.hpp:		include/boost/last_value.hpp
-boost/visit_each.hpp:		include/boost/visit_each.hpp
 boost/signal.hpp:		include/boost/signal.hpp
 boost/signals.hpp:		include/boost/signals.hpp
 boost/signals/:			include/boost/signals/
