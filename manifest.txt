@@ -1,92 +1,92 @@
 [<ignore>]
-boost/version.hpp:		<ignore>
-libs/compose/index.htm:		<ignore>
-libs/compose/index.html:	<ignore>
-libs/index.html:		<ignore>
-libs/libraries.htm:		<ignore>
-libs/maintainers.txt:		<ignore>
-libs/mem_fn/index.html:		<ignore>
-libs/platform_maintainers.txt:	<ignore>
-tools/Jamfile.v2:		<ignore>
-tools/index.html:		<ignore>
-tools/make-cputime-page.pl:	<ignore>
-tools/regression/:		<ignore>
-tools/release/:			<ignore>
+boost/version.hpp:			<ignore>
+libs/compose/index.htm:			<ignore>
+libs/compose/index.html:		<ignore>
+libs/index.html:			<ignore>
+libs/libraries.htm:			<ignore>
+libs/maintainers.txt:			<ignore>
+libs/mem_fn/index.html:			<ignore>
+libs/platform_maintainers.txt:		<ignore>
+tools/Jamfile.v2:			<ignore>
+tools/index.html:			<ignore>
+tools/make-cputime-page.pl:		<ignore>
+tools/regression/:			<ignore>
+tools/release/:				<ignore>
 
 [libs/accumulators]
-boost/accumulators/:		include/boost/accumulators/
-libs/accumulators/:		.
+boost/accumulators/:			include/boost/accumulators/
+libs/accumulators/:			.
 
 [libs/algorithm]
-boost/algorithm/:		include/boost/algorithm/
-libs/algorithm/:		.
+boost/algorithm/:			include/boost/algorithm/
+libs/algorithm/:			.
 
 [libs/any]
-boost/any.hpp:			include/boost/any.hpp
-libs/any/:			.
+boost/any.hpp:				include/boost/any.hpp
+libs/any/:				.
 
 [libs/array]
-boost/array.hpp:		include/boost/array.hpp
-libs/array/:			.
+boost/array.hpp:			include/boost/array.hpp
+libs/array/:				.
 
 [libs/asio]
-boost/asio.hpp:			include/boost/asio.hpp
-boost/asio/:			include/boost/asio/
-libs/asio/:			.
+boost/asio.hpp:				include/boost/asio.hpp
+boost/asio/:				include/boost/asio/
+libs/asio/:				.
 
 [libs/assign]
-boost/assign.hpp:		include/boost/assign.hpp
-boost/assign/:			include/boost/assign/
-libs/assign/:			.
+boost/assign.hpp:			include/boost/assign.hpp
+boost/assign/:				include/boost/assign/
+libs/assign/:				.
 
 [libs/bimap]
-boost/bimap.hpp:		include/boost/bimap.hpp
-boost/bimap/:			include/boost/bimap/
-libs/bimap/:			.
+boost/bimap.hpp:			include/boost/bimap.hpp
+boost/bimap/:				include/boost/bimap/
+libs/bimap/:				.
 
 [libs/bind]
-boost/is_placeholder.hpp:	include/boost/is_placeholder.hpp
-boost/bind.hpp:			include/boost/bind.hpp
-boost/bind/:			include/boost/bind/
-boost/mem_fn.hpp:		include/boost/mem_fn.hpp
-libs/bind/:			.
+boost/is_placeholder.hpp:		include/boost/is_placeholder.hpp
+boost/bind.hpp:				include/boost/bind.hpp
+boost/bind/:				include/boost/bind/
+boost/mem_fn.hpp:			include/boost/mem_fn.hpp
+libs/bind/:				.
 
 [libs/chrono]
-boost/chrono.hpp:		include/boost/chrono.hpp
-boost/chrono/:			include/boost/chrono/
-libs/chrono/:			.
+boost/chrono.hpp:			include/boost/chrono.hpp
+boost/chrono/:				include/boost/chrono/
+libs/chrono/:				.
 
 [libs/circular_buffer]
-boost/circular_buffer.hpp:	include/boost/circular_buffer.hpp
-boost/circular_buffer/:		include/boost/circular_buffer/
-boost/circular_buffer_fwd.hpp:	include/boost/circular_buffer_fwd.hpp
-libs/circular_buffer/:		.
+boost/circular_buffer.hpp:		include/boost/circular_buffer.hpp
+boost/circular_buffer/:			include/boost/circular_buffer/
+boost/circular_buffer_fwd.hpp:		include/boost/circular_buffer_fwd.hpp
+libs/circular_buffer/:			.
 
 [libs/compatibility]
-boost/compatibility/:		include/boost/compatibility/
-libs/compatibility/:		.
+boost/compatibility/:			include/boost/compatibility/
+libs/compatibility/:			.
 
 [libs/concept_check]
-boost/concept_archetype.hpp:	include/boost/concept_archetype.hpp
-boost/concept_check.hpp:	include/boost/concept_check.hpp
-boost/concept/:			include/boost/concept/
-boost/concept_check/:		include/boost/concept_check/
-libs/concept_check/:		.
+boost/concept_archetype.hpp:		include/boost/concept_archetype.hpp
+boost/concept_check.hpp:		include/boost/concept_check.hpp
+boost/concept/:				include/boost/concept/
+boost/concept_check/:			include/boost/concept_check/
+libs/concept_check/:			.
 
 [libs/config]
-boost/config.hpp:		include/boost/config.hpp
-boost/config/:			include/boost/config/
-libs/config/:			.
+boost/config.hpp:			include/boost/config.hpp
+boost/config/:				include/boost/config/
+libs/config/:				.
 
 [libs/container]
-boost/container/:		include/boost/container/
-libs/container/:		.
+boost/container/:			include/boost/container/
+libs/container/:			.
 
 [libs/conversion]
-boost/implicit_cast.hpp:	include/boost/implicit_cast.hpp
-boost/cast.hpp:			include/boost/cast.hpp
-boost/lexical_cast.hpp:		include/boost/lexical_cast.hpp
-libs/conversion/:		.
+boost/implicit_cast.hpp:		include/boost/implicit_cast.hpp
+boost/cast.hpp:				include/boost/cast.hpp
+boost/lexical_cast.hpp:			include/boost/lexical_cast.hpp
+libs/conversion/:			.
 
 [libs/core]
 boost/blank.hpp:			include/boost/blank.hpp
@@ -102,12 +102,12 @@ boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
 boost/pending/stringtok.hpp:		include/boost/pending/stringtok.hpp
 
 [libs/crc]
-boost/crc.hpp:			include/boost/crc.hpp
-libs/crc/:			.
+boost/crc.hpp:				include/boost/crc.hpp
+libs/crc/:				.
 
 [libs/date_time]
-boost/date_time.hpp:		include/boost/date_time.hpp
-boost/date_time/:		include/boost/date_time/
+boost/date_time.hpp:			include/boost/date_time.hpp
+boost/date_time/:			include/boost/date_time/
 libs/date_time/:			.
 
 [libs/detail]
@@ -162,66 +162,66 @@ boost/pending/detail/disjoint_sets.hpp:	include/boost/pending/detail/disjoint_se
 libs/disjoint_sets/:			.
 
 [libs/dynamic_bitset]
-boost/dynamic_bitset.hpp:	include/boost/dynamic_bitset.hpp
-boost/dynamic_bitset/:		include/boost/dynamic_bitset/
-boost/dynamic_bitset_fwd.hpp:	include/boost/dynamic_bitset_fwd.hpp
-libs/dynamic_bitset/:		.
+boost/dynamic_bitset.hpp:		include/boost/dynamic_bitset.hpp
+boost/dynamic_bitset/:			include/boost/dynamic_bitset/
+boost/dynamic_bitset_fwd.hpp:		include/boost/dynamic_bitset_fwd.hpp
+libs/dynamic_bitset/:			.
 
 [libs/exception]
-boost/exception.hpp:		include/boost/exception.hpp
-boost/exception_ptr.hpp:	include/boost/exception_ptr.hpp
-boost/throw_exception.hpp:	include/boost/throw_exception.hpp
-boost/exception/:		include/boost/exception/
-libs/exception/:		.
+boost/exception.hpp:			include/boost/exception.hpp
+boost/exception_ptr.hpp:		include/boost/exception_ptr.hpp
+boost/throw_exception.hpp:		include/boost/throw_exception.hpp
+boost/exception/:			include/boost/exception/
+libs/exception/:			.
 
 [libs/filesystem]
-boost/filesystem.hpp:		include/boost/filesystem.hpp
-boost/filesystem/:		include/boost/filesystem/
-libs/filesystem/:		.
-<patch>:			filesystem.patch
+boost/filesystem.hpp:			include/boost/filesystem.hpp
+boost/filesystem/:			include/boost/filesystem/
+libs/filesystem/:			.
+<patch>:				filesystem.patch
 
 [libs/flyweight]
-boost/flyweight.hpp:		include/boost/flyweight.hpp
-boost/flyweight/:		include/boost/flyweight
-libs/flyweight/:		.
+boost/flyweight.hpp:			include/boost/flyweight.hpp
+boost/flyweight/:			include/boost/flyweight
+libs/flyweight/:			.
 
 [libs/foreach]
-boost/foreach.hpp:		include/boost/foreach.hpp
-boost/foreach_fwd.hpp:		include/boost/foreach_fwd.hpp
-libs/foreach/:			.
+boost/foreach.hpp:			include/boost/foreach.hpp
+boost/foreach_fwd.hpp:			include/boost/foreach_fwd.hpp
+libs/foreach/:				.
 
 [libs/format]
-boost/format.hpp:		include/boost/format.hpp
-boost/format/:			include/boost/format/
-libs/format/:			.
+boost/format.hpp:			include/boost/format.hpp
+boost/format/:				include/boost/format/
+libs/format/:				.
 
 [libs/function]
-boost/function.hpp:		include/boost/function.hpp
-boost/function_equal.hpp:	include/boost/function_equal.hpp
-boost/function/:		include/boost/function/
-libs/function/:			.
+boost/function.hpp:			include/boost/function.hpp
+boost/function_equal.hpp:		include/boost/function_equal.hpp
+boost/function/:			include/boost/function/
+libs/function/:				.
 
 [libs/functional]
-boost/functional.hpp:		include/boost/functional.hpp
-boost/functional/:		include/boost/functional/
-libs/functional/:		.
+boost/functional.hpp:			include/boost/functional.hpp
+boost/functional/:			include/boost/functional/
+libs/functional/:			.
 
 [libs/function_types]
-boost/function_types/:		include/boost/function_types/
-libs/function_types/:		.
+boost/function_types/:			include/boost/function_types/
+libs/function_types/:			.
 
 [libs/fusion]
-boost/fusion/:			include/boost/fusion/
-libs/fusion/:			.
+boost/fusion/:				include/boost/fusion/
+libs/fusion/:				.
 
 [libs/geometry]
-boost/geometry.hpp: 		include/boost/geometry.hpp
-boost/geometry/:		include/boost/geometry/
-libs/geometry/:			.
+boost/geometry.hpp: 			include/boost/geometry.hpp
+boost/geometry/:			include/boost/geometry/
+libs/geometry/:				.
 
 [libs/gil]
-boost/gil/:			include/boost/gil/
-libs/gil/:			.
+boost/gil/:				include/boost/gil/
+libs/gil/:				.
 
 [libs/graph]
 boost/graph/:				include/boost/graph/
@@ -235,40 +235,40 @@ boost/pending/property_serialize.hpp:	include/boost/pending/property_serialize.h
 libs/graph/:				.
 
 [libs/graph_parallel]
-libs/graph_parallel/:		.
+libs/graph_parallel/:			.
 
 [libs/heap]
-boost/heap/:			include/boost/heap/
-libs/heap/:			.
+boost/heap/:				include/boost/heap/
+libs/heap/:				.
 
 [libs/icl]
-boost/icl/:			include/boost/icl/
-libs/icl/:			.
+boost/icl/:				include/boost/icl/
+libs/icl/:				.
 
 [libs/integer]
-boost/cstdint.hpp:		include/boost/cstdint.hpp
-boost/integer.hpp:		include/boost/integer.hpp
-boost/integer_fwd.hpp:		include/boost/integer_fwd.hpp
-boost/integer_traits.hpp:	include/boost/integer_traits.hpp
-boost/integer/:			include/boost/integer/
-libs/integer/:			.
+boost/cstdint.hpp:			include/boost/cstdint.hpp
+boost/integer.hpp:			include/boost/integer.hpp
+boost/integer_fwd.hpp:			include/boost/integer_fwd.hpp
+boost/integer_traits.hpp:		include/boost/integer_traits.hpp
+boost/integer/:				include/boost/integer/
+libs/integer/:				.
 
 [libs/interprocess]
-boost/interprocess/:		include/boost/interprocess/
-libs/interprocess/:		.
+boost/interprocess/:			include/boost/interprocess/
+libs/interprocess/:			.
 
 [libs/intrusive]
-boost/intrusive/:		include/boost/intrusive/
-libs/intrusive/:		.
+boost/intrusive/:			include/boost/intrusive/
+libs/intrusive/:			.
 
 [libs/io]
-boost/io/:			include/boost/io/
-boost/io_fwd.hpp:		include/boost/io_fwd.hpp
-libs/io/:			.
+boost/io/:				include/boost/io/
+boost/io_fwd.hpp:			include/boost/io_fwd.hpp
+libs/io/:				.
 
 [libs/iostreams]
-boost/iostreams/:		include/boost/iostreams/
-libs/iostreams/:		.
+boost/iostreams/:			include/boost/iostreams/
+libs/iostreams/:			.
 
 [libs/iterator]
 boost/iterator.hpp:			include/boost/iterator.hpp
@@ -283,93 +283,93 @@ boost/iterator/:			include/boost/iterator/
 libs/iterator/:				.
 
 [libs/lambda]
-boost/lambda/:			include/boost/lambda/
-libs/lambda/:			.
+boost/lambda/:				include/boost/lambda/
+libs/lambda/:				.
 
 [libs/locale]
-boost/locale.hpp:		include/boost/locale.hpp
-boost/locale/:			include/boost/locale/
-libs/locale/:			.
+boost/locale.hpp:			include/boost/locale.hpp
+boost/locale/:				include/boost/locale/
+libs/locale/:				.
 
 [libs/logic]
-boost/logic/:			include/boost/logic/
-libs/logic/:			.
+boost/logic/:				include/boost/logic/
+libs/logic/:				.
 
 [libs/math]
-boost/math/:			include/boost/math/
-boost/math_fwd.hpp:		include/boost/math_fwd.hpp
-libs/math/:			.
+boost/math/:				include/boost/math/
+boost/math_fwd.hpp:			include/boost/math_fwd.hpp
+libs/math/:				.
 
 [libs/move]
-boost/move/:			include/boost/move/
-libs/move/:			.
+boost/move/:				include/boost/move/
+libs/move/:				.
 
 [libs/mpi]
-boost/mpi.hpp:			include/boost/mpi.hpp
-boost/mpi/:			include/boost/mpi/
-libs/mpi/:			.
-<patch>:			mpi.patch
+boost/mpi.hpp:				include/boost/mpi.hpp
+boost/mpi/:				include/boost/mpi/
+libs/mpi/:				.
+<patch>:				mpi.patch
 
 [libs/mpl]
-boost/mpl/:			include/boost/mpl/
-libs/mpl/:			.
+boost/mpl/:				include/boost/mpl/
+libs/mpl/:				.
 
 [libs/msm]
-boost/msm/:			include/boost/msm/
-libs/msm/:			.
+boost/msm/:				include/boost/msm/
+libs/msm/:				.
 
 [libs/multi_array]
-boost/multi_array.hpp:		include/boost/multi_array.hpp
-boost/multi_array/:		include/boost/multi_array/
-libs/multi_array/:		.
+boost/multi_array.hpp:			include/boost/multi_array.hpp
+boost/multi_array/:			include/boost/multi_array/
+libs/multi_array/:			.
 
 [libs/multi_index]
 boost/multi_index_container.hpp:	include/boost/multi_index_container.hpp
 boost/multi_index_container_fwd.hpp:	include/boost/multi_index_container_fwd.hpp
-boost/multi_index/:		include/boost/multi_index/
-libs/multi_index/:		.
+boost/multi_index/:			include/boost/multi_index/
+libs/multi_index/:			.
 
 [libs/numeric]
-boost/numeric/interval.hpp:	include/boost/numeric/interval.hpp
-boost/numeric/conversion/:	include/boost/numeric/conversion/
-boost/numeric/interval/:	include/boost/numeric/interval/
-boost/numeric/ublas/:		include/boost/numeric/ublas/
-libs/numeric/:			.
+boost/numeric/interval.hpp:		include/boost/numeric/interval.hpp
+boost/numeric/conversion/:		include/boost/numeric/conversion/
+boost/numeric/interval/:		include/boost/numeric/interval/
+boost/numeric/ublas/:			include/boost/numeric/ublas/
+libs/numeric/:				.
 
 [libs/optional]
-boost/none.hpp:			include/boost/none.hpp
-boost/none_t.hpp:		include/boost/none_t.hpp
-boost/optional.hpp:		include/boost/optional.hpp
-boost/optional/:		include/boost/optional/
-libs/optional/:			.
+boost/none.hpp:				include/boost/none.hpp
+boost/none_t.hpp:			include/boost/none_t.hpp
+boost/optional.hpp:			include/boost/optional.hpp
+boost/optional/:			include/boost/optional/
+libs/optional/:				.
 
 [libs/parameter]
-boost/parameter.hpp:		include/boost/parameter.hpp
-boost/parameter/:		include/boost/parameter/
-libs/parameter/:		.
+boost/parameter.hpp:			include/boost/parameter.hpp
+boost/parameter/:			include/boost/parameter/
+libs/parameter/:			.
 
 [libs/phoenix]
-boost/phoenix.hpp:		include/boost/phoenix.hpp
-boost/phoenix/:			include/boost/phoenix/
-libs/phoenix/:			.
+boost/phoenix.hpp:			include/boost/phoenix.hpp
+boost/phoenix/:				include/boost/phoenix/
+libs/phoenix/:				.
 
 [libs/polygon]
-boost/polygon/:			include/boost/polygon/
-libs/polygon/:			.
+boost/polygon/:				include/boost/polygon/
+libs/polygon/:				.
 
 [libs/pool]
-boost/pool/:			include/boost/pool/
-libs/pool/:			.
+boost/pool/:				include/boost/pool/
+libs/pool/:				.
 
 [libs/preprocessor]
-boost/preprocessor.hpp:		include/boost/preprocessor.hpp
-boost/preprocessor/:		include/boost/preprocessor/
-libs/preprocessor/:		.
+boost/preprocessor.hpp:			include/boost/preprocessor.hpp
+boost/preprocessor/:			include/boost/preprocessor/
+libs/preprocessor/:			.
 
 [libs/program_options]
-boost/program_options.hpp:	include/boost/program_options.hpp
-boost/program_options/:		include/boost/program_options/
-libs/program_options/:		.
+boost/program_options.hpp:		include/boost/program_options.hpp
+boost/program_options/:			include/boost/program_options/
+libs/program_options/:			.
 <patch>: program_options.patch
 
 [libs/property_map]
@@ -384,215 +384,214 @@ boost/property_map/:			include/boost/property_map/
 libs/property_map/:			.
 
 [libs/property_tree]
-boost/property_tree/:		include/boost/property_tree/
-libs/property_tree/:		.
-<patch>: property_tree.patch
+boost/property_tree/:			include/boost/property_tree/
+libs/property_tree/:			.
+<patch>:				property_tree.patch
 
 [libs/proto]
-boost/proto/:			include/boost/proto/
-libs/proto/:			.
+boost/proto/:				include/boost/proto/
+libs/proto/:				.
 
 [libs/ptr_container]
-boost/ptr_container/:		include/boost/ptr_container/
-libs/ptr_container/:		.
+boost/ptr_container/:			include/boost/ptr_container/
+libs/ptr_container/:			.
 
 [libs/python]
-boost/python.hpp:		include/boost/python.hpp
-boost/python/:			include/boost/python/
-libs/python/:			.
+boost/python.hpp:			include/boost/python.hpp
+boost/python/:				include/boost/python/
+libs/python/:				.
 
 [libs/random]
-boost/nondet_random.hpp:	include/boost/nondet_random.hpp
-boost/random.hpp:		include/boost/random.hpp
-boost/random/:			include/boost/random/
-libs/random/:			.
+boost/nondet_random.hpp:		include/boost/nondet_random.hpp
+boost/random.hpp:			include/boost/random.hpp
+boost/random/:				include/boost/random/
+libs/random/:				.
 
 [libs/range]
-boost/range.hpp:		include/boost/range.hpp
-boost/range/:			include/boost/range/
-libs/range/:			.
+boost/range.hpp:			include/boost/range.hpp
+boost/range/:				include/boost/range/
+libs/range/:				.
 
 [libs/ratio]
-boost/ratio.hpp:		include/boost/ratio.hpp
-boost/ratio/:			include/boost/ratio/
-libs/ratio/:			.
+boost/ratio.hpp:			include/boost/ratio.hpp
+boost/ratio/:				include/boost/ratio/
+libs/ratio/:				.
 
 [libs/rational]
-boost/rational.hpp:		include/boost/rational.hpp
-libs/rational/:			.
+boost/rational.hpp:			include/boost/rational.hpp
+libs/rational/:				.
 
 [libs/regex]
-boost/cregex.hpp:		include/boost/cregex.hpp
-boost/regex.h:			include/boost/regex.h
-boost/regex.hpp:		include/boost/regex.hpp
-boost/regex_fwd.hpp:		include/boost/regex_fwd.hpp
-boost/regex/:			include/boost/regex/
-libs/regex/:			.
+boost/cregex.hpp:			include/boost/cregex.hpp
+boost/regex.h:				include/boost/regex.h
+boost/regex.hpp:			include/boost/regex.hpp
+boost/regex_fwd.hpp:			include/boost/regex_fwd.hpp
+boost/regex/:				include/boost/regex/
+libs/regex/:				.
 
 [libs/scope_exit]
-boost/scope_exit.hpp:		include/boost/scope_exit.hpp
-libs/scope_exit/:		.
+boost/scope_exit.hpp:			include/boost/scope_exit.hpp
+libs/scope_exit/:			.
 
 [libs/serialization]
-boost/archive/:			include/boost/archive/
-boost/serialization/:		include/boost/serialization/
-boost/strong_typedef.hpp:	include/boost/strong_typedef.hpp
-libs/serialization/:		.
-<patch>: 			serialization.patch
+boost/archive/:				include/boost/archive/
+boost/serialization/:			include/boost/serialization/
+boost/strong_typedef.hpp:		include/boost/strong_typedef.hpp
+libs/serialization/:			.
+<patch>: 				serialization.patch
 
 [libs/signals]
-boost/last_value.hpp:		include/boost/last_value.hpp
-boost/signal.hpp:		include/boost/signal.hpp
-boost/signals.hpp:		include/boost/signals.hpp
-boost/signals/:			include/boost/signals/
-libs/signals/:			.
+boost/last_value.hpp:			include/boost/last_value.hpp
+boost/signal.hpp:			include/boost/signal.hpp
+boost/signals.hpp:			include/boost/signals.hpp
+boost/signals/:				include/boost/signals/
+libs/signals/:				.
 
 [libs/signals2]
-boost/signals2.hpp:		include/boost/signals2.hpp
-boost/signals2/:		include/boost/signals2/
-libs/signals2/:			.
+boost/signals2.hpp:			include/boost/signals2.hpp
+boost/signals2/:			include/boost/signals2/
+libs/signals2/:				.
 
 [libs/smart_ptr]
 boost/enable_shared_from_this.hpp:	include/boost/enable_shared_from_this.hpp
-boost/intrusive_ptr.hpp:	include/boost/intrusive_ptr.hpp
-boost/get_pointer.hpp:		include/boost/get_pointer.hpp
-boost/make_shared.hpp:		include/boost/make_shared.hpp
-boost/memory_order.hpp:		include/boost/memory_order.hpp
-boost/pointer_cast.hpp:		include/boost/pointer_cast.hpp
-boost/pointer_to_other.hpp:	include/boost/pointer_to_other.hpp
-boost/scoped_array.hpp:		include/boost/scoped_array.hpp
-boost/scoped_ptr.hpp:		include/boost/scoped_ptr.hpp
-boost/shared_array.hpp:		include/boost/shared_array.hpp
-boost/shared_ptr.hpp:		include/boost/shared_ptr.hpp
-boost/smart_ptr.hpp:		include/boost/smart_ptr.hpp
-boost/weak_ptr.hpp:		include/boost/weak_ptr.hpp
-boost/smart_ptr/:		include/boost/smart_ptr/
-libs/smart_ptr/:		.
+boost/intrusive_ptr.hpp:		include/boost/intrusive_ptr.hpp
+boost/get_pointer.hpp:			include/boost/get_pointer.hpp
+boost/make_shared.hpp:			include/boost/make_shared.hpp
+boost/memory_order.hpp:			include/boost/memory_order.hpp
+boost/pointer_cast.hpp:			include/boost/pointer_cast.hpp
+boost/pointer_to_other.hpp:		include/boost/pointer_to_other.hpp
+boost/scoped_array.hpp:			include/boost/scoped_array.hpp
+boost/scoped_ptr.hpp:			include/boost/scoped_ptr.hpp
+boost/shared_array.hpp:			include/boost/shared_array.hpp
+boost/shared_ptr.hpp:			include/boost/shared_ptr.hpp
+boost/smart_ptr.hpp:			include/boost/smart_ptr.hpp
+boost/weak_ptr.hpp:			include/boost/weak_ptr.hpp
+boost/smart_ptr/:			include/boost/smart_ptr/
+libs/smart_ptr/:			.
 
 [libs/spirit]
-boost/spirit.hpp:		include/boost/spirit.hpp
-boost/spirit/:			include/boost/spirit/
-libs/spirit/:			.
+boost/spirit.hpp:			include/boost/spirit.hpp
+boost/spirit/:				include/boost/spirit/
+libs/spirit/:				.
 
 [libs/statechart]
-boost/statechart/:		include/boost/statechart/
-libs/statechart/:		.
+boost/statechart/:			include/boost/statechart/
+libs/statechart/:			.
 
 [libs/static_assert]
-boost/static_assert.hpp:	include/boost/static_assert.hpp
-libs/static_assert/:		.
+boost/static_assert.hpp:		include/boost/static_assert.hpp
+libs/static_assert/:			.
 
 [libs/system]
-boost/cerrno.hpp:		include/boost/cerrno.hpp
-boost/system/:			include/boost/system/
-libs/system/:			.
+boost/cerrno.hpp:			include/boost/cerrno.hpp
+boost/system/:				include/boost/system/
+libs/system/:				.
 
 [libs/test]
-boost/test/:			include/boost/test/
-libs/test/:			.
+boost/test/:				include/boost/test/
+libs/test/:				.
 
 [libs/thread]
-boost/thread.hpp:		include/boost/thread.hpp
-boost/thread/:			include/boost/thread/
-libs/thread/:			.
+boost/thread.hpp:			include/boost/thread.hpp
+boost/thread/:				include/boost/thread/
+libs/thread/:				.
 
 [libs/timer]
-boost/progress.hpp:		include/boost/progress.hpp
-boost/timer.hpp:		include/boost/timer.hpp
-boost/timer/:			include/boost/timer/
-libs/timer/:			.
+boost/progress.hpp:			include/boost/progress.hpp
+boost/timer.hpp:			include/boost/timer.hpp
+boost/timer/:				include/boost/timer/
+libs/timer/:				.
 
 [libs/tokenizer]
-boost/token_functions.hpp:	include/boost/token_functions.hpp
-boost/token_iterator.hpp:	include/boost/token_iterator.hpp
-boost/tokenizer.hpp:		include/boost/tokenizer.hpp
-libs/tokenizer/:		.
+boost/token_functions.hpp:		include/boost/token_functions.hpp
+boost/token_iterator.hpp:		include/boost/token_iterator.hpp
+boost/tokenizer.hpp:			include/boost/tokenizer.hpp
+libs/tokenizer/:			.
 
 [libs/tr1]
-boost/tr1/:			include/boost/tr1/
-libs/tr1/:			.
+boost/tr1/:				include/boost/tr1/
+libs/tr1/:				.
 
 [libs/tti]
-boost/tti/:			include/boost/tti/
-libs/tti/:			.
+boost/tti/:				include/boost/tti/
+libs/tti/:				.
 
 [libs/tuple]
-boost/tuple/:			include/boost/tuple/
-libs/tuple/:			.
+boost/tuple/:				include/boost/tuple/
+libs/tuple/:				.
 
 [libs/typeof]
-boost/typeof/:			include/boost/typeof/
-libs/typeof/:			.
+boost/typeof/:				include/boost/typeof/
+libs/typeof/:				.
 
 [libs/type_traits]
-boost/aligned_storage.hpp:	include/boost/aligned_storage.hpp
-boost/type_traits.hpp:		include/boost/type_traits.hpp
-boost/type_traits/:		include/boost/type_traits/
-libs/type_traits/:		.
+boost/aligned_storage.hpp:		include/boost/aligned_storage.hpp
+boost/type_traits.hpp:			include/boost/type_traits.hpp
+boost/type_traits/:			include/boost/type_traits/
+libs/type_traits/:			.
 
 [libs/units]
-boost/units/:			include/boost/units/
-libs/units/:			.
+boost/units/:				include/boost/units/
+libs/units/:				.
 
 [libs/unordered]
-boost/unordered_map.hpp:	include/boost/unordered_map.hpp
-boost/unordered_set.hpp:	include/boost/unordered_set.hpp
-boost/unordered/:		include/boost/unordered/
-libs/unordered/:		.
+boost/unordered_map.hpp:		include/boost/unordered_map.hpp
+boost/unordered_set.hpp:		include/boost/unordered_set.hpp
+boost/unordered/:			include/boost/unordered/
+libs/unordered/:			.
 
 [libs/utility]
-boost/swap.hpp:			include/boost/swap.hpp
-boost/ref.hpp:			include/boost/ref.hpp
-boost/assert.hpp:		include/boost/assert.hpp
-boost/operators.hpp:		include/boost/operators.hpp
-boost/noncopyable.hpp:		include/boost/noncopyable.hpp
-boost/next_prior.hpp:		include/boost/next_prior.hpp
-boost/generator_iterator.hpp:	include/boost/generator_iterator.hpp
-boost/current_function.hpp:	include/boost/current_function.hpp
-boost/checked_delete.hpp:	include/boost/checked_delete.hpp
-boost/call_traits.hpp:		include/boost/call_traits.hpp
-boost/compressed_pair.hpp:	include/boost/compressed_pair.hpp
-boost/utility.hpp:		include/boost/utility.hpp
-boost/utility/:			include/boost/utility/
-libs/utility/:			.
+boost/swap.hpp:				include/boost/swap.hpp
+boost/ref.hpp:				include/boost/ref.hpp
+boost/assert.hpp:			include/boost/assert.hpp
+boost/operators.hpp:			include/boost/operators.hpp
+boost/noncopyable.hpp:			include/boost/noncopyable.hpp
+boost/next_prior.hpp:			include/boost/next_prior.hpp
+boost/generator_iterator.hpp:		include/boost/generator_iterator.hpp
+boost/current_function.hpp:		include/boost/current_function.hpp
+boost/checked_delete.hpp:		include/boost/checked_delete.hpp
+boost/call_traits.hpp:			include/boost/call_traits.hpp
+boost/compressed_pair.hpp:		include/boost/compressed_pair.hpp
+boost/utility.hpp:			include/boost/utility.hpp
+boost/utility/:				include/boost/utility/
+libs/utility/:				.
 
 [libs/uuid]
-boost/uuid/:			include/boost/uuid/
-libs/uuid/:			.
+boost/uuid/:				include/boost/uuid/
+libs/uuid/:				.
 
 [libs/variant]
-boost/variant.hpp:		include/boost/variant.hpp
-boost/variant/:			include/boost/variant/
-libs/variant/:			.
+boost/variant.hpp:			include/boost/variant.hpp
+boost/variant/:				include/boost/variant/
+libs/variant/:				.
 
 [libs/wave]
-boost/wave.hpp:			include/boost/wave.hpp
-boost/wave/:			include/boost/wave/
-tools/wave/:			tool/
-libs/wave/:			.
+boost/wave.hpp:				include/boost/wave.hpp
+boost/wave/:				include/boost/wave/
+tools/wave/:				tool/
+libs/wave/:				.
 
 [libs/xpressive]
-boost/xpressive/:		include/boost/xpressive/
-libs/xpressive/:		.
+boost/xpressive/:			include/boost/xpressive/
+libs/xpressive/:			.
 
 [tools/auto_index]
-tools/auto_index/:		.
+tools/auto_index/:			.
 
 [tools/bcp]
-tools/bcp/:			.
+tools/bcp/:				.
 
 [tools/boostbook]
-tools/boostbook/:		.
+tools/boostbook/:			.
 
 [tools/build]
-tools/build/:			.
+tools/build/:				.
 
 [tools/inspect]
-tools/inspect/:			.
+tools/inspect/:				.
 
 [tools/litre]
-tools/litre/:			.
+tools/litre/:				.
 
 [tools/quickbook]
-tools/quickbook/:		.
-
+tools/quickbook/:			.
