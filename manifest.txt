@@ -86,6 +86,7 @@ libs/container/:			.
 boost/implicit_cast.hpp:		include/boost/implicit_cast.hpp
 boost/cast.hpp:				include/boost/cast.hpp
 boost/lexical_cast.hpp:			include/boost/lexical_cast.hpp
+boost/detail/lcast_precision.hpp:	include/boost/detail/lcast_precision.hpp
 libs/conversion/:			.
 
 [libs/core]
@@ -113,14 +114,10 @@ libs/date_time/:			.
 [libs/detail]
 boost/detail/algorithm.hpp:		include/boost/detail/algorithm.hpp
 boost/detail/allocator_utilities.hpp:	include/boost/detail/allocator_utilities.hpp
-boost/detail/atomic_count.hpp:		include/boost/detail/atomic_count.hpp
 boost/detail/binary_search.hpp:		include/boost/detail/binary_search.hpp
 boost/detail/bitmask.hpp:		include/boost/detail/bitmask.hpp
-boost/detail/call_traits.hpp:		include/boost/detail/call_traits.hpp
 boost/detail/catch_exceptions.hpp:	include/boost/detail/catch_exceptions.hpp
-boost/detail/compressed_pair.hpp:	include/boost/detail/compressed_pair.hpp
 boost/detail/container_fwd.hpp:		include/boost/detail/container_fwd.hpp
-boost/detail/dynamic_bitset.hpp:	include/boost/detail/dynamic_bitset.hpp
 boost/detail/endian.hpp:		include/boost/detail/endian.hpp
 boost/detail/fenv.hpp:			include/boost/detail/fenv.hpp
 boost/detail/has_default_constructor.hpp:	include/boost/detail/has_default_constructor.hpp
@@ -132,7 +129,6 @@ boost/detail/is_incrementable.hpp:	include/boost/detail/is_incrementable.hpp
 boost/detail/is_sorted.hpp:		include/boost/detail/is_sorted.hpp
 boost/detail/is_xxx.hpp:		include/boost/detail/is_xxx.hpp
 boost/detail/iterator.hpp:		include/boost/detail/iterator.hpp
-boost/detail/lcast_precision.hpp:	include/boost/detail/lcast_precision.hpp
 boost/detail/lightweight_main.hpp:	include/boost/detail/lightweight_main.hpp
 boost/detail/lightweight_mutex.hpp:	include/boost/detail/lightweight_mutex.hpp
 boost/detail/lightweight_test.hpp:	include/boost/detail/lightweight_test.hpp
@@ -142,13 +138,10 @@ boost/detail/named_template_params.hpp:	include/boost/detail/named_template_para
 boost/detail/no_exceptions_support.hpp:	include/boost/detail/no_exceptions_support.hpp
 boost/detail/none_t.hpp:		include/boost/detail/none_t.hpp
 boost/detail/numeric_traits.hpp:	include/boost/detail/numeric_traits.hpp
-boost/detail/ob_call_traits.hpp:	include/boost/detail/ob_call_traits.hpp
-boost/detail/ob_compressed_pair.hpp:	include/boost/detail/ob_compressed_pair.hpp
 boost/detail/quick_allocator.hpp:	include/boost/detail/quick_allocator.hpp
 boost/detail/reference_content.hpp:	include/boost/detail/reference_content.hpp
 boost/detail/scoped_enum_emulation.hpp:	include/boost/detail/scoped_enum_emulation.hpp
 boost/detail/select_type.hpp:		include/boost/detail/select_type.hpp
-boost/detail/sp_typeinfo.hpp:		include/boost/detail/sp_typeinfo.hpp
 boost/detail/templated_streams.hpp:	include/boost/detail/templated_streams.hpp
 boost/detail/utf8_codecvt_facet.hpp:	include/boost/detail/utf8_codecvt_facet.hpp
 libs/detail/utf8_codecvt_facet.cpp:	include/boost/detail/utf8_codecvt_facet_impl.hpp
@@ -165,6 +158,7 @@ libs/disjoint_sets/:			.
 boost/dynamic_bitset.hpp:		include/boost/dynamic_bitset.hpp
 boost/dynamic_bitset/:			include/boost/dynamic_bitset/
 boost/dynamic_bitset_fwd.hpp:		include/boost/dynamic_bitset_fwd.hpp
+boost/detail/dynamic_bitset.hpp:	include/boost/detail/dynamic_bitset.hpp
 libs/dynamic_bitset/:			.
 
 [libs/exception]
@@ -453,6 +447,8 @@ boost/signals2/:			include/boost/signals2/
 libs/signals2/:				.
 
 [libs/smart_ptr]
+boost/detail/atomic_count.hpp:		include/boost/detail/atomic_count.hpp
+boost/detail/sp_typeinfo.hpp:		include/boost/detail/sp_typeinfo.hpp
 boost/enable_shared_from_this.hpp:	include/boost/enable_shared_from_this.hpp
 boost/intrusive_ptr.hpp:		include/boost/intrusive_ptr.hpp
 boost/get_pointer.hpp:			include/boost/get_pointer.hpp
@@ -551,7 +547,11 @@ boost/generator_iterator.hpp:		include/boost/generator_iterator.hpp
 boost/current_function.hpp:		include/boost/current_function.hpp
 boost/checked_delete.hpp:		include/boost/checked_delete.hpp
 boost/call_traits.hpp:			include/boost/call_traits.hpp
+boost/detail/call_traits.hpp:		include/boost/detail/call_traits.hpp
+boost/detail/ob_call_traits.hpp:	include/boost/detail/ob_call_traits.hpp
 boost/compressed_pair.hpp:		include/boost/compressed_pair.hpp
+boost/detail/compressed_pair.hpp:	include/boost/detail/compressed_pair.hpp
+boost/detail/ob_compressed_pair.hpp:	include/boost/detail/ob_compressed_pair.hpp
 boost/utility.hpp:			include/boost/utility.hpp
 boost/utility/:				include/boost/utility/
 libs/utility/:				.
