@@ -10,19 +10,38 @@ This project is used to manage all the projects at https://github.com/boost-lib
 +
 ..............................................
 git clone git://github.com/boost-lib/boost.git
+cd boost
 git submodule update --init
 ..............................................
 
-3. Make changes to the CMakeLists.txt files in Boost.
+3. Make *but do not commit* changes to the +boost_project.cmake+ and
+   +CMakeLists.txt+ files in the Boost repository.  A typical change that
+   ports a library's testing Jamfile to CMake is visible
+   https://github.com/boost-lib/bimap/commit/9269a48767e4f8ba387252361a53d8dba319de62#test/CMakeLists.txt[here].
 
-4. Copy the changed CMakeLists.txt files to the directory 'new' in
-Boost.Modularize:
+4. https://svn.boost.org/trac/boost/wiki/CMakeModularizationStatus#IntegrationTesting[Test] your changes
+
+5. Use the following commands *in this repository's root directory* to
+   automatically move the changes to the directory 'new' in the
+   Boost.Modularize project.
 +
 .............................
 cmake -P copy_listfiles.cmake
 python clean.py
 .............................
 
-5. Commit your changes to Boost.Modularize.
+5. Commit your changes to Boost.Modularize.  A typical commit
+   corresponding to the change above is visible
+   https://github.com/ryppl/boost-modularize/commit/a339f625e492d21926c449c17269c4d77e94f78a[here].
 
-6. Reset the changes in Boost.
+6. Clean out your changes in your local modularized boost
+   repository.
++
+..............................................
+   cd ../boost
+   git clean -f
+..............................................
+The
+http://bbot.boostpro.com/builders/Boost.Modularize-x-Modularize[modularization
+bot] will then make the corresponding commits in the
+https://github.com/boost-lib/[modularized repositories]
