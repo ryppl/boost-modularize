@@ -7,28 +7,6 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-# TODO: details not yet ported from Jamfile
-#
-# warning-options = <warnings>all <warnings-as-errors>on ;
-# warning-compilers =
-#     <toolset>msvc
-# ;
-
-# project boost/units/test :
-#     requirements
-#         <source>/boost//headers
-#         <include>../../..
-#         <toolset>msvc:<asynch-exceptions>on
-#         $(warning-compilers):$(warning-options)
-#         # This warning comes from the test library.
-#         <toolset>msvc:<cxxflags>"/wd4701"
-#         # The comes from the exception library
-#         <toolset>msvc,<toolset-msvc:version>7.1:<cxxflags>"/wd4800"
-# ;
-
-# alias test_framework : /boost//unit_test_framework/<warnings-as-errors>off ;
-
-
 boost_add_multiple_tests(
   COMPILE
     test_predicates.cpp
@@ -68,6 +46,7 @@ boost_add_multiple_tests(
   )
 
 boost_add_test(
+  test_output
   RUN
     test_output.cpp
   LINK_BOOST_LIBRARIES
