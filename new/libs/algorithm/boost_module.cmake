@@ -19,6 +19,11 @@ boost_module(Algorithm
     tuple
     type_traits
     utility
+  TEST_DIRECTORIES
+    minmax/test
+    minmax/example
+    string/test
+    string/example
   INCLUDE_DIRECTORIES
     include
   )
