@@ -390,7 +390,7 @@ def setup_metarepo(dst_dir):
         os.makedirs(dst_dir)
         run('git', 'clone', repo_rw % 'boost', dst_dir)
 
-    run('git', 'submodule', 'foreach', 'git', 'checkout', '--force', cwd=dst_dir)
+    run('git', 'submodule', 'foreach', 'git', 'checkout', 'master', '--force', cwd=dst_dir)
     run('git', 'submodule', 'foreach', 'git', 'pull', cwd=dst_dir)
     run('git', 'submodule', 'update', '--init', cwd=dst_dir)
 
@@ -467,6 +467,10 @@ def update_modules(src_dir, dst_dir, manifest):
     fout.close()
 
 def push_modules(dst_dir):
+    # Is there something to push?
+    if "" == popen('git', 'status', '-s', cwd=dst_dir):
+        return
+
     # We now want to 'git add' all the modified submodules to the supermodule,
     # commit them and push the new boost supermodule.
     print 'Pushing all modified submodues...'
