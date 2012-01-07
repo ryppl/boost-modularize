@@ -251,7 +251,7 @@ class Module:
                     continue
 
                 if incmod is None:
-                    print >>sys.stderr, '[ERROR] Cannot file module for :', include, 'found in', file
+                    print >>sys.stderr, '[WARNING] Cannot file module for :', include, 'found in', file
                     continue
 
                 if pfile.find(self.section + '/test/') != -1:
