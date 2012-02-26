@@ -82,6 +82,10 @@ libs/config/:				.
 boost/container/:			include/boost/container/
 libs/container/:			.
 
+[libs/context]
+boost/context/:				include/boost/context/
+libs/context/:				.
+
 [libs/conversion]
 boost/implicit_cast.hpp:		include/boost/implicit_cast.hpp
 boost/cast.hpp:				include/boost/cast.hpp
@@ -284,6 +288,11 @@ libs/lambda/:				.
 boost/locale.hpp:			include/boost/locale.hpp
 boost/locale/:				include/boost/locale/
 libs/locale/:				.
+
+[libs/local_function]
+boost/local_function.hpp:		include/boost/local_function.hpp
+boost/local_function/:			include/boost/local_function/
+libs/local_function/:			.
 
 [libs/logic]
 boost/logic/:				include/boost/logic/
