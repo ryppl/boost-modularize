@@ -133,7 +133,7 @@ class Module:
             run('git', 'config', 'branch.master.remote', 'origin', cwd=self.dst_dir)
             run('git', 'config', 'branch.master.merge', 'refs/heads/master', cwd=self.dst_dir)
             run('git', 'submodule', 'add', repo_ro % base, self.section, cwd=self.dstroot)
-            run('git', 'commit', '-am', 'Added submodule %s' % base, cwd=self.dstroot)
+            run('git', 'status', cwd=self.dstroot)
 
     # remove everything (leaving behind the top-level .git directory)
     def clean(self):
