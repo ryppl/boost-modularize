@@ -94,28 +94,7 @@ boost/detail/lcast_precision.hpp:	include/boost/detail/lcast_precision.hpp
 libs/conversion/:			.
 
 [libs/core]
-boost/blank.hpp:			include/boost/blank.hpp
-boost/blank_fwd.hpp:			include/boost/blank_fwd.hpp
-boost/cstdlib.hpp:			include/boost/cstdlib.hpp
-boost/indirect_reference.hpp:		include/boost/indirect_reference.hpp
-boost/limits.hpp:			include/boost/limits.hpp
-boost/non_type.hpp:			include/boost/non_type.hpp
-boost/type.hpp:				include/boost/type.hpp
-boost/visit_each.hpp:			include/boost/visit_each.hpp
-boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
-boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
-boost/pending/stringtok.hpp:		include/boost/pending/stringtok.hpp
-
-[libs/crc]
-boost/crc.hpp:				include/boost/crc.hpp
-libs/crc/:				.
-
-[libs/date_time]
-boost/date_time.hpp:			include/boost/date_time.hpp
-boost/date_time/:			include/boost/date_time/
-libs/date_time/:			.
-
-[libs/detail]
+boost/detail/win/:			include/boost/detail/win/
 boost/detail/algorithm.hpp:		include/boost/detail/algorithm.hpp
 boost/detail/allocator_utilities.hpp:	include/boost/detail/allocator_utilities.hpp
 boost/detail/binary_search.hpp:		include/boost/detail/binary_search.hpp
@@ -150,8 +129,27 @@ boost/detail/templated_streams.hpp:	include/boost/detail/templated_streams.hpp
 boost/detail/utf8_codecvt_facet.hpp:	include/boost/detail/utf8_codecvt_facet.hpp
 libs/detail/utf8_codecvt_facet.cpp:	include/boost/detail/utf8_codecvt_facet_impl.hpp
 boost/detail/workaround.hpp:		include/boost/detail/workaround.hpp
-boost/detail/win/:			include/boost/detail/win/
+boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
+boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
+boost/pending/stringtok.hpp:		include/boost/pending/stringtok.hpp
+boost/blank.hpp:			include/boost/blank.hpp
+boost/blank_fwd.hpp:			include/boost/blank_fwd.hpp
+boost/cstdlib.hpp:			include/boost/cstdlib.hpp
+boost/indirect_reference.hpp:		include/boost/indirect_reference.hpp
+boost/limits.hpp:			include/boost/limits.hpp
+boost/non_type.hpp:			include/boost/non_type.hpp
+boost/type.hpp:				include/boost/type.hpp
+boost/visit_each.hpp:			include/boost/visit_each.hpp
 libs/detail/test/:			test/
+
+[libs/crc]
+boost/crc.hpp:				include/boost/crc.hpp
+libs/crc/:				.
+
+[libs/date_time]
+boost/date_time.hpp:			include/boost/date_time.hpp
+boost/date_time/:			include/boost/date_time/
+libs/date_time/:			.
 
 [libs/disjoint_sets]
 boost/pending/disjoint_sets.hpp:	include/boost/pending/disjoint_sets.hpp
