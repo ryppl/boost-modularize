@@ -27,10 +27,13 @@ if(DEFINED TOOLCHAIN AND NOT DEFINED GENERATOR)
     set(GENERATOR "Visual Studio 8 2005")
   elseif(TOOLCHAIN STREQUAL "vs71")
     set(GENERATOR "Visual Studio 7 .NET 2003")
+  else()
+    set(GENERATOR "Unix Makefiles")
   endif()
   message(WARNING
     "TOOLCHAIN has been set to \"${TOOLCHAIN}\".\n"
-	"Instead, GENERATOR should be set to \"${GENERATOR}\"!"
+    "GENERATOR should be set instead!\n"
+    "Trying \"${GENERATOR}\"..."
     )
 endif(DEFINED TOOLCHAIN AND NOT DEFINED GENERATOR)
 
