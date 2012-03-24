@@ -14,7 +14,7 @@ cd boost
 git submodule update --init
 ..............................................
 
-3. Make *but do not commit* changes to the +boost_project.cmake+ and
+3. Make *but do not commit* changes to the
    +CMakeLists.txt+ files in the Boost repository.  A typical change that
    ports a library's testing Jamfile to CMake is visible
    https://github.com/boost-lib/bimap/commit/9269a48767e4f8ba387252361a53d8dba319de62#test/CMakeLists.txt[here].
@@ -27,7 +27,6 @@ git submodule update --init
 +
 .............................
 cmake -P copy_listfiles.cmake
-python clean.py
 .............................
 
 5. Commit your changes to Boost.Modularize.  A typical commit

@@ -2,11 +2,46 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(BoostMath CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    algorithm
+    array
+    bind
+    cmake
+    concept_check
+    config
+    conversion
+    core
+    exception
+    format
+    function
+    fusion
+    integer
+    mpl
+    numeric
+    random
+    regex
+    smart_ptr
+    spirit
+    static_assert
+    test
+    timer
+    tr1
+    tuple
+    type_traits
+    utility
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddLibrary)
+include(BoostExport)
 
-include_directories(src/tr1)
+include_directories(
+  include
+  src/tr1
+  )
 
 set(C99_SOURCES
   acosh
@@ -73,3 +108,37 @@ add_math_library(tr1l "l" ${TR1_SOURCES})
 add_math_library(c99  ""  ${C99_SOURCES})
 add_math_library(c99f "f" ${C99_SOURCES})
 add_math_library(c99l "l" ${C99_SOURCES})
+
+boost_export(
+  TARGETS
+    math_tr1
+    math_tr1f
+    math_tr1l
+    math_c99
+    math_c99f
+    math_c99l
+  BOOST_DEPENDS
+    algorithm
+    array
+    bind
+    concept_check
+    config
+    conversion
+    core
+    exception
+    format
+    function
+    fusion
+    integer
+    mpl
+    numeric
+    smart_ptr
+    spirit
+    static_assert
+    tr1
+    tuple
+    type_traits
+    utility
+  INCLUDE_DIRECTORIES
+    include
+  )

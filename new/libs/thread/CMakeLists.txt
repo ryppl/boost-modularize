@@ -1,10 +1,34 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(BoostThread CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    bind
+    chrono
+    cmake
+    config
+    core
+    date_time
+    exception
+    function
+    functional
+    integer
+    io
+    move
+    mpl
+    optional
+    smart_ptr
+    static_assert
+    system
+    type_traits
+    utility
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddLibrary)
 
 find_package(Threads REQUIRED)
 

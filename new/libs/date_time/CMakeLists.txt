@@ -2,11 +2,63 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(BoostDateTime)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    algorithm
+    config
+    conversion
+    core
+    exception
+    integer
+    io
+    mpl
+    range
+    serialization
+    smart_ptr
+    tokenizer
+    type_traits
+    utility
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddDirectory)
+include(BoostAddLibrary)
+include(BoostExport)
+
+#boost_add_directory(DOC doc)
 
 add_definitions(-DDATE_TIME_INLINE)
+
+boost_add_library(date_time
+  src/gregorian/greg_month.cpp
+  src/gregorian/greg_weekday.cpp
+  src/gregorian/date_generators.cpp
+  )
+
+boost_export(
+  BOOST_DEPENDS
+    algorithm
+    config
+    conversion
+    core
+    exception
+    integer
+    io
+    mpl
+    range
+    serialization
+    smart_ptr
+    tokenizer
+    type_traits
+    utility
+  INCLUDE_DIRECTORIES
+    include
+  )
+
+
+return()
 
 file(GLOB date_time_files boost/date_time/*.hpp)
 file(GLOB gregorian_files boost/date_time/gregorian/*.hpp)
@@ -57,10 +109,4 @@ boost_documentation(xmldoc/date_time.xml
   posix_time_autodoc.xml
   local_time_autodoc.xml
   #<xsl:param>boost.root=../../../..
-  )
-
-boost_add_library(date_time
-  src/gregorian/greg_month.cpp
-  src/gregorian/greg_weekday.cpp
-  src/gregorian/date_generators.cpp
   )

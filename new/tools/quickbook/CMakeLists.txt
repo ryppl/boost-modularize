@@ -1,10 +1,34 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(Quickbook CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    algorithm
+    bind
+    cmake
+    config
+    conversion
+    core
+    filesystem
+    foreach
+    iostreams
+    iterator
+    preprocessor
+    program_options
+    range
+    smart_ptr
+    spirit
+    tuple
+    unordered
+    utility
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddExecutable)
+include(BoostExport)
 
 if(MSVC)
   add_definitions(-D_SCL_SECURE_NO_WARNINGS -D_CRT_SECURE_NO_WARNINGS
@@ -34,13 +58,9 @@ boost_add_executable(quickbook
     src/block_element_grammar.cpp
     src/phrase_element_grammar.cpp
     src/doc_info_grammar.cpp
-  LINK_BOOST_LIBRARIES
-    filesystem
-    program_options
-    system
+  LINK_LIBRARIES
+    ${Boost_LIBRARIES}
   )
 
-#boost_documentation(doc/quickbook.qbk
-#  IMAGES
-#    doc/html/images
-#  )
+boost_export(TARGETS quickbook)
+

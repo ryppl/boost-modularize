@@ -2,11 +2,14 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(BoostFilesystem CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost COMPONENTS cmake system NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddLibrary)
+include(BoostExport)
 
-boost_add_library(filesystem NO_SYMBOL
+boost_add_library(filesystem
   SOURCES
     v2/src/v2_operations
     v2/src/v2_path
@@ -19,6 +22,28 @@ boost_add_library(filesystem NO_SYMBOL
     v3/src/path_traits
     v3/src/unique_path
     v3/src/windows_file_codecvt
-  LINK_BOOST_LIBRARIES
+  LINK_LIBRARIES
+    ${Boost_LIBRARIES}
+  )
+
+boost_export(
+  TARGETS
+    filesystem
+  BOOST_DEPENDS
+    bind
+    config
+    core
+    functional
+    integer
+    io
+    iterator
+    smart_ptr
+    static_assert
     system
+    #test
+    #timer
+    type_traits
+    utility
+  INCLUDE_DIRECTORIES
+    include
   )

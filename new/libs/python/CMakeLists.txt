@@ -1,7 +1,8 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(BoostPython CXX)
 
 find_package(PythonLibs)
 if(NOT PYTHONLIBS_FOUND)
@@ -10,8 +11,30 @@ endif()
 
 include_directories(${PYTHON_INCLUDE_DIRS})
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    bind
+    config
+    conversion
+    core
+    foreach
+    function
+    graph
+    integer
+    iterator
+    mpl
+    numeric
+    preprocessor
+    property_map
+    smart_ptr
+    static_assert
+    tuple
+    type_traits
+    utility
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddLibrary)
 
 set(sources
   src/numeric.cpp

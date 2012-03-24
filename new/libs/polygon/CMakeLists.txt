@@ -2,6 +2,17 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(BoostPolygon NONE)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost COMPONENTS cmake NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostExport)
+
+boost_export(
+  BOOST_DEPENDS
+    config
+    mpl
+    utility
+  INCLUDE_DIRECTORIES
+    include
+  )

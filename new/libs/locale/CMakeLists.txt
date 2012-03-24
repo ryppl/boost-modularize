@@ -2,9 +2,23 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(BoostLocale CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    config
+    function
+    integer
+    iterator
+    smart_ptr
+    thread
+    type_traits
+    unordered
+    utility
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddLibrary)
 
 find_package(Iconv)
 if(ICONV_FOUND)
@@ -181,18 +195,17 @@ if(WIN32 OR CYGWIN)
   endif()
 endif()
 
-boost_add_library(locale NO_SYMBOL
+boost_add_library(locale
   SOURCES
     ${sources}
   LINK_LIBRARIES
     ${link_libraries}
-  LINK_BOOST_LIBRARIES
     ${link_boost_libraries}
   )
 
-boost_add_multiple_tests(
-  RUN
-    ${tests}
-  LINK_BOOST_LIBRARIES
-    shared locale
-  )
+#boost_add_multiple_tests(
+#  RUN
+#    ${tests}
+#  LINK_BOOST_LIBRARIES
+#    shared locale
+#  )

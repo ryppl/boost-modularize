@@ -9,21 +9,17 @@
 ##########################################################################
 
 cmake_minimum_required(VERSION 2.8.4 FATAL_ERROR)
-project(Boost)
+project(Boost NONE)
 
 ##########################################################################
 # Config Information                                                     #
 ##########################################################################
 
-configure_file(boost-config.cmake.in boost-config.cmake @ONLY)
-configure_file(boost-config-version.cmake.in boost-config-version.cmake COPYONLY)
+set(Boost_DIR "${Boost_SOURCE_DIR}")
 
-set(Boost_DIR "${Boost_BINARY_DIR}")
-find_package(Boost NO_MODULE)
-include("${Boost_USE_FILE}")
-include(BoostProject)
-
-option(BOOST_DEBIAN_PACKAGES "Create debian packages" OFF)
+if(BOOST_INITIAL_PASS)
+  set(Boost_MODULE_PATH "${Boost_SOURCE_DIR}/tools/cmake/modules")
+endif(BOOST_INITIAL_PASS)
 
 ##########################################################################
 # Building and Testing                                                   #
@@ -47,51 +43,21 @@ set(BOOST_ENABLED_EXAMPLES "NONE" CACHE
   STRING "valid values are ALL, NONE, or a ; separated list of components"
   )
 
-
-# As long as CTest does not support incremental testing, we disable the
-# builtin test target and create our own. This target should be "built"
-# with the "keep going" option, eg: 'make test -k'.
-add_custom_target(test)
-#enable_testing()
-
 # make visual studio look nice
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-
-# Put the libaries and binaries that get built into directories at the
-# top of the build tree rather than in hard-to-find leaf
-# directories. This simplifies manual testing and the use of the build
-# tree rather than installed Boost libraries.
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
 ##########################################################################
 # Components                                                             #
 ##########################################################################
 
-set(BOOST_PROJECTS_ALL)
-
-set(BOOST_SUBDIRECTORIES
-  @BOOST_SUBDIRECTORIES@
-  )
-
-foreach(dir ${BOOST_SUBDIRECTORIES})
-  boost_precache(${dir})
-endforeach(dir)
-
-foreach(dir ${BOOST_SUBDIRECTORIES})
-  add_subdirectory(${dir})
-endforeach(dir)
+@BOOST_SUBDIRECTORIES@
 
 ##########################################################################
-# Package Information                                                    #
+#                                                                        #
 ##########################################################################
 
-set(CPACK_PACKAGE_NAME "Boost")
-set(CPACK_PACKAGE_VENDOR "http://www.boost.org")
-set(CPACK_PACKAGE_CONTACT "Daniel Pfeifer <daniel@pfeifer-mail.de>")
-set(CPACK_PACKAGE_VERSION "${Boost_VERSION}")
-set(CPACK_PACKAGE_FILE_NAME "Boost-${Boost_VERSION}-${CMAKE_SYSTEM_NAME}-${BOOST_TOOLSET}")
-set(CPACK_SOURCE_IGNORE_FILES "${Boost_BINARY_DIR}/;/\\\\.git")
+if(BOOST_INITIAL_PASS)
+  # report an error in order to inhibit the generation step (save time).
+  message(ERROR "Initial pass successfully completed, now run CMake again!")
+endif(BOOST_INITIAL_PASS)
 
-include(BoostCPack)

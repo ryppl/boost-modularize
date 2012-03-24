@@ -1,10 +1,36 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(BoostSerialization CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    array
+    config
+    core
+    exception
+    function
+    functional
+    integer
+    io
+    iterator
+    mpl
+    optional
+    preprocessor
+    smart_ptr
+    spirit
+    static_assert
+    timer
+    type_traits
+    utility
+    uuid
+    variant
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddLibrary)
+include(BoostExport)
 
 if(MSVC)
   add_definitions(
@@ -19,7 +45,7 @@ endif(MSVC)
 #   add_definitions(-fvisibility=hidden)
 # endif(GCC)
 
-boost_add_library(serialization NO_SYMBOL
+boost_add_library(serialization
   src/basic_archive
   src/basic_iarchive
   src/basic_iserializer
@@ -63,4 +89,33 @@ boost_add_library(wserialization
     src/codecvt_null
   LINK_BOOST_LIBRARIES
     serialization 
+  )
+
+boost_export(
+  TARGETS
+    serialization
+    wserialization
+  BOOST_DEPENDS
+    array
+    config
+    core
+    exception
+    function
+    functional
+    integer
+    io
+    iterator
+    mpl
+    optional
+    preprocessor
+    smart_ptr
+    spirit
+    static_assert
+    timer
+    type_traits
+    utility
+    uuid
+    variant
+  INCLUDE_DIRECTORIES
+    include
   )

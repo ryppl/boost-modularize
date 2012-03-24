@@ -1,10 +1,38 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(BoostWave CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    any
+    cmake
+    concept_check
+    config
+    core
+    exception
+    filesystem
+    integer
+    iterator
+    mpl
+    multi_index
+    pool
+    preprocessor
+    program_options
+    serialization
+    smart_ptr
+    spirit
+    static_assert
+    timer
+    type_traits
+    utility
+    xpressive
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddExecutable)
+include(BoostAddLibrary)
 
 if(MSVC)
   add_definitions(

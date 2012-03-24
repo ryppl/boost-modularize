@@ -2,13 +2,15 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(Boostbook)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
-
+find_package(Boost COMPONENTS cmake NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddDirectory)
+include(BoostExport)
 include(BoostExtract)
 
-add_subdirectory(doc)
+#boost_add_directory(DOC doc)
 
 if(WIN32)
   set(BOOSTBOOK_DIR "boostbook")
@@ -22,6 +24,7 @@ set(BOOSTBOOK_XSL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/xsl")
 # Find the DocBook DTD (version 4.2)
 find_path(DOCBOOK_DTD_DIR docbookx.dtd PATHS
   "/usr/share/xml/docbook/schema/dtd/4.2"
+  "/usr/share/sgml/docbook/xml-dtd-4.2"
   "/opt/local/share/xml/docbook/4.2"
   )
 if(NOT DOCBOOK_DTD_DIR)
@@ -36,6 +39,7 @@ endif(NOT DOCBOOK_DTD_DIR)
 # Find the DocBook XSL stylesheets
 find_path(DOCBOOK_XSL_DIR html/html.xsl PATHS
   "/usr/share/xml/docbook/stylesheet/nwalsh"
+  "/usr/share/sgml/docbook/xsl-stylesheets"
   "/opt/local/share/xsl/docbook-xsl"
   )
 if(NOT DOCBOOK_XSL_DIR)
@@ -60,8 +64,9 @@ install(DIRECTORY dtd xsl
   DESTINATION "${BOOSTBOOK_DIR}"
   COMPONENT "${BOOST_RUNTIME_COMPONENT}"
   )
-set(BOOSTBOOK_DTD_DIR "dtd")
-set(BOOSTBOOK_XSL_DIR "xsl")
+  
+# make the binary directory usable...
+file(COPY dtd xsl DESTINATION .)
 
 if(install_docbook_dtd)
   install(DIRECTORY "${DOCBOOK_DTD_DIR}/"
@@ -87,7 +92,7 @@ install(FILES "${catalog}"
   COMPONENT "${BOOST_RUNTIME_COMPONENT}"
   )
 
-file(WRITE "${BOOST_EXPORTS_FILE}"
+boost_export(CODE
   "set(BOOSTBOOK_CATALOG \"\${CMAKE_CURRENT_LIST_DIR}/../boostbook/catalog.xml\")\n"
   "set(BOOSTBOOK_XSL_DIR \"\${CMAKE_CURRENT_LIST_DIR}/../boostbook/xsl\")\n"
   )

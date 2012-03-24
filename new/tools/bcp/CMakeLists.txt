@@ -1,10 +1,23 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(BoostBCP CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    cmake
+    conversion
+    core
+    exception
+    filesystem
+    regex
+    smart_ptr
+    test
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddExecutable)
 
 boost_add_executable(bcp
   SOURCES

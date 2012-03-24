@@ -1,10 +1,28 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(BoostContext CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    bind
+    config
+    core
+    format
+    integer
+    move
+    preprocessor
+    program_options
+    smart_ptr
+    system
+    thread
+    type_traits
+    utility
+  NO_MODULE
+  )
+include("${Boost_USE_FILE}")
+include(BoostAddLibrary)
 
 
 set(abi
@@ -79,10 +97,9 @@ else()
     )
 endif()
 
-boost_add_library(context NO_SYMBOL
-  SOURCES
-    ${ASM_CONTEXT_SOURCES}
-    ${CONTEXT_SOURCES}
-    src/fcontext.cpp
+boost_add_library(context
+  ${ASM_CONTEXT_SOURCES}
+  ${CONTEXT_SOURCES}
+  src/fcontext.cpp
   )
 

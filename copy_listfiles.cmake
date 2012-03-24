@@ -11,6 +11,5 @@ file(COPY "${BOOST_DIR}/"
     PATTERN "${boost}/build"          EXCLUDE # binary dir
     PATTERN "${boost}/tools/cmake"    EXCLUDE # has its own listfiles
     PATTERN "${boost}/CMakeLists.txt" EXCLUDE
-    PATTERN "boost_module.cmake"
     PATTERN "CMakeLists.txt"
   )

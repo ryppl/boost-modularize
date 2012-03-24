@@ -2,6 +2,32 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(BoostAccumulators)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost COMPONENTS cmake NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostExport)
+
+boost_export(
+  BOOST_DEPENDS
+    array
+    circular_buffer
+    concept_check
+    config
+    core
+    exception
+    fusion
+    iterator
+    mpl
+    numeric
+    parameter
+    preprocessor
+    range
+    static_assert
+    tuple
+    type_traits
+    typeof
+    utility
+  INCLUDE_DIRECTORIES
+    include
+  )

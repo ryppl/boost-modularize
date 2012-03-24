@@ -111,12 +111,6 @@ class Module:
         self.dstroot = dst_dir
         self.dst_dir = os.path.normpath(os.path.join(dst_dir, section))
         self.new_dir = os.path.join('new', section)
-        self.depends = set()
-
-        # bcp is linked against prg_exec_monitor, but does not include any
-        # headers of Boost.Test, so this dependency is not found automatically.
-        if section == 'tools/bcp':
-            self.depends.add('libs/test')
 
     # uses git
     def update(self):
@@ -202,23 +196,6 @@ class Module:
             print '[INFO] Applying patch', patch, 'in', self.dst_dir
         run('git', 'apply', patch, cwd=self.dst_dir)
 
-    def write_metadata(self):
-        find_package = 'find_package(Boost NO_MODULE)'
-        if len(self.depends) > 5:
-            find_package = 'find_package(Boost\n  COMPONENTS\n'
-            for dep in sorted(self.depends):
-                find_package += '    ' + os.path.split(dep)[1] + '\n'
-            find_package += '  NO_MODULE\n  )'
-        elif len(self.depends) > 0:
-            find_package = 'find_package(Boost COMPONENTS '
-            for dep in sorted(self.depends):
-                find_package += os.path.split(dep)[1] + ' '
-            find_package += 'NO_MODULE)'
-
-        list_file = os.path.join(self.dst_dir, 'CMakeLists.txt')
-        content = open(list_file).read()
-        open(list_file, 'w').write(find_boost.sub(find_package, content))
-
     # uses git
     def commit(self):
         if verbose:
@@ -254,15 +231,6 @@ class Module:
                 if incmod is None:
                     print >>sys.stderr, '[WARNING] Cannot file module for :', include, 'found in', file
                     continue
-
-                if pfile.find(self.section + '/test/') != -1:
-                    return # TODO: self.test_depends
-                if pfile.find(self.section + '/example/') != -1:
-                    return # TODO: self.example_depends
-                if pfile.find(self.section + '/examples/') != -1:
-                    return # TODO: self.example_depends
-                else:
-                    self.depends.add(incmod)
 
 # Check the manifest against the live boost mirror to ensure that we
 # know where everything goes. Try reading the list of existing boost
@@ -440,16 +408,13 @@ def update_modules(src_dir, dst_dir, manifest):
         if manifest.has_option(section, '<patch>'):
             module.apply_patch(os.path.abspath('patches/'+manifest.get(section, '<patch>')))
 
-        # write metadata (dependencies)
-        module.write_metadata()
-
         # commit locally, TODO: skip in offline mode
         module.commit()
 
     # copy new files
-    dir_util.copy_tree('new/toolchains', os.path.join(dst_dir, 'toolchains'))
-    for new_file in ['boost-config.cmake.in', 'boost-config-version.cmake.in',
-                     'build.bat', 'build.cmake', 'LICENSE_1_0.txt', 'README.txt']:
+    for new_file in ['BoostConfig.cmake', 'BoostConfigVersion.cmake',
+                     'BoostCatalog.cmake', 'UseBoost.cmake', 'LICENSE_1_0.txt',
+                     'build.bat', 'build.cmake', 'README.txt']:
         shutil.copy2(os.path.join('new', new_file), dst_dir)
 
     # configure CMakeLists.txt
@@ -459,9 +424,9 @@ def update_modules(src_dir, dst_dir, manifest):
     fin = open(os.path.join('new', 'CMakeLists.txt'))
     fout = open(os.path.join(dst_dir, 'CMakeLists.txt'), "wt")
     for line in fin:
-        if line == '  @BOOST_SUBDIRECTORIES@\n':
+        if line == '@BOOST_SUBDIRECTORIES@\n':
             for directory in subdirectories:
-                fout.write('  %s\n' % directory)
+                fout.write('add_subdirectory(%s)\n' % directory)
         else:
             fout.write(line)
     fin.close()

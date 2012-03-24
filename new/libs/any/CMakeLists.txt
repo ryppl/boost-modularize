@@ -2,15 +2,28 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8)
+project(BoostAny)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost COMPONENTS cmake NO_MODULE)
+include(${Boost_USE_FILE})
+#include(BoostDocumentation)
+include(BoostExport)
 
-boost_documentation(doc/any.xml)
+#boost_documentation(doc/any.xml)
 
-boost_add_multiple_tests(
-  RUN
-    any_test.cpp
-  COMPILE_FAIL
-    test/any_cast_cv_failed.cpp
+boost_export(
+  BOOST_DEPENDS
+    config
+    exception
+    static_assert
+    type_traits
+  INCLUDE_DIRECTORIES
+    include
   )
+
+#boost_add_multiple_tests(
+#  RUN
+#    any_test.cpp
+#  COMPILE_FAIL
+#    test/any_cast_cv_failed.cpp
+#  )

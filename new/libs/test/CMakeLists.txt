@@ -1,10 +1,32 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+project(BoostTest CXX)
 
-find_package(Boost NO_MODULE)
-include("${Boost_DEV_FILE}")
+find_package(Boost
+  COMPONENTS
+    bind
+    config
+    conversion
+    core
+    exception
+    function
+    io
+    iterator
+    mpl
+    numeric
+    optional
+    preprocessor
+    smart_ptr
+    static_assert
+    timer
+    type_traits
+    utility
+  NO_MODULE
+  )
+include(${Boost_USE_FILE})
+include(BoostAddLibrary)
 
 if(MSVC)
   # specify the asynchronous exception handling model
