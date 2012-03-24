@@ -470,6 +470,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     verbose = args.verbose
 
+    if 'cleansetup' in args.command:
+        shutil.rmtree(args.dst)
+        setup_metarepo(args.dst)
+
     if 'setup' in args.command:
         setup_metarepo(args.dst)
 
