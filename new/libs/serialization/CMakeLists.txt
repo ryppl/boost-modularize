@@ -88,7 +88,7 @@ boost_add_library(wserialization
     src/xml_wiarchive
     src/xml_woarchive
     src/codecvt_null
-  LINK_BOOST_LIBRARIES
+  LINK_LIBRARIES
     serialization 
   )
 

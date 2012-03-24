@@ -34,10 +34,9 @@ boost_add_library(graph_parallel
   SOURCES
     src/mpi_process_group.cpp
     src/tag_allocator.cpp
-  LINK_BOOST_LIBRARIES
-    ${mpi_library}
   LINK_LIBRARIES
     ${MPI_LIBRARIES}
+    ${mpi_library}
   # <define>BOOST_GRAPH_NO_LIB=1
   # <link>shared:<define>BOOST_GRAPH_DYN_LINK=1
   # <toolset>intel-vc71-win-9.1:<optimization>off

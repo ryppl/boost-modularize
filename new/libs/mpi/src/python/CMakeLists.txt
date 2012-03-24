@@ -7,9 +7,9 @@ include_directories(${PYTHON_INCLUDE_DIRS})
 boost_add_library(${boost_mpi_name}_python
   SOURCES
     serialize.cpp
-  LINK_BOOST_LIBRARIES
+  LINK_LIBRARIES
+    ${Boost_LIBRARIES}
     ${boost_mpi_name}
-    python
   )
 
 boost_add_python_extension(${boost_mpi_name}
@@ -26,6 +26,6 @@ boost_add_python_extension(${boost_mpi_name}
     skeleton_and_content.cpp
     status.cpp
     py_timer.cpp
-  LINK_BOOST_LIBRARIES
+  LINK_LIBRARIES
     ${boost_mpi_name}_python
   )

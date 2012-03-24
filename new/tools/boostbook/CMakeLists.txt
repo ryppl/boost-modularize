@@ -6,11 +6,10 @@ project(Boostbook)
 
 find_package(Boost COMPONENTS cmake NO_MODULE)
 include(${Boost_USE_FILE})
-include(BoostAddDirectory)
 include(BoostExport)
 include(BoostExtract)
 
-#boost_add_directory(DOC doc)
+add_subdirectory(doc)
 
 if(WIN32)
   set(BOOSTBOOK_DIR "boostbook")

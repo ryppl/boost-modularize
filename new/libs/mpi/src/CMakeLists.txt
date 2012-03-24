@@ -91,9 +91,8 @@ boost_add_library(${boost_mpi_name}
     request.cpp
     text_skeleton_oarchive.cpp
     timer.cpp
-  LINK_BOOST_LIBRARIES
-    serialization
   LINK_LIBRARIES
+    ${Boost_LIBRARIES}
     ${MPI_LIBRARIES}
   )
 

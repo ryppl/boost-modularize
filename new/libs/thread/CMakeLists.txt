@@ -51,8 +51,7 @@ file(WRITE ${shared_lib_dir}/CMakeLists.txt
   "add_definitions(-DBOOST_THREAD_BUILD_DLL=1)\n"
   "boost_add_library(thread SHARED\n"
   "  SOURCES ${sources}\n"
-  "  LINK_BOOST_LIBRARIES date_time\n"
-  "  LINK_LIBRARIES ${CMAKE_THREAD_LIBS_INIT}\n"
+  "  LINK_LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT}\n"
   "  )\n"
   )
 add_subdirectory(${shared_lib_dir} ${shared_lib_dir}-build)
@@ -62,8 +61,7 @@ file(WRITE ${static_lib_dir}/CMakeLists.txt
   "add_definitions(-DBOOST_THREAD_BUILD_LIB=1)\n"
   "boost_add_library(thread STATIC\n"
   "  SOURCES ${sources}\n"
-  "  LINK_BOOST_LIBRARIES date_time\n"
-  "  LINK_LIBRARIES ${CMAKE_THREAD_LIBS_INIT}\n"
+  "  LINK_LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT}\n"
   "  )\n"
   )
 add_subdirectory(${static_lib_dir} ${static_lib_dir}-build)

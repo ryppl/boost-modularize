@@ -24,11 +24,8 @@ find_package(Boost
   NO_MODULE
   )
 include(${Boost_USE_FILE})
-include(BoostAddDirectory)
 include(BoostAddLibrary)
 include(BoostExport)
-
-#boost_add_directory(DOC doc)
 
 add_definitions(-DDATE_TIME_INLINE)
 

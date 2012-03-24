@@ -25,8 +25,8 @@ boost_add_library(timer
   SOURCES
     src/auto_timers_construction.cpp
     src/cpu_timer.cpp
-  LINK_LIBRARIES
-    ${Boost_LIBRARIES}
+# LINK_LIBRARIES
+#   ${Boost_LIBRARIES}
   )
 
 boost_export(

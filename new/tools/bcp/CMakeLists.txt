@@ -33,8 +33,6 @@ boost_add_executable(bcp
     licence_info.cpp
     scan_licence.cpp
     output_licence_info.cpp
-  LINK_BOOST_LIBRARIES
-    shared filesystem
-    shared regex
-    static prg_exec_monitor
+  LINK_LIBRARIES
+    ${Boost_LIBRARIES}
   )

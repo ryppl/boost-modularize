@@ -54,21 +54,13 @@ boost_add_library(wave
     src/wave_config_constant.cpp
     src/cpplexer/re2clex/aq.cpp
     src/cpplexer/re2clex/cpp_re.cpp
-  LINK_BOOST_LIBRARIES
-    filesystem
-    thread
-    date_time
+  LINK_LIBRARIES
+    ${Boost_LIBRARIES}
   )
 
 boost_add_executable(wave
   SOURCES
     tool/cpp.cpp
-  LINK_BOOST_LIBRARIES
-    wave
-    program_options
-    filesystem
-    serialization
-    system
-    thread
-    date_time
+  LINK_LIBRARIES
+    ${Boost_LIBRARIES}
   )
