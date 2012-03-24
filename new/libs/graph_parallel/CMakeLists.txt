@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(BoostGraphParallel CXX)
 
 find_package(Boost COMPONENTS conversion graph mpi utility NO_MODULE)
-include("${Boost_USE_FILE}")
+include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 
 if(MSVC)

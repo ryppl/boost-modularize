@@ -7,6 +7,7 @@ project(BoostContext CXX)
 find_package(Boost
   COMPONENTS
     bind
+    cmake
     config
     core
     format
@@ -21,7 +22,7 @@ find_package(Boost
     utility
   NO_MODULE
   )
-include("${Boost_USE_FILE}")
+include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 
 

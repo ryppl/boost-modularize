@@ -8,8 +8,8 @@
 #   http://www.boost.org/LICENSE_1_0.txt                                 #
 ##########################################################################
 
-cmake_minimum_required(VERSION 2.8.4 FATAL_ERROR)
-project(Boost NONE)
+cmake_minimum_required(VERSION 2.8.5 FATAL_ERROR)
+project(Boost)
 
 ##########################################################################
 # Config Information                                                     #

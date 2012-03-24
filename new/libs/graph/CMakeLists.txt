@@ -2,7 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostGraphParallel CXX)
+project(BoostGraph CXX)
 
 find_package(Boost
   COMPONENTS
@@ -50,6 +50,7 @@ find_package(Boost
   )
 include("${Boost_USE_FILE}")
 include(BoostAddLibrary)
+include(BoostExport)
 
 boost_add_library(graph
   SOURCES
@@ -57,4 +58,11 @@ boost_add_library(graph
     src/graphml.cpp
   LINK_LIBRARIES
     ${Boost_LIBRARIES}
+  )
+
+boost_export(
+  TARGETS
+    graph
+  INCLUDE_DIRECTORIES
+    include
   )

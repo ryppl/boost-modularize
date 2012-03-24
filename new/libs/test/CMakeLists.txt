@@ -27,6 +27,7 @@ find_package(Boost
   )
 include(${Boost_USE_FILE})
 include(BoostAddLibrary)
+include(BoostExport)
 
 if(MSVC)
   # specify the asynchronous exception handling model
@@ -82,4 +83,13 @@ boost_add_library(unit_test_framework
   src/unit_test_parameters.cpp
   src/xml_log_formatter.cpp
   src/xml_report_formatter.cpp
+  )
+
+boost_export(
+  TARGETS
+    prg_exec_monitor
+    test_exec_monitor
+    unit_test_framework
+  INCLUDE_DIRECTORIES
+    include
   )
