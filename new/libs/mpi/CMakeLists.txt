@@ -31,6 +31,8 @@ include(BoostAddLibrary)
 include(BoostAddPythonExtension)
 include(BoostExport)
 
+include_directories(include)
+
 if(MSVC)
   add_definitions(
     /wd4251 # class needs to have dll-interface to be used by clients

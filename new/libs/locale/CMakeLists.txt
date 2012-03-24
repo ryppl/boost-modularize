@@ -196,6 +196,8 @@ if(WIN32 OR CYGWIN)
   endif()
 endif()
 
+include_directories(include)
+
 boost_add_library(locale
   SOURCES
     ${sources}

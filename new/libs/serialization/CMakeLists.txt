@@ -89,7 +89,7 @@ boost_add_library(wserialization
     src/xml_woarchive
     src/codecvt_null
   LINK_LIBRARIES
-    serialization 
+    serialization-shared
   )
 
 boost_export(

@@ -15,7 +15,7 @@ boost_export(
     core
     exception
     integer
-    #math
+    math
     mpl
     numeric
     static_assert

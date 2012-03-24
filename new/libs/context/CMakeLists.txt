@@ -98,6 +98,8 @@ else()
     )
 endif()
 
+include_directories(include)
+
 boost_add_library(context
   ${ASM_CONTEXT_SOURCES}
   ${CONTEXT_SOURCES}

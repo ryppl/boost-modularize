@@ -9,7 +9,10 @@ if(NOT PYTHONLIBS_FOUND)
   return()
 endif()
 
-include_directories(${PYTHON_INCLUDE_DIRS})
+include_directories(
+  include
+  ${PYTHON_INCLUDE_DIRS}
+  )
 
 find_package(Boost
   COMPONENTS
