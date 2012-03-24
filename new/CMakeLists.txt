@@ -19,6 +19,7 @@ set(Boost_DIR "${Boost_SOURCE_DIR}")
 
 if(BOOST_INITIAL_PASS)
   set(Boost_MODULE_PATH "${Boost_SOURCE_DIR}/tools/cmake/modules")
+  set(Boost_RESOURCE_PATH "${Boost_SOURCE_DIR}/tools/cmake/resources")
 endif(BOOST_INITIAL_PASS)
 
 ##########################################################################
@@ -58,6 +59,9 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 if(BOOST_INITIAL_PASS)
   # report an error in order to inhibit the generation step (save time).
-  message(ERROR "Initial pass successfully completed, now run CMake again!")
+  message(SEND_ERROR
+    "Initial pass successfully completed, now run CMake again!"
+    )
+  unset(BOOST_INITIAL_PASS CACHE)
 endif(BOOST_INITIAL_PASS)
 
