@@ -67,6 +67,10 @@ if(NOT DEFINED BUILDSTEP OR BUILDSTEP MATCHES "configure$")
   if(MULTI_CONFIG)
     file(MAKE_DIRECTORY "${BUILDDIR}")
     execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
+      "${toolchain_param}" -DBOOST_INITIAL_PASS=TRUE "${CMAKE_CURRENT_LIST_DIR}"
+      WORKING_DIRECTORY "${BUILDDIR}"
+      )
+    execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
       "${toolchain_param}" "${CMAKE_CURRENT_LIST_DIR}"
       WORKING_DIRECTORY "${BUILDDIR}"
       RESULT_VARIABLE result
