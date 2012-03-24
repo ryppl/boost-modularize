@@ -14,6 +14,7 @@ include_directories(${PYTHON_INCLUDE_DIRS})
 find_package(Boost
   COMPONENTS
     bind
+    cmake
     config
     conversion
     core
@@ -35,6 +36,7 @@ find_package(Boost
   )
 include(${Boost_USE_FILE})
 include(BoostAddLibrary)
+include(BoostExport)
 
 set(sources
   src/numeric.cpp
@@ -91,6 +93,10 @@ file(WRITE ${static_lib_dir}/CMakeLists.txt
   )
 add_subdirectory(${static_lib_dir} ${static_lib_dir}-build)
 
+boost_export(
+  INCLUDE_DIRECTORIES
+    include
+  )
 
 # Some explanation why the code above does not (yet) simply look like this:
 

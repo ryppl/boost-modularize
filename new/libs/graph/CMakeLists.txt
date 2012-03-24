@@ -10,6 +10,7 @@ find_package(Boost
     any
     array
     bind
+    cmake
     concept_check
     config
     conversion

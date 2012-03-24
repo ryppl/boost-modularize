@@ -29,6 +29,7 @@ find_package(Boost
   )
 include(${Boost_USE_FILE})
 include(BoostAddLibrary)
+include(BoostExport)
 
 find_package(Threads REQUIRED)
 
@@ -66,3 +67,8 @@ file(WRITE ${static_lib_dir}/CMakeLists.txt
   "  )\n"
   )
 add_subdirectory(${static_lib_dir} ${static_lib_dir}-build)
+
+boost_export(
+  INCLUDE_DIRECTORIES
+    include
+  )

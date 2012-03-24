@@ -2,10 +2,11 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-project(BoostMPI C CXX)
+project(BoostMPI CXX)
 
 find_package(Boost
   COMPONENTS
+    cmake
     config
     conversion
     core
@@ -28,6 +29,7 @@ find_package(Boost
 include("${Boost_USE_FILE}")
 include(BoostAddLibrary)
 include(BoostAddPythonExtension)
+include(BoostExport)
 
 if(MSVC)
   add_definitions(
@@ -53,3 +55,10 @@ endif(MSVC)
 #else()
   add_subdirectory(src)
 #endif()
+
+boost_export(
+# TARGETS
+#   mpi
+  INCLUDE_DIRECTORIES
+    include
+  )

@@ -8,6 +8,7 @@ find_package(Boost
   COMPONENTS
     algorithm
     array
+    cmake
     core
     exception
     filesystem

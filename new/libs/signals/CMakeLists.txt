@@ -7,6 +7,7 @@ project(BoostSignals CXX)
 find_package(Boost
   COMPONENTS
     any
+    cmake
     config
     core
     function

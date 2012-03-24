@@ -7,6 +7,7 @@ project(BoostSerialization CXX)
 find_package(Boost
   COMPONENTS
     array
+    cmake
     config
     core
     exception
