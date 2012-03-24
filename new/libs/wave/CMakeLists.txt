@@ -34,6 +34,8 @@ include(${Boost_USE_FILE})
 include(BoostAddExecutable)
 include(BoostAddLibrary)
 
+include_directories(include)
+
 if(MSVC)
   add_definitions(
     -D_CRT_SECURE_NO_WARNINGS
@@ -63,4 +65,5 @@ boost_add_executable(wave
     tool/cpp.cpp
   LINK_LIBRARIES
     ${Boost_LIBRARIES}
+    wave-shared
   )

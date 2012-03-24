@@ -82,9 +82,6 @@ set(tests
 set(link_libraries
   )
 
-set(link_boost_libraries
-  )
-
 if(BOOST_LOCALE_NO_ICONV)
   add_definitions(-DBOOST_LOCALE_NO_ICONV)
 else()
@@ -121,9 +118,7 @@ else()
   list(APPEND link_libraries
     ${ICU_LIBRARIES}
     ${ICU_I18N_LIBRARIES}
-    )
-  list(APPEND link_boost_libraries
-    thread
+    thread-shared
     )
 endif()
 
@@ -203,7 +198,6 @@ boost_add_library(locale
     ${sources}
   LINK_LIBRARIES
     ${link_libraries}
-    ${link_boost_libraries}
   )
 
 #boost_add_multiple_tests(

@@ -27,5 +27,5 @@ boost_add_python_extension(${boost_mpi_name}
     status.cpp
     py_timer.cpp
   LINK_LIBRARIES
-    ${boost_mpi_name}_python
+    ${boost_mpi_name}_python-shared
   )

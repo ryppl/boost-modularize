@@ -14,6 +14,7 @@ boost_export(
     core
     exception
     type_traits
+    thread
     utility
   INCLUDE_DIRECTORIES
     include

@@ -61,6 +61,8 @@ endif(MSVC)
 boost_export(
 # TARGETS
 #   mpi
+  BOOST_DEPENDS
+    serialization
   INCLUDE_DIRECTORIES
     include
   )

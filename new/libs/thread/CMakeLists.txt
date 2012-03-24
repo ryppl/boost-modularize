@@ -32,41 +32,43 @@ include(BoostAddLibrary)
 include(BoostExport)
 
 find_package(Threads REQUIRED)
+include_directories(include)
 
 if(CMAKE_USE_WIN32_THREADS_INIT)
   set(sources
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/win32/thread.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/win32/tss_dll.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/win32/tss_pe.cpp
+    src/win32/thread.cpp
+    src/win32/tss_dll.cpp
+    src/win32/tss_pe.cpp
     )
 else()
   set(sources
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/pthread/thread.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/pthread/once.cpp
+    src/pthread/thread.cpp
+    src/pthread/once.cpp
     )
 endif()
 
-set(shared_lib_dir ${CMAKE_CURRENT_BINARY_DIR}/shared_lib)
-file(WRITE ${shared_lib_dir}/CMakeLists.txt
-  "add_definitions(-DBOOST_THREAD_BUILD_DLL=1)\n"
-  "boost_add_library(thread SHARED\n"
-  "  SOURCES ${sources}\n"
-  "  LINK_LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT}\n"
-  "  )\n"
+boost_add_library(thread
+  SOURCES
+    ${sources}
+  LINK_LIBRARIES
+    #${Boost_LIBRARIES}
+    ${CMAKE_THREAD_LIBS_INIT}
   )
-add_subdirectory(${shared_lib_dir} ${shared_lib_dir}-build)
 
-set(static_lib_dir ${CMAKE_CURRENT_BINARY_DIR}/static_lib)
-file(WRITE ${static_lib_dir}/CMakeLists.txt
-  "add_definitions(-DBOOST_THREAD_BUILD_LIB=1)\n"
-  "boost_add_library(thread STATIC\n"
-  "  SOURCES ${sources}\n"
-  "  LINK_LIBRARIES ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT}\n"
-  "  )\n"
+set_property(TARGET thread-shared APPEND PROPERTY
+  COMPILE_DEFINITIONS "BOOST_THREAD_BUILD_DLL=1"
   )
-add_subdirectory(${static_lib_dir} ${static_lib_dir}-build)
+
+set_property(TARGET thread-static APPEND PROPERTY
+  COMPILE_DEFINITIONS "BOOST_THREAD_BUILD_LIB=1"
+  )
 
 boost_export(
+  TARGETS
+    thread
+  BOOST_DEPENDS
+    chrono
+    date_time
   INCLUDE_DIRECTORIES
     include
   )

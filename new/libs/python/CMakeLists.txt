@@ -41,94 +41,48 @@ include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 include(BoostExport)
 
-set(sources
-  src/numeric.cpp
-  src/list.cpp
-  src/long.cpp
-  src/dict.cpp
-  src/tuple.cpp
-  src/str.cpp
-  src/slice.cpp
-  src/converter/from_python.cpp
-  src/converter/registry.cpp
-  src/converter/type_id.cpp
-  src/object/enum.cpp
-  src/object/class.cpp
-  src/object/function.cpp
-  src/object/inheritance.cpp
-  src/object/life_support.cpp
-  src/object/pickle_support.cpp
-  src/errors.cpp
-  src/module.cpp
-  src/converter/builtin_converters.cpp
-  src/converter/arg_to_python_base.cpp
-  src/object/iterator.cpp
-  src/object/stl_iterator.cpp
-  src/object_protocol.cpp
-  src/object_operators.cpp
-  src/wrapper.cpp
-  src/import.cpp
-  src/exec.cpp
-  src/object/function_doc_signature.cpp
+boost_add_library(python
+  SOURCES
+    src/numeric.cpp
+    src/list.cpp
+    src/long.cpp
+    src/dict.cpp
+    src/tuple.cpp
+    src/str.cpp
+    src/slice.cpp
+    src/converter/from_python.cpp
+    src/converter/registry.cpp
+    src/converter/type_id.cpp
+    src/object/enum.cpp
+    src/object/class.cpp
+    src/object/function.cpp
+    src/object/inheritance.cpp
+    src/object/life_support.cpp
+    src/object/pickle_support.cpp
+    src/errors.cpp
+    src/module.cpp
+    src/converter/builtin_converters.cpp
+    src/converter/arg_to_python_base.cpp
+    src/object/iterator.cpp
+    src/object/stl_iterator.cpp
+    src/object_protocol.cpp
+    src/object_operators.cpp
+    src/wrapper.cpp
+    src/import.cpp
+    src/exec.cpp
+    src/object/function_doc_signature.cpp
+  LINK_LIBRARIES
+    ${PYTHON_LIBRARIES}
   )
 
-set(sources_string "")
-foreach(file ${sources})
-  set(sources_string "${sources_string}\n  ${CMAKE_CURRENT_SOURCE_DIR}/${file}")
-endforeach(file)
-
-set(shared_lib_dir ${CMAKE_CURRENT_BINARY_DIR}/shared_lib)
-file(WRITE ${shared_lib_dir}/CMakeLists.txt
-  "boost_add_library(python SHARED\n"
-  "  SOURCES ${sources_string}\n"
-  "  LINK_LIBRARIES ${PYTHON_LIBRARIES}\n"
-  "  )\n"
+set_property(TARGET python-static APPEND PROPERTY
+  COMPILE_DEFINITIONS "BOOST_PYTHON_STATIC_LIB=1"
   )
-add_subdirectory(${shared_lib_dir} ${shared_lib_dir}-build)
-
-set(static_lib_dir ${CMAKE_CURRENT_BINARY_DIR}/static_lib)
-file(WRITE ${static_lib_dir}/CMakeLists.txt
-  "add_definitions(-DBOOST_PYTHON_STATIC_LIB=1)\n"
-  "boost_add_library(python STATIC\n"
-  "  SOURCES ${sources_string}\n"
-  "  LINK_LIBRARIES ${PYTHON_LIBRARIES}\n"
-  "  )\n"
-  )
-add_subdirectory(${static_lib_dir} ${static_lib_dir}-build)
 
 boost_export(
+  TARGETS
+    python
   INCLUDE_DIRECTORIES
     include
   )
 
-# Some explanation why the code above does not (yet) simply look like this:
-
-##
-# boost_add_library(python
-#   SOURCES
-#     ...
-#   LINK_LIBRARIES
-#     ${PYTHON_LIBRARIES}
-#  )
-##
-
-# Most Boost libraries use BOOST_<name>_DYN_LINK and BOOST_<name>_SOURCE do
-# distinguish between importing and exporting as shown below.
-
-##
-# if defined(BOOST_ALL_DYN_LINK) || defined(BOOST_SYSTEM_DYN_LINK)
-#   if defined(BOOST_SYSTEM_SOURCE)
-#     define BOOST_SYSTEM_DECL BOOST_SYMBOL_EXPORT
-#   else
-#     define BOOST_SYSTEM_DECL BOOST_SYMBOL_IMPORT
-#   endif
-# else
-#   define BOOST_SYSTEM_DECL
-# endif
-##
-
-# Boost.Python currently is the only exception to this 'rule': It requires
-# BOOST_PYTHON_STATIC_LIB to be defined for building a static library.
-# To keep the boost_add_library command as simple as possible, I decided against
-# adding parameters to set custom definitions. This does not make it impossible
-# to use custom definitions, but it requires some hacks, as can be seen above.

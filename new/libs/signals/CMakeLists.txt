@@ -22,6 +22,8 @@ find_package(Boost
 include(${Boost_USE_FILE})
 include(BoostAddLibrary)
 
+include_directories(include)
+
 if(MSVC)
   add_definitions(
     /wd4251 # class needs to have dll-interface to be used by clients

@@ -64,6 +64,9 @@ boost_add_library(graph
 boost_export(
   TARGETS
     graph
+  BOOST_DEPENDS
+    property_map
+    serialization
   INCLUDE_DIRECTORIES
     include
   )
