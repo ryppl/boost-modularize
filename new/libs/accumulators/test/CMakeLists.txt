@@ -1,6 +1,10 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
 
+find_package(Boost COMPONENTS cmake serialization test NO_MODULE)
+include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
+
 #if(MSVC)
 #  add_definitions(-D_HAS_ITERATOR_DEBUGGING=0)
 #endif(MSVC)
@@ -49,7 +53,7 @@ boost_test_suite(
     weighted_tail_mean
     weighted_tail_quantile
     weighted_tail_variate_means
-  LINK_BOOST_LIBRARIES
-    serialization
-    unit_test_framework
+  LINK_LIBRARIES
+    serialization-static
+    unit_test_framework-static
   )

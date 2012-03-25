@@ -4,8 +4,9 @@
 cmake_minimum_required(VERSION 2.8)
 project(BoostAny)
 
-find_package(Boost COMPONENTS cmake NO_MODULE)
+find_package(Boost COMPONENTS cmake config NO_MODULE)
 include(${Boost_USE_FILE})
+include(BoostAddTestSuite)
 #include(BoostDocumentation)
 include(BoostExport)
 
@@ -21,9 +22,11 @@ boost_export(
     include
   )
 
-#boost_add_multiple_tests(
-#  RUN
-#    any_test.cpp
-#  COMPILE_FAIL
-#    test/any_cast_cv_failed.cpp
-#  )
+include_directories(include)
+
+boost_add_test_suite(
+  RUN
+    any_test.cpp
+  COMPILE_FAIL
+    test/any_cast_cv_failed.cpp
+  )

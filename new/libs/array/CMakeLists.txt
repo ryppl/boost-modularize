@@ -9,6 +9,7 @@ include(${Boost_USE_FILE})
 #include(BoostDocumentation)
 include(BoostExport)
 
+add_subdirectory(test)
 #boost_documentation(doc/array.xml)
 
 boost_export(
@@ -19,10 +20,3 @@ boost_export(
   INCLUDE_DIRECTORIES
     include
   )
-
-#boost_add_test(array0 test/array0.cpp)
-#boost_add_test(array1 test/array1.cpp)
-#boost_add_test(array2 test/array2.cpp)
-#boost_add_test(array3 test/array3.cpp)
-#boost_add_test(array4 test/array4.cpp)
-#boost_add_test(array5 test/array5.cpp)
