@@ -7,8 +7,6 @@ from argparse import ArgumentParser
 
 # This are global constants. Do not change.
 is_win32 = (sys.platform == 'win32')
-include_directive = re.compile(r'^\s*#\s*include\s+["<](boost[/\\][^">]*)[">]')
-find_boost = re.compile(r'find_package\(Boost\s+[^)]*\)')
 
 repo_ro = 'git://github.com/boost-lib/%s.git'
 #repo_rw = 'git@github.com:boost-lib/%s.git'
@@ -173,20 +171,12 @@ class Module:
         # copy the files from src to target
         if os.path.isdir(src_path):
             dir_util.copy_tree(src_path, dst_path)
-            for root, dirs, files in os.walk(src_path):
-                for f in files:
-                    # Only look in cpp, hpp or ipp files
-                    if fnmatch.fnmatch(f, '*.?pp'):
-                        f = os.path.normpath(os.path.join(root, f))
-                        self.visit_file(f, src2mod)
         else:
             if not os.path.isdir(os.path.dirname(dst_path)):
                 if verbose:
                     print '[INFO] Making directory:', os.path.dirname(dst_path)
                 os.makedirs(os.path.dirname(dst_path))
             shutil.copy2(src_path, dst_path)
-            if fnmatch.fnmatch(src, '*.?pp'):
-                self.visit_file(src_path, src2mod)
 
         if verbose:
             print '[INFO] Copied'
@@ -209,28 +199,6 @@ class Module:
         lines = [l for l in o.split('\n') if not l == '']
         if len(lines):
             run('git', 'commit', '-m', 'latest from svn', cwd=self.dst_dir)
-
-    # For the specified file, read looking for #include <boost/...> statements,
-    # infer the module to which boost/... belongs and add that module as a
-    # dependency in moddeps
-    def visit_file(self, file, src2mod):
-        pfile = file.replace('\\', '/') if is_win32 else file
-
-        with open(file) as xpp:
-            for line in xpp:
-                match = include_directive.match(line)
-                if match is None:
-                    continue
-
-                include = posixpath.normpath(match.group(1))
-                incmod = file2mod(include, src2mod)
-
-                if incmod == self.section:
-                    continue
-
-                if incmod is None:
-                    print >>sys.stderr, '[WARNING] Cannot file module for :', include, 'found in', file
-                    continue
 
 # Check the manifest against the live boost mirror to ensure that we
 # know where everything goes. Try reading the list of existing boost
