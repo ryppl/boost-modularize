@@ -13,6 +13,7 @@ project(Boost)
 
 set(Boost_DIR "${Boost_SOURCE_DIR}")
 
+set(BOOST_INITIAL_PASS TRUE CACHE BOOL "")
 if(BOOST_INITIAL_PASS)
   set(Boost_MODULE_PATH "${Boost_SOURCE_DIR}/tools/cmake/modules")
   set(Boost_RESOURCE_PATH "${Boost_SOURCE_DIR}/tools/cmake/resources")
@@ -28,6 +29,6 @@ if(BOOST_INITIAL_PASS)
   message(SEND_ERROR
     "Initial pass successfully completed, now run CMake again!"
     )
-  unset(BOOST_INITIAL_PASS CACHE)
+  set(BOOST_INITIAL_PASS FALSE CACHE BOOL "" FORCE)
 endif(BOOST_INITIAL_PASS)
 

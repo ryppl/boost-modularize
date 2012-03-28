@@ -65,14 +65,14 @@ endif()
 
 if(NOT DEFINED BUILDSTEP OR BUILDSTEP MATCHES "configure$")
   if(MULTI_CONFIG)
-    file(MAKE_DIRECTORY "${BUILDDIR}")
-    execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
-      "${toolchain_param}" -DBOOST_INITIAL_PASS=TRUE "${CMAKE_CURRENT_LIST_DIR}"
-      WORKING_DIRECTORY "${BUILDDIR}"
-      )
-    execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
-      "${toolchain_param}" "${CMAKE_CURRENT_LIST_DIR}"
-      WORKING_DIRECTORY "${BUILDDIR}"
+    if(NOT EXISTS "${BUILDDIR}/CMakeCache.txt")
+      file(MAKE_DIRECTORY "${BUILDDIR}")
+      execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
+        "${toolchain_param}" "${CMAKE_CURRENT_LIST_DIR}"
+        WORKING_DIRECTORY "${BUILDDIR}"
+        )
+    endif(NOT EXISTS "${BUILDDIR}/CMakeCache.txt")
+    execute_process(COMMAND "${CMAKE_COMMAND}" "${BUILDDIR}"
       RESULT_VARIABLE result
       )
     if(NOT result EQUAL 0)
@@ -80,16 +80,15 @@ if(NOT DEFINED BUILDSTEP OR BUILDSTEP MATCHES "configure$")
     endif(NOT result EQUAL 0)
   else()
     foreach(config Debug Release)
-      file(MAKE_DIRECTORY "${BUILDDIR}/${config}")
-      execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
-        "${toolchain_param}" -DCMAKE_BUILD_TYPE=${config} 
-        -DBOOST_INITIAL_PASS=TRUE "${CMAKE_CURRENT_LIST_DIR}"
-        WORKING_DIRECTORY "${BUILDDIR}/${config}"
-        )
-      execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
-        "${toolchain_param}" -DCMAKE_BUILD_TYPE=${config} 
-        "${CMAKE_CURRENT_LIST_DIR}"
-        WORKING_DIRECTORY "${BUILDDIR}/${config}"
+      if(NOT EXISTS "${BUILDDIR}/${config}/CMakeCache.txt")
+        file(MAKE_DIRECTORY "${BUILDDIR}/${config}")
+        execute_process(COMMAND "${CMAKE_COMMAND}" "-G${GENERATOR}"
+          "${toolchain_param}" -DCMAKE_BUILD_TYPE=${config} 
+          "${CMAKE_CURRENT_LIST_DIR}"
+          WORKING_DIRECTORY "${BUILDDIR}/${config}"
+          )
+      endif(NOT EXISTS "${BUILDDIR}/${config}/CMakeCache.txt")
+      execute_process(COMMAND "${CMAKE_COMMAND}" "${BUILDDIR}/${config}"
         RESULT_VARIABLE result
         )
       if(NOT result EQUAL 0)
