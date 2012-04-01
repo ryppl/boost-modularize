@@ -26,7 +26,7 @@ boost_test_suite(
     min
     moment
     pot_quantile
-    p_square_cumulative_distribution
+    p_square_cumul_dist
     p_square_quantile
     reference
     skewness
@@ -44,7 +44,7 @@ boost_test_suite(
     weighted_mean
     weighted_median
     weighted_moment
-    weighted_p_square_cum_dist
+    weighted_p_square_cumul_dist
     weighted_p_square_quantile
     weighted_skewness
     weighted_sum

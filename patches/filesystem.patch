@@ -1,7 +1,7 @@
-diff --git a/v3/src/utf8_codecvt_facet.cpp b/v3/src/utf8_codecvt_facet.cpp
+diff --git a/src/utf8_codecvt_facet.cpp b/src/utf8_codecvt_facet.cpp
 index 1849a1a..806a300 100644
---- a/v3/src/utf8_codecvt_facet.cpp
-+++ b/v3/src/utf8_codecvt_facet.cpp
+--- a/src/utf8_codecvt_facet.cpp
++++ b/src/utf8_codecvt_facet.cpp
 @@ -16,7 +16,7 @@
  #define BOOST_UTF8_END_NAMESPACE }}}
  #define BOOST_UTF8_DECL BOOST_FILESYSTEM_DECL

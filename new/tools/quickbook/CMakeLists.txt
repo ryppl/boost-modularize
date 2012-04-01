@@ -40,7 +40,7 @@ boost_add_executable(quickbook
     src/quickbook.cpp
     src/actions.cpp
     src/doc_info_actions.cpp
-    src/actions_class.cpp
+    src/state.cpp
     src/utils.cpp
     src/files.cpp
     src/string_ref.cpp

@@ -11,17 +11,14 @@ include(BoostExport)
 
 boost_add_library(filesystem
   SOURCES
-    v2/src/v2_operations
-    v2/src/v2_path
-    v2/src/v2_portability
-    v3/src/operations
-    v3/src/path
-    v3/src/portability
-    v3/src/utf8_codecvt_facet
-    v3/src/codecvt_error_category
-    v3/src/path_traits
-    v3/src/unique_path
-    v3/src/windows_file_codecvt
+    src/operations.cpp
+    src/path.cpp
+    src/portability.cpp
+    src/utf8_codecvt_facet.cpp
+    src/codecvt_error_category.cpp
+    src/path_traits.cpp
+    src/unique_path.cpp
+    src/windows_file_codecvt.cpp
   LINK_LIBRARIES
     ${Boost_LIBRARIES}
   )
