@@ -10,7 +10,9 @@ This project is used to manage all the projects at https://github.com/boost-lib
 +
 ----------------------------------------------
 git clone git://github.com/boost-lib/boost.git
+
 cd boost
+
 git submodule update --init
 ----------------------------------------------
 
