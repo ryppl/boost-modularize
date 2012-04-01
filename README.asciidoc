@@ -8,11 +8,11 @@ This project is used to manage all the projects at https://github.com/boost-lib
 
 2. Clone the Boost super-project in read only mode. Also update all submodules.
 +
-..............................................
-git clone git://github.com/boost-lib/boost.git
-cd boost
+----------------------------------------------
+git clone git://github.com/boost-lib/boost.git +
+cd boost +
 git submodule update --init
-..............................................
+----------------------------------------------
 
 3. Make *but do not commit* changes to the
    +CMakeLists.txt+ files in the Boost repository.  A typical change that
@@ -25,9 +25,9 @@ git submodule update --init
    automatically move the changes to the directory 'new' in the
    Boost.Modularize project.
 +
-.............................
+----------------------------------------------
 cmake -P copy_listfiles.cmake
-.............................
+----------------------------------------------
 
 5. Commit your changes to Boost.Modularize.  A typical commit
    corresponding to the change above is visible
@@ -36,10 +36,10 @@ cmake -P copy_listfiles.cmake
 6. Clean out your changes in your local modularized boost
    repository.
 +
-..............................................
+----------------------------------------------
    cd ../boost
    git clean -f
-..............................................
+----------------------------------------------
 The
 http://bbot.boostpro.com/builders/Boost.Modularize-x-Modularize[modularization
 bot] will then make the corresponding commits in the
