@@ -9,7 +9,7 @@ include(BoostAddTestSuite)
 #  add_definitions(-D_HAS_ITERATOR_DEBUGGING=0)
 #endif(MSVC)
 
-boost_test_suite(
+boost_add_test_suite(
   RUN
     count
     covariance
@@ -56,4 +56,5 @@ boost_test_suite(
   LINK_LIBRARIES
     serialization-static
     unit_test_framework-static
+  NO_SINGLE_TARGET
   )
