@@ -1,5 +1,4 @@
 [<ignore>]
-boost/version.hpp:			<ignore>
 libs/compose/index.htm:			<ignore>
 libs/compose/index.html:		<ignore>
 libs/index.html:			<ignore>
@@ -139,6 +138,7 @@ boost/indirect_reference.hpp:		include/boost/indirect_reference.hpp
 boost/limits.hpp:			include/boost/limits.hpp
 boost/non_type.hpp:			include/boost/non_type.hpp
 boost/type.hpp:				include/boost/type.hpp
+boost/version.hpp:			include/boost/version.hpp
 boost/visit_each.hpp:			include/boost/visit_each.hpp
 libs/detail/test/:			test/
 
