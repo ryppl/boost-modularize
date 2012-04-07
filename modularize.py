@@ -358,6 +358,37 @@ def update_modules(src_dir, dst_dir, manifest):
         # commit locally, TODO: skip in offline mode
         module.commit()
 
+    # clean the superproject
+    for entry in popen('git', 'ls-files', cwd=dst_dir).split('\n'):
+        if entry and not entry.startswith('.git') and not manifest.has_section(entry):
+            run('git', 'rm', '--quiet', entry, cwd=dst_dir)
+
+    # copy directories 'doc', 'more', and 'status'
+    for dir in ['doc', 'more', 'status']:
+        dir_util.copy_tree(os.path.join(src_dir, dir), os.path.join(dst_dir, dir))
+
+    # copy files from the top level directory
+    for file in os.listdir(src_dir):
+        file = os.path.join(src_dir, file)
+        if os.path.isfile(file):
+             shutil.copy(file, dst_dir)
+
+    # copy files from 'libs' and 'tools' that are not modularized
+    for entry, ignore in manifest.items('<ignore>'):
+        src_path = os.path.join(src_dir, entry)
+        dst_path = os.path.join(dst_dir, entry)
+        if os.path.isdir(src_path):
+            dir_util.copy_tree(src_path, dst_path)
+        else:
+            if not os.path.isdir(os.path.dirname(dst_path)):
+                if verbose:
+                    print '[INFO] Making directory:', os.path.dirname(dst_path)
+                os.makedirs(os.path.dirname(dst_path))
+            shutil.copy2(src_path, dst_path)
+
+    # Add all the remaining files
+    run('git', 'add', '.', cwd=dst_dir)
+
 def push_modules(dst_dir):
     # Is there something to push?
     if "" == popen('git', 'status', '-s', cwd=dst_dir):
