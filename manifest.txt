@@ -352,6 +352,7 @@ boost/graph/transitive_reduction.hpp:		include/boost/graph/transitive_reduction.
 boost/graph/transpose_graph.hpp:		include/boost/graph/transpose_graph.hpp
 boost/graph/tree_traits.hpp:			include/boost/graph/tree_traits.hpp
 boost/graph/two_bit_color_map.hpp:		include/boost/graph/two_bit_color_map.hpp
+boost/graph/two_graphs_common_spanning_trees.hpp:	include/boost/graph/two_graphs_common_spanning_trees.hpp
 boost/graph/undirected_dfs.hpp:			include/boost/graph/undirected_dfs.hpp
 boost/graph/undirected_graph.hpp:		include/boost/graph/undirected_graph.hpp
 boost/graph/use_mpi.hpp:			include/boost/graph/use_mpi.hpp
