@@ -126,7 +126,7 @@ boost/detail/scoped_enum_emulation.hpp:	include/boost/detail/scoped_enum_emulati
 boost/detail/select_type.hpp:		include/boost/detail/select_type.hpp
 boost/detail/templated_streams.hpp:	include/boost/detail/templated_streams.hpp
 boost/detail/utf8_codecvt_facet.hpp:	include/boost/detail/utf8_codecvt_facet.hpp
-libs/detail/utf8_codecvt_facet.cpp:	include/boost/detail/utf8_codecvt_facet_impl.hpp
+boost/detail/utf8_codecvt_facet.ipp:	include/boost/detail/utf8_codecvt_facet.ipp
 boost/detail/workaround.hpp:		include/boost/detail/workaround.hpp
 boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
 boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
@@ -174,7 +174,6 @@ libs/exception/:			.
 boost/filesystem.hpp:			include/boost/filesystem.hpp
 boost/filesystem/:			include/boost/filesystem/
 libs/filesystem/:			.
-<patch>:				filesystem.patch
 
 [libs/flyweight]
 boost/flyweight.hpp:			include/boost/flyweight.hpp
@@ -309,7 +308,6 @@ libs/move/:				.
 boost/mpi.hpp:				include/boost/mpi.hpp
 boost/mpi/:				include/boost/mpi/
 libs/mpi/:				.
-<patch>:				mpi.patch
 
 [libs/mpl]
 boost/mpl/:				include/boost/mpl/
@@ -371,7 +369,6 @@ libs/preprocessor/:			.
 boost/program_options.hpp:		include/boost/program_options.hpp
 boost/program_options/:			include/boost/program_options/
 libs/program_options/:			.
-<patch>: program_options.patch
 
 [libs/property_map]
 boost/pending/cstddef.hpp:		include/boost/pending/cstddef.hpp
@@ -387,7 +384,6 @@ libs/property_map/:			.
 [libs/property_tree]
 boost/property_tree/:			include/boost/property_tree/
 libs/property_tree/:			.
-<patch>:				property_tree.patch
 
 [libs/proto]
 boost/proto/:				include/boost/proto/
@@ -439,7 +435,6 @@ boost/archive/:				include/boost/archive/
 boost/serialization/:			include/boost/serialization/
 boost/strong_typedef.hpp:		include/boost/strong_typedef.hpp
 libs/serialization/:			.
-<patch>: 				serialization.patch
 
 [libs/signals]
 boost/last_value.hpp:			include/boost/last_value.hpp
