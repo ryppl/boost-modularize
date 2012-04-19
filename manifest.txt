@@ -220,6 +220,7 @@ libs/gil/:				.
 
 [libs/graph]
 boost/graph/detail/:				include/boost/graph/detail/
+boost/graph/planar_detail/:			include/boost/graph/planar_detail/
 boost/graph/property_maps/:			include/boost/graph/property_maps/
 boost/graph/accounting.hpp:			include/boost/graph/accounting.hpp
 boost/graph/adjacency_iterator.hpp:		include/boost/graph/adjacency_iterator.hpp
@@ -316,7 +317,6 @@ boost/graph/one_bit_color_map.hpp:		include/boost/graph/one_bit_color_map.hpp
 boost/graph/overloading.hpp:			include/boost/graph/overloading.hpp
 boost/graph/page_rank.hpp:			include/boost/graph/page_rank.hpp
 boost/graph/planar_canonical_ordering.hpp:	include/boost/graph/planar_canonical_ordering.hpp
-boost/graph/planar_detail:			include/boost/graph/planar_detail
 boost/graph/planar_face_traversal.hpp:		include/boost/graph/planar_face_traversal.hpp
 boost/graph/plod_generator.hpp:			include/boost/graph/plod_generator.hpp
 boost/graph/point_traits.hpp:			include/boost/graph/point_traits.hpp
