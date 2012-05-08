@@ -321,6 +321,11 @@ def setup_metarepo(dst_dir):
     run('git', 'submodule', 'foreach', 'git', 'pull', cwd=dst_dir)
     run('git', 'submodule', 'update', '--init', cwd=dst_dir)
 
+    # HACK: Add forward_headers.cmake at Beman's request
+    open(os.path.join(dst_dir, 'forward_headers.cmake'), 'w').write(
+        open(os.path.join(os.path.dirname(__file__), 'forward_headers.cmake')).read())
+
+
 def update_modules(src_dir, dst_dir, manifest):
 
     # This is a map of header files and directories to target modules.
