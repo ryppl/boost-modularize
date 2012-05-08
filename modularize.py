@@ -360,6 +360,7 @@ def update_modules(src_dir, dst_dir, manifest):
         module.commit()
 
     # clean the superproject
+    run('git', 'reset', '--hard', cwd=dst_dir)
     for entry in popen('git', 'ls-files', cwd=dst_dir).split('\n'):
         if entry and not entry.startswith('.git') and not manifest.has_section(entry):
             run('git', 'rm', '--quiet', entry, cwd=dst_dir)
