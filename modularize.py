@@ -321,10 +321,6 @@ def setup_metarepo(dst_dir):
     run('git', 'submodule', 'foreach', 'git', 'pull', cwd=dst_dir)
     run('git', 'submodule', 'update', '--init', cwd=dst_dir)
 
-    # HACK: Add forward_headers.cmake at Beman's request
-    open(os.path.join(dst_dir, 'forward_headers.cmake'), 'w').write(
-        open(os.path.join(os.path.dirname(__file__), 'forward_headers.cmake')).read())
-
 
 def update_modules(src_dir, dst_dir, manifest):
 
@@ -390,6 +386,10 @@ def update_modules(src_dir, dst_dir, manifest):
                     print '[INFO] Making directory:', os.path.dirname(dst_path)
                 os.makedirs(os.path.dirname(dst_path))
             shutil.copy2(src_path, dst_path)
+
+    # HACK: Insert forward_headers.cmake at Beman's request
+    open(os.path.join(dst_dir, 'forward_headers.cmake'), 'w').write(
+        open(os.path.join(os.path.dirname(__file__), 'forward_headers.cmake')).read())
 
     # Add all the remaining files
     run('git', 'add', '.', cwd=dst_dir)
