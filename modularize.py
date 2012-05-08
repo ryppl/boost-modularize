@@ -312,6 +312,7 @@ def validate_manifest(manifest, src_dir):
 
 def setup_metarepo(dst_dir):
     if os.path.exists(dst_dir):
+        run('git', 'reset', '--hard', cwd=dst_dir)
         run('git', 'pull', repo_rw % 'boost', 'master', cwd=dst_dir)
     else:
         os.makedirs(dst_dir)
@@ -360,7 +361,6 @@ def update_modules(src_dir, dst_dir, manifest):
         module.commit()
 
     # clean the superproject
-    run('git', 'reset', '--hard', cwd=dst_dir)
     for entry in popen('git', 'ls-files', cwd=dst_dir).split('\n'):
         if entry and not entry.startswith('.git') and not manifest.has_section(entry):
             run('git', 'rm', '--quiet', entry, cwd=dst_dir)
