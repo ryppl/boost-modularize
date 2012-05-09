@@ -128,6 +128,7 @@ boost/detail/templated_streams.hpp:	include/boost/detail/templated_streams.hpp
 boost/detail/utf8_codecvt_facet.hpp:	include/boost/detail/utf8_codecvt_facet.hpp
 boost/detail/utf8_codecvt_facet.ipp:	include/boost/detail/utf8_codecvt_facet.ipp
 boost/detail/workaround.hpp:		include/boost/detail/workaround.hpp
+boost/pending/cstddef.hpp:		include/boost/pending/cstddef.hpp
 boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
 boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
 boost/pending/stringtok.hpp:		include/boost/pending/stringtok.hpp
@@ -364,10 +365,16 @@ boost/graph/write_dimacs.hpp:			include/boost/graph/write_dimacs.hpp
 boost/pending/bucket_sorter.hpp:		include/boost/pending/bucket_sorter.hpp
 boost/pending/container_traits.hpp:		include/boost/pending/container_traits.hpp
 boost/pending/detail/property.hpp:		include/boost/pending/detail/property.hpp
+boost/pending/fenced_priority_queue.hpp:	include/boost/pending/fenced_priority_queue.hpp
+boost/pending/fibonacci_heap.hpp:		include/boost/pending/fibonacci_heap.hpp
 boost/pending/indirect_cmp.hpp:			include/boost/pending/indirect_cmp.hpp
 boost/pending/is_heap.hpp:			include/boost/pending/is_heap.hpp
+boost/pending/mutable_heap.hpp:			include/boost/pending/mutable_heap.hpp
+boost/pending/mutable_queue.hpp:		include/boost/pending/mutable_queue.hpp
 boost/pending/property.hpp:			include/boost/pending/property.hpp
 boost/pending/property_serialize.hpp:		include/boost/pending/property_serialize.hpp
+boost/pending/queue.hpp:			include/boost/pending/queue.hpp
+boost/pending/relaxed_heap.hpp:			include/boost/pending/relaxed_heap.hpp
 libs/graph/:					.
 
 [libs/graph_parallel]
@@ -514,13 +521,6 @@ boost/program_options/:			include/boost/program_options/
 libs/program_options/:			.
 
 [libs/property_map]
-boost/pending/cstddef.hpp:		include/boost/pending/cstddef.hpp
-boost/pending/fenced_priority_queue.hpp:include/boost/pending/fenced_priority_queue.hpp
-boost/pending/fibonacci_heap.hpp:	include/boost/pending/fibonacci_heap.hpp
-boost/pending/mutable_heap.hpp:		include/boost/pending/mutable_heap.hpp
-boost/pending/mutable_queue.hpp:	include/boost/pending/mutable_queue.hpp
-boost/pending/queue.hpp:		include/boost/pending/queue.hpp
-boost/pending/relaxed_heap.hpp:		include/boost/pending/relaxed_heap.hpp
 boost/property_map/:			include/boost/property_map/
 libs/property_map/:			.
 
