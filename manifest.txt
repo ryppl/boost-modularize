@@ -511,7 +511,7 @@ boost/numeric/interval/:		include/boost/numeric/interval/
 boost/numeric/interval.hpp:		include/boost/numeric/interval.hpp
 libs/numeric/interval/:			.
 
-[libs/ubas]
+[libs/ublas]
 boost/numeric/ublas/:			include/boost/numeric/ublas/
 libs/numeric/ublas/:			.
 
