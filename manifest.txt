@@ -5,7 +5,7 @@ libs/index.html:			<ignore>
 libs/libraries.htm:			<ignore>
 libs/maintainers.txt:			<ignore>
 libs/mem_fn/index.html:			<ignore>
-libs/numeric/sublibs/:			<ignore>
+libs/numeric/sublibs:			<ignore>
 libs/numeric/index.html:		<ignore>
 libs/platform_maintainers.txt:		<ignore>
 tools/Jamfile.v2:			<ignore>
@@ -200,9 +200,31 @@ boost/function/:			include/boost/function/
 libs/function/:				.
 
 [libs/functional]
+boost/functional/detail/:		include/boost/functional/detail/
+boost/functional/overloaded_function/:	include/boost/functional/overloaded_function/
+boost/functional/factory.hpp:		include/boost/functional/factory.hpp
+boost/functional/forward_adapter.hpp:	include/boost/functional/forward_adapter.hpp
+boost/functional/lightweight_forward_adapter.hpp:	include/boost/functional/lightweight_forward_adapter.hpp
+boost/functional/overloaded_function.hpp:		include/boost/functional/overloaded_function.hpp
+boost/functional/value_factory.hpp:	include/boost/functional/value_factory.hpp
 boost/functional.hpp:			include/boost/functional.hpp
-boost/functional/:			include/boost/functional/
-libs/functional/:			.
+libs/functional/factory/:		factory/
+libs/functional/forward/:		forward/
+libs/functional/overloaded_function/:	overloaded_function/
+libs/functional/test/:			test/
+libs/functional/binders.html:		binders.html
+libs/functional/function_traits.html:	function_traits.html
+libs/functional/index.html:		index.html
+libs/functional/mem_fun.html:		mem_fun.html
+libs/functional/negators.html:		negators.html
+libs/functional/ptr_fun.html:		ptr_fun.html
+libs/functional/sublibs:		sublibs
+
+[libs/functional_hash]
+boost/functional/hash/:			include/boost/functional/hash/
+boost/functional/hash.hpp:		include/boost/functional/hash.hpp
+boost/functional/hash_fwd.hpp:		include/boost/functional/hash_fwd.hpp
+libs/functional/hash/:			.
 
 [libs/function_types]
 boost/function_types/:			include/boost/function_types/
