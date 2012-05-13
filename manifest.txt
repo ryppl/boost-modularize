@@ -5,6 +5,8 @@ libs/index.html:			<ignore>
 libs/libraries.htm:			<ignore>
 libs/maintainers.txt:			<ignore>
 libs/mem_fn/index.html:			<ignore>
+libs/numeric/sublibs/:			<ignore>
+libs/numeric/index.html:		<ignore>
 libs/platform_maintainers.txt:		<ignore>
 tools/Jamfile.v2:			<ignore>
 tools/index.html:			<ignore>
@@ -478,12 +480,18 @@ boost/multi_index_container_fwd.hpp:	include/boost/multi_index_container_fwd.hpp
 boost/multi_index/:			include/boost/multi_index/
 libs/multi_index/:			.
 
-[libs/numeric]
-boost/numeric/interval.hpp:		include/boost/numeric/interval.hpp
+[libs/numeric_conversion]
 boost/numeric/conversion/:		include/boost/numeric/conversion/
+libs/numeric/conversion/:		.
+
+[libs/numeric_interval]
 boost/numeric/interval/:		include/boost/numeric/interval/
+boost/numeric/interval.hpp:		include/boost/numeric/interval.hpp
+libs/numeric/interval/:			.
+
+[libs/ubas]
 boost/numeric/ublas/:			include/boost/numeric/ublas/
-libs/numeric/:				.
+libs/numeric/ublas/:			.
 
 [libs/optional]
 boost/none.hpp:				include/boost/none.hpp
