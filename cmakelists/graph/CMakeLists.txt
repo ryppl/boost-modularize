@@ -42,7 +42,7 @@ ryppl_export(
     BoostInteger
     BoostIterator
     BoostMath
-    BoostMpi
+    BoostMPI
     BoostMPL
     BoostMultiIndex
     BoostOptional
@@ -57,7 +57,7 @@ ryppl_export(
     BoostSpirit
     BoostStaticAssert
     BoostTest
-    BoostTti
+    BoostTTI
     BoostTuple
     BoostTypeTraits
     BoostTypeof

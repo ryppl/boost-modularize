@@ -11,10 +11,14 @@ def project_name(module):
         return 'BoostIO'
     if module == 'libs/iostreams':
         return 'BoostIOStreams'
+    if module == 'libs/mpi':
+        return 'BoostMPI'
     if module == 'libs/mpl':
         return 'BoostMPL'
     if module == 'libs/tr1':
         return 'BoostTR1'
+    if module == 'libs/tti':
+        return 'BoostTTI'
     if module == 'libs/ublas':
         return 'BoostUBLAS'
     l = os.path.basename(module)

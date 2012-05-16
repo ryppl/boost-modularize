@@ -54,7 +54,7 @@ ryppl_export(
     BoostGraph
     BoostInteger
     BoostIterator
-    BoostMpi
+    BoostMPI
     BoostMPL
     BoostOptional
     BoostPropertyMap
