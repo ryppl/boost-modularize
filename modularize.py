@@ -146,7 +146,7 @@ class Module:
         sys.exit(1)
 
     # Copy over the files that are new to the modularized boost
-    def copy_new(self):
+    def copy_cmake(self):
         if os.path.exists(self.new_dir):
             dir_util.copy_tree(self.new_dir, self.dst_dir)
         else:
