@@ -24,7 +24,49 @@ ryppl_export(
   TARGETS
     boost_graph
   DEPENDS
-    BoostPropertyMap 
+    BoostAlgorithm
+    BoostAny
+    BoostArray
+    BoostBimap
+    BoostBind
+    BoostConceptCheck
+    BoostConfig
+    BoostConversion
+    BoostCore
+    BoostDisjointSets
+    BoostException
+    BoostForeach
+    BoostFunction
+    BoostFunctionalHash
+    BoostGraphParallel
+    BoostInteger
+    BoostIterator
+    BoostMath
+    BoostMpi
+    BoostMPL
+    BoostMultiIndex
+    BoostOptional
+    BoostParameter
+    BoostPreprocessor
+    BoostPropertyMap
+    BoostPropertyTree
+    BoostRandom
+    BoostRange
+    BoostSerialization
+    BoostSmartPtr
+    BoostSpirit
+    BoostStaticAssert
+    BoostTest
+    BoostTti
+    BoostTuple
+    BoostTypeTraits
+    BoostTypeof
+    BoostUnordered
+    BoostUtility
+    BoostXpressive
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

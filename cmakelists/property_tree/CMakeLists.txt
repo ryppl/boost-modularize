@@ -11,18 +11,22 @@ ryppl_add_test_subdirectory(test)
 
 ryppl_export(
   DEPENDS
-    BoostAny 
-    BoostConfig 
-    BoostCore 
-    BoostException 
-    BoostIterator 
-    BoostMPL 
-    BoostMultiIndex 
-    BoostOptional 
-    BoostSpirit 
-    BoostStaticAssert 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostAny
+    BoostConfig
+    BoostCore
+    BoostException
+    BoostIterator
+    BoostMPL
+    BoostMultiIndex
+    BoostOptional
+    BoostSerialization
+    BoostSpirit
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

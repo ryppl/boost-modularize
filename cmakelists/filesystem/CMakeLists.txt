@@ -37,18 +37,20 @@ ryppl_export(
   TARGETS
     boost_filesystem
   DEPENDS
-    BoostBind 
-    BoostConfig 
-    BoostCore 
+    BoostConfig
+    BoostCore
     BoostFunctionalHash
-    BoostInteger 
-    BoostIO 
-    BoostIterator 
-    BoostSmartPtr 
-    BoostStaticAssert 
-    BoostSystem 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostInteger
+    BoostIo
+    BoostIterator
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostSystem
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

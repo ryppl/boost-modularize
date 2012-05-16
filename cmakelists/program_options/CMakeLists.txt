@@ -40,19 +40,20 @@ ryppl_export(
   TARGETS
     boost_program_options
   DEPENDS
-    BoostAny 
-    BoostBind 
-    BoostConfig 
-    BoostConversion 
-    BoostCore 
-    BoostException 
-    BoostFunction 
-    BoostIterator 
-    BoostSmartPtr 
-    BoostStaticAssert 
-    BoostTokenizer 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostAny
+    BoostConfig
+    BoostConversion
+    BoostCore
+    BoostException
+    BoostFunction
+    BoostIterator
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

@@ -68,7 +68,26 @@ add_library(boost_unit_test_framework
 
 ryppl_export(
   DEPENDS
+    BoostBind
+    BoostConfig
+    BoostConversion
+    BoostCore
+    BoostException
+    BoostFunction
+    BoostIo
+    BoostIterator
+    BoostMPL
+    BoostNumericConversion
+    BoostOptional
+    BoostPreprocessor
+    BoostSmartPtr
+    BoostStaticAssert
     BoostTimer
+    BoostTypeTraits
+    BoostUtility
+
+
+
   TARGETS
     boost_prg_exec_monitor
     boost_test_exec_monitor

@@ -18,10 +18,12 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
-    BoostConfig 
-    BoostCore 
-    BoostStaticAssert 
-    BoostTest 
+    BoostConfig
+    BoostCore
+    BoostStaticAssert
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

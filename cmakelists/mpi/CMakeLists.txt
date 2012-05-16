@@ -120,7 +120,25 @@ ryppl_export(
     boost_mpi
     boost_mpi_python
   DEPENDS
+    BoostConfig
+    BoostCore
+    BoostException
+    BoostFunction
+    BoostGraph
+    BoostInteger
+    BoostIterator
+    BoostMPL
+    BoostOptional
+    BoostPropertyMap
+    BoostPython
     BoostSerialization
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

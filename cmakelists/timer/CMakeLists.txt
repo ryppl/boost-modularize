@@ -25,7 +25,15 @@ ryppl_export(
   TARGETS
     boost_timer
   DEPENDS
-    BoostSystem 
+    BoostChrono
+    BoostConfig
+    BoostCore
+    BoostInteger
+    BoostSystem
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

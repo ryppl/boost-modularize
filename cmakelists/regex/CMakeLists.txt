@@ -43,19 +43,21 @@ ryppl_export(
   TARGETS
     boost_regex
   DEPENDS
-    BoostConceptCheck 
-    BoostConfig 
-    BoostCore 
-    BoostException 
-    BoostFunctional 
-    BoostInteger 
-    BoostIterator 
-    BoostMPL 
-    BoostSmartPtr 
-    BoostStaticAssert 
-    BoostTypeTraits 
-    BoostUtility 
-    BoostXpressive 
+    BoostConceptCheck
+    BoostConfig
+    BoostCore
+    BoostException
+    BoostFunctionalHash
+    BoostInteger
+    BoostIterator
+    BoostMPL
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

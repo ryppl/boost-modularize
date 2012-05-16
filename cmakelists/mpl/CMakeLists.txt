@@ -11,10 +11,15 @@ ryppl_add_test_subdirectory(test)
 
 ryppl_export(
   DEPENDS
-    BoostConfig 
-    BoostPreprocessor 
-    BoostStaticAssert 
-    BoostTypeTraits 
+    BoostConfig
+    BoostCore
+    BoostPreprocessor
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

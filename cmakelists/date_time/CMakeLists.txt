@@ -25,19 +25,23 @@ ryppl_export(
   TARGETS
     boost_date_time
   DEPENDS
-    BoostAlgorithm 
-    BoostConfig 
-    BoostConversion 
-    BoostCore 
-    BoostException 
-    BoostInteger 
-    BoostIO 
-    BoostMPL 
-    BoostRange 
-    BoostSmartPtr 
-    BoostTokenizer 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostAlgorithm
+    BoostConfig
+    BoostConversion
+    BoostCore
+    BoostException
+    BoostInteger
+    BoostIo
+    BoostMPL
+    BoostRange
+    BoostSerialization
+    BoostSmartPtr
+    BoostTokenizer
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

@@ -31,21 +31,24 @@ ryppl_export(
   TARGETS
     boost_chrono
   DEPENDS
-    BoostAccumulators 
-    BoostConfig 
-    BoostCore 
-    BoostException 
-    BoostFormat 
-    BoostInteger 
-    BoostInterprocess 
-    BoostMath 
-    BoostMPL 
-    BoostRatio 
-    BoostStaticAssert 
-    BoostSystem 
-    BoostTypeTraits 
-    BoostTypeof 
-    BoostUtility 
+    BoostAccumulators
+    BoostConfig
+    BoostCore
+    BoostException
+    BoostFormat
+    BoostInteger
+    BoostInterprocess
+    BoostMath
+    BoostMPL
+    BoostRatio
+    BoostStaticAssert
+    BoostSystem
+    BoostTypeTraits
+    BoostTypeof
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

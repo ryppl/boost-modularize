@@ -94,19 +94,30 @@ ryppl_export(
     boost_math_c99f
     boost_math_c99l
   DEPENDS
-    BoostAlgorithm 
-    BoostArray 
-    BoostBind 
-    BoostConceptCheck 
-    BoostConfig 
-    BoostConversion 
-    BoostCore 
-    BoostException 
-    BoostFormat 
-    BoostFunction 
-    BoostFusion 
-    BoostInteger 
-    BoostMPL 
+    BoostAlgorithm
+    BoostArray
+    BoostConceptCheck
+    BoostConfig
+    BoostConversion
+    BoostCore
+    BoostException
+    BoostFormat
+    BoostFunction
+    BoostFusion
+    BoostInteger
+    BoostMPL
+    BoostRegex
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostTest
+    BoostTr1
+    BoostTuple
+    BoostTypeTraits
+    BoostUBLAS
+    BoostUtility
+
+
+
 #   BoostNumeric 
     BoostSmartPtr 
     BoostSpirit 

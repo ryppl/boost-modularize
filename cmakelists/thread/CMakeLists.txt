@@ -56,8 +56,28 @@ ryppl_export(
   TARGETS
     boost_thread
   DEPENDS
-    BoostChrono 
-    BoostDateTime 
+    BoostBind
+    BoostChrono
+    BoostConfig
+    BoostContainer
+    BoostCore
+    BoostDateTime
+    BoostException
+    BoostFunction
+    BoostFunctionalHash
+    BoostInteger
+    BoostIo
+    BoostMove
+    BoostMPL
+    BoostOptional
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostSystem
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

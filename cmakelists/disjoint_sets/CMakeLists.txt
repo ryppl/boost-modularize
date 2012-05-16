@@ -14,9 +14,10 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
-    BoostCore 
-    BoostGraph 
-    BoostTest 
+    BoostGraph
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

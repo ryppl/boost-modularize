@@ -8,9 +8,13 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
-    BoostConfig 
-    BoostMPL 
-    BoostUtility 
+    BoostConfig
+    BoostCore
+    BoostMPL
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

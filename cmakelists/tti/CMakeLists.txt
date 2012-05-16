@@ -8,11 +8,14 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
-    BoostConfig 
-    BoostFunctionTypes 
-    BoostMPL 
-    BoostPreprocessor 
-    BoostTypeTraits 
+    BoostConfig
+    BoostFunctionTypes
+    BoostMPL
+    BoostPreprocessor
+    BoostTypeTraits
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

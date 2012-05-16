@@ -30,9 +30,12 @@ ryppl_export(
   TARGETS
     boost_system
   DEPENDS
-    BoostConfig 
-    BoostInteger 
-    BoostUtility 
+    BoostConfig
+    BoostInteger
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

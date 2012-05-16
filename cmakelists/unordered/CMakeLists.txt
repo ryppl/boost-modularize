@@ -8,19 +8,21 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
-    BoostAlgorithm 
-    BoostConfig 
-    BoostCore 
-    BoostException 
-    BoostForeach 
+    BoostConfig
+    BoostContainer
+    BoostCore
+    BoostException
     BoostFunctionalHash
-    BoostIterator 
-    BoostMove 
-    BoostPreprocessor 
-    BoostSmartPtr 
-    BoostTuple 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostIterator
+    BoostMove
+    BoostPreprocessor
+    BoostSmartPtr
+    BoostTuple
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

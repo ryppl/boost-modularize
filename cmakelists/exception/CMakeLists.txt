@@ -11,11 +11,15 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
-    BoostConfig 
-    BoostSmartPtr 
-    BoostTuple 
-    BoostUnits 
-    BoostUtility 
+    BoostConfig
+    BoostCore
+    BoostSmartPtr
+    BoostTuple
+    BoostUnits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

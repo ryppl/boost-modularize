@@ -20,20 +20,18 @@ ryppl_export(
   TARGETS
     boost_random
   DEPENDS
-    BoostConfig 
-    BoostConversion 
-    BoostCore 
-    BoostForeach 
-    BoostFormat 
-    BoostInteger 
-    BoostMPL 
-    BoostMultiIndex 
-    BoostRange 
-    BoostSmartPtr 
-    BoostStaticAssert 
-    BoostTuple 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostConfig
+    BoostCore
+    BoostInteger
+    BoostMath
+    BoostMPL
+    BoostRange
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

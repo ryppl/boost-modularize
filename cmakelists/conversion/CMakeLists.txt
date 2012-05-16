@@ -10,17 +10,21 @@ ryppl_add_test_subdirectory(test)
 
 ryppl_export(
   DEPENDS
-    BoostConfig 
-    BoostContainer 
-    BoostCore 
-    BoostException 
-    BoostInteger 
-    BoostMath 
-    BoostMPL 
+    BoostConfig
+    BoostContainer
+    BoostCore
+    BoostException
+    BoostInteger
+    BoostMath
+    BoostMPL
     BoostNumericConversion
-    BoostStaticAssert 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostRange
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

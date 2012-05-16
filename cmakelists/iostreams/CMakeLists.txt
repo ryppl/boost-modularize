@@ -51,19 +51,24 @@ ryppl_export(
   TARGETS
     boost_iostreams
   DEPENDS
-    BoostBind 
-    BoostConfig 
-    BoostCore 
-    BoostException 
-    BoostFunction 
-    BoostInteger 
-    BoostMPL 
-    BoostPreprocessor 
-    BoostRange 
-    BoostSmartPtr 
-    BoostStaticAssert 
-    BoostTypeTraits 
-    BoostUtility 
+    BoostBind
+    BoostConfig
+    BoostCore
+    BoostException
+    BoostFunction
+    BoostInteger
+    BoostMPL
+    BoostPreprocessor
+    BoostRandom
+    BoostRange
+    BoostRegex
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

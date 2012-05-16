@@ -9,6 +9,8 @@ class ModuleNotFound:
 def project_name(module):
     if module == 'libs/mpl':
         return 'BoostMPL'
+    if module == 'libs/ublas':
+        return 'BoostUBLAS'
     l = os.path.basename(module)
     return "Boost" + "".join(
         ["" if c == "_" else c.upper() if prev == "_" else c
@@ -90,17 +92,22 @@ def main():
         cmakelists = 'cmakelists/' + os.path.basename(mod) + '/CMakeLists.txt'
 
         print cmakelists
+        depends = ''
         for dep in sorted(deps):
             print '   ', project_name(dep)
+            depends += '    ' + project_name(dep) + '\n'
 
-        #old = open(cmakelists, "r").read()
-        #new = re.sub(
-        #    "^  DEPENDS *(\n    .* *)*"
-        #    , "  DEPENDS\n" + depends
-        #    , old, flags=re.MULTILINE)
+        if not os.path.exists(cmakelists):
+            continue
 
-        #if new != old:
-        #    open(cmakelists, "w").write(new)
+        old = open(cmakelists, "r").read()
+        new = re.sub(
+            "^  DEPENDS *(\n    .* *)*"
+            , "  DEPENDS\n" + depends
+            , old, flags=re.MULTILINE)
+
+        if new != old:
+            open(cmakelists, "w").write(new)
 
 if __name__ == "__main__":
     main()

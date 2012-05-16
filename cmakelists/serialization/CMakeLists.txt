@@ -74,25 +74,24 @@ ryppl_export(
     boost_serialization
     boost_wserialization
   DEPENDS
-    BoostArray 
-    BoostConfig 
-    BoostCore 
-    BoostException 
-    BoostFunction 
-    BoostFunctional 
-    BoostInteger 
-    BoostIO 
-    BoostIterator 
-    BoostMPL 
-    BoostOptional 
-    BoostPreprocessor 
-    BoostSmartPtr 
-    BoostSpirit 
-    BoostStaticAssert 
-    BoostTypeTraits 
-    BoostUtility 
-    BoostUUID 
-    BoostVariant 
+    BoostArray
+    BoostConfig
+    BoostCore
+    BoostInteger
+    BoostIo
+    BoostIterator
+    BoostMPL
+    BoostOptional
+    BoostPreprocessor
+    BoostSmartPtr
+    BoostSpirit
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
+    BoostVariant
+
+
+
   INCLUDE_DIRECTORIES
     include
   )

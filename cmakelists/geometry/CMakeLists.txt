@@ -8,21 +8,36 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
-    BoostAlgorithm 
-    BoostArray 
-    BoostAssign 
-    BoostConceptCheck 
-    BoostConfig 
-    BoostConversion 
-    BoostCore 
-    BoostForeach 
-    BoostFunctionTypes 
-    BoostFusion 
-    BoostInteger 
-    BoostIterator 
-    BoostMath 
-    BoostMPL 
-    BoostMSM 
+    BoostAlgorithm
+    BoostArray
+    BoostConceptCheck
+    BoostConfig
+    BoostConversion
+    BoostCore
+    BoostForeach
+    BoostFunctionTypes
+    BoostFusion
+    BoostInteger
+    BoostIterator
+    BoostMath
+    BoostMPL
+    BoostMsm
+    BoostNumericConversion
+    BoostPolygon
+    BoostRange
+    BoostRational
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostTokenizer
+    BoostTuple
+    BoostTypeTraits
+    BoostTypeof
+    BoostUBLAS
+    BoostUnits
+    BoostUtility
+
+
+
 #   BoostNumeric 
     BoostPolygon 
     BoostProgramOptions 
