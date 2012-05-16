@@ -96,7 +96,6 @@ libs/conversion/:			.
 
 [libs/core]
 boost/detail/win/:			include/boost/detail/win/
-boost/detail/algorithm.hpp:		include/boost/detail/algorithm.hpp
 boost/detail/allocator_utilities.hpp:	include/boost/detail/allocator_utilities.hpp
 boost/detail/binary_search.hpp:		include/boost/detail/binary_search.hpp
 boost/detail/bitmask.hpp:		include/boost/detail/bitmask.hpp
@@ -132,8 +131,6 @@ boost/detail/utf8_codecvt_facet.ipp:	include/boost/detail/utf8_codecvt_facet.ipp
 boost/detail/workaround.hpp:		include/boost/detail/workaround.hpp
 boost/pending/cstddef.hpp:		include/boost/pending/cstddef.hpp
 boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
-boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
-boost/pending/stringtok.hpp:		include/boost/pending/stringtok.hpp
 boost/blank.hpp:			include/boost/blank.hpp
 boost/blank_fwd.hpp:			include/boost/blank_fwd.hpp
 boost/cstdlib.hpp:			include/boost/cstdlib.hpp
@@ -164,6 +161,7 @@ boost/dynamic_bitset.hpp:		include/boost/dynamic_bitset.hpp
 boost/dynamic_bitset/:			include/boost/dynamic_bitset/
 boost/dynamic_bitset_fwd.hpp:		include/boost/dynamic_bitset_fwd.hpp
 boost/detail/dynamic_bitset.hpp:	include/boost/detail/dynamic_bitset.hpp
+boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
 libs/dynamic_bitset/:			.
 
 [libs/exception]
@@ -244,6 +242,7 @@ boost/gil/:				include/boost/gil/
 libs/gil/:				.
 
 [libs/graph]
+boost/detail/algorithm.hpp:			include/boost/detail/algorithm.hpp
 boost/graph/detail/:				include/boost/graph/detail/
 boost/graph/planar_detail/:			include/boost/graph/planar_detail/
 boost/graph/property_maps/:			include/boost/graph/property_maps/
@@ -397,6 +396,7 @@ boost/pending/mutable_heap.hpp:			include/boost/pending/mutable_heap.hpp
 boost/pending/mutable_queue.hpp:		include/boost/pending/mutable_queue.hpp
 boost/pending/property.hpp:			include/boost/pending/property.hpp
 boost/pending/property_serialize.hpp:		include/boost/pending/property_serialize.hpp
+boost/pending/stringtok.hpp:			include/boost/pending/stringtok.hpp
 boost/pending/queue.hpp:			include/boost/pending/queue.hpp
 boost/pending/relaxed_heap.hpp:			include/boost/pending/relaxed_heap.hpp
 libs/graph/:					.
