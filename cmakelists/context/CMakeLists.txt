@@ -102,6 +102,11 @@ add_library(boost_context
 ryppl_export(
   TARGETS
     boost_context
+  DEPENDS
+    BoostConfig
+    BoostCore
+    BoostInteger
+    BoostUtility
   INCLUDE_DIRECTORIES
     include
   )

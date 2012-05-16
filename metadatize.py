@@ -96,15 +96,12 @@ def main():
     # each module.
     for mod, deps in sorted(moddeps.items()):
         cmakelists = 'cmakelists/' + os.path.basename(mod) + '/CMakeLists.txt'
-
-        print cmakelists
-        depends = ''
-        for dep in sorted(deps):
-            print '   ', project_name(dep)
-            depends += '    ' + project_name(dep) + '\n'
-
         if not os.path.exists(cmakelists):
             continue
+
+        depends = ''
+        for dep in sorted(deps):
+            depends += '    ' + project_name(dep) + '\n'
 
         old = open(cmakelists, "r").read()
         new = re.sub(

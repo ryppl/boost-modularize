@@ -204,6 +204,14 @@ ryppl_add_test_subdirectory(test)
 ryppl_export(
   TARGETS
     boost_locale
+  DEPENDS
+    BoostConfig
+    BoostFunction
+    BoostInteger
+    BoostIterator
+    BoostSmartPtr
+    BoostTypeTraits
+    BoostUtility
   INCLUDE_DIRECTORIES
     include
   )

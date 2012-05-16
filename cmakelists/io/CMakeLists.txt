@@ -8,8 +8,9 @@ include(Ryppl)
   
 ryppl_add_test_subdirectory(test)
 
-
 ryppl_export(
+  DEPENDS
+    BoostCore
   INCLUDE_DIRECTORIES
     include
   )

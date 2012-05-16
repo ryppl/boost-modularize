@@ -7,6 +7,14 @@ project(BoostLocalFunction CXX)
 include(Ryppl)
 
 ryppl_export(
+  DEPENDS
+    BoostConfig
+    BoostMPL
+    BoostPreprocessor
+    BoostScopeExit
+    BoostTypeTraits
+    BoostTypeof
+    BoostUtility
   INCLUDE_DIRECTORIES
     include
   )

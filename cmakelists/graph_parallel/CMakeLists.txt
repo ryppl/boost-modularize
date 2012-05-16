@@ -40,6 +40,32 @@ target_link_libraries(boost_graph_parallel
 ryppl_export(
   TARGETS
     boost_graph_parallel
+  DEPENDS
+    BoostConceptCheck
+    BoostConfig
+    BoostConversion
+    BoostCore
+    BoostDisjointSets
+    BoostDynamicBitset
+    BoostFilesystem
+    BoostForeach
+    BoostFunction
+    BoostFunctionalHash
+    BoostGraph
+    BoostInteger
+    BoostIterator
+    BoostMpi
+    BoostMPL
+    BoostOptional
+    BoostPropertyMap
+    BoostRandom
+    BoostSerialization
+    BoostSmartPtr
+    BoostStaticAssert
+    BoostTuple
+    BoostTypeTraits
+    BoostUtility
+    BoostVariant
   INCLUDE_DIRECTORIES
     include
   )

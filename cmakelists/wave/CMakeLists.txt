@@ -50,6 +50,24 @@ ryppl_export(
   TARGETS
     boost_wave
     # wave
+  DEPENDS
+    BoostConceptCheck
+    BoostConfig
+    BoostCore
+    BoostException
+    BoostFilesystem
+    BoostInteger
+    BoostIterator
+    BoostMPL
+    BoostMultiIndex
+    BoostPool
+    BoostPreprocessor
+    BoostSerialization
+    BoostSmartPtr
+    BoostSpirit
+    BoostStaticAssert
+    BoostTypeTraits
+    BoostUtility
   INCLUDE_DIRECTORIES
     include
   )
