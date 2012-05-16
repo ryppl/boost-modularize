@@ -5,6 +5,15 @@ include_directive = re.compile(r'^\s*#\s*include\s+["<](boost[/\\][^">]*)[">]')
 class ModuleNotFound:
     pass
 
+# create CamelCase project name
+def project_name(module):
+    if module == 'libs/mpl':
+        return 'BoostMPL'
+    l = os.path.basename(module)
+    return "Boost" + "".join(
+        ["" if c == "_" else c.upper() if prev == "_" else c
+            for prev, c in zip("_" + l, l)])
+
 # Look up the specified file in the src2mod map
 # and return the module to which it belongs.
 # Throws if it can't find a module which claims
@@ -39,8 +48,6 @@ def visit_file(file, mod, src2mod, moddeps):
                 incmod = file2mod(include, src2mod)
                 if not incmod == mod:
                     deps.add(incmod)
-                    if incmod == 'libs/math':
-                        print file, '--->', include
             except:
                 print >>sys.stderr, '[ERROR] Cannot file module for :', include, 'found in', file
 
@@ -80,9 +87,9 @@ def main():
     # on which it depends. Use it to generate ryppl metadata files for
     # each module.
     for mod, deps in sorted(moddeps.items()):
-        print mod
+        print os.path.basename(mod)
         for dep in sorted(deps):
-            print '   ', dep
+            print '   ', project_name(dep)
 
 if __name__ == "__main__":
     main()
