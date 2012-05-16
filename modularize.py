@@ -106,6 +106,7 @@ class Module:
         self.src_dir = src_dir
         self.dstroot = dst_dir
         self.dst_dir = os.path.normpath(os.path.join(dst_dir, section))
+        self.new_dir = os.path.join('cmakelists', os.path.basename(section))
 
     # uses git
     def update(self):
@@ -144,6 +145,13 @@ class Module:
         print '[ERROR] Cannot clean directory', self.dst_dir
         sys.exit(1)
 
+    # Copy over the files that are new to the modularized boost
+    def copy_new(self):
+        if os.path.exists(self.new_dir):
+            dir_util.copy_tree(self.new_dir, self.dst_dir)
+        else:
+            print '[WARNING] "%s" does not exist' % self.new_dir
+
     def modularize(self, src, dst, src2mod):
         if src[0] == '<':
             return # We'll handle these special keys later
@@ -170,11 +178,6 @@ class Module:
 
         if verbose:
             print '[INFO] Copied'
-
-    def apply_patch(self, patch):
-        if verbose:
-            print '[INFO] Applying patch', patch, 'in', self.dst_dir
-        run('git', 'apply', patch, cwd=self.dst_dir)
 
     # uses git
     def commit(self):
@@ -349,13 +352,12 @@ def update_modules(src_dir, dst_dir, manifest):
         # Make sure we've really removed everything
         module.clean()
 
+        # Copy over CMakeLists.txt
+        module.copy_cmake()
+
         # Copy over the files from the unmodularized boost
         for src, dst in manifest.items(section):
             module.modularize(src, dst, src2mod)
-
-        # If this library has a patch file specified, apply it.
-        if manifest.has_option(section, '<patch>'):
-            module.apply_patch(os.path.abspath('patches/'+manifest.get(section, '<patch>')))
 
         # commit locally, TODO: skip in offline mode
         module.commit()
