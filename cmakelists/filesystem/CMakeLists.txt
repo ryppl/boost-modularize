@@ -41,16 +41,13 @@ ryppl_export(
     BoostCore
     BoostFunctionalHash
     BoostInteger
-    BoostIo
+    BoostIO
     BoostIterator
     BoostSmartPtr
     BoostStaticAssert
     BoostSystem
     BoostTypeTraits
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

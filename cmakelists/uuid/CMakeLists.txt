@@ -11,7 +11,7 @@ ryppl_export(
     BoostConfig
     BoostException
     BoostInteger
-    BoostIo
+    BoostIO
     BoostIterator
     BoostRandom
     BoostSerialization
@@ -19,9 +19,6 @@ ryppl_export(
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

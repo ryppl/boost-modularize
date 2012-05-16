@@ -31,7 +31,7 @@ ryppl_export(
     BoostCore
     BoostException
     BoostInteger
-    BoostIo
+    BoostIO
     BoostMPL
     BoostRange
     BoostSerialization
@@ -39,9 +39,6 @@ ryppl_export(
     BoostTokenizer
     BoostTypeTraits
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

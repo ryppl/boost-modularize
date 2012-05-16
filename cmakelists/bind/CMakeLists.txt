@@ -16,9 +16,6 @@ ryppl_export(
     BoostCore
     BoostSmartPtr
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

@@ -20,8 +20,8 @@ ryppl_export(
     BoostFunctionTypes
     BoostFusion
     BoostInteger
-    BoostIo
-    BoostIostreams
+    BoostIO
+    BoostIOStreams
     BoostIterator
     BoostMath
     BoostMPL
@@ -41,9 +41,6 @@ ryppl_export(
     BoostUnordered
     BoostUtility
     BoostVariant
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

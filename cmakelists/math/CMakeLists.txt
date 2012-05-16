@@ -110,14 +110,11 @@ ryppl_export(
     BoostSmartPtr
     BoostStaticAssert
     BoostTest
-    BoostTr1
+    BoostTR1
     BoostTuple
     BoostTypeTraits
     BoostUBLAS
     BoostUtility
-
-
-
 #   BoostNumeric 
     BoostSmartPtr 
     BoostSpirit 

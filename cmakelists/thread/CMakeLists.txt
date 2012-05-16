@@ -66,7 +66,7 @@ ryppl_export(
     BoostFunction
     BoostFunctionalHash
     BoostInteger
-    BoostIo
+    BoostIO
     BoostMove
     BoostMPL
     BoostOptional
@@ -75,9 +75,6 @@ ryppl_export(
     BoostSystem
     BoostTypeTraits
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

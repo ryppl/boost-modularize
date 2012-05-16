@@ -74,7 +74,7 @@ ryppl_export(
     BoostCore
     BoostException
     BoostFunction
-    BoostIo
+    BoostIO
     BoostIterator
     BoostMPL
     BoostNumericConversion
@@ -85,9 +85,6 @@ ryppl_export(
     BoostTimer
     BoostTypeTraits
     BoostUtility
-
-
-
   TARGETS
     boost_prg_exec_monitor
     boost_test_exec_monitor

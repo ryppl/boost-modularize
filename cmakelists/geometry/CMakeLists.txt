@@ -35,9 +35,6 @@ ryppl_export(
     BoostUBLAS
     BoostUnits
     BoostUtility
-
-
-
 #   BoostNumeric 
     BoostPolygon 
     BoostProgramOptions 

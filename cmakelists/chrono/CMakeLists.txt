@@ -46,9 +46,6 @@ ryppl_export(
     BoostTypeTraits
     BoostTypeof
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

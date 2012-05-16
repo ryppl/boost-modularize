@@ -15,9 +15,6 @@ ryppl_export(
     BoostStaticAssert
     BoostTypeof
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

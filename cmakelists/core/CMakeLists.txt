@@ -32,9 +32,6 @@ ryppl_export(
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     "${PROJECT_SOURCE_DIR}/include"
     "${PROJECT_BINARY_DIR}/include"

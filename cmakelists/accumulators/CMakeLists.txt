@@ -30,9 +30,6 @@ ryppl_export(
     BoostTypeof
     BoostUBLAS
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

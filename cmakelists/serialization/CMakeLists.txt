@@ -78,7 +78,7 @@ ryppl_export(
     BoostConfig
     BoostCore
     BoostInteger
-    BoostIo
+    BoostIO
     BoostIterator
     BoostMPL
     BoostOptional
@@ -89,9 +89,6 @@ ryppl_export(
     BoostTypeTraits
     BoostUtility
     BoostVariant
-
-
-
   INCLUDE_DIRECTORIES
     include
   )

@@ -7,8 +7,14 @@ class ModuleNotFound:
 
 # create CamelCase project name
 def project_name(module):
+    if module == 'libs/io':
+        return 'BoostIO'
+    if module == 'libs/iostreams':
+        return 'BoostIOStreams'
     if module == 'libs/mpl':
         return 'BoostMPL'
+    if module == 'libs/tr1':
+        return 'BoostTR1'
     if module == 'libs/ublas':
         return 'BoostUBLAS'
     l = os.path.basename(module)
@@ -102,7 +108,7 @@ def main():
 
         old = open(cmakelists, "r").read()
         new = re.sub(
-            "^  DEPENDS *(\n    .* *)*"
+            "^  DEPENDS *(\n    .* *)*\n*"
             , "  DEPENDS\n" + depends
             , old, flags=re.MULTILINE)
 

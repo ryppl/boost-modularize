@@ -11,7 +11,7 @@ ryppl_export(
     BoostAlgorithm
     BoostConfig
     BoostCore
-    BoostIo
+    BoostIO
     BoostLambda
     BoostMath
     BoostMPL
@@ -21,9 +21,6 @@ ryppl_export(
     BoostTypeTraits
     BoostTypeof
     BoostUtility
-
-
-
   INCLUDE_DIRECTORIES
     include
   )
