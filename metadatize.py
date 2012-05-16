@@ -87,9 +87,20 @@ def main():
     # on which it depends. Use it to generate ryppl metadata files for
     # each module.
     for mod, deps in sorted(moddeps.items()):
-        print os.path.basename(mod)
+        cmakelists = 'cmakelists/' + os.path.basename(mod) + '/CMakeLists.txt'
+
+        print cmakelists
         for dep in sorted(deps):
             print '   ', project_name(dep)
+
+        #old = open(cmakelists, "r").read()
+        #new = re.sub(
+        #    "^  DEPENDS *(\n    .* *)*"
+        #    , "  DEPENDS\n" + depends
+        #    , old, flags=re.MULTILINE)
+
+        #if new != old:
+        #    open(cmakelists, "w").write(new)
 
 if __name__ == "__main__":
     main()
