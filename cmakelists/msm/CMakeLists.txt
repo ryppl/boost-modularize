@@ -22,11 +22,12 @@ ryppl_export(
     BoostPhoenix
     BoostPreprocessor
     BoostProto
-    BoostSerialization
     BoostTuple
     BoostTypeTraits
     BoostTypeof
     BoostUtility
+  RECOMMENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

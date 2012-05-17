@@ -17,12 +17,13 @@ ryppl_export(
     BoostIterator
     BoostMPL
     BoostRange
-    BoostSerialization
     BoostSmartPtr
     BoostStaticAssert
     BoostTypeTraits
     BoostUnordered
     BoostUtility
+  RECOMMENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

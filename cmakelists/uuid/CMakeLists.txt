@@ -13,12 +13,13 @@ ryppl_export(
     BoostInteger
     BoostIO
     BoostIterator
-    BoostRandom
-    BoostSerialization
     BoostSmartPtr
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostRandom
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

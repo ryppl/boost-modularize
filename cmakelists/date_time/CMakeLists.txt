@@ -34,11 +34,12 @@ ryppl_export(
     BoostIO
     BoostMPL
     BoostRange
-    BoostSerialization
     BoostSmartPtr
     BoostTokenizer
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

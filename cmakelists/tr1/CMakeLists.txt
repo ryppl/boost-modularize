@@ -18,7 +18,6 @@ ryppl_export(
     BoostIterator
     BoostMath
     BoostMPL
-    BoostRandom
     BoostRegex
     BoostSmartPtr
     BoostStaticAssert
@@ -26,6 +25,8 @@ ryppl_export(
     BoostTypeTraits
     BoostUnordered
     BoostUtility
+  RECOMMENDS
+    BoostRandom
   INCLUDE_DIRECTORIES
     include
   )

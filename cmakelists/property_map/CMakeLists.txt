@@ -25,10 +25,11 @@ ryppl_export(
     BoostMPL
     BoostMultiIndex
     BoostOptional
-    BoostSerialization
     BoostSmartPtr
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

@@ -58,14 +58,15 @@ ryppl_export(
     BoostMPL
     BoostOptional
     BoostPropertyMap
-    BoostRandom
-    BoostSerialization
     BoostSmartPtr
     BoostStaticAssert
     BoostTuple
     BoostTypeTraits
     BoostUtility
     BoostVariant
+  RECOMMENDS
+    BoostRandom
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

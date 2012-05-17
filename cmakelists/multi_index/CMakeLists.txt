@@ -21,11 +21,12 @@ ryppl_export(
     BoostMath
     BoostMPL
     BoostPreprocessor
-    BoostSerialization
     BoostStaticAssert
     BoostTuple
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

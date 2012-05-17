@@ -20,10 +20,11 @@ ryppl_export(
     BoostMultiIndex
     BoostPreprocessor
     BoostPropertyMap
-    BoostSerialization
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

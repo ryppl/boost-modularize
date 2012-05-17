@@ -59,13 +59,14 @@ ryppl_export(
     BoostInteger
     BoostMPL
     BoostPreprocessor
-    BoostRandom
     BoostRange
     BoostRegex
     BoostSmartPtr
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostRandom
   INCLUDE_DIRECTORIES
     include
   )

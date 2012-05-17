@@ -104,14 +104,23 @@ def main():
             continue
 
         depends = ''
+        recommends = ''
         for dep in sorted(deps):
-            depends += '    ' + project_name(dep) + '\n'
+            name = project_name(dep)
+            if name == 'BoostRandom' or name == 'BoostSerialization':
+                recommends += '    ' + name + '\n'
+            else:
+                depends += '    ' + name + '\n'
 
         old = open(cmakelists, "r").read()
         new = re.sub(
             "^  DEPENDS *(\n    .* *)*\n*"
             , "  DEPENDS\n" + depends
             , old, flags=re.MULTILINE)
+        new = re.sub(
+            "^  RECOMMENDS *(\n    .* *)*\n*"
+            , "  RECOMMENDS\n" + recommends
+            , new, flags=re.MULTILINE)
 
         if new != old:
             open(cmakelists, "w").write(new)

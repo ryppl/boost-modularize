@@ -50,9 +50,7 @@ ryppl_export(
     BoostPreprocessor
     BoostPropertyMap
     BoostPropertyTree
-    BoostRandom
     BoostRange
-    BoostSerialization
     BoostSmartPtr
     BoostSpirit
     BoostStaticAssert
@@ -64,6 +62,9 @@ ryppl_export(
     BoostUnordered
     BoostUtility
     BoostXpressive
+  RECOMMENDS
+    BoostRandom
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )

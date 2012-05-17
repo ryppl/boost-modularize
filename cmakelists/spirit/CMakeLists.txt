@@ -32,7 +32,6 @@ ryppl_export(
     BoostProto
     BoostRange
     BoostRegex
-    BoostSerialization
     BoostSmartPtr
     BoostStaticAssert
     BoostThread
@@ -41,6 +40,8 @@ ryppl_export(
     BoostUnordered
     BoostUtility
     BoostVariant
+  RECOMMENDS
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )
