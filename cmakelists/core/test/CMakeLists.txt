@@ -4,7 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostCore)
+ryppl_find_and_use_package(BoostFunctional)
 
 ryppl_test_suite( RUN is_sorted_test.cpp )
 

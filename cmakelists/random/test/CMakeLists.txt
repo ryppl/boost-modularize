@@ -4,6 +4,8 @@
 include(Ryppl)
 include(RypplTestSuite)
 
+ryppl_find_and_use_package(BoostAssign)
+ryppl_find_and_use_package(BoostRandom)
 ryppl_find_and_use_package(BoostTest)
 
 if(MSVC)

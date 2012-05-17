@@ -5,6 +5,8 @@ include(Ryppl)
 include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostAssign)
+ryppl_find_and_use_package(BoostFunctional)
+ryppl_find_and_use_package(BoostMultiIndex)
 ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostTest)
 
