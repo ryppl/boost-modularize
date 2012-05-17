@@ -250,7 +250,7 @@ def validate_manifest(manifest, src_dir):
     mfi = manifest_files.__iter__()
     exi = existing_files.__iter__()
 
-    # Iterate over the manifast and the existing_files files in lock step
+    # Iterate over the manifest and the existing_files files in lock step
     # advancing one or the other or both as necessary and keeping
     # track in the counts which paths appear in both lists and which
     # don't.
