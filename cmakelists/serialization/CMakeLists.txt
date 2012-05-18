@@ -77,8 +77,8 @@ ryppl_export(
     BoostArray
     BoostConfig
     BoostCore
-    BoostInteger
     BoostIO
+    BoostInteger
     BoostIterator
     BoostMPL
     BoostOptional

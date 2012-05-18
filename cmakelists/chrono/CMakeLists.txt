@@ -38,8 +38,8 @@ ryppl_export(
     BoostFormat
     BoostInteger
     BoostInterprocess
-    BoostMath
     BoostMPL
+    BoostMath
     BoostRatio
     BoostStaticAssert
     BoostSystem

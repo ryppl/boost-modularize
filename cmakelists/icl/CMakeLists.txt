@@ -14,8 +14,8 @@ ryppl_export(
     BoostCore
     BoostDateTime
     BoostIterator
-    BoostMove
     BoostMPL
+    BoostMove
     BoostRational
     BoostStaticAssert
     BoostTypeTraits

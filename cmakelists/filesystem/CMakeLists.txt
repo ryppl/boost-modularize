@@ -40,8 +40,8 @@ ryppl_export(
     BoostConfig
     BoostCore
     BoostFunctionalHash
-    BoostInteger
     BoostIO
+    BoostInteger
     BoostIterator
     BoostSmartPtr
     BoostStaticAssert

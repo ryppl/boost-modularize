@@ -10,8 +10,8 @@ ryppl_export(
   DEPENDS
     BoostConfig
     BoostException
-    BoostInteger
     BoostIO
+    BoostInteger
     BoostIterator
     BoostSmartPtr
     BoostStaticAssert

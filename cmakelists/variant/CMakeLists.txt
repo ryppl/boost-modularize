@@ -11,8 +11,8 @@ ryppl_export(
     BoostConfig
     BoostCore
     BoostFunctionalHash
-    BoostMath
     BoostMPL
+    BoostMath
     BoostPreprocessor
     BoostStaticAssert
     BoostTypeTraits

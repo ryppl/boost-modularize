@@ -109,8 +109,8 @@ ryppl_export(
     BoostRegex
     BoostSmartPtr
     BoostStaticAssert
-    BoostTest
     BoostTR1
+    BoostTest
     BoostTuple
     BoostTypeTraits
     BoostUBLAS

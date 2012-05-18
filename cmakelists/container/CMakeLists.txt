@@ -13,8 +13,8 @@ ryppl_export(
     BoostConfig
     BoostCore
     BoostIntrusive
-    BoostMove
     BoostMPL
+    BoostMove
     BoostPreprocessor
     BoostStaticAssert
     BoostTypeTraits

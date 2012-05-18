@@ -19,12 +19,12 @@ ryppl_export(
     BoostFunction
     BoostFunctionTypes
     BoostFusion
-    BoostInteger
     BoostIO
     BoostIOStreams
+    BoostInteger
     BoostIterator
-    BoostMath
     BoostMPL
+    BoostMath
     BoostOptional
     BoostPhoenix
     BoostPool

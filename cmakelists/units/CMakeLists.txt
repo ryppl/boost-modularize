@@ -13,8 +13,8 @@ ryppl_export(
     BoostCore
     BoostIO
     BoostLambda
-    BoostMath
     BoostMPL
+    BoostMath
     BoostPreprocessor
     BoostStaticAssert
     BoostTypeTraits

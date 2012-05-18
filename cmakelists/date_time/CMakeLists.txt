@@ -30,8 +30,8 @@ ryppl_export(
     BoostConversion
     BoostCore
     BoostException
-    BoostInteger
     BoostIO
+    BoostInteger
     BoostMPL
     BoostRange
     BoostSmartPtr

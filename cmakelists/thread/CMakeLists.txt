@@ -65,10 +65,10 @@ ryppl_export(
     BoostException
     BoostFunction
     BoostFunctionalHash
-    BoostInteger
     BoostIO
-    BoostMove
+    BoostInteger
     BoostMPL
+    BoostMove
     BoostOptional
     BoostSmartPtr
     BoostStaticAssert

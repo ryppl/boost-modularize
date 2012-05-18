@@ -15,8 +15,8 @@ ryppl_export(
     BoostCore
     BoostException
     BoostInteger
-    BoostMath
     BoostMPL
+    BoostMath
     BoostNumericConversion
     BoostRange
     BoostStaticAssert

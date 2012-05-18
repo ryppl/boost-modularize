@@ -18,8 +18,8 @@ ryppl_export(
     BoostForeach
     BoostFunctionalHash
     BoostIterator
-    BoostMath
     BoostMPL
+    BoostMath
     BoostPreprocessor
     BoostStaticAssert
     BoostTuple

@@ -19,8 +19,8 @@ ryppl_export(
     BoostFusion
     BoostInteger
     BoostIterator
-    BoostMath
     BoostMPL
+    BoostMath
     BoostMsm
     BoostNumericConversion
     BoostPolygon
