@@ -64,6 +64,7 @@ ryppl_export(
     BoostPreprocessor
     BoostSmartPtr
     BoostSpirit
+    BoostSpiritClassic
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility

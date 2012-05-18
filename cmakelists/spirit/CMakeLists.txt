@@ -33,8 +33,8 @@ ryppl_export(
     BoostRange
     BoostRegex
     BoostSmartPtr
+    BoostSpiritClassic
     BoostStaticAssert
-    BoostThread
     BoostTypeTraits
     BoostTypeof
     BoostUnordered

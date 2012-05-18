@@ -19,7 +19,7 @@ ryppl_export(
     BoostMPL
     BoostMultiIndex
     BoostOptional
-    BoostSpirit
+    BoostSpiritClassic
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility

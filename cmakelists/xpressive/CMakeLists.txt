@@ -22,7 +22,6 @@ ryppl_export(
     BoostProto
     BoostRange
     BoostSmartPtr
-    BoostSpirit
     BoostStaticAssert
     BoostTypeTraits
     BoostTypeof
