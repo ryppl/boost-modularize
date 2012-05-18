@@ -21,11 +21,11 @@ ryppl_export(
     BoostRegex
     BoostSmartPtr
     BoostStaticAssert
-    BoostThread
     BoostTypeTraits
     BoostTypeof
     BoostUtility
   RECOMMENDS
+    BoostThread
   INCLUDE_DIRECTORIES
     include
   )
