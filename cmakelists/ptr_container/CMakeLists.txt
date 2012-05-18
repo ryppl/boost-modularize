@@ -13,6 +13,7 @@ ryppl_export(
   DEPENDS
     BoostArray
     BoostCircularBuffer
+    BoostCompressedPair
     BoostConfig
     BoostIterator
     BoostMPL

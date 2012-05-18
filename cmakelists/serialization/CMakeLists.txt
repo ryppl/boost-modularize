@@ -75,12 +75,14 @@ ryppl_export(
     boost_wserialization
   DEPENDS
     BoostArray
+    BoostCallTraits
     BoostConfig
     BoostCore
     BoostIO
     BoostInteger
     BoostIterator
     BoostMPL
+    BoostOperators
     BoostOptional
     BoostPreprocessor
     BoostSmartPtr

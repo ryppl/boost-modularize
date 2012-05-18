@@ -8,6 +8,7 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
+    BoostCallTraits
     BoostConceptCheck
     BoostConfig
     BoostContainer

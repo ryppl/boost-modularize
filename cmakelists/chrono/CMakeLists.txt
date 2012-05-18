@@ -40,6 +40,7 @@ ryppl_export(
     BoostInterprocess
     BoostMPL
     BoostMath
+    BoostOperators
     BoostRatio
     BoostStaticAssert
     BoostSystem

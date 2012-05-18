@@ -45,6 +45,7 @@ ryppl_export(
     BoostMPL
     BoostMath
     BoostMultiIndex
+    BoostOperators
     BoostOptional
     BoostParameter
     BoostPreprocessor

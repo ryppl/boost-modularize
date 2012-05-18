@@ -11,6 +11,7 @@ ryppl_add_test_subdirectory(test)
 
 ryppl_export(
   DEPENDS
+    BoostCallTraits
     BoostConceptCheck
     BoostConfig
     BoostCore

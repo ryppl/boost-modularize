@@ -46,6 +46,7 @@ ryppl_export(
     BoostFunction
     BoostIterator
     BoostMPL
+    BoostOperators
     BoostOptional
     BoostSmartPtr
     BoostTypeTraits

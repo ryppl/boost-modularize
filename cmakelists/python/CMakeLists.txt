@@ -85,6 +85,8 @@ ryppl_export(
     boost_python
   DEPENDS
     BoostBind
+    BoostCallTraits
+    BoostCompressedPair
     BoostConfig
     BoostConversion
     BoostCore
@@ -93,6 +95,7 @@ ryppl_export(
     BoostIterator
     BoostMPL
     BoostNumericConversion
+    BoostOperators
     BoostPreprocessor
     BoostSmartPtr
     BoostStaticAssert

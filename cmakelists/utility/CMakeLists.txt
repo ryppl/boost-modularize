@@ -10,7 +10,6 @@ ryppl_export(
   DEPENDS
     BoostConfig
     BoostCore
-    BoostIterator
     BoostMPL
     BoostPreprocessor
     BoostStaticAssert

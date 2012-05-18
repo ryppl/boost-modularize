@@ -168,6 +168,7 @@ libs/dynamic_bitset/:			.
 boost/exception.hpp:			include/boost/exception.hpp
 boost/exception_ptr.hpp:		include/boost/exception_ptr.hpp
 boost/throw_exception.hpp:		include/boost/throw_exception.hpp
+libs/utility/throw_exception.html:	doc/throw_exception.html
 boost/exception/:			include/boost/exception/
 libs/exception/:			.
 
@@ -440,6 +441,7 @@ boost/iostreams/:			include/boost/iostreams/
 libs/iostreams/:			.
 
 [libs/iterator]
+boost/generator_iterator.hpp:		include/boost/generator_iterator.hpp
 boost/iterator.hpp:			include/boost/iterator.hpp
 boost/iterator_adaptors.hpp:		include/boost/iterator_adaptors.hpp
 boost/function_output_iterator.hpp:	include/boost/function_output_iterator.hpp
@@ -1053,21 +1055,85 @@ libs/unordered/:			.
 boost/swap.hpp:				include/boost/swap.hpp
 boost/ref.hpp:				include/boost/ref.hpp
 boost/assert.hpp:			include/boost/assert.hpp
-boost/operators.hpp:			include/boost/operators.hpp
+boost/current_function.hpp:		include/boost/current_function.hpp
 boost/noncopyable.hpp:			include/boost/noncopyable.hpp
 boost/next_prior.hpp:			include/boost/next_prior.hpp
-boost/generator_iterator.hpp:		include/boost/generator_iterator.hpp
-boost/current_function.hpp:		include/boost/current_function.hpp
 boost/checked_delete.hpp:		include/boost/checked_delete.hpp
+boost/utility/:				include/boost/utility/
+libs/utility/swap/:			swap/
+libs/utility/enable_if/:		enable_if/
+libs/utility/doc/:			doc/
+libs/utility/test/:			test/
+libs/utility/Assignable.html:		doc/Assignable.html
+libs/utility/Collection.html:		doc/Collection.html
+libs/utility/CopyConstructible.html:		doc/CopyConstructible.html
+libs/utility/LessThanComparable.html:		doc/LessThanComparable.html
+libs/utility/MultiPassInputIterator.html:		doc/MultiPassInputIterator.html
+libs/utility/OptionalPointee.html:		doc/OptionalPointee.html
+libs/utility/addressof_fn_test.cpp:		test/addressof_fn_test.cpp
+libs/utility/addressof_test.cpp:		test/addressof_test.cpp
+libs/utility/addressof_test2.cpp:		test/addressof_test2.cpp
+libs/utility/assert.html:		doc/assert.html
+libs/utility/assert_test.cpp:		test/assert_test.cpp
+libs/utility/base_from_member.html:		doc/base_from_member.html
+libs/utility/base_from_member_test.cpp:		test/base_from_member_test.cpp
+libs/utility/binary_search_test.cpp:		test/binary_search_test.cpp
+libs/utility/binary_test.cpp:		test/binary_test.cpp
+libs/utility/checked_delete.html:		doc/checked_delete.html
+libs/utility/checked_delete_test.cpp:		test/checked_delete_test.cpp
+libs/utility/current_function.html:		doc/current_function.html
+libs/utility/current_function_test.cpp:		test/current_function_test.cpp
+libs/utility/enable_if.html:		doc/enable_if.html
+libs/utility/generator_iterator.htm:		doc/generator_iterator.htm
+libs/utility/identity_type/:		identity_type/
+libs/utility/in_place_factories.html:		doc/in_place_factories.html
+libs/utility/index.html:		doc/index.html
+libs/utility/initialized_test.cpp:		test/initialized_test.cpp
+libs/utility/initialized_test_fail1.cpp:		test/initialized_test_fail1.cpp
+libs/utility/initialized_test_fail2.cpp:		test/initialized_test_fail2.cpp
+libs/utility/iterator_adaptors.htm:		doc/iterator_adaptors.htm
+libs/utility/iterators_test.cpp:		test/iterators_test.cpp
+libs/utility/noncopyable_test.cpp:		test/noncopyable_test.cpp
+libs/utility/numeric_traits_test.cpp:		test/numeric_traits_test.cpp
+libs/utility/ref_ct_test.cpp:		test/ref_ct_test.cpp
+libs/utility/ref_test.cpp:		test/ref_test.cpp
+libs/utility/shared_container_iterator.html:		doc/shared_container_iterator.html
+libs/utility/shared_iterator_example1.cpp:		shared_iterator_example1.cpp
+libs/utility/shared_iterator_example2.cpp:		shared_iterator_example2.cpp
+libs/utility/shared_iterator_example3.cpp:		shared_iterator_example3.cpp
+libs/utility/shared_iterator_test.cpp:		test/shared_iterator_test.cpp
+libs/utility/sublibs:		sublibs
+libs/utility/swap.html:		doc/swap.html
+libs/utility/utility.htm:		utility.htm
+libs/utility/value_init.htm:		value_init.htm
+libs/utility/value_init_test.cpp:		test/value_init_test.cpp
+libs/utility/value_init_test_fail1.cpp:		test/value_init_test_fail1.cpp
+libs/utility/value_init_test_fail2.cpp:		test/value_init_test_fail2.cpp
+libs/utility/value_init_test_fail3.cpp:		test/value_init_test_fail3.cpp
+libs/utility/value_init_workaround_test.cpp:		test/value_init_workaround_test.cpp
+libs/utility/verify_test.cpp:		test/verify_test.cpp
+
+[libs/operators]
+boost/operators.hpp:			include/boost/operators.hpp
+libs/utility/operators.htm:		doc/operators.htm
+libs/utility/operators_test.cpp:		test/operators_test.cpp
+
+[libs/call_traits]
 boost/call_traits.hpp:			include/boost/call_traits.hpp
 boost/detail/call_traits.hpp:		include/boost/detail/call_traits.hpp
 boost/detail/ob_call_traits.hpp:	include/boost/detail/ob_call_traits.hpp
+libs/utility/call_traits.htm:		doc/call_traits.htm
+libs/utility/call_traits_test.cpp:		test/call_traits_test.cpp
+
+[libs/compressed_pair]
 boost/compressed_pair.hpp:		include/boost/compressed_pair.hpp
 boost/detail/compressed_pair.hpp:	include/boost/detail/compressed_pair.hpp
 boost/detail/ob_compressed_pair.hpp:	include/boost/detail/ob_compressed_pair.hpp
+libs/utility/compressed_pair.htm:		doc/compressed_pair.htm
+libs/utility/compressed_pair_test.cpp:		test/compressed_pair_test.cpp
+
+[libs/all_utility]
 boost/utility.hpp:			include/boost/utility.hpp
-boost/utility/:				include/boost/utility/
-libs/utility/:				.
 
 [libs/uuid]
 boost/uuid/:				include/boost/uuid/

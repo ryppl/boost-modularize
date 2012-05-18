@@ -32,6 +32,7 @@ ryppl_export(
   DEPENDS
     BoostConfig
     BoostInteger
+    BoostOperators
     BoostUtility
   INCLUDE_DIRECTORIES
     include

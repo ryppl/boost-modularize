@@ -52,6 +52,7 @@ ryppl_export(
     boost_iostreams
   DEPENDS
     BoostBind
+    BoostCallTraits
     BoostConfig
     BoostCore
     BoostException

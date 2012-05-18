@@ -17,6 +17,7 @@ ryppl_export(
     BoostCore
     BoostFunctionTypes
     BoostMPL
+    BoostOperators
     BoostSmartPtr
     BoostStaticAssert
     BoostTuple

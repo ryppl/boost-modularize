@@ -8,6 +8,7 @@ include(Ryppl)
 
 ryppl_export(
   DEPENDS
+    BoostCompressedPair
     BoostConfig
     BoostContainer
     BoostCore

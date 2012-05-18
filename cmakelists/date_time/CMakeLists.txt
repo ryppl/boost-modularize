@@ -33,6 +33,7 @@ ryppl_export(
     BoostIO
     BoostInteger
     BoostMPL
+    BoostOperators
     BoostRange
     BoostSmartPtr
     BoostTokenizer

@@ -12,6 +12,7 @@ ryppl_add_test_subdirectory(test)
 ryppl_export(
   DEPENDS
     BoostBind
+    BoostCallTraits
     BoostConfig
     BoostCore
     BoostException
@@ -20,6 +21,7 @@ ryppl_export(
     BoostIterator
     BoostMPL
     BoostMath
+    BoostOperators
     BoostPreprocessor
     BoostStaticAssert
     BoostTuple

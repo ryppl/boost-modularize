@@ -69,6 +69,7 @@ add_library(boost_unit_test_framework
 ryppl_export(
   DEPENDS
     BoostBind
+    BoostCallTraits
     BoostConfig
     BoostConversion
     BoostCore

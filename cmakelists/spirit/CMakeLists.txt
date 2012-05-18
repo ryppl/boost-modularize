@@ -10,6 +10,7 @@ ryppl_export(
   DEPENDS
     BoostAlgorithm
     BoostArray
+    BoostCallTraits
     BoostConceptCheck
     BoostConfig
     BoostConversion
@@ -25,6 +26,7 @@ ryppl_export(
     BoostIterator
     BoostMPL
     BoostMath
+    BoostOperators
     BoostOptional
     BoostPhoenix
     BoostPool
