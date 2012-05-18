@@ -103,24 +103,23 @@ def main():
         if not os.path.exists(cmakelists):
             continue
 
-        depends = ''
-        recommends = ''
-        for dep in sorted(deps):
-            name = project_name(dep)
-            if name == 'BoostRandom' or name == 'BoostSerialization':
-                recommends += '    ' + name + '\n'
-            else:
-                depends += '    ' + name + '\n'
-
+        depends = set(project_name(d) for d in deps)
         old = open(cmakelists, "r").read()
-        new = re.sub(
-            "^  DEPENDS *(\n    .* *)*\n*"
-            , "  DEPENDS\n" + depends
-            , old, flags=re.MULTILINE)
-        new = re.sub(
-            "^  RECOMMENDS *(\n    .* *)*\n*"
-            , "  RECOMMENDS\n" + recommends
-            , new, flags=re.MULTILINE)
+
+        pattern = "^  %s *\n((?:    [^ ]+ *\n)*)"
+        m = re.search(pattern % 'RECOMMENDS', old, flags=re.MULTILINE)
+        old_recommends = set(m.group(1).split() if m else [])
+        recommends = old_recommends & depends
+        depends -= recommends
+        def subdeps(txt, name, deps):
+            return re.sub(
+                pattern % name
+                , "  %s\n" % name
+                + ''.join('    '+d+'\n' for d in sorted(deps))
+                , txt, flags=re.MULTILINE)
+
+        new = subdeps(old, 'DEPENDS', depends)
+        new = subdeps(new, 'RECOMMENDS', recommends)
 
         if new != old:
             open(cmakelists, "w").write(new)
