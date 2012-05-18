@@ -16,9 +16,10 @@ ryppl_export(
     BoostMPL
     BoostOptional
     BoostPreprocessor
-    BoostPython
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostPython
   INCLUDE_DIRECTORIES
     include
   )

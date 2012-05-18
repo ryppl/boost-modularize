@@ -130,13 +130,13 @@ ryppl_export(
     BoostMPL
     BoostOptional
     BoostPropertyMap
-    BoostPython
     BoostSmartPtr
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility
-  RECOMMENDS
     BoostSerialization
+  RECOMMENDS
+    BoostPython
   INCLUDE_DIRECTORIES
     include
   )
