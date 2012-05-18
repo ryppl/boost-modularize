@@ -246,7 +246,6 @@ boost/detail/algorithm.hpp:			include/boost/detail/algorithm.hpp
 boost/graph/detail/:				include/boost/graph/detail/
 boost/graph/planar_detail/:			include/boost/graph/planar_detail/
 boost/graph/property_maps/:			include/boost/graph/property_maps/
-boost/graph/accounting.hpp:			include/boost/graph/accounting.hpp
 boost/graph/adjacency_iterator.hpp:		include/boost/graph/adjacency_iterator.hpp
 boost/graph/adjacency_list.hpp:			include/boost/graph/adjacency_list.hpp
 boost/graph/adjacency_list_io.hpp:		include/boost/graph/adjacency_list_io.hpp
@@ -395,7 +394,6 @@ boost/pending/is_heap.hpp:			include/boost/pending/is_heap.hpp
 boost/pending/mutable_heap.hpp:			include/boost/pending/mutable_heap.hpp
 boost/pending/mutable_queue.hpp:		include/boost/pending/mutable_queue.hpp
 boost/pending/property.hpp:			include/boost/pending/property.hpp
-boost/pending/property_serialize.hpp:		include/boost/pending/property_serialize.hpp
 boost/pending/stringtok.hpp:			include/boost/pending/stringtok.hpp
 boost/pending/queue.hpp:			include/boost/pending/queue.hpp
 boost/pending/relaxed_heap.hpp:			include/boost/pending/relaxed_heap.hpp
@@ -403,6 +401,8 @@ libs/graph/:					.
 
 [libs/graph_parallel]
 boost/graph/distributed/:		include/boost/graph/distributed/
+boost/graph/accounting.hpp:		include/boost/graph/accounting.hpp
+boost/pending/property_serialize.hpp:	include/boost/pending/property_serialize.hpp
 boost/graph/parallel/:			include/boost/graph/parallel/
 libs/graph_parallel/:			.
 
