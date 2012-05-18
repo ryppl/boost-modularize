@@ -61,7 +61,7 @@ def visit_file(file, mod, src2mod, moddeps):
                 if not incmod == mod:
                     deps.add(incmod)
             except:
-                print >>sys.stderr, '[ERROR] Cannot file module for :', include, 'found in', file
+                print >>sys.stderr, '[ERROR] Cannot find module for :', include, 'found in', file
 
 def main():
     # Parse the manifest
