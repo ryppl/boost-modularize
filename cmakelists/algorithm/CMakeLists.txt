@@ -19,12 +19,13 @@ ryppl_export(
     BoostIterator
     BoostMPL
     BoostRange
-    BoostRegex
     BoostStaticAssert
     BoostTR1
     BoostTuple
     BoostTypeTraits
     BoostUtility
+  RECOMMENDS
+    BoostRegex
   INCLUDE_DIRECTORIES
     include
   )
