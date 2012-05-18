@@ -24,6 +24,7 @@ ryppl_export(
     BoostParameter
     BoostPreprocessor
     BoostSmartPtr
+    BoostTuple
     BoostTypeTraits
     BoostUtility
     BoostVariant

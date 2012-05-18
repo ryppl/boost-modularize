@@ -35,21 +35,6 @@ ryppl_export(
     BoostUBLAS
     BoostUnits
     BoostUtility
-#   BoostNumeric 
-    BoostPolygon 
-    BoostProgramOptions 
-    BoostProto 
-    BoostRange 
-    BoostRational 
-    BoostSmartPtr 
-    BoostStaticAssert 
-    BoostTest 
-    BoostTokenizer 
-    BoostTuple 
-    BoostTypeTraits 
-    BoostTypeof 
-    BoostUnits 
-    BoostUtility 
   INCLUDE_DIRECTORIES
     include
   )

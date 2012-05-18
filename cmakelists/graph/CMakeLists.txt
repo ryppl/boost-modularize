@@ -55,7 +55,6 @@ ryppl_export(
     BoostSpiritClassic
     BoostStaticAssert
     BoostTTI
-    BoostTest
     BoostTuple
     BoostTypeTraits
     BoostTypeof
@@ -65,6 +64,7 @@ ryppl_export(
   RECOMMENDS
     BoostRandom
     BoostSerialization
+    BoostTest
   INCLUDE_DIRECTORIES
     include
   )
