@@ -443,7 +443,8 @@ if __name__ == "__main__":
         setup_metarepo(args.dst)
 
     if 'update' in args.command:
-        manifest = Manifest(args.sections.split(','), args.start_at, args.stop_at)
+        manifest = Manifest(
+            args.sections and args.sections.split(','), args.start_at, args.stop_at)
         manifest.validate()
         update_modules(args.src, args.dst, manifest)
 
