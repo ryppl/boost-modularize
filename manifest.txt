@@ -786,7 +786,7 @@ boost/spirit/include/phoenix1_tuples.hpp:		include/boost/spirit/include/phoenix1
 libs/spirit/classic/:                                   .
 
 [libs/spirit]
-boost/spirit.hpp:			include/boost/spirit.hpp
+boost/spirit.hpp:			<ignore>
 boost/spirit/home/karma.hpp:		include/boost/spirit/home/karma.hpp
 boost/spirit/home/karma/:		include/boost/spirit/home/karma/
 boost/spirit/home/lex.hpp:		include/boost/spirit/home/lex.hpp
