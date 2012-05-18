@@ -41,7 +41,6 @@ ryppl_export(
     BoostGraphParallel
     BoostInteger
     BoostIterator
-    BoostMPI
     BoostMPL
     BoostMath
     BoostMultiIndex

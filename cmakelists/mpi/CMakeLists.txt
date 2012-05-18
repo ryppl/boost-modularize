@@ -134,9 +134,9 @@ ryppl_export(
     BoostStaticAssert
     BoostTypeTraits
     BoostUtility
-    BoostSerialization
   RECOMMENDS
     BoostPython
+    BoostSerialization
   INCLUDE_DIRECTORIES
     include
   )
