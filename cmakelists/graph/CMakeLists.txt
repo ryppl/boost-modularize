@@ -52,7 +52,6 @@ ryppl_export(
     BoostPropertyTree
     BoostRange
     BoostSmartPtr
-    BoostSpirit
     BoostSpiritClassic
     BoostStaticAssert
     BoostTest
