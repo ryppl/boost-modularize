@@ -1,67 +1,68 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See copy at http://www.boost.org/LICENSE_1_0.txt
+include(Ryppl)
+include(RypplTestSuite)
 
-boost_add_multiple_tests(
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostXpressive)
+
+ryppl_test_suite(
   RUN
     #regress  # <dependency>regress.txt
     #c_traits # <dependency>regress.txt
-    test1
-    test2
-    test3
-    test4
-    test5
-    test6
-    test7
-    test8
-    test9
-    test10
-    test11
-    test1u
-    test2u
-    test3u
-    test4u
-    test5u
-    test6u
-    test7u
-    test8u
-    test9u
-    test10u
-    test11u
-    misc1
-    misc2
-    test_format
-    test_cycles
-    test_non_char
-    test_static
-    test_actions
-    test_assert
-    test_assert_with_placeholder
-    test_symbols
-    test_dynamic
-    test_dynamic_grammar
-    test_skip
+    test1.cpp
+    test2.cpp
+    test3.cpp
+    test4.cpp
+    test5.cpp
+    test6.cpp
+    test7.cpp
+    test8.cpp
+    test9.cpp
+    test10.cpp
+    test11.cpp
+    test1u.cpp
+    test2u.cpp
+    test3u.cpp
+    test4u.cpp
+    test5u.cpp
+    test6u.cpp
+    test7u.cpp
+    test8u.cpp
+    test9u.cpp
+    test10u.cpp
+    test11u.cpp
+    misc1.cpp
+    misc2.cpp
+    test_format.cpp
+    test_cycles.cpp
+    test_non_char.cpp
+    test_static.cpp
+    test_actions.cpp
+    test_assert.cpp
+    test_assert_with_placeholder.cpp
+    test_symbols.cpp
+    test_dynamic.cpp
+    test_dynamic_grammar.cpp
+    test_skip.cpp
   COMPILE
-    test_basic_regex
-    test_match_results
-    test_regex_algorithms
-    test_regex_compiler
-    test_regex_constants
-    test_regex_error
-    test_regex_iterator
-    test_regex_primitives
-    test_regex_token_iterator
-    test_regex_traits
-    test_sub_match
-    #test_typeof
-    #test_typeof2
-  LINK_BOOST_LIBRARIES
-    unit_test_framework
-  )
-
-boost_add_test(multiple_defs LINK
-  SOURCES
+    test_basic_regex.cpp
+    test_match_results.cpp
+    test_regex_algorithms.cpp
+    test_regex_compiler.cpp
+    test_regex_constants.cpp
+    test_regex_error.cpp
+    test_regex_iterator.cpp
+    test_regex_primitives.cpp
+    test_regex_token_iterator.cpp
+    test_regex_traits.cpp
+    test_sub_match.cpp
+    #test_typeof.cpp
+    #test_typeof2.cpp
     multiple_defs1.cpp
     multiple_defs2.cpp
-  LINK_BOOST_LIBRARIES
-    unit_test_framework
+  LINK_LIBRARIES
+    boost_unit_test_framework
+  NO_SINGLE_TARGET
   )

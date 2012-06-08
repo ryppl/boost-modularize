@@ -7,6 +7,7 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostAssign)
 ryppl_find_and_use_package(BoostSignals2)
 ryppl_find_and_use_package(BoostThread)
+ryppl_find_and_use_package(BoostPhoenix)
 
 ryppl_test_suite(
   RUN

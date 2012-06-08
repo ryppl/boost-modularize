@@ -4,13 +4,5 @@
 include(Ryppl)
 include(RypplTestSuite)
 
-ryppl_find_and_use_package(BoostCRC)
+ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostTest)
-ryppl_find_and_use_package(BoostRandom)
-
-ryppl_test_suite(
-  RUN
-    crc_test
-  LINK_LIBRARIES
-    boost_test_exec_monitor
-  )

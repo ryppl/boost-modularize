@@ -6,6 +6,7 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostMultiIndex)
 ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostSerialization)
 
 ryppl_test_suite(
   RUN

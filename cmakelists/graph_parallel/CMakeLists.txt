@@ -9,6 +9,7 @@ include(Ryppl)
 ryppl_find_and_use_package(BoostGraph)
 ryppl_find_and_use_package(BoostMPI)
 ryppl_find_and_use_package(BoostUtility)
+ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_package(MPI)
 
 include_directories(

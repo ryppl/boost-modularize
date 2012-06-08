@@ -7,6 +7,7 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostAssign)
 ryppl_find_and_use_package(BoostRange)
 ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostForeach)
 
 if(CMAKE_COMPILER_IS_GNUCXX)
   add_definitions(-Wall -Wunused)

@@ -7,6 +7,10 @@ include(RypplTestSuite)
 ryppl_find_and_use_package(BoostAccumulators)
 ryppl_find_and_use_package(BoostSerialization)
 ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostRandom)
+ryppl_find_and_use_package(BoostForeach)
+
+
 
 #if(MSVC)
 #  add_definitions(-D_HAS_ITERATOR_DEBUGGING=0)

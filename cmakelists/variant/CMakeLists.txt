@@ -6,6 +6,8 @@ project(BoostVariant NONE)
 
 include(Ryppl)
 
+ryppl_add_test_subdirectory(test)
+
 ryppl_export(
   DEPENDS
     BoostConfig

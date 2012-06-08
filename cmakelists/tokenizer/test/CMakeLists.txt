@@ -1,14 +1,20 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+include(Ryppl)
+include(RypplTestSuite)
 
-boost_add_multiple_tests(
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostTest)
+
+ryppl_test_suite(
   RUN
-    examples
-    simple_example_1
-    simple_example_2
-    simple_example_3
-    simple_example_4
-    simple_example_5
-  LINK_BOOST_LIBRARIES
-    test_exec_monitor
+    examples.cpp
+    simple_example_1.cpp
+    simple_example_2.cpp
+    simple_example_3.cpp
+    simple_example_4.cpp
+    simple_example_5.cpp
+  LINK_LIBRARIES
+    boost_test_exec_monitor
+  NO_SINGLE_TARGET
   )

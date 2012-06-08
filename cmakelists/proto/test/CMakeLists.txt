@@ -6,6 +6,7 @@ include(RypplTestSuite)
 
 ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostProto)
 
 add_definitions(-DBOOST_PROTO_DONT_USE_PREPROCESSED_FILES)
 

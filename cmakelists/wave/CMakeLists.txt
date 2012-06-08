@@ -8,6 +8,8 @@ include(Ryppl)
 
 ryppl_find_and_use_package(BoostConfig)
 ryppl_find_and_use_package(BoostThread)
+ryppl_find_and_use_package(BoostSpirit)
+ryppl_find_and_use_package(BoostSpiritClassic)
 
 include_directories(
   include

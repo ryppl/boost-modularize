@@ -1,25 +1,39 @@
 # Distributed under the Boost Software License, Version 1.0.
 # See http://www.boost.org/LICENSE_1_0.txt
+include(Ryppl)
+include(RypplTestSuite)
+
+ryppl_find_and_use_package(BoostConfig)
+ryppl_find_and_use_package(BoostTest)
+ryppl_find_and_use_package(BoostVariant)
 
 if(MSVC)
-  # <asynch-exceptions>on
-endif(MSVC)
+  add_definitions(
+    /EHa    # <toolset>msvc:<asynch-exceptions>on
+    ) 
+endif()
 
-boost_add_test(variant_test1 RUN test1.cpp class_a.cpp)
+ryppl_test_suite(
+ RUN 
+  test1.cpp 
+  test4.cpp
+ ADDITIONAL_SOURCES
+  class_a.cpp
+ NO_SINGLE_TARGET 
+ )
 
-boost_add_test(variant_test4 RUN test4.cpp class_a.cpp)
-
-boost_add_multiple_tests(
+ryppl_test_suite(
   RUN
-    test2
-    test3
-    test5
-    test6
-    test7
-    test8
-    recursive_variant_test
-    variant_reference_test
-    variant_comparison_test
-    variant_visit_test
+    test2.cpp
+    test3.cpp
+    test5.cpp
+    test6.cpp
+    test7.cpp
+    test8.cpp
+    recursive_variant_test.cpp
+    variant_reference_test.cpp
+    variant_comparison_test.cpp
+    variant_visit_test.cpp
+  NO_SINGLE_TARGET
   )
 
