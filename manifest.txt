@@ -26,6 +26,11 @@ libs/algorithm/:			.
 boost/any.hpp:				include/boost/any.hpp
 libs/any/:				.
 
+[libs/atomic]
+boost/atomic.hpp:			include/boost/atomic.hpp
+boost/atomic/:				include/boost/atomic/
+libs/atomic/:				.
+
 [libs/array]
 boost/array.hpp:			include/boost/array.hpp
 libs/array/:				.
@@ -165,7 +170,6 @@ boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
 libs/dynamic_bitset/:			.
 
 [libs/exception]
-boost/exception.hpp:			include/boost/exception.hpp
 boost/exception_ptr.hpp:		include/boost/exception_ptr.hpp
 boost/throw_exception.hpp:		include/boost/throw_exception.hpp
 boost/exception/:			include/boost/exception/
@@ -464,6 +468,10 @@ libs/locale/:				.
 boost/local_function.hpp:		include/boost/local_function.hpp
 boost/local_function/:			include/boost/local_function/
 libs/local_function/:			.
+
+[libs/lockfree]
+boost/lockfree/:			include/boost/lockfree/
+libs/lockfree/:				.
 
 [libs/logic]
 boost/logic/:				include/boost/logic/
