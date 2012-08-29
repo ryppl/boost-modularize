@@ -202,7 +202,6 @@ boost/function/:			include/boost/function/
 libs/function/:				.
 
 [libs/functional]
-boost/functional/detail/:		include/boost/functional/detail/
 boost/functional/overloaded_function/:	include/boost/functional/overloaded_function/
 boost/functional/factory.hpp:		include/boost/functional/factory.hpp
 boost/functional/forward_adapter.hpp:	include/boost/functional/forward_adapter.hpp
