@@ -76,23 +76,21 @@ set(ASM_CONTEXT_SOURCES
 
 if(WIN32)
   set(CONTEXT_SOURCES
-    src/stack_allocator_windows.cpp
-    src/stack_utils_windows.cpp
     src/seh.cpp
+    src/stack_allocator_windows.cpp
     )
 else()
   set(CONTEXT_SOURCES
     src/stack_allocator_posix.cpp
-    src/stack_utils_posix.cpp
     )
 endif()
 
 include_directories(include)
 
 add_library(boost_context
+  src/fcontext.cpp
   ${ASM_CONTEXT_SOURCES}
   ${CONTEXT_SOURCES}
-  src/fcontext.cpp
   )
 
 # add_subdirectory(test)

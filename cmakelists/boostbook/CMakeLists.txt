@@ -19,9 +19,10 @@ set(BOOSTBOOK_XSL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/xsl")
 
 # Find the DocBook DTD (version 4.2)
 find_path(DOCBOOK_DTD_DIR docbookx.dtd PATHS
-  "/usr/share/xml/docbook/schema/dtd/4.2"
-  "/usr/share/sgml/docbook/xml-dtd-4.2"
   "/opt/local/share/xml/docbook/4.2"
+  "/usr/share/sgml/docbook/xml-dtd-4.2"
+  "/usr/share/xml/docbook/schema/dtd/4.2"
+  "/usr/share/xml/docbook/xml-dtd-4.2"
   )
 if(NOT DOCBOOK_DTD_DIR)
   message(WARNING "could not find DocBook DTD!")
@@ -29,9 +30,10 @@ endif(NOT DOCBOOK_DTD_DIR)
 
 # Find the DocBook XSL stylesheets
 find_path(DOCBOOK_XSL_DIR html/html.xsl PATHS
-  "/usr/share/xml/docbook/stylesheet/nwalsh"
-  "/usr/share/sgml/docbook/xsl-stylesheets"
   "/opt/local/share/xsl/docbook-xsl"
+  "/usr/share/sgml/docbook/xsl-stylesheets"
+  "/usr/share/xml/docbook/*"
+  "/usr/share/xml/docbook/stylesheet/nwalsh"
   )
 if(NOT DOCBOOK_XSL_DIR)
   message(WARNING "could not find DocBook XSL stylesheets!")
