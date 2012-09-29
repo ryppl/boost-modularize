@@ -2,7 +2,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 
 cmake_minimum_required(VERSION 2.8.8)
-project(BoostIOStreams CXX)
+project(BoostIOStreams C CXX)
 
 include(Ryppl)
 
