@@ -71,17 +71,20 @@ set_property(CACHE BOOST_CONTEXT_BINARY_FORMAT
 
 # TODO:
 set(ASM_CONTEXT_SOURCES
-  src/asm/fcontext_i386_sysv_elf_gas.S
+  src/asm/make_x86_64_sysv_elf_gas.S
+  src/asm/jump_x86_64_sysv_elf_gas.S
   )
 
 if(WIN32)
   set(CONTEXT_SOURCES
     src/seh.cpp
-    src/stack_allocator_windows.cpp
+    src/guarded_stack_allocator_windows.cpp
+    src/utils_windows.cpp
     )
 else()
   set(CONTEXT_SOURCES
-    src/stack_allocator_posix.cpp
+    src/guarded_stack_allocator_posix.cpp
+    src/utils_posix.cpp
     )
 endif()
 
