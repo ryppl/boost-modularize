@@ -530,6 +530,7 @@ libs/numeric/interval/:			.
 
 [libs/odeint]
 boost/numeric/odeint/:			include/boost/numeric/odeint/
+boost/numeric/odeint.hpp:		include/boost/numeric/odeint.hpp
 libs/numeric/odeint/:			.
 
 [libs/ublas]
