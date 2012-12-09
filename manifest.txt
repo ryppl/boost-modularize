@@ -514,6 +514,10 @@ boost/multi_index_container_fwd.hpp:	include/boost/multi_index_container_fwd.hpp
 boost/multi_index/:			include/boost/multi_index/
 libs/multi_index/:			.
 
+[libs/multiprecision]
+boost/multiprecision/:			include/boost/multiprecision/
+libs/multiprecision/:			.
+
 [libs/numeric_conversion]
 boost/numeric/conversion/:		include/boost/numeric/conversion/
 libs/numeric/conversion/:		.
