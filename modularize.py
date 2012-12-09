@@ -34,6 +34,11 @@ def popen(*args, **kwargs):
     return subprocess.Popen(args, stdout=subprocess.PIPE, shell=is_win32,
         **kwargs).communicate()[0]
 
+def repo_name(section):
+    if section.endswith("numeric/conversion"):
+        return "numeric_conversion"
+    return os.path.basename(section)
+
 # Look up the specified file in the src2mod map
 # and return the module to which it belongs.
 # Throws if it can't find a module which claims
@@ -106,11 +111,11 @@ class Module:
         self.src_dir = src_dir
         self.dstroot = dst_dir
         self.dst_dir = os.path.normpath(os.path.join(dst_dir, section))
-        self.new_dir = os.path.join('cmakelists', os.path.basename(section))
+        self.new_dir = os.path.join('cmakelists', repo_name(section))
 
     # uses git
     def update(self):
-        base = os.path.basename(self.dst_dir)
+        base = repo_name(self.dst_dir)
         if os.path.isdir(self.dst_dir):
             if '  master' in popen('git', 'branch', cwd=self.dst_dir):
                 run('git', 'checkout', 'master', cwd=self.dst_dir)

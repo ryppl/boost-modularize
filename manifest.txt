@@ -519,21 +519,21 @@ libs/multi_index/:			.
 boost/multiprecision/:			include/boost/multiprecision/
 libs/multiprecision/:			.
 
-[libs/numeric_conversion]
+[libs/numeric/conversion]
 boost/numeric/conversion/:		include/boost/numeric/conversion/
 libs/numeric/conversion/:		.
 
-[libs/numeric_interval]
+[libs/numeric/interval]
 boost/numeric/interval/:		include/boost/numeric/interval/
 boost/numeric/interval.hpp:		include/boost/numeric/interval.hpp
 libs/numeric/interval/:			.
 
-[libs/odeint]
+[libs/numeric/odeint]
 boost/numeric/odeint/:			include/boost/numeric/odeint/
 boost/numeric/odeint.hpp:		include/boost/numeric/odeint.hpp
 libs/numeric/odeint/:			.
 
-[libs/ublas]
+[libs/numeric/ublas]
 boost/numeric/ublas/:			include/boost/numeric/ublas/
 libs/numeric/ublas/:			.
 
