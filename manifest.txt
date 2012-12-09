@@ -13,6 +13,7 @@ tools/index.html:			<ignore>
 tools/make-cputime-page.pl:		<ignore>
 tools/regression/:			<ignore>
 tools/release/:				<ignore>
+tools/server/:				<ignore>
 
 [libs/accumulators]
 boost/accumulators/:			include/boost/accumulators/
