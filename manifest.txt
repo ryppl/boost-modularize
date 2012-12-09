@@ -389,7 +389,7 @@ boost/graph/undirected_graph.hpp:		include/boost/graph/undirected_graph.hpp
 boost/graph/use_mpi.hpp:			include/boost/graph/use_mpi.hpp
 boost/graph/vector_as_graph.hpp:		include/boost/graph/vector_as_graph.hpp
 boost/graph/vertex_and_edge_range.hpp:		include/boost/graph/vertex_and_edge_range.hpp
-boost/graph/vf2_sub_graph_iso.hpp		include/boost/graph/vf2_sub_graph_iso.hpp
+boost/graph/vf2_sub_graph_iso.hpp:		include/boost/graph/vf2_sub_graph_iso.hpp
 boost/graph/visitors.hpp:			include/boost/graph/visitors.hpp
 boost/graph/wavefront.hpp:			include/boost/graph/wavefront.hpp
 boost/graph/write_dimacs.hpp:			include/boost/graph/write_dimacs.hpp
