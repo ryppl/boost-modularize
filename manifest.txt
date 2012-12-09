@@ -148,6 +148,10 @@ boost/version.hpp:			include/boost/version.hpp
 boost/visit_each.hpp:			include/boost/visit_each.hpp
 libs/detail/test/:			test/
 
+[libs/coroutine]
+boost/coroutine/:			include/boost/coroutine/
+libs/coroutine/:			.
+
 [libs/crc]
 boost/crc.hpp:				include/boost/crc.hpp
 libs/crc/:				.
