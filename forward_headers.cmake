@@ -19,7 +19,7 @@ if(CMAKE_HOST_WIN32)
     set(MKLINK_WORKING FALSE)
     message(STATUS "Symlinks are NOT supported.")
   endif()
-endif(CMAKE_HOST_WIN32)
+endif()
 
 # Make a header file available from another path.
 #
@@ -37,13 +37,16 @@ function(forward_header file target)
   else()
     file(WRITE "${target}" "#include \"${file}\"\n")
   endif()
-endfunction(forward_header)
+endfunction()
 
 
 file(REMOVE_RECURSE boost)
-file(GLOB_RECURSE headers "libs/*/include/boost/*.?pp")
+file(GLOB_RECURSE headers
+  "libs/*/include/boost/*.?pp"
+  "libs/*/*/include/boost/*.?pp"
+  )
 
 foreach(file ${headers})
   string(REGEX REPLACE ".*//include//boost//" "" relative "${file}")
   forward_header("${file}" "${CMAKE_CURRENT_LIST_DIR}/boost/${relative}")
-endforeach(file)
+endforeach()
