@@ -17,13 +17,6 @@ repo_rw = 'git@207.97.227.239:boost-lib/%s.git'
 # These are controlled by command-line parameters
 args = []
 verbose = False
-#debug = False
-#src_repo_dir = None
-#dst_repo_dir = None
-#dst_module_dir = None
-#regenerate_cache = False
-#start_at = None
-#stop_at = None
 
 def run(*args, **kwargs):
     if verbose: print "[INFO] ", string.join(args, ' ')
@@ -38,6 +31,13 @@ def repo_name(section):
     if section.endswith("numeric/conversion"):
         return "numeric_conversion"
     return os.path.basename(section)
+
+def change_branch(name, cwd):
+    branches = popen('git', 'branch', cwd=cwd)
+    if not ('* ' + name) in branches:
+        if not ('  ' + name) in branches:
+            run('git', 'branch', name, cwd=cwd)
+        run('git', 'checkout', name, cwd=cwd)
 
 # Look up the specified file in the src2mod map
 # and return the module to which it belongs.
@@ -54,53 +54,13 @@ def file2mod(include, src2mod):
     return None
 
 class Manifest(ConfigParser.ConfigParser):
-
-    def __init__(self, sections, start_at, stop_at):
+    def __init__(self, branch):
         ConfigParser.ConfigParser.__init__(self)
         self.optionxform = str # preserve case in key names
-        self.read('manifest.txt')
-
-        # Sort the section names so we can iterate them in order.
-        # We do this so that if anything fails mid-way, the user
-        # can specify the --start-at option to pick up where the
-        # script last left off.
-        if sections is not None:
-            for section in sections:
-                if section not in self.sections():
-                    print >>sys.stderr, '%s is not a section in manifest.txt' % section
-                    sys.exit(2)
-        else:
-            sections = [section for section in self.sections()
-                if section != '<ignore>']
-        sections.sort()
-
-        # validate start_at and stop_at params
-        if start_at is not None and start_at not in sections:
-            print >>sys.stderr, start_at, 'is not a valid section'
-            sys.exit(2)
-        if stop_at is not None and stop_at not in sections:
-            print >>sys.stderr, stop_at, 'is not a valid section'
-            sys.exit(2)
-
-        # If the user has asked to restart at a given section, skip all until
-        # we get to that one.
-        if start_at is not None and stop_at is not None:
-            self.modules = [section for section in sections
-                if section >= start_at and section <= stop_at]
-        elif start_at:
-            self.modules = [section for section in sections
-                if section >= start_at]
-        elif stop_at:
-            self.modules = [section for section in sections
-                if section <= stop_at]
-        else:
-            self.modules = sections
-
-    # validate the manifest against the live repo. We had
-    # better know how to relocate /every/ file before we do anything
-    # else. This will abort the program if validation fails.
-    def validate(self):
-        pass
+        self.read(branch + '.txt')
+        self.modules = [section for section in self.sections() if section != '<ignore>']
+        self.modules.sort()
+        self.branch = branch
 
 class Module:
 
@@ -113,11 +73,10 @@ class Module:
         self.dst_dir = os.path.normpath(os.path.join(dst_dir, section))
 
     # uses git
-    def update(self):
+    def update(self, branch):
         base = repo_name(self.dst_dir)
         if os.path.isdir(self.dst_dir):
-            if '  master' in popen('git', 'branch', cwd=self.dst_dir):
-                run('git', 'checkout', 'master', cwd=self.dst_dir)
+            change_branch(branch, self.dst_dir)
             run('git', 'rm', '--quiet', '--ignore-unmatch', '-r', '.', cwd=self.dst_dir)
             run('git', 'remote', 'set-url', 'origin', repo_rw % base, cwd=self.dst_dir)
         else:
@@ -126,6 +85,8 @@ class Module:
             run('git', 'remote', 'add', 'origin', repo_rw % base, cwd=self.dst_dir)
             run('git', 'config', 'branch.master.remote', 'origin', cwd=self.dst_dir)
             run('git', 'config', 'branch.master.merge', 'refs/heads/master', cwd=self.dst_dir)
+            run('git', 'config', 'branch.develop.remote', 'origin', cwd=self.dst_dir)
+            run('git', 'config', 'branch.develop.merge', 'refs/heads/develop', cwd=self.dst_dir)
             run('git', 'submodule', 'add', repo_ro % base, self.section, cwd=self.dstroot)
             run('git', 'status', cwd=self.dstroot)
 
@@ -310,29 +271,11 @@ def validate_manifest(manifest, src_dir):
         print '[ERROR] Unaccounded for files. Please fix the manifest and re-run.'
         sys.exit(1)
 
-def setup_metarepo(dst_dir):
-    if os.path.exists(dst_dir):
-        run('git', 'reset', '--hard', cwd=dst_dir)
-        run('git', 'pull', repo_rw % 'boost', 'master', cwd=dst_dir)
-    else:
-        os.makedirs(dst_dir)
-        run('git', 'clone', repo_rw % 'boost', dst_dir)
-
-    run('git', 'submodule', 'foreach', 'git', 'checkout', 'master', '--force', cwd=dst_dir)
-    run('git', 'submodule', 'foreach', 'git', 'pull', cwd=dst_dir)
-    run('git', 'submodule', 'update', '--init', cwd=dst_dir)
-
-
 def update_modules(src_dir, dst_dir, manifest):
 
     # This is a map of header files and directories to target modules.
     src2mod = dict([(src, mod) for mod in manifest.sections() if not mod == '<ignore>'
         for src, dst in manifest.items(mod) if src.startswith('boost/')])
-
-    # validate the manifest against the live repo. We had
-    # better know how to relocate /every/ file before we do anything
-    # else. This will abort the program if validation fails.
-    validate_manifest(manifest, src_dir)
 
     # Iterate over the sections, which represent submodules. For each
     # submodule, make sure we're on the branch 'master', remove all the
@@ -344,7 +287,7 @@ def update_modules(src_dir, dst_dir, manifest):
         module = Module(section, src_dir, dst_dir)
 
         # TODO: skip in offline mode
-        module.update()
+        module.update(manifest.branch)
 
         # Make sure we've really removed everything
         module.clean()
@@ -391,9 +334,52 @@ def update_modules(src_dir, dst_dir, manifest):
     # Add all the remaining files
     run('git', 'add', '.', cwd=dst_dir)
 
-def push_modules(dst_dir):
+
+def main():
+    parser = ArgumentParser(description='Modularize Boost.')
+    parser.add_argument('-v', '--verbose', action='store_true',
+        help='verbose output')
+    parser.add_argument('--clean', action='store_true',
+        help='clean dst directory before modularization')
+    parser.add_argument('--src', metavar='DIR', required=True,
+        help='local path to the unmodularized boost')
+    parser.add_argument('--dst', metavar='DIR', required=True,
+        help='local path to the modularized boost')
+    parser.add_argument('--branch', metavar='BRANCH', required=True,
+        help='branch to modularize (develop or master)')
+
+    args = parser.parse_args()
+    verbose = args.verbose
+
+    if args.clean:
+        shutil.rmtree(args.dst)
+
+    # trunk -> develop, release -> master
+    if args.branch == 'develop':
+        run('git', 'checkout', 'trunk', cwd=args.src)
+    else: 
+        run('git', 'checkout', 'release', cwd=args.src)
+
+    manifest = Manifest(args.branch)
+
+    # validate the manifest against the live repo. We had
+    # better know how to relocate /every/ file before we do anything
+    # else. This will abort the program if validation fails.
+    validate_manifest(manifest, args.src)
+
+    if os.path.exists(args.dst):
+        run('git', 'reset', '--hard', cwd=args.dst)
+        #run('git', 'fetch', '--all', cwd=args.dst)
+    else:
+        os.makedirs(args.dst)
+        run('git', 'clone', '--recursive', repo_rw % 'boost', cwd=args.dst)
+
+    change_branch(args.branch, cwd=args.dst)
+    update_modules(args.src, args.dst, manifest)
+
     # Is there something to push?
-    if "" == popen('git', 'status', '-s', cwd=dst_dir):
+    if "" == popen('git', 'status', '-s', cwd=args.dst):
+        print 'Nothing to push'
         return
 
     # We now want to 'git add' all the modified submodules to the supermodule,
@@ -401,48 +387,16 @@ def push_modules(dst_dir):
     print 'Pushing all modified submodues...'
 
     # Push the changes in each submodule to the remote repo
-    run('git', 'submodule', 'foreach', 'git', 'push', 'origin', 'master',
-        cwd=dst_dir)
+    run('git', 'submodule', 'foreach', 'git', 'push', 'origin', args.branch, cwd=args.dst)
 
     print 'Committing the boost supermodule...'
-    run('git', 'commit', '-am' 'latest from svn', cwd=dst_dir)
+    run('git', 'commit', '-am' 'latest from svn', cwd=args.dst)
 
     print 'Pushing the boost supermodule...'
-    run('git', 'push', repo_rw % 'boost', 'master', cwd=dst_dir)
-
-if __name__ == "__main__":
-    parser = ArgumentParser(description='Modularize Boost.')
-    parser.add_argument('-v', '--verbose', action='store_true',
-        help='verbose output')
-    parser.add_argument('--src', metavar='DIR', required=True,
-        help='local path to the unmodularized boost')
-    parser.add_argument('--dst', metavar='DIR', required=True,
-        help='local path to the modularized boost')
-    parser.add_argument('--start-at', metavar='SECTION',
-        help='section in the manifest at which to start the copy')
-    parser.add_argument('--stop-at',  metavar='SECTION',
-        help='section in the manifest at which to stop the copy')
-    parser.add_argument('--sections',
-        help='comma-separated list of section in the manifest to copy')
-    parser.add_argument('command', nargs='*', default=['update'])
-
-    args = parser.parse_args()
-    verbose = args.verbose
-
-    if 'cleansetup' in args.command:
-        shutil.rmtree(args.dst)
-        setup_metarepo(args.dst)
-
-    if 'setup' in args.command:
-        setup_metarepo(args.dst)
-
-    if 'update' in args.command:
-        manifest = Manifest(
-            args.sections and args.sections.split(','), args.start_at, args.stop_at)
-        manifest.validate()
-        update_modules(args.src, args.dst, manifest)
-
-    if 'push' in args.command:
-        push_modules(args.dst)
+    run('git', 'push', repo_rw % 'boost', args.branch, cwd=args.dst)
 
     print 'Done'
+
+if __name__ == "__main__":
+    main()
+

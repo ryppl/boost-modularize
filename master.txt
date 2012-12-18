@@ -1,0 +1,1122 @@
+[<ignore>]
+libs/compose/index.htm:			<ignore>
+libs/compose/index.html:		<ignore>
+libs/index.html:			<ignore>
+libs/libraries.htm:			<ignore>
+libs/maintainers.txt:			<ignore>
+libs/mem_fn/index.html:			<ignore>
+libs/numeric/sublibs:			<ignore>
+libs/numeric/index.html:		<ignore>
+libs/platform_maintainers.txt:		<ignore>
+tools/Jamfile.v2:			<ignore>
+tools/index.html:			<ignore>
+tools/make-cputime-page.pl:		<ignore>
+tools/regression/:			<ignore>
+tools/release/:				<ignore>
+
+[libs/accumulators]
+boost/accumulators/:			include/boost/accumulators/
+libs/accumulators/:			.
+
+[libs/algorithm]
+boost/algorithm/:			include/boost/algorithm/
+libs/algorithm/:			.
+
+[libs/any]
+boost/any.hpp:				include/boost/any.hpp
+libs/any/:				.
+
+[libs/atomic]
+
+[libs/array]
+boost/array.hpp:			include/boost/array.hpp
+libs/array/:				.
+
+[libs/asio]
+boost/asio.hpp:				include/boost/asio.hpp
+boost/asio/:				include/boost/asio/
+libs/asio/:				.
+
+[libs/assign]
+boost/assign.hpp:			include/boost/assign.hpp
+boost/assign/:				include/boost/assign/
+libs/assign/:				.
+
+[libs/bimap]
+boost/bimap.hpp:			include/boost/bimap.hpp
+boost/bimap/:				include/boost/bimap/
+libs/bimap/:				.
+
+[libs/bind]
+boost/is_placeholder.hpp:		include/boost/is_placeholder.hpp
+boost/bind.hpp:				include/boost/bind.hpp
+boost/bind/:				include/boost/bind/
+boost/mem_fn.hpp:			include/boost/mem_fn.hpp
+libs/bind/:				.
+
+[libs/chrono]
+boost/chrono.hpp:			include/boost/chrono.hpp
+boost/chrono/:				include/boost/chrono/
+libs/chrono/:				.
+
+[libs/circular_buffer]
+boost/circular_buffer.hpp:		include/boost/circular_buffer.hpp
+boost/circular_buffer/:			include/boost/circular_buffer/
+boost/circular_buffer_fwd.hpp:		include/boost/circular_buffer_fwd.hpp
+libs/circular_buffer/:			.
+
+[libs/compatibility]
+boost/compatibility/:			include/boost/compatibility/
+libs/compatibility/:			.
+
+[libs/concept_check]
+boost/concept_archetype.hpp:		include/boost/concept_archetype.hpp
+boost/concept_check.hpp:		include/boost/concept_check.hpp
+boost/concept/:				include/boost/concept/
+boost/concept_check/:			include/boost/concept_check/
+libs/concept_check/:			.
+
+[libs/config]
+boost/config.hpp:			include/boost/config.hpp
+boost/config/:				include/boost/config/
+libs/config/:				.
+
+[libs/container]
+boost/container/:			include/boost/container/
+libs/container/:			.
+
+[libs/context]
+boost/context/:				include/boost/context/
+libs/context/:				.
+
+[libs/conversion]
+boost/implicit_cast.hpp:		include/boost/implicit_cast.hpp
+boost/cast.hpp:				include/boost/cast.hpp
+boost/lexical_cast.hpp:			include/boost/lexical_cast.hpp
+boost/detail/lcast_precision.hpp:	include/boost/detail/lcast_precision.hpp
+libs/conversion/:			.
+
+[libs/core]
+boost/detail/win/:			include/boost/detail/win/
+boost/detail/allocator_utilities.hpp:	include/boost/detail/allocator_utilities.hpp
+boost/detail/binary_search.hpp:		include/boost/detail/binary_search.hpp
+boost/detail/bitmask.hpp:		include/boost/detail/bitmask.hpp
+boost/detail/catch_exceptions.hpp:	include/boost/detail/catch_exceptions.hpp
+boost/detail/container_fwd.hpp:		include/boost/detail/container_fwd.hpp
+boost/detail/endian.hpp:		include/boost/detail/endian.hpp
+boost/detail/fenv.hpp:			include/boost/detail/fenv.hpp
+boost/detail/has_default_constructor.hpp:	include/boost/detail/has_default_constructor.hpp
+boost/detail/identifier.hpp:		include/boost/detail/identifier.hpp
+boost/detail/indirect_traits.hpp:	include/boost/detail/indirect_traits.hpp
+boost/detail/interlocked.hpp:		include/boost/detail/interlocked.hpp
+boost/detail/is_function_ref_tester.hpp:include/boost/detail/is_function_ref_tester.hpp
+boost/detail/is_incrementable.hpp:	include/boost/detail/is_incrementable.hpp
+boost/detail/is_sorted.hpp:		include/boost/detail/is_sorted.hpp
+boost/detail/is_xxx.hpp:		include/boost/detail/is_xxx.hpp
+boost/detail/iterator.hpp:		include/boost/detail/iterator.hpp
+boost/detail/lightweight_main.hpp:	include/boost/detail/lightweight_main.hpp
+boost/detail/lightweight_mutex.hpp:	include/boost/detail/lightweight_mutex.hpp
+boost/detail/lightweight_test.hpp:	include/boost/detail/lightweight_test.hpp
+boost/detail/lightweight_thread.hpp:	include/boost/detail/lightweight_thread.hpp
+boost/detail/limits.hpp:		include/boost/detail/limits.hpp
+boost/detail/named_template_params.hpp:	include/boost/detail/named_template_params.hpp
+boost/detail/no_exceptions_support.hpp:	include/boost/detail/no_exceptions_support.hpp
+boost/detail/none_t.hpp:		include/boost/detail/none_t.hpp
+boost/detail/numeric_traits.hpp:	include/boost/detail/numeric_traits.hpp
+boost/detail/quick_allocator.hpp:	include/boost/detail/quick_allocator.hpp
+boost/detail/reference_content.hpp:	include/boost/detail/reference_content.hpp
+boost/detail/scoped_enum_emulation.hpp:	include/boost/detail/scoped_enum_emulation.hpp
+boost/detail/select_type.hpp:		include/boost/detail/select_type.hpp
+boost/detail/templated_streams.hpp:	include/boost/detail/templated_streams.hpp
+boost/detail/utf8_codecvt_facet.hpp:	include/boost/detail/utf8_codecvt_facet.hpp
+boost/detail/utf8_codecvt_facet.ipp:	include/boost/detail/utf8_codecvt_facet.ipp
+boost/detail/workaround.hpp:		include/boost/detail/workaround.hpp
+boost/pending/cstddef.hpp:		include/boost/pending/cstddef.hpp
+boost/pending/integer_log2.hpp:		include/boost/pending/integer_log2.hpp
+boost/blank.hpp:			include/boost/blank.hpp
+boost/blank_fwd.hpp:			include/boost/blank_fwd.hpp
+boost/cstdlib.hpp:			include/boost/cstdlib.hpp
+boost/indirect_reference.hpp:		include/boost/indirect_reference.hpp
+boost/limits.hpp:			include/boost/limits.hpp
+boost/non_type.hpp:			include/boost/non_type.hpp
+boost/type.hpp:				include/boost/type.hpp
+boost/version.hpp:			include/boost/version.hpp
+boost/visit_each.hpp:			include/boost/visit_each.hpp
+libs/detail/test/:			test/
+
+[libs/coroutine]
+boost/coroutine/:			include/boost/coroutine/
+libs/coroutine/:			.
+
+[libs/crc]
+boost/crc.hpp:				include/boost/crc.hpp
+libs/crc/:				.
+
+[libs/date_time]
+boost/date_time.hpp:			include/boost/date_time.hpp
+boost/date_time/:			include/boost/date_time/
+libs/date_time/:			.
+
+[libs/disjoint_sets]
+boost/pending/disjoint_sets.hpp:	include/boost/pending/disjoint_sets.hpp
+boost/pending/detail/disjoint_sets.hpp:	include/boost/pending/detail/disjoint_sets.hpp
+libs/disjoint_sets/:			.
+
+[libs/dynamic_bitset]
+boost/dynamic_bitset.hpp:		include/boost/dynamic_bitset.hpp
+boost/dynamic_bitset/:			include/boost/dynamic_bitset/
+boost/dynamic_bitset_fwd.hpp:		include/boost/dynamic_bitset_fwd.hpp
+boost/detail/dynamic_bitset.hpp:	include/boost/detail/dynamic_bitset.hpp
+boost/pending/lowest_bit.hpp:		include/boost/pending/lowest_bit.hpp
+libs/dynamic_bitset/:			.
+
+[libs/exception]
+boost/exception_ptr.hpp:		include/boost/exception_ptr.hpp
+boost/throw_exception.hpp:		include/boost/throw_exception.hpp
+boost/exception/:			include/boost/exception/
+libs/exception/:			.
+
+[libs/filesystem]
+boost/filesystem.hpp:			include/boost/filesystem.hpp
+boost/filesystem/:			include/boost/filesystem/
+libs/filesystem/:			.
+
+[libs/flyweight]
+boost/flyweight.hpp:			include/boost/flyweight.hpp
+boost/flyweight/:			include/boost/flyweight
+libs/flyweight/:			.
+
+[libs/foreach]
+boost/foreach.hpp:			include/boost/foreach.hpp
+boost/foreach_fwd.hpp:			include/boost/foreach_fwd.hpp
+libs/foreach/:				.
+
+[libs/format]
+boost/format.hpp:			include/boost/format.hpp
+boost/format/:				include/boost/format/
+libs/format/:				.
+
+[libs/function]
+boost/function.hpp:			include/boost/function.hpp
+boost/function_equal.hpp:		include/boost/function_equal.hpp
+boost/function/:			include/boost/function/
+libs/function/:				.
+
+[libs/functional]
+boost/functional/overloaded_function/:	include/boost/functional/overloaded_function/
+boost/functional/factory.hpp:		include/boost/functional/factory.hpp
+boost/functional/forward_adapter.hpp:	include/boost/functional/forward_adapter.hpp
+boost/functional/lightweight_forward_adapter.hpp:	include/boost/functional/lightweight_forward_adapter.hpp
+boost/functional/overloaded_function.hpp:		include/boost/functional/overloaded_function.hpp
+boost/functional/value_factory.hpp:	include/boost/functional/value_factory.hpp
+boost/functional.hpp:			include/boost/functional.hpp
+libs/functional/factory/:		factory/
+libs/functional/forward/:		forward/
+libs/functional/overloaded_function/:	overloaded_function/
+libs/functional/test/:			test/
+libs/functional/binders.html:		binders.html
+libs/functional/function_traits.html:	function_traits.html
+libs/functional/index.html:		index.html
+libs/functional/mem_fun.html:		mem_fun.html
+libs/functional/negators.html:		negators.html
+libs/functional/ptr_fun.html:		ptr_fun.html
+libs/functional/sublibs:		sublibs
+
+[libs/functional_hash]
+boost/functional/hash/:			include/boost/functional/hash/
+boost/functional/hash.hpp:		include/boost/functional/hash.hpp
+boost/functional/hash_fwd.hpp:		include/boost/functional/hash_fwd.hpp
+libs/functional/hash/:			.
+
+[libs/function_types]
+boost/function_types/:			include/boost/function_types/
+libs/function_types/:			.
+
+[libs/fusion]
+boost/fusion/:				include/boost/fusion/
+libs/fusion/:				.
+
+[libs/geometry]
+boost/geometry.hpp: 			include/boost/geometry.hpp
+boost/geometry/:			include/boost/geometry/
+libs/geometry/:				.
+
+[libs/gil]
+boost/gil/:				include/boost/gil/
+libs/gil/:				.
+
+[libs/graph]
+boost/detail/algorithm.hpp:			include/boost/detail/algorithm.hpp
+boost/graph/detail/:				include/boost/graph/detail/
+boost/graph/planar_detail/:			include/boost/graph/planar_detail/
+boost/graph/property_maps/:			include/boost/graph/property_maps/
+boost/graph/adjacency_iterator.hpp:		include/boost/graph/adjacency_iterator.hpp
+boost/graph/adjacency_list.hpp:			include/boost/graph/adjacency_list.hpp
+boost/graph/adjacency_list_io.hpp:		include/boost/graph/adjacency_list_io.hpp
+boost/graph/adjacency_matrix.hpp:		include/boost/graph/adjacency_matrix.hpp
+boost/graph/adj_list_serialize.hpp:		include/boost/graph/adj_list_serialize.hpp
+boost/graph/astar_search.hpp:			include/boost/graph/astar_search.hpp
+boost/graph/bandwidth.hpp:			include/boost/graph/bandwidth.hpp
+boost/graph/bc_clustering.hpp:			include/boost/graph/bc_clustering.hpp
+boost/graph/bellman_ford_shortest_paths.hpp:	include/boost/graph/bellman_ford_shortest_paths.hpp
+boost/graph/betweenness_centrality.hpp:		include/boost/graph/betweenness_centrality.hpp
+boost/graph/biconnected_components.hpp:		include/boost/graph/biconnected_components.hpp
+boost/graph/bipartite.hpp:			include/boost/graph/bipartite.hpp
+boost/graph/boyer_myrvold_planar_test.hpp:	include/boost/graph/boyer_myrvold_planar_test.hpp
+boost/graph/boykov_kolmogorov_max_flow.hpp:	include/boost/graph/boykov_kolmogorov_max_flow.hpp
+boost/graph/breadth_first_search.hpp:		include/boost/graph/breadth_first_search.hpp
+boost/graph/bron_kerbosch_all_cliques.hpp:	include/boost/graph/bron_kerbosch_all_cliques.hpp
+boost/graph/buffer_concepts.hpp:		include/boost/graph/buffer_concepts.hpp
+boost/graph/chrobak_payne_drawing.hpp:		include/boost/graph/chrobak_payne_drawing.hpp
+boost/graph/circle_layout.hpp:			include/boost/graph/circle_layout.hpp
+boost/graph/closeness_centrality.hpp:		include/boost/graph/closeness_centrality.hpp
+boost/graph/clustering_coefficient.hpp:		include/boost/graph/clustering_coefficient.hpp
+boost/graph/compressed_sparse_row_graph.hpp:	include/boost/graph/compressed_sparse_row_graph.hpp
+boost/graph/connected_components.hpp:		include/boost/graph/connected_components.hpp
+boost/graph/copy.hpp:				include/boost/graph/copy.hpp
+boost/graph/core_numbers.hpp:			include/boost/graph/core_numbers.hpp
+boost/graph/create_condensation_graph.hpp:	include/boost/graph/create_condensation_graph.hpp
+boost/graph/cuthill_mckee_ordering.hpp:		include/boost/graph/cuthill_mckee_ordering.hpp
+boost/graph/dag_shortest_paths.hpp:		include/boost/graph/dag_shortest_paths.hpp
+boost/graph/degree_centrality.hpp:		include/boost/graph/degree_centrality.hpp
+boost/graph/depth_first_search.hpp:		include/boost/graph/depth_first_search.hpp
+boost/graph/dijkstra_shortest_paths.hpp:	include/boost/graph/dijkstra_shortest_paths.hpp
+boost/graph/dijkstra_shortest_paths_no_color_map.hpp:	include/boost/graph/dijkstra_shortest_paths_no_color_map.hpp
+boost/graph/dimacs.hpp:				include/boost/graph/dimacs.hpp
+boost/graph/directed_graph.hpp:			include/boost/graph/directed_graph.hpp
+boost/graph/dll_import_export.hpp:		include/boost/graph/dll_import_export.hpp
+boost/graph/dominator_tree.hpp:			include/boost/graph/dominator_tree.hpp
+boost/graph/eccentricity.hpp:			include/boost/graph/eccentricity.hpp
+boost/graph/edge_connectivity.hpp:		include/boost/graph/edge_connectivity.hpp
+boost/graph/edge_list.hpp:			include/boost/graph/edge_list.hpp
+boost/graph/edmonds_karp_max_flow.hpp:		include/boost/graph/edmonds_karp_max_flow.hpp
+boost/graph/edmunds_karp_max_flow.hpp:		include/boost/graph/edmunds_karp_max_flow.hpp
+boost/graph/erdos_renyi_generator.hpp:		include/boost/graph/erdos_renyi_generator.hpp
+boost/graph/exception.hpp:			include/boost/graph/exception.hpp
+boost/graph/exterior_property.hpp:		include/boost/graph/exterior_property.hpp
+boost/graph/filtered_graph.hpp:			include/boost/graph/filtered_graph.hpp
+boost/graph/floyd_warshall_shortest.hpp:	include/boost/graph/floyd_warshall_shortest.hpp
+boost/graph/fruchterman_reingold.hpp:		include/boost/graph/fruchterman_reingold.hpp
+boost/graph/geodesic_distance.hpp:		include/boost/graph/geodesic_distance.hpp
+boost/graph/graph_archetypes.hpp:		include/boost/graph/graph_archetypes.hpp
+boost/graph/graph_as_tree.hpp:			include/boost/graph/graph_as_tree.hpp
+boost/graph/graph_concepts.hpp:			include/boost/graph/graph_concepts.hpp
+boost/graph/graphml.hpp:			include/boost/graph/graphml.hpp
+boost/graph/graph_mutability_traits.hpp:	include/boost/graph/graph_mutability_traits.hpp
+boost/graph/graph_selectors.hpp:		include/boost/graph/graph_selectors.hpp
+boost/graph/graph_stats.hpp:			include/boost/graph/graph_stats.hpp
+boost/graph/graph_test.hpp:			include/boost/graph/graph_test.hpp
+boost/graph/graph_traits.hpp:			include/boost/graph/graph_traits.hpp
+boost/graph/graph_utility.hpp:			include/boost/graph/graph_utility.hpp
+boost/graph/graphviz.hpp:			include/boost/graph/graphviz.hpp
+boost/graph/grid_graph.hpp:			include/boost/graph/grid_graph.hpp
+boost/graph/gursoy_atun_layout.hpp:		include/boost/graph/gursoy_atun_layout.hpp
+boost/graph/howard_cycle_ratio.hpp:		include/boost/graph/howard_cycle_ratio.hpp
+boost/graph/incremental_components.hpp:		include/boost/graph/incremental_components.hpp
+boost/graph/is_kuratowski_subgraph.hpp:		include/boost/graph/is_kuratowski_subgraph.hpp
+boost/graph/isomorphism.hpp:			include/boost/graph/isomorphism.hpp
+boost/graph/is_straight_line_drawing.hpp:	include/boost/graph/is_straight_line_drawing.hpp
+boost/graph/iteration_macros.hpp:		include/boost/graph/iteration_macros.hpp
+boost/graph/iteration_macros_undef.hpp:		include/boost/graph/iteration_macros_undef.hpp
+boost/graph/johnson_all_pairs_shortest.hpp:	include/boost/graph/johnson_all_pairs_shortest.hpp
+boost/graph/kamada_kawai_spring_layout.hpp:	include/boost/graph/kamada_kawai_spring_layout.hpp
+boost/graph/king_ordering.hpp:			include/boost/graph/king_ordering.hpp
+boost/graph/kruskal_min_spanning_tree.hpp:	include/boost/graph/kruskal_min_spanning_tree.hpp
+boost/graph/labeled_graph.hpp:			include/boost/graph/labeled_graph.hpp
+boost/graph/leda_graph.hpp:			include/boost/graph/leda_graph.hpp
+boost/graph/lookup_edge.hpp:			include/boost/graph/lookup_edge.hpp
+boost/graph/loop_erased_random_walk.hpp:	include/boost/graph/loop_erased_random_walk.hpp
+boost/graph/make_biconnected_planar.hpp:	include/boost/graph/make_biconnected_planar.hpp
+boost/graph/make_connected.hpp:			include/boost/graph/make_connected.hpp
+boost/graph/make_maximal_planar.hpp:		include/boost/graph/make_maximal_planar.hpp
+boost/graph/matrix_as_graph.hpp:		include/boost/graph/matrix_as_graph.hpp
+boost/graph/max_cardinality_matching.hpp:	include/boost/graph/max_cardinality_matching.hpp
+boost/graph/mcgregor_common_subgraphs.hpp:	include/boost/graph/mcgregor_common_subgraphs.hpp
+boost/graph/mesh_graph_generator.hpp:		include/boost/graph/mesh_graph_generator.hpp
+boost/graph/metis.hpp:				include/boost/graph/metis.hpp
+boost/graph/metric_tsp_approx.hpp:		include/boost/graph/metric_tsp_approx.hpp
+boost/graph/minimum_degree_ordering.hpp:	include/boost/graph/minimum_degree_ordering.hpp
+boost/graph/named_function_params.hpp:		include/boost/graph/named_function_params.hpp
+boost/graph/named_graph.hpp:			include/boost/graph/named_graph.hpp
+boost/graph/neighbor_bfs.hpp:			include/boost/graph/neighbor_bfs.hpp
+boost/graph/numeric_values.hpp:			include/boost/graph/numeric_values.hpp
+boost/graph/one_bit_color_map.hpp:		include/boost/graph/one_bit_color_map.hpp
+boost/graph/overloading.hpp:			include/boost/graph/overloading.hpp
+boost/graph/page_rank.hpp:			include/boost/graph/page_rank.hpp
+boost/graph/planar_canonical_ordering.hpp:	include/boost/graph/planar_canonical_ordering.hpp
+boost/graph/planar_face_traversal.hpp:		include/boost/graph/planar_face_traversal.hpp
+boost/graph/plod_generator.hpp:			include/boost/graph/plod_generator.hpp
+boost/graph/point_traits.hpp:			include/boost/graph/point_traits.hpp
+boost/graph/prim_minimum_spanning_tree.hpp:	include/boost/graph/prim_minimum_spanning_tree.hpp
+boost/graph/profile.hpp:			include/boost/graph/profile.hpp
+boost/graph/properties.hpp:			include/boost/graph/properties.hpp
+boost/graph/property_iter_range.hpp:		include/boost/graph/property_iter_range.hpp
+boost/graph/push_relabel_max_flow.hpp:		include/boost/graph/push_relabel_max_flow.hpp
+boost/graph/random.hpp:				include/boost/graph/random.hpp
+boost/graph/random_layout.hpp:			include/boost/graph/random_layout.hpp
+boost/graph/random_spanning_tree.hpp:		include/boost/graph/random_spanning_tree.hpp
+boost/graph/r_c_shortest_paths.hpp:		include/boost/graph/r_c_shortest_paths.hpp
+boost/graph/read_dimacs.hpp:			include/boost/graph/read_dimacs.hpp
+boost/graph/relax.hpp:				include/boost/graph/relax.hpp
+boost/graph/reverse_graph.hpp:			include/boost/graph/reverse_graph.hpp
+boost/graph/rmat_graph_generator.hpp:		include/boost/graph/rmat_graph_generator.hpp
+boost/graph/sequential_vertex_coloring.hpp:	include/boost/graph/sequential_vertex_coloring.hpp
+boost/graph/simple_point.hpp:			include/boost/graph/simple_point.hpp
+boost/graph/sloan_ordering.hpp:			include/boost/graph/sloan_ordering.hpp
+boost/graph/smallest_last_ordering.hpp:		include/boost/graph/smallest_last_ordering.hpp
+boost/graph/small_world_generator.hpp:		include/boost/graph/small_world_generator.hpp
+boost/graph/ssca_graph_generator.hpp:		include/boost/graph/ssca_graph_generator.hpp
+boost/graph/stanford_graph.hpp:			include/boost/graph/stanford_graph.hpp
+boost/graph/st_connected.hpp:			include/boost/graph/st_connected.hpp
+boost/graph/stoer_wagner_min_cut.hpp:		include/boost/graph/stoer_wagner_min_cut.hpp
+boost/graph/strong_components.hpp:		include/boost/graph/strong_components.hpp
+boost/graph/subgraph.hpp:			include/boost/graph/subgraph.hpp
+boost/graph/tiernan_all_cycles.hpp:		include/boost/graph/tiernan_all_cycles.hpp
+boost/graph/topological_sort.hpp:		include/boost/graph/topological_sort.hpp
+boost/graph/topology.hpp:			include/boost/graph/topology.hpp
+boost/graph/transitive_closure.hpp:		include/boost/graph/transitive_closure.hpp
+boost/graph/transitive_reduction.hpp:		include/boost/graph/transitive_reduction.hpp
+boost/graph/transpose_graph.hpp:		include/boost/graph/transpose_graph.hpp
+boost/graph/tree_traits.hpp:			include/boost/graph/tree_traits.hpp
+boost/graph/two_bit_color_map.hpp:		include/boost/graph/two_bit_color_map.hpp
+boost/graph/two_graphs_common_spanning_trees.hpp:	include/boost/graph/two_graphs_common_spanning_trees.hpp
+boost/graph/undirected_dfs.hpp:			include/boost/graph/undirected_dfs.hpp
+boost/graph/undirected_graph.hpp:		include/boost/graph/undirected_graph.hpp
+boost/graph/use_mpi.hpp:			include/boost/graph/use_mpi.hpp
+boost/graph/vector_as_graph.hpp:		include/boost/graph/vector_as_graph.hpp
+boost/graph/vertex_and_edge_range.hpp:		include/boost/graph/vertex_and_edge_range.hpp
+boost/graph/visitors.hpp:			include/boost/graph/visitors.hpp
+boost/graph/wavefront.hpp:			include/boost/graph/wavefront.hpp
+boost/graph/write_dimacs.hpp:			include/boost/graph/write_dimacs.hpp
+boost/pending/bucket_sorter.hpp:		include/boost/pending/bucket_sorter.hpp
+boost/pending/container_traits.hpp:		include/boost/pending/container_traits.hpp
+boost/pending/detail/property.hpp:		include/boost/pending/detail/property.hpp
+boost/pending/fenced_priority_queue.hpp:	include/boost/pending/fenced_priority_queue.hpp
+boost/pending/fibonacci_heap.hpp:		include/boost/pending/fibonacci_heap.hpp
+boost/pending/indirect_cmp.hpp:			include/boost/pending/indirect_cmp.hpp
+boost/pending/is_heap.hpp:			include/boost/pending/is_heap.hpp
+boost/pending/mutable_heap.hpp:			include/boost/pending/mutable_heap.hpp
+boost/pending/mutable_queue.hpp:		include/boost/pending/mutable_queue.hpp
+boost/pending/property.hpp:			include/boost/pending/property.hpp
+boost/pending/stringtok.hpp:			include/boost/pending/stringtok.hpp
+boost/pending/queue.hpp:			include/boost/pending/queue.hpp
+boost/pending/relaxed_heap.hpp:			include/boost/pending/relaxed_heap.hpp
+libs/graph/:					.
+
+[libs/graph_parallel]
+boost/graph/distributed/:		include/boost/graph/distributed/
+boost/graph/accounting.hpp:		include/boost/graph/accounting.hpp
+boost/pending/property_serialize.hpp:	include/boost/pending/property_serialize.hpp
+boost/graph/parallel/:			include/boost/graph/parallel/
+libs/graph_parallel/:			.
+
+[libs/heap]
+boost/heap/:				include/boost/heap/
+libs/heap/:				.
+
+[libs/icl]
+boost/icl/:				include/boost/icl/
+libs/icl/:				.
+
+[libs/integer]
+boost/cstdint.hpp:			include/boost/cstdint.hpp
+boost/integer.hpp:			include/boost/integer.hpp
+boost/integer_fwd.hpp:			include/boost/integer_fwd.hpp
+boost/integer_traits.hpp:		include/boost/integer_traits.hpp
+boost/integer/:				include/boost/integer/
+libs/integer/:				.
+
+[libs/interprocess]
+boost/interprocess/:			include/boost/interprocess/
+libs/interprocess/:			.
+
+[libs/intrusive]
+boost/intrusive/:			include/boost/intrusive/
+libs/intrusive/:			.
+
+[libs/io]
+boost/io/:				include/boost/io/
+boost/io_fwd.hpp:			include/boost/io_fwd.hpp
+libs/io/:				.
+
+[libs/iostreams]
+boost/iostreams/:			include/boost/iostreams/
+libs/iostreams/:			.
+
+[libs/iterator]
+boost/iterator.hpp:			include/boost/iterator.hpp
+boost/iterator_adaptors.hpp:		include/boost/iterator_adaptors.hpp
+boost/function_output_iterator.hpp:	include/boost/function_output_iterator.hpp
+boost/pending/detail/int_iterator.hpp:	include/boost/pending/detail/int_iterator.hpp
+boost/pending/iterator_adaptors.hpp:	include/boost/pending/iterator_adaptors.hpp
+boost/pending/iterator_tests.hpp:	include/boost/pending/iterator_tests.hpp
+boost/pointee.hpp:			include/boost/pointee.hpp
+boost/shared_container_iterator.hpp:	include/boost/shared_container_iterator.hpp
+boost/iterator/:			include/boost/iterator/
+libs/iterator/:				.
+
+[libs/lambda]
+boost/lambda/:				include/boost/lambda/
+libs/lambda/:				.
+
+[libs/locale]
+boost/locale.hpp:			include/boost/locale.hpp
+boost/locale/:				include/boost/locale/
+libs/locale/:				.
+
+[libs/local_function]
+boost/local_function.hpp:		include/boost/local_function.hpp
+boost/local_function/:			include/boost/local_function/
+libs/local_function/:			.
+
+[libs/lockfree]
+
+[libs/logic]
+boost/logic/:				include/boost/logic/
+libs/logic/:				.
+
+[libs/math]
+boost/math/:				include/boost/math/
+boost/math_fwd.hpp:			include/boost/math_fwd.hpp
+libs/math/:				.
+
+[libs/move]
+boost/move/:				include/boost/move/
+libs/move/:				.
+
+[libs/mpi]
+boost/mpi.hpp:				include/boost/mpi.hpp
+boost/mpi/:				include/boost/mpi/
+libs/mpi/:				.
+
+[libs/mpl]
+boost/mpl/:				include/boost/mpl/
+libs/mpl/:				.
+
+[libs/msm]
+boost/msm/:				include/boost/msm/
+libs/msm/:				.
+
+[libs/multi_array]
+boost/multi_array.hpp:			include/boost/multi_array.hpp
+boost/multi_array/:			include/boost/multi_array/
+libs/multi_array/:			.
+
+[libs/multi_index]
+boost/multi_index_container.hpp:	include/boost/multi_index_container.hpp
+boost/multi_index_container_fwd.hpp:	include/boost/multi_index_container_fwd.hpp
+boost/multi_index/:			include/boost/multi_index/
+libs/multi_index/:			.
+
+[libs/multiprecision]
+boost/multiprecision/:			include/boost/multiprecision/
+libs/multiprecision/:			.
+
+[libs/numeric/conversion]
+boost/numeric/conversion/:		include/boost/numeric/conversion/
+libs/numeric/conversion/:		.
+
+[libs/numeric/interval]
+boost/numeric/interval/:		include/boost/numeric/interval/
+boost/numeric/interval.hpp:		include/boost/numeric/interval.hpp
+libs/numeric/interval/:			.
+
+[libs/numeric/odeint]
+boost/numeric/odeint/:			include/boost/numeric/odeint/
+boost/numeric/odeint.hpp:		include/boost/numeric/odeint.hpp
+libs/numeric/odeint/:			.
+
+[libs/numeric/ublas]
+boost/numeric/ublas/:			include/boost/numeric/ublas/
+libs/numeric/ublas/:			.
+
+[libs/optional]
+boost/none.hpp:				include/boost/none.hpp
+boost/none_t.hpp:			include/boost/none_t.hpp
+boost/optional.hpp:			include/boost/optional.hpp
+boost/optional/:			include/boost/optional/
+libs/optional/:				.
+
+[libs/parameter]
+boost/parameter.hpp:			include/boost/parameter.hpp
+boost/parameter/:			include/boost/parameter/
+libs/parameter/:			.
+
+[libs/phoenix]
+boost/phoenix.hpp:			include/boost/phoenix.hpp
+boost/phoenix/:				include/boost/phoenix/
+libs/phoenix/:				.
+
+[libs/polygon]
+boost/polygon/:				include/boost/polygon/
+libs/polygon/:				.
+
+[libs/pool]
+boost/pool/:				include/boost/pool/
+libs/pool/:				.
+
+[libs/preprocessor]
+boost/preprocessor.hpp:			include/boost/preprocessor.hpp
+boost/preprocessor/:			include/boost/preprocessor/
+libs/preprocessor/:			.
+
+[libs/program_options]
+boost/program_options.hpp:		include/boost/program_options.hpp
+boost/program_options/:			include/boost/program_options/
+libs/program_options/:			.
+
+[libs/property_map]
+boost/property_map/:			include/boost/property_map/
+libs/property_map/:			.
+
+[libs/property_tree]
+boost/property_tree/:			include/boost/property_tree/
+libs/property_tree/:			.
+
+[libs/proto]
+boost/proto/:				include/boost/proto/
+libs/proto/:				.
+
+[libs/ptr_container]
+boost/ptr_container/:			include/boost/ptr_container/
+libs/ptr_container/:			.
+
+[libs/python]
+boost/python.hpp:			include/boost/python.hpp
+boost/python/:				include/boost/python/
+libs/python/:				.
+
+[libs/random]
+boost/nondet_random.hpp:		include/boost/nondet_random.hpp
+boost/random.hpp:			include/boost/random.hpp
+boost/random/:				include/boost/random/
+libs/random/:				.
+
+[libs/range]
+boost/range.hpp:			include/boost/range.hpp
+boost/range/:				include/boost/range/
+libs/range/:				.
+
+[libs/ratio]
+boost/ratio.hpp:			include/boost/ratio.hpp
+boost/ratio/:				include/boost/ratio/
+libs/ratio/:				.
+
+[libs/rational]
+boost/rational.hpp:			include/boost/rational.hpp
+libs/rational/:				.
+
+[libs/regex]
+boost/cregex.hpp:			include/boost/cregex.hpp
+boost/regex.h:				include/boost/regex.h
+boost/regex.hpp:			include/boost/regex.hpp
+boost/regex_fwd.hpp:			include/boost/regex_fwd.hpp
+boost/regex/:				include/boost/regex/
+libs/regex/:				.
+
+[libs/scope_exit]
+boost/scope_exit.hpp:			include/boost/scope_exit.hpp
+libs/scope_exit/:			.
+
+[libs/serialization]
+boost/archive/:				include/boost/archive/
+boost/serialization/:			include/boost/serialization/
+boost/strong_typedef.hpp:		include/boost/strong_typedef.hpp
+libs/serialization/:			.
+
+[libs/signals]
+boost/last_value.hpp:			include/boost/last_value.hpp
+boost/signal.hpp:			include/boost/signal.hpp
+boost/signals.hpp:			include/boost/signals.hpp
+boost/signals/:				include/boost/signals/
+libs/signals/:				.
+
+[libs/signals2]
+boost/signals2.hpp:			include/boost/signals2.hpp
+boost/signals2/:			include/boost/signals2/
+libs/signals2/:				.
+
+[libs/smart_ptr]
+boost/detail/atomic_count.hpp:		include/boost/detail/atomic_count.hpp
+boost/detail/sp_typeinfo.hpp:		include/boost/detail/sp_typeinfo.hpp
+boost/enable_shared_from_this.hpp:	include/boost/enable_shared_from_this.hpp
+boost/intrusive_ptr.hpp:		include/boost/intrusive_ptr.hpp
+boost/get_pointer.hpp:			include/boost/get_pointer.hpp
+boost/make_shared.hpp:			include/boost/make_shared.hpp
+boost/memory_order.hpp:			include/boost/memory_order.hpp
+boost/pointer_cast.hpp:			include/boost/pointer_cast.hpp
+boost/pointer_to_other.hpp:		include/boost/pointer_to_other.hpp
+boost/scoped_array.hpp:			include/boost/scoped_array.hpp
+boost/scoped_ptr.hpp:			include/boost/scoped_ptr.hpp
+boost/shared_array.hpp:			include/boost/shared_array.hpp
+boost/shared_ptr.hpp:			include/boost/shared_ptr.hpp
+boost/smart_ptr.hpp:			include/boost/smart_ptr.hpp
+boost/weak_ptr.hpp:			include/boost/weak_ptr.hpp
+boost/smart_ptr/:			include/boost/smart_ptr/
+libs/smart_ptr/:			.
+
+[libs/spirit_classic]
+boost/spirit/home/classic.hpp:		include/boost/spirit/home/classic.hpp
+boost/spirit/home/classic/:		include/boost/spirit/home/classic/
+boost/spirit/include/classic.hpp:		include/boost/spirit/include/classic.hpp
+boost/spirit/include/classic_actions.hpp:		include/boost/spirit/include/classic_actions.hpp
+boost/spirit/include/classic_actor.hpp:		include/boost/spirit/include/classic_actor.hpp
+boost/spirit/include/classic_alternative.hpp:		include/boost/spirit/include/classic_alternative.hpp
+boost/spirit/include/classic_as_parser.hpp:		include/boost/spirit/include/classic_as_parser.hpp
+boost/spirit/include/classic_assert.hpp:		include/boost/spirit/include/classic_assert.hpp
+boost/spirit/include/classic_assign_actor.hpp:		include/boost/spirit/include/classic_assign_actor.hpp
+boost/spirit/include/classic_assign_key_actor.hpp:		include/boost/spirit/include/classic_assign_key_actor.hpp
+boost/spirit/include/classic_ast.hpp:		include/boost/spirit/include/classic_ast.hpp
+boost/spirit/include/classic_ast_fwd.hpp:		include/boost/spirit/include/classic_ast_fwd.hpp
+boost/spirit/include/classic_attribute.hpp:		include/boost/spirit/include/classic_attribute.hpp
+boost/spirit/include/classic_basic_chset.hpp:		include/boost/spirit/include/classic_basic_chset.hpp
+boost/spirit/include/classic_chset.hpp:		include/boost/spirit/include/classic_chset.hpp
+boost/spirit/include/classic_chset_operators.hpp:		include/boost/spirit/include/classic_chset_operators.hpp
+boost/spirit/include/classic_clear_actor.hpp:		include/boost/spirit/include/classic_clear_actor.hpp
+boost/spirit/include/classic_closure.hpp:		include/boost/spirit/include/classic_closure.hpp
+boost/spirit/include/classic_closure_context.hpp:		include/boost/spirit/include/classic_closure_context.hpp
+boost/spirit/include/classic_closure_fwd.hpp:		include/boost/spirit/include/classic_closure_fwd.hpp
+boost/spirit/include/classic_common.hpp:		include/boost/spirit/include/classic_common.hpp
+boost/spirit/include/classic_common_fwd.hpp:		include/boost/spirit/include/classic_common_fwd.hpp
+boost/spirit/include/classic_composite.hpp:		include/boost/spirit/include/classic_composite.hpp
+boost/spirit/include/classic_config.hpp:		include/boost/spirit/include/classic_config.hpp
+boost/spirit/include/classic_confix.hpp:		include/boost/spirit/include/classic_confix.hpp
+boost/spirit/include/classic_confix_fwd.hpp:		include/boost/spirit/include/classic_confix_fwd.hpp
+boost/spirit/include/classic_core.hpp:		include/boost/spirit/include/classic_core.hpp
+boost/spirit/include/classic_debug.hpp:		include/boost/spirit/include/classic_debug.hpp
+boost/spirit/include/classic_debug_node.hpp:		include/boost/spirit/include/classic_debug_node.hpp
+boost/spirit/include/classic_decrement_actor.hpp:		include/boost/spirit/include/classic_decrement_actor.hpp
+boost/spirit/include/classic_difference.hpp:		include/boost/spirit/include/classic_difference.hpp
+boost/spirit/include/classic_directives.hpp:		include/boost/spirit/include/classic_directives.hpp
+boost/spirit/include/classic_distinct.hpp:		include/boost/spirit/include/classic_distinct.hpp
+boost/spirit/include/classic_distinct_fwd.hpp:		include/boost/spirit/include/classic_distinct_fwd.hpp
+boost/spirit/include/classic_dynamic.hpp:		include/boost/spirit/include/classic_dynamic.hpp
+boost/spirit/include/classic_epsilon.hpp:		include/boost/spirit/include/classic_epsilon.hpp
+boost/spirit/include/classic_erase_actor.hpp:		include/boost/spirit/include/classic_erase_actor.hpp
+boost/spirit/include/classic_error_handling.hpp:		include/boost/spirit/include/classic_error_handling.hpp
+boost/spirit/include/classic_escape_char.hpp:		include/boost/spirit/include/classic_escape_char.hpp
+boost/spirit/include/classic_escape_char_fwd.hpp:		include/boost/spirit/include/classic_escape_char_fwd.hpp
+boost/spirit/include/classic_exceptions.hpp:		include/boost/spirit/include/classic_exceptions.hpp
+boost/spirit/include/classic_exceptions_fwd.hpp:		include/boost/spirit/include/classic_exceptions_fwd.hpp
+boost/spirit/include/classic_exclusive_or.hpp:		include/boost/spirit/include/classic_exclusive_or.hpp
+boost/spirit/include/classic_file_iterator.hpp:		include/boost/spirit/include/classic_file_iterator.hpp
+boost/spirit/include/classic_file_iterator_fwd.hpp:		include/boost/spirit/include/classic_file_iterator_fwd.hpp
+boost/spirit/include/classic_fixed_size_queue.hpp:		include/boost/spirit/include/classic_fixed_size_queue.hpp
+boost/spirit/include/classic_flush_multi_pass.hpp:		include/boost/spirit/include/classic_flush_multi_pass.hpp
+boost/spirit/include/classic_for.hpp:		include/boost/spirit/include/classic_for.hpp
+boost/spirit/include/classic_functor_parser.hpp:		include/boost/spirit/include/classic_functor_parser.hpp
+boost/spirit/include/classic_fundamental.hpp:		include/boost/spirit/include/classic_fundamental.hpp
+boost/spirit/include/classic_grammar.hpp:		include/boost/spirit/include/classic_grammar.hpp
+boost/spirit/include/classic_grammar_def.hpp:		include/boost/spirit/include/classic_grammar_def.hpp
+boost/spirit/include/classic_grammar_def_fwd.hpp:		include/boost/spirit/include/classic_grammar_def_fwd.hpp
+boost/spirit/include/classic_if.hpp:		include/boost/spirit/include/classic_if.hpp
+boost/spirit/include/classic_increment_actor.hpp:		include/boost/spirit/include/classic_increment_actor.hpp
+boost/spirit/include/classic_insert_at_actor.hpp:		include/boost/spirit/include/classic_insert_at_actor.hpp
+boost/spirit/include/classic_insert_key_actor.hpp:		include/boost/spirit/include/classic_insert_key_actor.hpp
+boost/spirit/include/classic_intersection.hpp:		include/boost/spirit/include/classic_intersection.hpp
+boost/spirit/include/classic_iterator.hpp:		include/boost/spirit/include/classic_iterator.hpp
+boost/spirit/include/classic_kleene_star.hpp:		include/boost/spirit/include/classic_kleene_star.hpp
+boost/spirit/include/classic_lazy.hpp:		include/boost/spirit/include/classic_lazy.hpp
+boost/spirit/include/classic_list.hpp:		include/boost/spirit/include/classic_list.hpp
+boost/spirit/include/classic_lists.hpp:		include/boost/spirit/include/classic_lists.hpp
+boost/spirit/include/classic_lists_fwd.hpp:		include/boost/spirit/include/classic_lists_fwd.hpp
+boost/spirit/include/classic_loops.hpp:		include/boost/spirit/include/classic_loops.hpp
+boost/spirit/include/classic_match.hpp:		include/boost/spirit/include/classic_match.hpp
+boost/spirit/include/classic_meta.hpp:		include/boost/spirit/include/classic_meta.hpp
+boost/spirit/include/classic_minimal.hpp:		include/boost/spirit/include/classic_minimal.hpp
+boost/spirit/include/classic_multi_pass.hpp:		include/boost/spirit/include/classic_multi_pass.hpp
+boost/spirit/include/classic_multi_pass_fwd.hpp:		include/boost/spirit/include/classic_multi_pass_fwd.hpp
+boost/spirit/include/classic_nil.hpp:		include/boost/spirit/include/classic_nil.hpp
+boost/spirit/include/classic_no_actions.hpp:		include/boost/spirit/include/classic_no_actions.hpp
+boost/spirit/include/classic_numerics.hpp:		include/boost/spirit/include/classic_numerics.hpp
+boost/spirit/include/classic_numerics_fwd.hpp:		include/boost/spirit/include/classic_numerics_fwd.hpp
+boost/spirit/include/classic_operators.hpp:		include/boost/spirit/include/classic_operators.hpp
+boost/spirit/include/classic_optional.hpp:		include/boost/spirit/include/classic_optional.hpp
+boost/spirit/include/classic_parametric.hpp:		include/boost/spirit/include/classic_parametric.hpp
+boost/spirit/include/classic_parse_tree.hpp:		include/boost/spirit/include/classic_parse_tree.hpp
+boost/spirit/include/classic_parse_tree_fwd.hpp:		include/boost/spirit/include/classic_parse_tree_fwd.hpp
+boost/spirit/include/classic_parse_tree_utils.hpp:		include/boost/spirit/include/classic_parse_tree_utils.hpp
+boost/spirit/include/classic_parser.hpp:		include/boost/spirit/include/classic_parser.hpp
+boost/spirit/include/classic_parser_context.hpp:		include/boost/spirit/include/classic_parser_context.hpp
+boost/spirit/include/classic_parser_id.hpp:		include/boost/spirit/include/classic_parser_id.hpp
+boost/spirit/include/classic_parser_names.hpp:		include/boost/spirit/include/classic_parser_names.hpp
+boost/spirit/include/classic_parser_traits.hpp:		include/boost/spirit/include/classic_parser_traits.hpp
+boost/spirit/include/classic_position_iterator.hpp:		include/boost/spirit/include/classic_position_iterator.hpp
+boost/spirit/include/classic_position_iterator_fwd.hpp:		include/boost/spirit/include/classic_position_iterator_fwd.hpp
+boost/spirit/include/classic_positive.hpp:		include/boost/spirit/include/classic_positive.hpp
+boost/spirit/include/classic_primitives.hpp:		include/boost/spirit/include/classic_primitives.hpp
+boost/spirit/include/classic_push_back_actor.hpp:		include/boost/spirit/include/classic_push_back_actor.hpp
+boost/spirit/include/classic_push_front_actor.hpp:		include/boost/spirit/include/classic_push_front_actor.hpp
+boost/spirit/include/classic_range_run.hpp:		include/boost/spirit/include/classic_range_run.hpp
+boost/spirit/include/classic_ref_actor.hpp:		include/boost/spirit/include/classic_ref_actor.hpp
+boost/spirit/include/classic_ref_const_ref_actor.hpp:		include/boost/spirit/include/classic_ref_const_ref_actor.hpp
+boost/spirit/include/classic_ref_const_ref_const_ref_a.hpp:		include/boost/spirit/include/classic_ref_const_ref_const_ref_a.hpp
+boost/spirit/include/classic_ref_const_ref_value_actor.hpp:		include/boost/spirit/include/classic_ref_const_ref_value_actor.hpp
+boost/spirit/include/classic_ref_value_actor.hpp:		include/boost/spirit/include/classic_ref_value_actor.hpp
+boost/spirit/include/classic_refactoring.hpp:		include/boost/spirit/include/classic_refactoring.hpp
+boost/spirit/include/classic_regex.hpp:		include/boost/spirit/include/classic_regex.hpp
+boost/spirit/include/classic_rule.hpp:		include/boost/spirit/include/classic_rule.hpp
+boost/spirit/include/classic_rule_alias.hpp:		include/boost/spirit/include/classic_rule_alias.hpp
+boost/spirit/include/classic_rule_parser.hpp:		include/boost/spirit/include/classic_rule_parser.hpp
+boost/spirit/include/classic_safe_bool.hpp:		include/boost/spirit/include/classic_safe_bool.hpp
+boost/spirit/include/classic_scanner.hpp:		include/boost/spirit/include/classic_scanner.hpp
+boost/spirit/include/classic_scanner_fwd.hpp:		include/boost/spirit/include/classic_scanner_fwd.hpp
+boost/spirit/include/classic_scoped_lock.hpp:		include/boost/spirit/include/classic_scoped_lock.hpp
+boost/spirit/include/classic_select.hpp:		include/boost/spirit/include/classic_select.hpp
+boost/spirit/include/classic_sequence.hpp:		include/boost/spirit/include/classic_sequence.hpp
+boost/spirit/include/classic_sequential_and.hpp:		include/boost/spirit/include/classic_sequential_and.hpp
+boost/spirit/include/classic_sequential_or.hpp:		include/boost/spirit/include/classic_sequential_or.hpp
+boost/spirit/include/classic_skipper.hpp:		include/boost/spirit/include/classic_skipper.hpp
+boost/spirit/include/classic_skipper_fwd.hpp:		include/boost/spirit/include/classic_skipper_fwd.hpp
+boost/spirit/include/classic_spirit.hpp:		include/boost/spirit/include/classic_spirit.hpp
+boost/spirit/include/classic_static.hpp:		include/boost/spirit/include/classic_static.hpp
+boost/spirit/include/classic_stored_rule.hpp:		include/boost/spirit/include/classic_stored_rule.hpp
+boost/spirit/include/classic_stored_rule_fwd.hpp:		include/boost/spirit/include/classic_stored_rule_fwd.hpp
+boost/spirit/include/classic_subrule.hpp:		include/boost/spirit/include/classic_subrule.hpp
+boost/spirit/include/classic_subrule_fwd.hpp:		include/boost/spirit/include/classic_subrule_fwd.hpp
+boost/spirit/include/classic_swap_actor.hpp:		include/boost/spirit/include/classic_swap_actor.hpp
+boost/spirit/include/classic_switch.hpp:		include/boost/spirit/include/classic_switch.hpp
+boost/spirit/include/classic_symbols.hpp:		include/boost/spirit/include/classic_symbols.hpp
+boost/spirit/include/classic_symbols_fwd.hpp:		include/boost/spirit/include/classic_symbols_fwd.hpp
+boost/spirit/include/classic_traverse.hpp:		include/boost/spirit/include/classic_traverse.hpp
+boost/spirit/include/classic_tree_to_xml.hpp:		include/boost/spirit/include/classic_tree_to_xml.hpp
+boost/spirit/include/classic_typeof.hpp:		include/boost/spirit/include/classic_typeof.hpp
+boost/spirit/include/classic_utility.hpp:		include/boost/spirit/include/classic_utility.hpp
+boost/spirit/include/classic_version.hpp:		include/boost/spirit/include/classic_version.hpp
+boost/spirit/include/classic_while.hpp:		include/boost/spirit/include/classic_while.hpp
+boost/spirit/include/phoenix1.hpp:		include/boost/spirit/include/phoenix1.hpp
+boost/spirit/include/phoenix1_actor.hpp:		include/boost/spirit/include/phoenix1_actor.hpp
+boost/spirit/include/phoenix1_binders.hpp:		include/boost/spirit/include/phoenix1_binders.hpp
+boost/spirit/include/phoenix1_casts.hpp:		include/boost/spirit/include/phoenix1_casts.hpp
+boost/spirit/include/phoenix1_closures.hpp:		include/boost/spirit/include/phoenix1_closures.hpp
+boost/spirit/include/phoenix1_composite.hpp:		include/boost/spirit/include/phoenix1_composite.hpp
+boost/spirit/include/phoenix1_functions.hpp:		include/boost/spirit/include/phoenix1_functions.hpp
+boost/spirit/include/phoenix1_new.hpp:		include/boost/spirit/include/phoenix1_new.hpp
+boost/spirit/include/phoenix1_operators.hpp:		include/boost/spirit/include/phoenix1_operators.hpp
+boost/spirit/include/phoenix1_primitives.hpp:		include/boost/spirit/include/phoenix1_primitives.hpp
+boost/spirit/include/phoenix1_special_ops.hpp:		include/boost/spirit/include/phoenix1_special_ops.hpp
+boost/spirit/include/phoenix1_statements.hpp:		include/boost/spirit/include/phoenix1_statements.hpp
+boost/spirit/include/phoenix1_tuple_helpers.hpp:		include/boost/spirit/include/phoenix1_tuple_helpers.hpp
+boost/spirit/include/phoenix1_tuples.hpp:		include/boost/spirit/include/phoenix1_tuples.hpp
+libs/spirit/classic/:                                   .
+
+[libs/spirit]
+boost/spirit.hpp:			<ignore>
+boost/spirit/home/karma.hpp:		include/boost/spirit/home/karma.hpp
+boost/spirit/home/karma/:		include/boost/spirit/home/karma/
+boost/spirit/home/lex.hpp:		include/boost/spirit/home/lex.hpp
+boost/spirit/home/lex/:			include/boost/spirit/home/lex/
+boost/spirit/home/phoenix.hpp:		include/boost/spirit/home/phoenix.hpp
+boost/spirit/home/phoenix/:		include/boost/spirit/home/phoenix/
+boost/spirit/home/qi.hpp:		include/boost/spirit/home/qi.hpp
+boost/spirit/home/qi/:			include/boost/spirit/home/qi/
+boost/spirit/home/support.hpp:		include/boost/spirit/home/support.hpp
+boost/spirit/home/support/:		include/boost/spirit/home/support/
+boost/spirit/include/karma.hpp:		include/boost/spirit/include/karma.hpp
+boost/spirit/repository/:		include/boost/spirit/repository/
+boost/spirit/include/karma_action.hpp:		include/boost/spirit/include/karma_action.hpp
+boost/spirit/include/karma_alternative.hpp:		include/boost/spirit/include/karma_alternative.hpp
+boost/spirit/include/karma_and_predicate.hpp:		include/boost/spirit/include/karma_and_predicate.hpp
+boost/spirit/include/karma_as.hpp:		include/boost/spirit/include/karma_as.hpp
+boost/spirit/include/karma_attr_cast.hpp:		include/boost/spirit/include/karma_attr_cast.hpp
+boost/spirit/include/karma_auto.hpp:		include/boost/spirit/include/karma_auto.hpp
+boost/spirit/include/karma_auxiliary.hpp:		include/boost/spirit/include/karma_auxiliary.hpp
+boost/spirit/include/karma_binary.hpp:		include/boost/spirit/include/karma_binary.hpp
+boost/spirit/include/karma_bool.hpp:		include/boost/spirit/include/karma_bool.hpp
+boost/spirit/include/karma_buffer.hpp:		include/boost/spirit/include/karma_buffer.hpp
+boost/spirit/include/karma_center_alignment.hpp:		include/boost/spirit/include/karma_center_alignment.hpp
+boost/spirit/include/karma_char.hpp:		include/boost/spirit/include/karma_char.hpp
+boost/spirit/include/karma_char_.hpp:		include/boost/spirit/include/karma_char_.hpp
+boost/spirit/include/karma_char_class.hpp:		include/boost/spirit/include/karma_char_class.hpp
+boost/spirit/include/karma_columns.hpp:		include/boost/spirit/include/karma_columns.hpp
+boost/spirit/include/karma_delimit.hpp:		include/boost/spirit/include/karma_delimit.hpp
+boost/spirit/include/karma_directive.hpp:		include/boost/spirit/include/karma_directive.hpp
+boost/spirit/include/karma_domain.hpp:		include/boost/spirit/include/karma_domain.hpp
+boost/spirit/include/karma_duplicate.hpp:		include/boost/spirit/include/karma_duplicate.hpp
+boost/spirit/include/karma_eol.hpp:		include/boost/spirit/include/karma_eol.hpp
+boost/spirit/include/karma_eps.hpp:		include/boost/spirit/include/karma_eps.hpp
+boost/spirit/include/karma_format.hpp:		include/boost/spirit/include/karma_format.hpp
+boost/spirit/include/karma_format_attr.hpp:		include/boost/spirit/include/karma_format_attr.hpp
+boost/spirit/include/karma_format_auto.hpp:		include/boost/spirit/include/karma_format_auto.hpp
+boost/spirit/include/karma_generate.hpp:		include/boost/spirit/include/karma_generate.hpp
+boost/spirit/include/karma_generate_attr.hpp:		include/boost/spirit/include/karma_generate_attr.hpp
+boost/spirit/include/karma_generate_auto.hpp:		include/boost/spirit/include/karma_generate_auto.hpp
+boost/spirit/include/karma_grammar.hpp:		include/boost/spirit/include/karma_grammar.hpp
+boost/spirit/include/karma_int.hpp:		include/boost/spirit/include/karma_int.hpp
+boost/spirit/include/karma_kleene.hpp:		include/boost/spirit/include/karma_kleene.hpp
+boost/spirit/include/karma_lazy.hpp:		include/boost/spirit/include/karma_lazy.hpp
+boost/spirit/include/karma_left_alignment.hpp:		include/boost/spirit/include/karma_left_alignment.hpp
+boost/spirit/include/karma_list.hpp:		include/boost/spirit/include/karma_list.hpp
+boost/spirit/include/karma_maxwidth.hpp:		include/boost/spirit/include/karma_maxwidth.hpp
+boost/spirit/include/karma_no_delimit.hpp:		include/boost/spirit/include/karma_no_delimit.hpp
+boost/spirit/include/karma_nonterminal.hpp:		include/boost/spirit/include/karma_nonterminal.hpp
+boost/spirit/include/karma_not_predicate.hpp:		include/boost/spirit/include/karma_not_predicate.hpp
+boost/spirit/include/karma_numeric.hpp:		include/boost/spirit/include/karma_numeric.hpp
+boost/spirit/include/karma_omit.hpp:		include/boost/spirit/include/karma_omit.hpp
+boost/spirit/include/karma_operator.hpp:		include/boost/spirit/include/karma_operator.hpp
+boost/spirit/include/karma_optional.hpp:		include/boost/spirit/include/karma_optional.hpp
+boost/spirit/include/karma_phoenix_attributes.hpp:		include/boost/spirit/include/karma_phoenix_attributes.hpp
+boost/spirit/include/karma_plus.hpp:		include/boost/spirit/include/karma_plus.hpp
+boost/spirit/include/karma_real.hpp:		include/boost/spirit/include/karma_real.hpp
+boost/spirit/include/karma_repeat.hpp:		include/boost/spirit/include/karma_repeat.hpp
+boost/spirit/include/karma_right_alignment.hpp:		include/boost/spirit/include/karma_right_alignment.hpp
+boost/spirit/include/karma_rule.hpp:		include/boost/spirit/include/karma_rule.hpp
+boost/spirit/include/karma_sequence.hpp:		include/boost/spirit/include/karma_sequence.hpp
+boost/spirit/include/karma_stream.hpp:		include/boost/spirit/include/karma_stream.hpp
+boost/spirit/include/karma_strict_relaxed.hpp:		include/boost/spirit/include/karma_strict_relaxed.hpp
+boost/spirit/include/karma_string.hpp:		include/boost/spirit/include/karma_string.hpp
+boost/spirit/include/karma_symbols.hpp:		include/boost/spirit/include/karma_symbols.hpp
+boost/spirit/include/karma_uint.hpp:		include/boost/spirit/include/karma_uint.hpp
+boost/spirit/include/karma_upper_lower_case.hpp:		include/boost/spirit/include/karma_upper_lower_case.hpp
+boost/spirit/include/karma_verbatim.hpp:		include/boost/spirit/include/karma_verbatim.hpp
+boost/spirit/include/karma_what.hpp:		include/boost/spirit/include/karma_what.hpp
+boost/spirit/include/lex.hpp:		include/boost/spirit/include/lex.hpp
+boost/spirit/include/lex_char_token_def.hpp:		include/boost/spirit/include/lex_char_token_def.hpp
+boost/spirit/include/lex_domain.hpp:		include/boost/spirit/include/lex_domain.hpp
+boost/spirit/include/lex_generate_static_lexertl.hpp:		include/boost/spirit/include/lex_generate_static_lexertl.hpp
+boost/spirit/include/lex_lexer.hpp:		include/boost/spirit/include/lex_lexer.hpp
+boost/spirit/include/lex_lexertl.hpp:		include/boost/spirit/include/lex_lexertl.hpp
+boost/spirit/include/lex_lexertl_position_token.hpp:		include/boost/spirit/include/lex_lexertl_position_token.hpp
+boost/spirit/include/lex_lexertl_token.hpp:		include/boost/spirit/include/lex_lexertl_token.hpp
+boost/spirit/include/lex_plain_token.hpp:		include/boost/spirit/include/lex_plain_token.hpp
+boost/spirit/include/lex_primitives.hpp:		include/boost/spirit/include/lex_primitives.hpp
+boost/spirit/include/lex_static_lexertl.hpp:		include/boost/spirit/include/lex_static_lexertl.hpp
+boost/spirit/include/lex_tokenize_and_parse.hpp:		include/boost/spirit/include/lex_tokenize_and_parse.hpp
+boost/spirit/include/lex_tokenize_and_parse_attr.hpp:		include/boost/spirit/include/lex_tokenize_and_parse_attr.hpp
+boost/spirit/include/phoenix.hpp:		include/boost/spirit/include/phoenix.hpp
+boost/spirit/include/phoenix_algorithm.hpp:		include/boost/spirit/include/phoenix_algorithm.hpp
+boost/spirit/include/phoenix_bind.hpp:		include/boost/spirit/include/phoenix_bind.hpp
+boost/spirit/include/phoenix_container.hpp:		include/boost/spirit/include/phoenix_container.hpp
+boost/spirit/include/phoenix_core.hpp:		include/boost/spirit/include/phoenix_core.hpp
+boost/spirit/include/phoenix_function.hpp:		include/boost/spirit/include/phoenix_function.hpp
+boost/spirit/include/phoenix_fusion.hpp:		include/boost/spirit/include/phoenix_fusion.hpp
+boost/spirit/include/phoenix_limits.hpp:		include/boost/spirit/include/phoenix_limits.hpp
+boost/spirit/include/phoenix_object.hpp:		include/boost/spirit/include/phoenix_object.hpp
+boost/spirit/include/phoenix_operator.hpp:		include/boost/spirit/include/phoenix_operator.hpp
+boost/spirit/include/phoenix_scope.hpp:		include/boost/spirit/include/phoenix_scope.hpp
+boost/spirit/include/phoenix_statement.hpp:		include/boost/spirit/include/phoenix_statement.hpp
+boost/spirit/include/phoenix_stl.hpp:		include/boost/spirit/include/phoenix_stl.hpp
+boost/spirit/include/phoenix_version.hpp:		include/boost/spirit/include/phoenix_version.hpp
+boost/spirit/include/qi.hpp:		include/boost/spirit/include/qi.hpp
+boost/spirit/include/qi_action.hpp:		include/boost/spirit/include/qi_action.hpp
+boost/spirit/include/qi_alternative.hpp:		include/boost/spirit/include/qi_alternative.hpp
+boost/spirit/include/qi_and_predicate.hpp:		include/boost/spirit/include/qi_and_predicate.hpp
+boost/spirit/include/qi_as.hpp:		include/boost/spirit/include/qi_as.hpp
+boost/spirit/include/qi_as_string.hpp:		include/boost/spirit/include/qi_as_string.hpp
+boost/spirit/include/qi_attr.hpp:		include/boost/spirit/include/qi_attr.hpp
+boost/spirit/include/qi_attr_cast.hpp:		include/boost/spirit/include/qi_attr_cast.hpp
+boost/spirit/include/qi_auto.hpp:		include/boost/spirit/include/qi_auto.hpp
+boost/spirit/include/qi_auxiliary.hpp:		include/boost/spirit/include/qi_auxiliary.hpp
+boost/spirit/include/qi_binary.hpp:		include/boost/spirit/include/qi_binary.hpp
+boost/spirit/include/qi_bool.hpp:		include/boost/spirit/include/qi_bool.hpp
+boost/spirit/include/qi_char.hpp:		include/boost/spirit/include/qi_char.hpp
+boost/spirit/include/qi_char_.hpp:		include/boost/spirit/include/qi_char_.hpp
+boost/spirit/include/qi_char_class.hpp:		include/boost/spirit/include/qi_char_class.hpp
+boost/spirit/include/qi_core.hpp:		include/boost/spirit/include/qi_core.hpp
+boost/spirit/include/qi_difference.hpp:		include/boost/spirit/include/qi_difference.hpp
+boost/spirit/include/qi_directive.hpp:		include/boost/spirit/include/qi_directive.hpp
+boost/spirit/include/qi_domain.hpp:		include/boost/spirit/include/qi_domain.hpp
+boost/spirit/include/qi_eoi.hpp:		include/boost/spirit/include/qi_eoi.hpp
+boost/spirit/include/qi_eol.hpp:		include/boost/spirit/include/qi_eol.hpp
+boost/spirit/include/qi_eps.hpp:		include/boost/spirit/include/qi_eps.hpp
+boost/spirit/include/qi_expect.hpp:		include/boost/spirit/include/qi_expect.hpp
+boost/spirit/include/qi_grammar.hpp:		include/boost/spirit/include/qi_grammar.hpp
+boost/spirit/include/qi_hold.hpp:		include/boost/spirit/include/qi_hold.hpp
+boost/spirit/include/qi_int.hpp:		include/boost/spirit/include/qi_int.hpp
+boost/spirit/include/qi_kleene.hpp:		include/boost/spirit/include/qi_kleene.hpp
+boost/spirit/include/qi_lazy.hpp:		include/boost/spirit/include/qi_lazy.hpp
+boost/spirit/include/qi_lexeme.hpp:		include/boost/spirit/include/qi_lexeme.hpp
+boost/spirit/include/qi_list.hpp:		include/boost/spirit/include/qi_list.hpp
+boost/spirit/include/qi_lit.hpp:		include/boost/spirit/include/qi_lit.hpp
+boost/spirit/include/qi_match.hpp:		include/boost/spirit/include/qi_match.hpp
+boost/spirit/include/qi_match_attr.hpp:		include/boost/spirit/include/qi_match_attr.hpp
+boost/spirit/include/qi_match_auto.hpp:		include/boost/spirit/include/qi_match_auto.hpp
+boost/spirit/include/qi_matches.hpp:		include/boost/spirit/include/qi_matches.hpp
+boost/spirit/include/qi_no_case.hpp:		include/boost/spirit/include/qi_no_case.hpp
+boost/spirit/include/qi_no_skip.hpp:		include/boost/spirit/include/qi_no_skip.hpp
+boost/spirit/include/qi_nonterminal.hpp:		include/boost/spirit/include/qi_nonterminal.hpp
+boost/spirit/include/qi_not_predicate.hpp:		include/boost/spirit/include/qi_not_predicate.hpp
+boost/spirit/include/qi_numeric.hpp:		include/boost/spirit/include/qi_numeric.hpp
+boost/spirit/include/qi_omit.hpp:		include/boost/spirit/include/qi_omit.hpp
+boost/spirit/include/qi_operator.hpp:		include/boost/spirit/include/qi_operator.hpp
+boost/spirit/include/qi_optional.hpp:		include/boost/spirit/include/qi_optional.hpp
+boost/spirit/include/qi_parse.hpp:		include/boost/spirit/include/qi_parse.hpp
+boost/spirit/include/qi_parse_attr.hpp:		include/boost/spirit/include/qi_parse_attr.hpp
+boost/spirit/include/qi_parse_auto.hpp:		include/boost/spirit/include/qi_parse_auto.hpp
+boost/spirit/include/qi_permutation.hpp:		include/boost/spirit/include/qi_permutation.hpp
+boost/spirit/include/qi_plus.hpp:		include/boost/spirit/include/qi_plus.hpp
+boost/spirit/include/qi_raw.hpp:		include/boost/spirit/include/qi_raw.hpp
+boost/spirit/include/qi_real.hpp:		include/boost/spirit/include/qi_real.hpp
+boost/spirit/include/qi_repeat.hpp:		include/boost/spirit/include/qi_repeat.hpp
+boost/spirit/include/qi_rule.hpp:		include/boost/spirit/include/qi_rule.hpp
+boost/spirit/include/qi_sequence.hpp:		include/boost/spirit/include/qi_sequence.hpp
+boost/spirit/include/qi_sequential_or.hpp:		include/boost/spirit/include/qi_sequential_or.hpp
+boost/spirit/include/qi_skip.hpp:		include/boost/spirit/include/qi_skip.hpp
+boost/spirit/include/qi_stream.hpp:		include/boost/spirit/include/qi_stream.hpp
+boost/spirit/include/qi_string.hpp:		include/boost/spirit/include/qi_string.hpp
+boost/spirit/include/qi_symbols.hpp:		include/boost/spirit/include/qi_symbols.hpp
+boost/spirit/include/qi_uint.hpp:		include/boost/spirit/include/qi_uint.hpp
+boost/spirit/include/qi_what.hpp:		include/boost/spirit/include/qi_what.hpp
+boost/spirit/include/support.hpp:		include/boost/spirit/include/support.hpp
+boost/spirit/include/support_adapt_adt_attributes.hpp:		include/boost/spirit/include/support_adapt_adt_attributes.hpp
+boost/spirit/include/support_any.hpp:		include/boost/spirit/include/support_any.hpp
+boost/spirit/include/support_any_if.hpp:		include/boost/spirit/include/support_any_if.hpp
+boost/spirit/include/support_any_if_ns.hpp:		include/boost/spirit/include/support_any_if_ns.hpp
+boost/spirit/include/support_any_ns.hpp:		include/boost/spirit/include/support_any_ns.hpp
+boost/spirit/include/support_argument.hpp:		include/boost/spirit/include/support_argument.hpp
+boost/spirit/include/support_ascii.hpp:		include/boost/spirit/include/support_ascii.hpp
+boost/spirit/include/support_attributes.hpp:		include/boost/spirit/include/support_attributes.hpp
+boost/spirit/include/support_attributes_fwd.hpp:		include/boost/spirit/include/support_attributes_fwd.hpp
+boost/spirit/include/support_char_class.hpp:		include/boost/spirit/include/support_char_class.hpp
+boost/spirit/include/support_container.hpp:		include/boost/spirit/include/support_container.hpp
+boost/spirit/include/support_extended_variant.hpp:		include/boost/spirit/include/support_extended_variant.hpp
+boost/spirit/include/support_info.hpp:		include/boost/spirit/include/support_info.hpp
+boost/spirit/include/support_iso8859_1.hpp:		include/boost/spirit/include/support_iso8859_1.hpp
+boost/spirit/include/support_istream_iterator.hpp:		include/boost/spirit/include/support_istream_iterator.hpp
+boost/spirit/include/support_line_pos_iterator.hpp:		include/boost/spirit/include/support_line_pos_iterator.hpp
+boost/spirit/include/support_locals.hpp:		include/boost/spirit/include/support_locals.hpp
+boost/spirit/include/support_look_ahead.hpp:		include/boost/spirit/include/support_look_ahead.hpp
+boost/spirit/include/support_modify.hpp:		include/boost/spirit/include/support_modify.hpp
+boost/spirit/include/support_multi_pass.hpp:		include/boost/spirit/include/support_multi_pass.hpp
+boost/spirit/include/support_multi_pass_fwd.hpp:		include/boost/spirit/include/support_multi_pass_fwd.hpp
+boost/spirit/include/support_ostream_iterator.hpp:		include/boost/spirit/include/support_ostream_iterator.hpp
+boost/spirit/include/support_standard.hpp:		include/boost/spirit/include/support_standard.hpp
+boost/spirit/include/support_standard_wide.hpp:		include/boost/spirit/include/support_standard_wide.hpp
+boost/spirit/include/support_string_traits.hpp:		include/boost/spirit/include/support_string_traits.hpp
+boost/spirit/include/support_unused.hpp:		include/boost/spirit/include/support_unused.hpp
+boost/spirit/include/support_utree.hpp:		include/boost/spirit/include/support_utree.hpp
+boost/spirit/include/version.hpp:		include/boost/spirit/include/version.hpp
+boost/spirit/version.hpp:		include/boost/spirit/version.hpp
+libs/spirit/doc/:		                doc/
+libs/spirit/example/:		                example/
+libs/spirit/index.html:		        index.html
+libs/spirit/optimization/:		        optimization/
+libs/spirit/phoenix/:		                phoenix/
+libs/spirit/repository/:		        repository/
+libs/spirit/test/:		                test/
+libs/spirit/sublibs:		                <ignore>
+
+[libs/statechart]
+boost/statechart/:			include/boost/statechart/
+libs/statechart/:			.
+
+[libs/static_assert]
+boost/static_assert.hpp:		include/boost/static_assert.hpp
+libs/static_assert/:			.
+
+[libs/system]
+boost/cerrno.hpp:			include/boost/cerrno.hpp
+boost/system/:				include/boost/system/
+libs/system/:				.
+
+[libs/test]
+boost/test/:				include/boost/test/
+libs/test/:				.
+
+[libs/thread]
+boost/thread.hpp:			include/boost/thread.hpp
+boost/thread/:				include/boost/thread/
+libs/thread/:				.
+
+[libs/timer]
+boost/progress.hpp:			include/boost/progress.hpp
+boost/timer.hpp:			include/boost/timer.hpp
+boost/timer/:				include/boost/timer/
+libs/timer/:				.
+
+[libs/tokenizer]
+boost/token_functions.hpp:		include/boost/token_functions.hpp
+boost/token_iterator.hpp:		include/boost/token_iterator.hpp
+boost/tokenizer.hpp:			include/boost/tokenizer.hpp
+libs/tokenizer/:			.
+
+[libs/tr1]
+boost/tr1/:				include/boost/tr1/
+libs/tr1/:				.
+
+[libs/tti]
+
+[libs/tuple]
+boost/tuple/:				include/boost/tuple/
+libs/tuple/:				.
+
+[libs/typeof]
+boost/typeof/:				include/boost/typeof/
+libs/typeof/:				.
+
+[libs/type_traits]
+boost/aligned_storage.hpp:		include/boost/aligned_storage.hpp
+boost/type_traits.hpp:			include/boost/type_traits.hpp
+boost/type_traits/:			include/boost/type_traits/
+libs/type_traits/:			.
+
+[libs/units]
+boost/units/:				include/boost/units/
+libs/units/:				.
+
+[libs/unordered]
+boost/unordered_map.hpp:		include/boost/unordered_map.hpp
+boost/unordered_set.hpp:		include/boost/unordered_set.hpp
+boost/unordered/:			include/boost/unordered/
+libs/unordered/:			.
+
+[libs/utility]
+boost/exception.hpp:			include/boost/exception.hpp
+boost/swap.hpp:				include/boost/swap.hpp
+boost/ref.hpp:				include/boost/ref.hpp
+boost/assert.hpp:			include/boost/assert.hpp
+boost/operators.hpp:			include/boost/operators.hpp
+boost/noncopyable.hpp:			include/boost/noncopyable.hpp
+boost/next_prior.hpp:			include/boost/next_prior.hpp
+boost/generator_iterator.hpp:		include/boost/generator_iterator.hpp
+boost/current_function.hpp:		include/boost/current_function.hpp
+boost/checked_delete.hpp:		include/boost/checked_delete.hpp
+boost/call_traits.hpp:			include/boost/call_traits.hpp
+boost/detail/call_traits.hpp:		include/boost/detail/call_traits.hpp
+boost/detail/ob_call_traits.hpp:	include/boost/detail/ob_call_traits.hpp
+boost/compressed_pair.hpp:		include/boost/compressed_pair.hpp
+boost/detail/compressed_pair.hpp:	include/boost/detail/compressed_pair.hpp
+boost/detail/ob_compressed_pair.hpp:	include/boost/detail/ob_compressed_pair.hpp
+boost/utility.hpp:			include/boost/utility.hpp
+boost/utility/:				include/boost/utility/
+libs/utility/:				.
+
+[libs/uuid]
+boost/uuid/:				include/boost/uuid/
+libs/uuid/:				.
+
+[libs/variant]
+boost/variant.hpp:			include/boost/variant.hpp
+boost/variant/:				include/boost/variant/
+libs/variant/:				.
+
+[libs/wave]
+boost/wave.hpp:				include/boost/wave.hpp
+boost/wave/:				include/boost/wave/
+tools/wave/:				tool/
+libs/wave/:				.
+
+[libs/xpressive]
+boost/xpressive/:			include/boost/xpressive/
+libs/xpressive/:			.
+
+[tools/auto_index]
+tools/auto_index/:			.
+
+[tools/bcp]
+tools/bcp/:				.
+
+[tools/boostbook]
+tools/boostbook/:			.
+
+[tools/build]
+tools/build/:				.
+
+[tools/inspect]
+tools/inspect/:				.
+
+[tools/litre]
+tools/litre/:				.
+
+[tools/quickbook]
+tools/quickbook/:			.
