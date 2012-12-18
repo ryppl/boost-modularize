@@ -111,7 +111,6 @@ class Module:
         self.src_dir = src_dir
         self.dstroot = dst_dir
         self.dst_dir = os.path.normpath(os.path.join(dst_dir, section))
-        self.new_dir = os.path.join('cmakelists', repo_name(section))
 
     # uses git
     def update(self):
@@ -149,13 +148,6 @@ class Module:
                 time.sleep(.5)
         print '[ERROR] Cannot clean directory', self.dst_dir
         sys.exit(1)
-
-    # Copy over the files that are new to the modularized boost
-    def copy_cmake(self):
-        if os.path.exists(self.new_dir):
-            dir_util.copy_tree(self.new_dir, self.dst_dir)
-        else:
-            print '[WARNING] "%s" does not exist' % self.new_dir
 
     def modularize(self, src, dst, src2mod):
         if src[0] == '<':
@@ -356,9 +348,6 @@ def update_modules(src_dir, dst_dir, manifest):
 
         # Make sure we've really removed everything
         module.clean()
-
-        # Copy over CMakeLists.txt
-        module.copy_cmake()
 
         # Copy over the files from the unmodularized boost
         for src, dst in manifest.items(section):
