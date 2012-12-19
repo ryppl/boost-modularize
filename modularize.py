@@ -361,14 +361,15 @@ def main():
     # else. This will abort the program if validation fails.
     validate_manifest(manifest, args.src)
 
-    if os.path.exists(args.dst):
-        run('git', 'reset', '--hard', cwd=args.dst)
-    else:
+    if not os.path.exists(args.dst):
         os.makedirs(args.dst)
-        run('git', 'clone', '--recursive', repo_rw % 'boost', cwd=args.dst)
+        run('git', 'init' cwd=args.dst)
 
-    run('git', 'checkout', '-B', args.branch, 'origin/' + args.branch, cwd=args.dst)
-    run('git', 'pull', 'origin', args.branch, cwd=args.dst)
+    run('git', 'fetch', '-t', repo_rw % 'boost', cwd=args.dst)
+    run('git', 'reset', '--hard', 'FETCH_HEAD', cwd=args.dst)
+    run('git', 'branch', '-M', args.branch, cwd=args.dst)
+    run('git', 'submodule', 'init', '--update', cwd=args.dst)
+    run('git', 'submodule', 'foreach', 'git', 'clean', '-df', cwd=args.dst)
 
     update_modules(args.src, args.dst, manifest)
 
