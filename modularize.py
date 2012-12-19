@@ -363,7 +363,7 @@ def main():
 
     if not os.path.exists(args.dst):
         os.makedirs(args.dst)
-        run('git', 'init' cwd=args.dst)
+        run('git', 'init', cwd=args.dst)
 
     run('git', 'fetch', '-t', repo_rw % 'boost', cwd=args.dst)
     run('git', 'reset', '--hard', 'FETCH_HEAD', cwd=args.dst)
