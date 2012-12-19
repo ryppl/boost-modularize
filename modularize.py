@@ -32,13 +32,6 @@ def repo_name(section):
         return "numeric_conversion"
     return os.path.basename(section)
 
-def change_branch(name, cwd):
-    branches = popen('git', 'branch', cwd=cwd)
-    if not ('* ' + name) in branches:
-        if not ('  ' + name) in branches:
-            run('git', 'branch', name, cwd=cwd)
-        run('git', 'checkout', name, cwd=cwd)
-
 # Look up the specified file in the src2mod map
 # and return the module to which it belongs.
 # Throws if it can't find a module which claims
@@ -76,7 +69,8 @@ class Module:
     def update(self, branch):
         base = repo_name(self.dst_dir)
         if os.path.isdir(self.dst_dir):
-            change_branch(branch, self.dst_dir)
+            run('git', 'checkout', '-B', name, 'origin/' + name, cwd=self.dst_dir)
+            run('git', 'pull', 'origin', name, cwd=self.dst_dir)
             run('git', 'rm', '--quiet', '--ignore-unmatch', '-r', '.', cwd=self.dst_dir)
             run('git', 'remote', 'set-url', 'origin', repo_rw % base, cwd=self.dst_dir)
         else:
@@ -356,9 +350,9 @@ def main():
 
     # trunk -> develop, release -> master
     if args.branch == 'develop':
-        run('git', 'checkout', 'trunk', cwd=args.src)
+        run('git', 'checkout', '-B', 'trunk', 'origin/trunk', cwd=args.src)
     else: 
-        run('git', 'checkout', 'release', cwd=args.src)
+        run('git', 'checkout', '-B', 'release', 'origin/release', cwd=args.src)
 
     manifest = Manifest(args.branch)
 
@@ -369,12 +363,13 @@ def main():
 
     if os.path.exists(args.dst):
         run('git', 'reset', '--hard', cwd=args.dst)
-        #run('git', 'fetch', '--all', cwd=args.dst)
     else:
         os.makedirs(args.dst)
         run('git', 'clone', '--recursive', repo_rw % 'boost', cwd=args.dst)
 
-    change_branch(args.branch, cwd=args.dst)
+    run('git', 'checkout', '-B', args.branch, 'origin/' + args.branch, cwd=args.dst)
+    run('git', 'pull', 'origin', args.branch, cwd=args.dst)
+
     update_modules(args.src, args.dst, manifest)
 
     # Is there something to push?
