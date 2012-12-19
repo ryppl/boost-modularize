@@ -349,10 +349,10 @@ def main():
         shutil.rmtree(args.dst)
 
     # trunk -> develop, release -> master
-    if args.branch == 'develop':
-        run('git', 'checkout', '-B', 'trunk', 'origin/trunk', cwd=args.src)
-    else: 
-        run('git', 'checkout', '-B', 'release', 'origin/release', cwd=args.src)
+    branch = 'trunk' if args.branch == 'develop' else 'release';
+    run('git', 'fetch', '-t', 'http://github.com/ryppl/boost-svn', '+' + branch, cwd=args.src)
+    run('git', 'reset', '--hard', 'FETCH_HEAD', cwd=args.src)
+    run('git', 'branch', '-M', branch, cwd=args.src)
 
     manifest = Manifest(args.branch)
 
