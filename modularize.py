@@ -366,7 +366,8 @@ def main():
         os.makedirs(args.dst)
         run('git', 'init', cwd=args.dst)
 
-    run('git', 'fetch', '-t', repo_rw % 'boost', '+' + args.branch, cwd=args.dst)
+    run('git', 'remote', 'set-url', 'origin', repo_rw % 'boost', cwd=args.dst)
+    run('git', 'fetch', '-t', 'origin', '+' + args.branch, cwd=args.dst)
     run('git', 'reset', '--hard', 'FETCH_HEAD', cwd=args.dst)
     run('git', 'branch', '-M', args.branch, cwd=args.dst)
     run('git', 'submodule', 'update', '--init', cwd=args.dst)
@@ -390,7 +391,7 @@ def main():
     run('git', 'commit', '-am' 'latest from svn', cwd=args.dst)
 
     print 'Pushing the boost supermodule...'
-    run('git', 'push', repo_rw % 'boost', args.branch, cwd=args.dst)
+    run('git', 'push', 'origin', args.branch, cwd=args.dst)
 
     print 'Done'
 
