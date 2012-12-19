@@ -369,8 +369,8 @@ def main():
     run('git', 'fetch', '-t', 'origin', '+' + args.branch, cwd=args.dst)
     run('git', 'reset', '--hard', 'FETCH_HEAD', cwd=args.dst)
     run('git', 'branch', '-M', args.branch, cwd=args.dst)
-    run('git', 'submodule', 'update', '--init', cwd=args.dst)
     run('git', 'submodule', 'foreach', 'git', 'clean', '-df', cwd=args.dst)
+    run('git', 'submodule', 'update', '--init', cwd=args.dst)
 
     update_modules(args.src, args.dst, manifest)
 
