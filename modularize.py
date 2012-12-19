@@ -70,9 +70,8 @@ class Module:
         base = repo_name(self.dst_dir)
         if os.path.isdir(self.dst_dir):
             run('git', 'remote', 'set-url', 'origin', repo_rw % base, cwd=self.dst_dir)
-            run('git', 'fetch', '-t', 'origin', '+' + branch, cwd=self.dst_dir)
-            run('git', 'reset', '--hard', 'FETCH_HEAD', cwd=self.dst_dir)
-            run('git', 'branch', '-M', branch, cwd=self.dst_dir)
+            run('git', 'checkout', '--force', branch, cwd=self.dst_dir)
+            run('git', 'pull', 'origin', branch, cwd=self.dst_dir)
             run('git', 'rm', '--quiet', '--ignore-unmatch', '-r', '.', cwd=self.dst_dir)
         else:
             os.makedirs(self.dst_dir)
