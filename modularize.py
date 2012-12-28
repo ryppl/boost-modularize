@@ -132,7 +132,7 @@ class Module:
             print '[INFO] Copied'
 
     # uses git
-    def commit(self):
+    def commit(self, branch):
         if verbose:
             print '[INFO] Committing changes to module at:', self.dst_dir
 
@@ -144,6 +144,7 @@ class Module:
         lines = [l for l in o.split('\n') if not l == '']
         if len(lines):
             run('git', 'commit', '-m', 'latest from svn', cwd=self.dst_dir)
+            run('git', 'push', 'origin', branch, cwd=self.dst_dir)
 
 # Check the manifest against the live boost mirror to ensure that we
 # know where everything goes. Try reading the list of existing boost
@@ -290,8 +291,8 @@ def update_modules(src_dir, dst_dir, manifest):
         for src, dst in manifest.items(section):
             module.modularize(src, dst, src2mod)
 
-        # commit locally, TODO: skip in offline mode
-        module.commit()
+        # Push the changes to the remote repo
+        module.commit(manifest.branch)
 
     # clean the superproject
     for entry in popen('git', 'ls-files', cwd=dst_dir).split('\n'):
@@ -378,13 +379,6 @@ def main():
     if "" == popen('git', 'status', '-s', cwd=args.dst):
         print 'Nothing to push'
         return
-
-    # We now want to 'git add' all the modified submodules to the supermodule,
-    # commit them and push the new boost supermodule.
-    print 'Pushing all modified submodues...'
-
-    # Push the changes in each submodule to the remote repo
-    run('git', 'submodule', 'foreach', 'git', 'push', 'origin', args.branch, cwd=args.dst)
 
     print 'Committing the boost supermodule...'
     run('git', 'commit', '-am' 'latest from svn', cwd=args.dst)
